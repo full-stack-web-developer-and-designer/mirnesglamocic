@@ -1,8 +1,10 @@
-$('.content-slider').each(function(i, e){
+'use strict';
+jQuery(document).ready(function () {
+  jQuery('.content-slider').each(function(i, e){
     var id = 'adaptive';
-    $(e).attr('id', id+i);
+    jQuery(e).attr('id', id+i);
     var selector = '#'+id+i;
-    var slider = $(selector).lightSlider({
+    var slider = jQuery(selector).lightSlider({
       item:4,
       slideMove: 1,
       slideMargin: 15,
@@ -12,7 +14,10 @@ $('.content-slider').each(function(i, e){
       gallery: false,
      });
 });
+});
   /*-- Page Scroll To Top Section ---------------*/
+  'use strict';
+jQuery(document).ready(function () {
   jQuery(window).scroll(function () {
     if (jQuery(this).scrollTop() > 100) {
       jQuery('.scroll-top').fadeIn();
@@ -27,3 +32,4 @@ $('.content-slider').each(function(i, e){
     }, 600);
     return false;
   });
+});
