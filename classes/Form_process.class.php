@@ -18,7 +18,7 @@ try{
 	$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	//echo "connected!";
 }catch(PDOException $e){
-	echo "Greška u konekciji: " . $e->getMessage();
+	echo "Connection error: " . $e->getMessage();
 }
 use PHPMailer\PHPMailer\PHPMailer;
 require 'PHPMailer/PHPMailer.php';
@@ -34,30 +34,30 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$message = $_POST['message'];
 	if(empty($_POST['name'])) {
 		//$error = true;
-		$name_error = "Ime i prezime ne može biti prazno!";
+		$name_error = "Name and surname cannot be empty!";
 	}else{
 		$name = $_POST['name'];
 		// check if name only contains letters and whitespace	
 		if(!preg_match("/^[a-zšđčćžA-ZŠĐČĆŽ\s]*$/", $name)){
-			$name_error = "Ime i prezime mogu da sadrže samo slova i razmak!";
+			$name_error = "Name and surname can only contain letters and a space!";
 		}
 	}
 	if(empty($_POST['email'])){
-		$email_error = "E-mail ne može biti prazan!";
+		$email_error = "E-mail cannot be empty!";
 	}else{
 		$email = $_POST['email'];
 		// check if e-mail address is well-formed
 		if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-			$email_error = "E-mail adresa nije ispravna!";
+			$email_error = "The e-mail address is not valid!";
 		}
 	}
 	if(empty($_POST['message'])) {
-		$message_error = "Sadržaj poruke ne može biti prazan!";
+		$message_error = "The content of the message cannot be empty!";
 	}else{
 		$message = $_POST['message'];
 		// check if name only contains letters and whitespace
 		if(!preg_match("/^[a-zšđčćžA-ZŠĐČĆŽ0-9 ,.!?\'\"]*$/", $message)){
-			$message_error = "Sadržaj poruke ne mogu biti specijalni znaci!";
+			$message_error = "Message content cannot be special characters!";
 		}
 	}
 	if($name_error == '' && $email_error == '' && $message_error == ''){
@@ -90,13 +90,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		
 		if($error==false){
 			$text['response'] = "success";
-			$text['message'] = "Thank you " . ucwords($name) . "! Your message has been successfully sent! You will get the answer soon!";
+			$text['message'] = "Thank you " . ucwords($name) . "!\n Your message has been successfully sent!\n You will get the answer soon!";
 		}
     } 
 	else
 	{
 		$text['response'] = "error";
-		$text['message'] = "Došlo je do greške! Pokušajte ponovo..." . $mail_contact->ErrorInfo;
+		$text['message'] = "An error occurred! Try again..." . $mail_contact->ErrorInfo;
     }
 	echo json_encode($text); 
 } //end if validation
