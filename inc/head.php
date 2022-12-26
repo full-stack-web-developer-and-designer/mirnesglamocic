@@ -54,6 +54,16 @@
 <!-- lightslider js-->
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+
+<!-- jQuery Modal -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<!--jQuery validate plugin -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<!-- lightbox css -->
+<link rel="stylesheet" type="text/css" href="/lightbox2/src/css/lightbox.css">
+<noscript><p class="errorJS">To display the page correctly, please enable JavaScript in your browser!</p></noscript>
+<title><?php echo $title; ?></title>
 <script defer>
 var navigation=$.noConflict();
 	navigation(document).ready(function($) {
@@ -70,7 +80,7 @@ var navigation=$.noConflict();
 			}
 		});
 	});
-</scrip>
+</script>
 <script defer>
 window.onorientationchange = function() { 
 
@@ -88,13 +98,4 @@ window.onorientationchange = function() {
 
 };
 </script>
-<!-- jQuery Modal -->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-<!--jQuery validate plugin -->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-<!-- lightbox css -->
-<link rel="stylesheet" type="text/css" href="/lightbox2/src/css/lightbox.css">
-<noscript><p class="errorJS">To display the page correctly, please enable JavaScript in your browser!</p></noscript>
-<title><?php echo $title; ?></title>
 </head>
