@@ -7,6 +7,7 @@ body {
   font-family: 'Roboto', Arial, sans-serif;
   color: #363636;
   font-weight: 300;
+  background: #f2f2f2;
 }
 h1,
 h2,
@@ -23,7 +24,7 @@ h1 {
   font-size: 3em;
 }
 h2 {
-  font-size: 2.2em;
+  font-size: 2em;
   text-align: center;
   margin: 0;
   padding: 30px 0;
@@ -32,7 +33,12 @@ h3 {
   font-size: 2em;
 }
 h4 {
-  font-size: 1.6em;
+    font-size: 1.6em;
+    height: 50px;
+    margin: 1em 1.9em 1em 0.7em;
+    color: #a2d838;
+    /* padding: 15px; */
+    text-align: center;
 }
 h5 {
   font-size: 1.4em;
@@ -40,7 +46,6 @@ h5 {
 h6 {
   font-size: 1.2em;
 }
-
 p {
   margin: 0.3em 0 0.5em;
 }
@@ -164,9 +169,9 @@ a:active {
   color: #363636;
   background: #fff;
 }
-/*#headerBottom{
-	
-}*/
+#headerBottom {
+  background: #FFF;
+}
 #nav {
   float: right;
 }
@@ -209,6 +214,15 @@ a:active {
   padding: 180px 0;
   text-align: center;
 }
+#aboutme h2 {
+  float: right;
+  width: 70%;
+  margin-top: 46px;
+  margin-bottom: 12px;
+  padding: 5px 0;
+  background: #0648a0;
+  color: #FFF;
+}
 #about {
   background: url('../images/Mirnes-Glamocic.jpg');
   background-position: center center;
@@ -217,12 +231,12 @@ a:active {
   padding: 200px 0;
   text-align: center;
 }
-/*#aboutme {
-  padding-bottom: 50px;
-}*/
+#aboutme {
+    background: #FFF;
+}
 .imgLeft {
   float: left;
-  padding: 50px 50px 50px 0;
+  padding: 46px 50px 50px 0;
 }
 #quotes {
   background: rgba(0, 0, 0, 0.4);
@@ -243,6 +257,14 @@ a:active {
 }
 #certificates h2 {
   display: inline;
+  padding: 0px 96px 5px;
+  background: #0648a0;
+  color: #FFF;
+  /* margin: 400px auto 0; */
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 #PHP {
   display: inline;
@@ -256,7 +278,6 @@ a:active {
 }
 #mycert {
   text-align: left;
-  padding: 0 20px 0;
 }
 .certificate {
   width: 200px;
@@ -288,6 +309,11 @@ a:active {
 .offers li {
   list-style: none;
 }
+/* skills */
+#skills {
+  background: #FFF;
+  padding-top: 30px;
+}
 .tooltip {
   position: relative;
   display: inline;
@@ -296,12 +322,15 @@ a:active {
   display: block;
   top: 316px;
 }
-#skills h2{
-  margin-bottom: 30px;
+#skills h2, #projects h2{
+  padding: 5px 0;
+  background: #0648a0;
+  color: #FFF;
+  margin-bottom: 50px;
 }
 .skill {
   width: 240px;
-  margin-right: 76px;
+  margin-right: 80px;
   margin-bottom: 76px;
 }
 .skill:nth-of-type(4n) {
@@ -326,15 +355,15 @@ a:active {
   font-weight: bold;
   color:#fff;
 }
-
+.help_tip:hover {
+  background-color: #1E2021;
+}
 .help_tip:hover p{
   display:block;
   transform-origin: 100% 0%;
   -webkit-animation: fadeIn 0.3s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
-
 }
-
 .help_tip p{    /* The tooltip */
   display: none;
   text-align: left;
@@ -389,6 +418,36 @@ a:active {
   0% { opacity:0; }
   100% { opacity:100%; }
 }
+/* Projects */
+#projects {
+  background: #FFF;
+  overflow: hidden;
+  margin-top: 40px;
+  padding-top: 30px;
+}
+#projects a.single {
+  display: block;
+  background: #e84e1b;
+  color: #FFF;
+  padding: 5px 35px;
+  margin: 0 80px 40px 0;
+  float: left;
+  text-align: center;
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  pointer-events: all;
+}
+#projects a.single:nth-of-type(5n) {
+  margin-right: 0;
+}
+.target {
+  display: none;
+  margin-bottom: 40px;
+}
 /* LinkedIn badges */
 #badges {
   background: #f2f2f2;
@@ -405,7 +464,15 @@ a:active {
 }
 p#contact_offer {
   text-align: center;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
+}
+#contact h2 {
+  width: 96%;
+  margin: 30px auto;
+  padding: 5px 0;
+  background: #0648a0;
+  color: #FFF;
+  margin-right: 4%;
 }
 /* form CSS */
 #form {
@@ -587,7 +654,7 @@ label.error {
   width: 400px;
   float: right;
   margin: 30px 0 0;
-  height: 652px;
+  height: 674px;
 }
 #icons p {
   color: #FFF;
@@ -731,7 +798,7 @@ body.development h1{
     text-align: center;
     background: #0648a0;
     color: #FFF;
-    width: 80%;
+    width: 100%;
     margin: 15px auto 0;
     padding: 5px 0;
   }
