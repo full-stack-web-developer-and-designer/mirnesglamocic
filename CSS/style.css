@@ -444,6 +444,16 @@ a:active {
 #projects a.single:nth-of-type(5n) {
   margin-right: 0;
 }
+#projects a.single:link,
+#projects a.single:visited {
+  background: #e84e1b;
+}
+#projects a.single:hover{
+  background: #B8370B;
+}
+#projects a.single:active{
+  background: #912500;
+}
 .target {
   display: none;
   margin-bottom: 40px;
@@ -461,6 +471,10 @@ a:active {
 }
 .badge:nth-of-type(3n) {
   padding-right: 0;
+}
+/* contact */
+#contact {
+  background: #FFF;
 }
 p#contact_offer {
   text-align: center;
