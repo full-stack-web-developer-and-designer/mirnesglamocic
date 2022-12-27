@@ -1,5 +1,5 @@
 <h2>Contact</h2>
-            <p id="contact_offer">Let's work together!<br>I'm ready for new projects.</p>
+    <p id="contact_offer">Let's work together! I'm ready for new projects.</p>
 <form  spellcheck="false" autocomplete="off" id='contact_me' class='form ajax' name='contact_me' action='' method='POST'> 
 <h4 id="response" class="success"><!-- This will hold response from the server --></h4>
             <div class="form-control InputIconBg">
