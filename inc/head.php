@@ -23,7 +23,7 @@
 <meta property="og:image" content="<?php echo $og_image;?>"/>
 <meta property="og:site_name" content="mirnesglamocic.com">
 <!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="visit-neum.com">
+<meta name="twitter:card" content="mirnesglamocic.com">
 <meta name="twitter:title" content="<?php echo $title;?>">
 <meta name="twitter:description" content="<?php echo $meta['description'];?>">
 <meta name="twitter:image" content="<?php echo $og_image;?>">
