@@ -22,31 +22,9 @@
 ?>
 </head>
 <body>
-<?php
-include 'inc/header.php';
-?>
-    <!--<article id="hero">
-        <div class="wrapper">
-            <h1 class="white">Web Development, UI/UX and Web Design</h1>
-        </div>end .wrapper
-    </article> end #hero
-    <article id="aboutme">
-        <div class="wrapper">
-            <h2>About me</h2>-->
-             
-        <!--</div> -end .wrapper-
-    </article> -end #aboutme.white-->
-    <!--<article id="about" class="white">
-        <div class="wrapper">
-            <div id="quotes">
-                <h2 class="white">My favorite quotes</h2>
-                <p>If you really want to do something you&apos;ll find a way. If you don&apos;t, you&apos;ll find an excuse. - <em>Pablo Picasso</p><br>
-                <p>Live as if you were to die tomorrow. Learn as if you were to live forever. ― <em>Mahatma Gandhi</em></p><br>
-                <p>”Choose a job you love, and you will never have to work a day in your life.” - <em>Confucius</em></p>
-                
-            </div> -end #quotes-
-        </div> -end .wrapper-
-    </article> -end #about-->
+    <?php
+        include 'inc/header.php';
+    ?>
     <?php echo $result->render(); ?>
     <section id="certificates">
         <div class="wrapper">
@@ -66,6 +44,7 @@ include 'inc/header.php';
 			?>
         </div><!--end .wrapper-->
     </section><!--end #certificates-->
+
     <section id="skills">
         <div class="wrapper">
             <h2>Skills</h2> 
@@ -75,6 +54,33 @@ include 'inc/header.php';
 			?>
         </div><!--end .wrapper-->
     </section><!--end #skills-->
+
+    <section id="projects">
+        <div class="wrapper">
+            <h2>Projects</h2>
+            <div class="menu">
+                <a id="showall"></a>
+                <a class="single" target="1">Web sites</a> 
+                <a class="single" target="2">Image editing</a> 
+                <a class="single" target="3">Logo design</a> 
+                <a class="single" target="4">Logo design</a>
+            </div>
+            <div class="taget_box">
+                <div id="div1" class="target"><img src="./images/Dreamweaver.png"></div>
+                <div id="div2" class="target"><img src="./images/HTML.png"></div>
+                <div id="div3" class="target"><img src="./images/CSS.png"></div>
+                <div id="div4" class="target"><img src="./images/PHP.png"></div>
+</div>
+            
+        </div><!--end .wrapper-->
+    </section><!--end #projects-->
+
+    <!--<section id="services">
+        <div class="wrapper">
+            <h2>Services</h2>
+ 
+        </div><!-end .wrapper-->
+    <!--</section><!-end #skills-->
     <!--LinkedIn badges-->
     <section id="badges">
         <div class="wrapper">
@@ -141,5 +147,26 @@ include 'inc/header.php';
 <?php
 	include_once './inc/footer.php';
 	//end #footer
-?>        
+?>
+<script>
+    jQuery(document).ready(function(){
+        jQuery(function(){
+            jQuery('#showall').click(function(){
+                jQuery('.target').show();
+            });
+
+        jQuery('.single').click(function(){
+            jQuery('.target').hide();
+            jQuery('#div'+jQuery(this).attr('target')).show();
+        });
+        });
+    });
+    /*
+        jQuery("#image_editing").click(function(){
+            jQuery("#my_image_editing").fadeToggle(1000);
+        });
+    });*/
+
+    
+</script>
 </body>
