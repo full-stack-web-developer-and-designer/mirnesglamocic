@@ -161,12 +161,5 @@
         });
         });
     });
-    /*
-        jQuery("#image_editing").click(function(){
-            jQuery("#my_image_editing").fadeToggle(1000);
-        });
-    });*/
-
-    
 </script>
 </body>
