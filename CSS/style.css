@@ -803,10 +803,9 @@ a:visited {
   display: none;
 }
 /* cert page */
-.development #headerBottom {
-  border-bottom: 4px solid #ececec;
+body.development {
+  background: #FFF;
 }
-
 body.development h1{
     font-size: 2em;
     text-align: center;
@@ -816,6 +815,9 @@ body.development h1{
     margin: 15px auto 0;
     padding: 5px 0;
   }
+.development #headerBottom {
+  border-bottom: 4px solid #ececec;
+}
   /* lightslider */
 .slider-container {
 	display: block;
