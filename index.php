@@ -82,7 +82,7 @@
         </div><!-end .wrapper-->
     <!--</section><!-end #skills-->
     <!--LinkedIn badges-->
-    <section id="badges">
+    <!--<section id="badges">
         <div class="wrapper">
             <h2>LinkedIn skill assesment badges</h2>
             <p>The LinkedIn Skill Assessments is the LinkedIn feature that allows you to confirm the skills you’ve included on your profile by completing assessments related to those skills.</p>
@@ -92,7 +92,7 @@
             <p>Below you can see my badges for passing LinkedIn skill exams.</p>
         <article class="badge">
             <a href="https://www.linkedin.com/skill-assessments/HTML/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-HTML.png" alt="HTML LinkedIn badge by Mirnes Glamočić"></a>
-        </article><!--end .badge-->
+        </article>< --end .badge->
         <article class="badge">
             <a href="https://www.linkedin.com/skill-assessments/CSS/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-CSS.png" alt="CSS LinkedIn badge by Mirnes Glamočić"></a>
         </article>
@@ -104,19 +104,14 @@
         </article>
         <article class="badge">
             <a href="https://www.linkedin.com/skill-assessments/PHP/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-PHP.png" alt="PHP LinkedIn badge by Mirnes Glamočić"></a>
-        </article><!--end .badge-->
+        </article>--end .badge--
         <article class="badge">
             <a href="https://www.linkedin.com/skill-assessments/WordPress/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-WordPress.png" alt="WordPress LinkedIn badge by Mirnes Glamočić"></a>
-        </article><!--end .badge-->
-        </div><!--end .wrapper-->
+        </article><-end .badge--
+        </div><!-end .wrapper--
         
-    </section><!--end #badges-->
+    </section><!-end #badges-->
  
-    <!--<section id="projects">
-        <div class="wrapper">
-            <H2>Projects</H2>
-        </div>end .wrapper-->
-    <!--</section> end #projects-->
     <section id="contact">
         <div class="wrapper">
         <?php
