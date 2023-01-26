@@ -52,7 +52,7 @@
 	window.jQuery || document.write("<script src='./JS/jQuery-1.7.2.js'><\/script>");
 </script>
 <!-- lightslider js-->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
 
 <!-- jQuery Modal -->
