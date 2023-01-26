@@ -37,6 +37,24 @@ include 'inc/header.php';
 		<ul class="content-slider">
 		<!-- slider box -->
 			<?php
+				$LinuxEngineer = new LinuxEngineerSlide();
+				$LinuxEngineer->renderSlider();
+			?>
+		</ul>
+	</section><!--end .slider-container-->
+
+	<section class="slider-container">
+	<div class="slideControls">
+            <a class="slidePrev arrow">
+              <i class="fa fa-angle-left"></i>
+             </a>
+            <a class="slideNext arrow">
+              <i class="fa fa-angle-right"></i>
+            </a>
+      </div><!--end .slideControls -->
+		<ul class="content-slider">
+		<!-- slider box -->
+			<?php
 				$Linux = new LinuxSlide();
 				$Linux->renderSlider();
 			?>
