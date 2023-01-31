@@ -1,8 +1,8 @@
 <?php
-class WordPressSlide extends Slider{
+class WordPressEcommerceSlide extends Slider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
-        $sql = "SELECT * FROM mirnesglamocic_cert.certifications WHERE skill='WordPress' OR skill='WordPress Rest' OR skill='WordPress SEO' OR skill='WordPress PHP' ORDER BY rand();";
+        $sql = "SELECT * FROM mirnesglamocic_cert.certifications WHERE skill='WordPressEcommerce' ORDER BY rand();";
         $stmt = $this->__connect()->query($sql);
 
         while($row = $stmt->fetch()) {

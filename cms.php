@@ -44,6 +44,60 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
+	<section class="slider-container">
+	<div class="slideControls">
+            <a class="slidePrev arrow">
+              <i class="fa fa-angle-left"></i>
+             </a>
+            <a class="slideNext arrow">
+              <i class="fa fa-angle-right"></i>
+            </a>
+      </div><!--end .slideControls -->
+		<ul class="content-slider">
+		<!-- slider box -->
+			<?php
+				$WordPressPlugin = new WordPressPluginSlide();
+				$WordPressPlugin->renderSlider();
+			?>
+		</ul>
+	</section><!--end .slider-container-->
+
+	<section class="slider-container">
+	<div class="slideControls">
+            <a class="slidePrev arrow">
+              <i class="fa fa-angle-left"></i>
+             </a>
+            <a class="slideNext arrow">
+              <i class="fa fa-angle-right"></i>
+            </a>
+      </div><!--end .slideControls -->
+		<ul class="content-slider">
+		<!-- slider box -->
+			<?php
+				$WordPressTheme = new WordPressThemeSlide();
+				$WordPressTheme->renderSlider();
+			?>
+		</ul>
+	</section><!--end .slider-container-->
+
+	<section class="slider-container">
+	<div class="slideControls">
+            <a class="slidePrev arrow">
+              <i class="fa fa-angle-left"></i>
+             </a>
+            <a class="slideNext arrow">
+              <i class="fa fa-angle-right"></i>
+            </a>
+      </div><!--end .slideControls -->
+		<ul class="content-slider">
+		<!-- slider box -->
+			<?php
+				$WordPressEcommerce = new WordPressEcommerceSlide();
+				$WordPressEcommerce->renderSlider();
+			?>
+		</ul>
+	</section><!--end .slider-container-->
+
 </div><!--end .wrapper-->
 
 <script src="lightbox2/src/js/lightbox.js"></script>
