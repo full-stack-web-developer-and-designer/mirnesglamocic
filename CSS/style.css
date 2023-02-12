@@ -172,13 +172,19 @@ a:active {
 #headerBottom {
   background: #FFF;
 }
+
 #nav {
   float: right;
+  width: 100%;
 }
+
 #nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+#nav ul.menu {
+  float: right;
 }
 #nav ul li {
   float: left;
@@ -205,6 +211,108 @@ a:active {
   background: #eee;
   border-bottom: 4px solid #ccc;
 }
+/* Flags */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+}
+.lang-menu {
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  position: relative;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding-top: 35px;
+}
+.lang-menu .selected-lang {
+  display: flex;   
+  justify-content: space-between;
+  line-height: 2;
+  cursor: pointer;
+}
+.lang-menu .selected-lang:before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://flagicons.lipis.dev/flags/4x3/us.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lang-menu ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  right: 0px;
+  width: 125px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+}
+.lang-menu ul li {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+#nav .lang-menu ul li a {
+  text-decoration: none;
+  width: 140px;
+  padding: 5px 10px;
+  display: block;
+}
+.lang-menu ul li:hover {
+  background-color: #f2f2f2;
+}
+.lang-menu ul li a:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.en:before {
+  background-image: url(https://flagicons.lipis.dev/flags/4x3/us.svg);
+}
+.de:before {
+  background-image: url(https://flagicons.lipis.dev/flags/4x3/de.svg);
+}
+.it:before {
+  background-image: url(https://flagicons.lipis.dev/flags/4x3/it.svg);
+}
+.kr:before {
+  background-image: url(https://flagicons.lipis.dev/flags/4x3/kr.svg);
+}
+.lang-menu:hover ul {
+  display: block;
+}
+
+/* Hero img */
 #hero {
   background: url('../images/development.jpg');
   background-attachment: fixed;
@@ -425,7 +533,7 @@ a:active {
   margin-top: 40px;
   padding-top: 30px;
 }
-#projects a.single {
+#projects a.project {
   display: block;
   background: #e84e1b;
   color: #FFF;
@@ -441,17 +549,17 @@ a:active {
   cursor: pointer;
   pointer-events: all;
 }
-#projects a.single:nth-of-type(5n) {
+#projects a.project:nth-of-type(5n) {
   margin-right: 0;
 }
-#projects a.single:link,
-#projects a.single:visited {
+#projects a.project:link,
+#projects a.project:visited {
   background: #e84e1b;
 }
-#projects a.single:hover{
+#projects a.project:hover{
   background: #B8370B;
 }
-#projects a.single:active{
+#projects a.project:active{
   background: #912500;
 }
 .target {
@@ -502,7 +610,8 @@ form > .form-control {
   margin-bottom: 2%;
 }
 form > .form-control > input,
-form > .form-control > textarea {
+form > .form-control > textarea,
+ #cke_message {
   width: 96%;
   margin: 0 2%;
   display: block;
@@ -525,6 +634,10 @@ form > .form-control > textarea {
   color: #aaa;
   transition: 0.3s;
 }
+.cke_editable
+{
+	font-size: 20px;
+}
 form .form-control input {
   padding: 13px 15px 13px 70px;
   line-height: 20px;
@@ -541,6 +654,10 @@ form .form-control textarea {
   padding: 15px 15px 10px 70px;
   box-sizing: border-box;
 }
+div#cke_message {
+  padding: 0 0 10px 60px;
+  box-sizing: border-box;
+}
 .form-control i {
   position: absolute;
   left: 17px;
@@ -551,10 +668,10 @@ form .form-control textarea {
   transition: 0.3s;
 }
 .form-control i.fas.fa-pencil-alt {
-  padding: 98.5px 22px;
+  padding: 116px 22px;
 }
 .form .form-control input:focus,
-.form .form-control textarea:focus {
+.form .form-control textarea #cke_message:focus {
   border: 2px solid #0b60d4 !important;
   box-shadow: 0 0 8px 0 #0b60d4;
   outline: none !important;
@@ -566,11 +683,11 @@ form .form-control textarea {
   padding: 15px 23px;
 }
 .form-control input:focus ~ i,
-.form-control textarea:focus ~ i{
+.form-control textarea #cke_message:focus ~ i{
   color: #0b60d4;
 }
 .form-control.InputIconBg input:focus ~ i,
-.form-control.InputIconBg textarea:focus ~ i {
+.form-control.InputIconBg textarea #cke_message:focus ~ i {
   background-color: #0b60d4;
   color: #fff;
 }
@@ -588,7 +705,7 @@ label#floated_textarea {
   color: #999;
   transition: all 0.2s ease-out;
   position: absolute;
-  top: 1rem;
+  top: 4rem;
   left: 6rem;
 }
 @supports (not (-ms-ime-align:auto)) {
@@ -599,10 +716,10 @@ label#floated_textarea {
       left: 5rem;
     }
   
-  input:focus ~ label.valid,
-  input:not(:placeholder-shown) ~ label.valid,
-  textarea:focus ~ label#floated_textarea,
-  textarea:not(:placeholder-shown) ~ label.valid {
+  input:focus~label.valid,
+  input:not(:placeholder-shown)~label.valid,
+  textarea #cke_message:focus~label#floated_textarea,
+  textarea #cke_message:not(:placeholder-shown)~label.valid {
       font-size: 12px;
       font-weight: bold;
       color: #0b60d4;
@@ -614,9 +731,9 @@ label#floated_textarea {
       top: 0.3rem;
       left: 4.5rem;
     }
-textarea:focus~label#floated_textarea,
-textarea:not(:placeholder-shown)~label#floated_textarea {
-  top: 0.3rem;
+label#floated_textarea,
+textarea #cke_message:not(:placeholder-shown)~label#floated_textarea {
+  top: 3rem;
   left: 5.5rem;
   color: #0b60d4;
   transition: all 0.2s ease-out;
@@ -880,6 +997,13 @@ img.LinkedIn.margin-top{
 /* CSS for Web Design cert */
 body.development.design img.LinkedIn.margin-top {
   margin-top: 15px;
+}
+/* CSS for SEO cert */
+body.development.seo footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 /* CSS for print */
 @media print {
