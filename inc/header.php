@@ -19,15 +19,23 @@
 		<div id="headerBottom">
             <div class="wrapper">
 				<nav id="nav">
-                    <ul>
-                        <li><a href="/#aboutme">ABOUT ME</a></li>
-                        <li><a href="/#certificates">CERTIFICATES</a></li>
-                        <li><a href="/#skills">SKILLS</a></li>
-                        <li><a href="/#badges">BADGES</a></li>
-                        <li><a href="/#projects">PROJECTS</a></li>
-                        <li><a href="/#services">SERVICES</a></li>
-                        <li><a href="/#contact">CONTACT</a></li>
-                    </ul>
+                    <div class="lang-menu">
+                        <div class="selected-lang">English</div>
+                        <ul class="dropdown-menu">
+                            <li><a href="" class="en">English</a></li>
+                            <li><a href="" class="de">German</a></li>
+                            <li><a href="" class="it">Italian</a></li>
+                            <li><a href="" class="kr">Korean</a></li>
+                        </ul>
+                    </div><!-- end .lang-menu -->
+                        <ul class="menu">
+                            <li><a href="/#aboutme">ABOUT ME</a></li>
+                            <li><a href="/#certificates">CERTIFICATES</a></li>
+                            <li><a href="/#skills">SKILLS</a></li>
+                            <li><a href="/#projects">PROJECTS</a></li>
+                            <li><a href="/#services">SERVICES</a></li>
+                            <li><a href="/#contact">CONTACT</a></li>
+                        </ul>
                 </nav>
         </div><!--end .wrapper-->
         </div><!--end #headerBottom-->

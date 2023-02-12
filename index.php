@@ -60,10 +60,10 @@
             <h2>Projects</h2>
             <div class="menu">
                 <a id="showall"></a>
-                <a class="single" target="1">Web sites</a> 
-                <a class="single" target="2">Image editing</a> 
-                <a class="single" target="3">Logo design</a> 
-                <a class="single" target="4">Logo design</a>
+                <a class="project" target="1">Web sites</a> 
+                <a class="project" target="2">Image editing</a> 
+                <a class="project" target="3">Logo design</a> 
+                <a class="project" target="4">Logo design</a>
             </div>
             <div class="taget_box">
                 <div id="div1" class="target"><img src="./images/Dreamweaver.png"></div>
@@ -150,7 +150,7 @@
                 jQuery('.target').show();
             });
 
-        jQuery('.single').click(function(){
+        jQuery('.project').click(function(){
             jQuery('.target').hide();
             jQuery('#div'+jQuery(this).attr('target')).show();
         });
