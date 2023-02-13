@@ -1,3 +1,8 @@
+    <?php
+$id=1;
+$nav = Navigations::get(1);
+
+    ?>
     <div id="header">
         <div id="headerTop">
             <div class="wrapper">
@@ -21,22 +26,32 @@
 				<nav id="nav">
                     <div class="lang-menu">
                         <div class="selected-lang">English</div>
-                        <ul class="dropdown-menu">
-                            <li><a href="" class="en">English</a></li>
+                        <ul class="dropdown-menu" id="lang_switcher">
+                            <li><a href="" class="en" selected="selected">English</a></li>
                             <li><a href="" class="de">German</a></li>
                             <li><a href="" class="it">Italian</a></li>
                             <li><a href="" class="kr">Korean</a></li>
                         </ul>
                     </div><!-- end .lang-menu -->
                         <ul class="menu">
-                            <li><a href="/#aboutme">ABOUT ME</a></li>
-                            <li><a href="/#certificates">CERTIFICATES</a></li>
-                            <li><a href="/#skills">SKILLS</a></li>
-                            <li><a href="/#projects">PROJECTS</a></li>
-                            <li><a href="/#services">SERVICES</a></li>
-                            <li><a href="/#contact">CONTACT</a></li>
+                            <!-- navigation -->
+				<?php echo $nav->render(); ?>
+                           
                         </ul>
                 </nav>
+                <script>
+jQuery(document).ready(function(){
+jQuery('.selected_lang').hover(function(){
+				jQuery('.lang_switcher').stop(true).slideToggle('slow');
+			});
+        $('ul.dropdown-menu').on('click','li',function() {
+           $('div.selected-lang').text($(this).text());
+        });
+$("#lang_switcher").on('change', function(){
+    window.location = '<?php echo $_SERVER['PHP_SELF'] ?>?lang=' + $(this).val();
+});
+	});
+</script>
         </div><!--end .wrapper-->
         </div><!--end #headerBottom-->
     </div><!--end #header-->
