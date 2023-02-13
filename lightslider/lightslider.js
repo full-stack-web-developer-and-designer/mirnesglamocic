@@ -1,4 +1,4 @@
-$('.content-slider').each(function(i, e){
+$(document).ready('.content-slider').each(function(i, e){
     var id = 'adaptive';
     $(e).attr('id', id+i);
     var selector = '#'+id+i;
