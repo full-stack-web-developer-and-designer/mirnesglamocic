@@ -5,6 +5,7 @@ class Navigations extends Entity{
 	
 	public function render(){
 		$render = "<li><a href=\"/#aboutme\">$this->about</a><li> ";
+        $render .= "<li><a href=\"/#certificates\">$this->certificates</a></li>";
         $render .= "<li><a href=\"/#skills\">$this->skills</a></li>";
         $render .= "<li><a href=\"/#projects\">$this->projects</a></li>";
         $render .= "<li><a href=\"/#services\">$this->services</a></li>";
