@@ -23,5 +23,11 @@ RewriteRule ^Error403.html.html$ /403.php [NC,L]
 # This domain inherits the “PHP” package.
 # php -- END cPanel-generated handler, do not edit
 
+#RewriteCond %{REQUEST_URI} /(en|de|it|kr)$ [NC]
+#RewriteRule (.*) /%1/ [R,L]
+#RewriteCond %{REQUEST_URI} !/(en|de|it|kr)/ [NC]
+#RewriteRule (.*) /en/$1 [R,L]
+#RewriteRule ^(en|de|it|kr)/$ /index.php?lang=$1 [L]
+
 
 
