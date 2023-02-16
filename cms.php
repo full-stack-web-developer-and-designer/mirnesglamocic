@@ -100,11 +100,11 @@ include 'inc/header.php';
 
 </div><!--end .wrapper-->
 
-<script src="lightbox2/src/js/lightbox.js"></script>
-<script src='./JS/slider.js'></script>
 <?php
 	include_once './inc/footer.php';
 	//end #footer
-?>  
+?>
+<script src="lightbox2/src/js/lightbox.js"></script>
+<script src='./JS/slider.js'></script>
 </body>
 </html>
