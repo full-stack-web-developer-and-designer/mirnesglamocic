@@ -20,6 +20,7 @@
 	$image_alt="Mirnes Glamočić";
 	include './inc/head.php';
 ?>
+<script src="./JS/project_slider.js" defer></script>
 </head>
 <body>
     <?php
@@ -55,7 +56,7 @@
         </div><!--end .wrapper-->
     </section><!--end #skills-->
 
-    <section id="projects">
+    <section id="projects" aria-label="Projects">
         <div class="wrapper">
             <h2>Projects</h2>
             <div class="menu">
@@ -66,56 +67,116 @@
                 <a class="project" target="4">Logo design</a>
             </div>
             <div class="taget_box">
-                <div id="div1" class="target"><img src="./images/Dreamweaver.png"></div>
+                <div id="div1" class="target">
+                    <section class="project_complete">
+                     <!--   
+                    <article class="skill_thumb">
+                            <img src="./thumb/HTML.png" alt="HTML Logo">
+                            <img src="./thumb/CSS.png" alt="CSS Logo">
+                            <img src="./thumb/JavaScript.png" alt="JavaScript Logo">
+                            <img src="./thumb/jQuery.png" alt="jQuery Logo">
+                            <img src="./thumb/JSON.png" alt="JSON Logo">
+                            <img src="./thumb/PHP.png" alt="PHP Logo">
+                            <img src="./thumb/MySQL.png" alt="MySQL Logo">
+                            <img src="./thumb/Photoshop.png" alt="Photoshop Logo">
+                            <img src="./thumb/seo.png" alt="SEO Logo">              
+                        </article>
+-->
+
+
+
+
+            <article class="project_mockup" data-carousel><!--carousel-->
+        
+            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+            
+             
+                        <ul class="slides" data-slides><!-- slider inner-->
+                        
+                        <li class='slide' data-active>
+                                <img src="./projects/mockup_visit-neum.jpg" class="active">
+                            </li>
+                            <li class='slide'>
+                                <img src="./projects/mockup_Matic.jpg">
+                            </li>
+                            <li class='slide'>
+                                <img src="projects/mockup_Mampas.jpg">
+                            </li>
+                            <li class='slide'>
+                                <img src="projects/mockup_Ivana.jpg">
+                            </li>
+                            
+                        </ul>
+                        
+                        
+                        </article>
+                        
+
+                        <article class="project_desc">
+                            <h3>visit-neum.com - Tourism Website</h3>
+                            <p>This project contains a complex dynamic responsive website with a complete reservation system in one city, where users can contact directly the owners of properties such as hotels, apartments, villas, rooms, restaurants, boats and car rentals, similar to the website www.booking .com. Also, the time for the next 7 days and the value of the currency at the exchange rate of NLB Bank are embedded there. There are also created custom 403 and 404 error pages.</p>
+                            <p>• On index pages all properties are displayed using the JavaScript library LightSlider and with Object Oriented PHP and SQL function rand() they are displayed randomly each time when open index page is.<br>
+                            • Images on every page for each property are displayed using JavaScript Library Lightbox. There are stored in MySQL database and read using Object Oriented PHP and SQL.<br> 
+                            • Under the description for each property using the JavaScript function rand() is displayed a random number of users that currently viewing this page.</p>
+                            <p>
+                                <a href="https://visit-neum.com/" target="_blank" class="button" >VIEW PROJECT &raquo;</a>
+                            </p>
+                            
+                        </article>
+                    </section> 
+                    <section class="project_complete">
+                    <article class='project_mockup'>
+                    <ul class='slides'>
+                          <!-- slider box -->
+                        <?php
+                            $ProjectsSlide = new ProjectsSlide();
+                            $ProjectsSlide->renderSlider();
+                        ?>
+                         </ul>
+                  </article>
+                  
+                        <article class="project_desc">
+                            <h3>visit-neum.com - Tourism Website</h3>
+                            <p>This project contain a dynamic responsive website with a complete booking system in one city, where users can contact directly owners of properties such as hotels, apartments, villas, rooms, restaurants, boats, and rent-a-car. Also, the time for the next 7 days and the value of the currency at the exchange rate of NLB Bank are embedded there. There are also created custom 403 and 404 error pages.</p>
+                            <p>• On index pages all properties are displayed using the JavaScript library LightSlider and with Object Oriented PHP and SQL function rand() they are displayed randomly each time when open index page is.<br>
+                            • Images on every page for each property are displayed using JavaScript Library Lightbox. There are stored in MySQL database and read using Object Oriented PHP and SQL.<br> 
+                            • Under the description for each property using the JavaScript function rand() is displayed a random number of users that currently viewing this page.</p>
+                            <p>
+                                <a href="https://visit-neum.com/" target="_blank" class="button" >VIEW PROJECT &raquo;</a>
+                            </p>
+                        </article>
+                    </section> 
+                </div>
+
+                
+                
                 <div id="div2" class="target"><img src="./images/HTML.png"></div>
                 <div id="div3" class="target"><img src="./images/CSS.png"></div>
                 <div id="div4" class="target"><img src="./images/PHP.png"></div>
-</div>
+        </div>
             
         </div><!--end .wrapper-->
     </section><!--end #projects-->
 
-    <!--<section id="services">
-        <div class="wrapper">
-            <h2>Services</h2>
+<!--Services-->
+<section id="services">
+    <div class="wrapper">
+        <h2>Services</h2>
+            <h3 id="service">Best solutions for your business</h3>
+                <!-- slider box -->
+                <?php
+                    $ServicesSlide = new ServicesSlide();
+                    $ServicesSlide->renderSlider();
+                ?>
+    </div><!-- end .wrapper-->
+</section><!-- end #services-->
+    
  
-        </div><!-end .wrapper-->
-    <!--</section><!-end #skills-->
-    <!--LinkedIn badges-->
-    <!--<section id="badges">
-        <div class="wrapper">
-            <h2>LinkedIn skill assesment badges</h2>
-            <p>The LinkedIn Skill Assessments is the LinkedIn feature that allows you to confirm the skills you’ve included on your profile by completing assessments related to those skills.</p>
-            <p>The LinkedIn skill assessment is a way for you to showcase your skills and expertise on the platform.</p>
-            <p>A typical assessment consists of 15 multiple choice questions and each question tests at least one concept or subskill.<br>The questions are timed and must be completed in one session with score in the top 30%.</p>
-            <p>If you don't earn a skill badge for a given skill, you can retake the exam once more within six months.</p><br>
-            <p>Below you can see my badges for passing LinkedIn skill exams.</p>
-        <article class="badge">
-            <a href="https://www.linkedin.com/skill-assessments/HTML/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-HTML.png" alt="HTML LinkedIn badge by Mirnes Glamočić"></a>
-        </article>< --end .badge->
-        <article class="badge">
-            <a href="https://www.linkedin.com/skill-assessments/CSS/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-CSS.png" alt="CSS LinkedIn badge by Mirnes Glamočić"></a>
-        </article>
-        <article class="badge">
-            <a href="https://www.linkedin.com/skill-assessments/JavaScript/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-JavaScript" alt="JavaScript LinkedIn badge by Mirnes Glamočić"></a>
-        </article>
-        <article class="badge">
-            <a href="https://www.linkedin.com/skill-assessments/jQuery/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-jQuery" alt="jQuery LinkedIn badge by Mirnes Glamočić"></a>
-        </article>
-        <article class="badge">
-            <a href="https://www.linkedin.com/skill-assessments/PHP/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-PHP.png" alt="PHP LinkedIn badge by Mirnes Glamočić"></a>
-        </article>--end .badge--
-        <article class="badge">
-            <a href="https://www.linkedin.com/skill-assessments/WordPress/quiz-intro/?channel=FEED_SHOWCASE&vanityNameContext" target="_blank"><img src="images/LinkedIn_badge-WordPress.png" alt="WordPress LinkedIn badge by Mirnes Glamočić"></a>
-        </article><-end .badge--
-        </div><!-end .wrapper--
-        
-    </section><!-end #badges-->
- 
-    <section id="contact">
-        <div class="wrapper">
-        <?php
-            include_once './classes/Form_process.class.php';
+<section id="contact">
+    <div class="wrapper">
+    <?php
+    include_once './classes/Form_process.class.php';
         ?>
             <article id="form">
             <?php
@@ -138,11 +199,14 @@
         </div><!--end .wrapper-->
     </section> <!--contact-->
     <a class="scroll-top" rel="nofollow"><i class="fa fa-arrow-up"></i></a>
-    <script src="./lightbox2/src/js/lightbox.js"></script><script src='./JS/slider.js'></script>
+    
 <?php
 	include_once './inc/footer.php';
 	//end #footer
 ?>
+<script src="./lightbox2/src/js/lightbox.js"></script>
+<!--<script src='./JS/slider.js'></script>-->
+<script src='./JS/mockup_slider.js'></script>
 <script>
     jQuery(document).ready(function(){
         jQuery(function(){
@@ -157,4 +221,5 @@
         });
     });
 </script>
+
 </body>
