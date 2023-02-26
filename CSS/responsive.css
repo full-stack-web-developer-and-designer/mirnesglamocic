@@ -13,6 +13,10 @@
 }
 /* tablets */
 @media screen and (max-width: 767px) {
+    h4 {
+        margin: 1em 0.7em 1em 0.7em;
+        height: auto;
+    }
     #headerTopLeft {
         width: 26%;
     }
@@ -112,40 +116,32 @@
         width: auto;
     }
     #certificates {
-        padding: 0;
+        padding: 30px 0 0;
     }
     #certificates h2{
         width: auto;
         display: block;
-        margin: 40px 0;
     }
     .certificate:nth-of-type(2n) {
         margin-right: 0;
     }
-    #PHP, #WD {
-        display: block;
-        float: left;
-        padding: 0 6% 0 0;
-        width: 47%;
-        margin-bottom: 1%;
-    }
-    #WD {
-        padding: 0;
-    }
-    #mycert {
-        clear: both;
-    }
     #skills {
         text-align: center;
     }
-    .skill:nth-of-type(2n){
-        margin-right: 0;
+    .tooltip,
+    .tooltip:nth-of-type(4n+1) {
+        display: none;
     }
     #projects a.project:nth-of-type(3n) {
         margin-right: 0;
     }
     #projects {
         text-align: center;
+    }
+    #projects a.project {
+        display: inline-block;
+        text-align: center;
+        float: none;
     }
     /* section project for mockup sites */
     section.project_complete {
@@ -198,11 +194,336 @@
         width: 100%;
         height: auto;
         float: none;
+        overflow: hidden;
+    }
+    #icons p {
+        padding: 50px 0;
+    }
+    .icon_box {
+        margin: 0;
+        width: 50%;
+        padding: 0 0 50px;
+        float: left;
+    }
+    i.contact_icon.fab.fa-linkedin {
+        float: left;
+    }
+    i.contact_icon.fab.fa-github {
+        float: right;
+    }
+}
+@media screen and (min-width: 730px) and (max-width: 767px) {
+    .skill:nth-of-type(4n) {
+        margin-right: 0;
+    }
+    .skill {
+        margin-right: 40px;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 767px) {
+    ul.skills {
+        width: 600px;
+    }
+    .carousel-button.prev {
+        float: none;
+        left: -15rem;
+        display: inline-block;
+    }
+    .carousel-button.next {
+        float: none;
+        left: 15rem;
+        display: inline-block;
+    }
+}
+@media screen and (min-width: 541px) and (max-width: 767px) {
+    .skill {
+        width: 140px;
+    }
+}
+@media screen and (min-width: 409px) and (max-width: 767px) {
+    #certificates h2{
+        margin: 40px 0;
+    }
+    #PHP, #WD {
+        display: block;
+        float: left;
+        width: 47.5%;  
+    }
+    #PHP{
+        margin-right: 2.5%;
+    }
+    #WD{
+        margin-left: 2.5%;
+    }
+    #mycert {
+        clear: both;
+    }
+    ul.skills{
+        margin: 0 auto;
+    }
+    ul.skills li {
+        display: inline-block;
+        float: none;
+    }
+    .icon_box {
+        margin: 0;
+        width: 50%;
+        padding: 0 0 50px;
+        float: left;
+    }
+    .slide > img {
+        display: inline-block;
+    }
+    i.contact_icon.fab.fa-linkedin,
+    i.contact_icon.fab.fa-github {
+        float: none;
+    }
+    i.contact_icon.fab.fa-linkedin {
+        margin-left: 100px;
+    }
+    i.contact_icon.fab.fa-github {
+        margin-right: 100px;
     }
 }
 @media screen and (min-width: 451px) and (max-width: 767px) {
     #headerCenter {
         width: 37%;
+    }
+}
+@media screen and (min-width: 562px) and (max-width: 729px) {
+    .skill:nth-of-type(4n) {
+        margin-right: 50px;
+    }
+    .skill:nth-of-type(3n) {
+        margin-right: 0;
+    }
+    .skill {
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (min-width: 457px) and (max-width: 729px) {
+    .skill:nth-of-type(3n) {
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 674px) and (max-width: 690px) {
+    .form-control i {
+        left: 14px;
+    }
+}
+@media screen and (min-width: 530px) and (max-width: 667px) {
+    .form-control i {
+        left: 12px;
+    }
+}
+@media screen and (min-width: 612px) and (max-width: 624px) {
+    .certificate {
+        padding: 30px 30px 15px;
+    }
+}
+@media screen and (min-width: 604px) and (max-width: 624px) {
+    #services .services {
+        padding: 30px 30px 15px;
+    }
+}
+@media screen and (min-width: 409px) and (max-width: 619px) {
+    ul.skills{
+        width: 380px;
+    }
+    ul.skills li:nth-of-type(4n) {
+        margin-right: 0;
+    }
+    ul.skills li:nth-of-type(6n) {
+        margin-right: 15px;
+    }
+    ul.skills li:nth-of-type(12) {
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 607px) {
+    #projects a.project {
+        margin: 0 50px 50px 0;
+    }
+}
+@media screen and (min-width: 591px) and (max-width: 611px) {
+    .certificate {
+        padding: 30px 25px 15px;
+    }
+}
+@media screen and (min-width: 583px) and (max-width: 603px) {
+    #services .services {
+        margin: 0 40px 40px 0;
+        padding: 30px 10px 15px;
+    }
+}
+@media screen and (min-width: 570px) and (max-width: 590px) {
+    .certificate {
+        padding: 30px 20px 15px;
+    }
+}
+@media screen and (min-width: 534px) and (max-width: 576px) {
+    #projects a.project {
+        margin: 0 50px 50px 0;
+        padding: 5px 25px;
+    }
+}
+@media screen and (min-width: 541px) and (max-width: 561px) {
+    .skill:nth-of-type(4n) {
+        margin-right: 40px;
+    }
+    .skill:nth-of-type(3n) {
+        margin-right: 0;
+    }
+    .skill {
+        margin-right: 40px;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 569px) {
+    .certificate {
+        width: 80%;
+        margin: 0 auto 40px;
+    }
+}
+@media screen and (min-width: 509px) and (max-width: 540px) {
+    .skill:nth-of-type(4n) {
+        margin-right: 40px;
+    }
+    .skill:nth-of-type(3n) {
+        margin-right: 0;
+    }
+    .skill {
+        width: 130px;
+        margin-right: 40px;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (min-width: 513px) and (max-width: 533px) {
+    #projects a.project {
+        margin: 0 50px 50px 0;
+        padding: 5px 20px;
+    }
+}
+@media screen and (min-width: 409px) and (max-width: 582px) {
+    #services .services {
+        margin: 0 auto 40px auto;
+    }
+}
+@media screen and (min-width: 409px) and (max-width: 529px) {
+    .form-control i {
+        left: 9px;
+    }
+}
+@media screen and (min-width: 492px) and (max-width: 512px) {
+    #projects a.project {
+        margin: 0 50px 50px 0;
+        padding: 5px 15px;
+    }
+}
+@media screen and (min-width: 478px) and (max-width: 508px) {
+    .skill:nth-of-type(4n) {
+        margin-right: 40px;
+    }
+    .skill:nth-of-type(3n) {
+        margin-right: 0;
+    }
+    .skill {
+        width: 120px;
+        margin-right: 40px;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (min-width: 482px) and (max-width: 491px) {
+    #projects a.project {
+        padding: 5px 15px;
+    }
+}
+@media screen and (min-width: 461px) and (max-width: 491px) {
+    #skills h2, #projects h2, #services h2{
+        margin-bottom: 40px;
+    }
+    #projects a.project {
+        margin: 0 40px 40px 0;
+    }
+}
+@media screen and (min-width: 461px) and (max-width: 481px) {
+    #projects a.project {
+        padding: 5px 10px;
+    }
+}
+@media screen and (min-width: 457px) and (max-width: 477px) {
+    .skill:nth-of-type(4n) {
+        margin-right: 30px;
+    }
+    .skill:nth-of-type(3n) {
+        margin-right: 0;
+    }
+    .skill {
+        width: 120px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 460px) {
+    #skills h2, #projects h2, #services h2{
+         margin-bottom: 30px;
+     }
+     #projects a.project {
+         margin: 0 30px 30px 0;
+         padding: 5px 10px;
+     }
+ }
+ @media screen and (min-width: 429px) and (max-width: 449px) {
+    #skills h2, #projects h2, #services h2{
+         margin-bottom: 30px;
+     }
+     #projects a.project {
+         margin: 0 30px 30px 0;
+         padding: 5px;
+     }
+ }
+ @media screen and (min-width: 424px) and (max-width: 428px) {
+    #projects h2{
+         margin-bottom: 25px;
+     }
+     #projects a.project {
+         margin: 0 25px 25px 0;
+         padding: 5px;
+     }
+ }
+ @media screen and (min-width: 419px) and (max-width: 423px) {
+     #projects a.project {
+         padding: 5px;
+     }
+ }
+ @media screen and (min-width: 409px) and (max-width: 423px) {
+    #projects h2{
+        margin-bottom: 20px;
+    }
+    #projects a.project {
+        margin: 0 20px 20px 0;
+    }
+ }
+ @media screen and (min-width: 409px) and (max-width: 418px) {
+     #projects a.project {
+         padding: 5px 0;
+     }
+ }
+@media screen and (min-width: 409px) and (max-width: 456px) {
+    .skill:nth-of-type(3n) {
+        margin-right: 50px;
+    }
+    .skill:nth-of-type(6n),
+    .skill:nth-of-type(4n),
+    .skill:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .skill {
+        width: 120px;
+        margin-right: 50px;
+        margin-bottom: 50px;
     }
 }
 @media screen and (min-width: 354px) and (max-width: 450px) {
@@ -217,22 +538,11 @@
         margin: 0 12% 10% 0;
     }
 }
-@media screen and (min-width: 354px) and (max-width: 398px) {
-
-}
-@media screen and (min-width: 320px) and (max-width: 364px) {
-    #projects a.project {
-        margin: 0 11% 10% 0;
-    }
-}
 @media screen and (min-width: 320px) and (max-width: 408px) {
     .skill {
         width: 120px;
         margin-right: 50px;
         margin-bottom: 50px;
-    }
-    #projects a.project {
-        width: 41%;
     }
     .form-control i {
         left: 7px;
@@ -255,21 +565,23 @@
     #nav ul li a:active {
         border-bottom: 1px solid #f39200;
     }
-    #certificates h2 {
+    #certificates h2{
+        margin: 0 0 30px;
         padding: 5px 0px;
     }
     .certificate {
-        width: 86%;
+        width: auto;
+        display: block;
     }
     #PHP, #WD {
         display: block;
         float: none;
         padding: 0;
-        width: 96%;
-        margin: 0 2%;
+        width: 80%;
+        margin: 0 auto;
     }
     #PHP{
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     .certificate,
     .certificate:nth-of-type(4n) {
@@ -283,13 +595,19 @@
     #skills h2, #projects h2, #services h2 {
         margin-bottom: 30px;
     }
-    .tooltip,
-    .tooltip:nth-of-type(4n+1) {
-        display: none;
+    .skill:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .menu {
+        letter-spacing: -0.31em;
+        width: 96%;
+        margin: auto;
     }
     #projects a.project {
         padding: 5px;
         text-align: center;
+        letter-spacing: 0;
+        margin: 0 auto 10%;
     }
     .carousel-button.prev {
         left: 0.5rem;
@@ -300,17 +618,28 @@
     ul.skills {
         display: none;
     }
+    #services{
+        padding-top: 30px;
+        text-align: center;
+    }
     #services .services,
     #services .services:nth-of-type(4) {
-        width: 95%;
+        width: 80%;
         padding: 2.5%;
-        margin: 0 0 40px 0;
+        margin: 0 auto 40px auto;
+        display: inline-block;
+        text-align: left;
+        float: unset;
     }
-    #icons {
-        overflow: hidden;
+    #skills h2, #projects h2, #services h2, #contact h2 {
+        margin: 0 auto 30px;
+        width: 96%;
     }
-    #icons p {
-        padding: 50px 0;
+    #services h3#service {
+        padding: 0 0.2em;
+    }
+    #contact {
+        padding-top: 40px;
     }
 }
 @media screen and (max-width: 353px) {
@@ -360,6 +689,18 @@
         margin-bottom: 30px;
     }
 }
+@media screen and (min-width: 210px) and (max-width: 408px) {
+    #aboutme h2, #certificates h2, #skills h2, #projects h2, #services h2, #contact h2 {
+        font-size: 1.7em;
+    }
+    label#floated_textarea {
+        left: 5.5rem;
+    }
+    textarea:focus~label#floated_textarea,
+    textarea:not(:placeholder-shown)~label#floated_textarea {
+        left: 5rem;
+    }
+}
 @media screen and (min-width: 209px) and (max-width: 319px) {
     .form-control i {
         left: 6px;
@@ -374,6 +715,9 @@
         float: none;
         width: 80%;
         margin: 0 auto 30px;
+    }
+    h4 {
+        font-size: 1.3em;
     }
 }
 @media screen and (min-width: 261px) and (max-width: 280px) {
@@ -392,9 +736,6 @@
 @media screen and (max-width: 266px) {
     h3 {
         font-size: 1.4em;
-    }
-    h4 {
-        font-size: 1.3em;
     }
     .skill {
         width: 80%;
@@ -417,6 +758,9 @@
     }
 }
 @media screen and (max-width: 209px){
+    #aboutme h2, #certificates h2, #skills h2, #projects h2, #services h2, #contact h2 {
+        font-size: 1.5em;
+    }
     .form-control i {
         left: 5px;
     }
