@@ -18,6 +18,7 @@ h6 {
   font-weight: 900;
   margin: 1em 0 0.5em;
   color: #696969;
+  word-break: break-word;
 }
 
 h1 {
@@ -47,7 +48,7 @@ h6 {
   font-size: 1.2em;
 }
 p {
-  margin: 0.3em 0 0.5em;
+  margin: 0.4em 0 0.5em;
 }
 img {
   vertical-align: bottom;
@@ -177,7 +178,16 @@ a:active {
   float: right;
   width: 100%;
 }
-
+#respmenu,
+.print {
+  display: none;
+}
+#nav.open {
+  position: fixed;
+  top: -20px;
+  width: 1200px;
+  margin: 20px auto;
+}
 #nav ul {
   margin: 0;
   padding: 0;
@@ -213,6 +223,28 @@ a:active {
 }
 /* Hero img */
 #hero {
+/*
+  background-image: -webkit-image-set(
+    url("../images/development408x270.jpg") 1x,
+    url("../images/development767x508.jpg") 1x,
+    url("../images/development1024x678.jpg") 1x,
+    /*url("../images/small_development.jpg") 1x,
+    url("../images/development.jpg") 2x);
+   /* url("small-landscape-750x536.jpg") 1x,
+      url("large-landscape-2048x1536.jpg") 2x);
+  background-image: image-set(
+    url("../images/development408x270.jpg") 1x,
+    url("../images/development767x508.jpg") 1x,
+    url("../images/development1024x678.jpg") 1x,
+    /*url("../images/small_development.jpg") 1x,
+    url("../images/development.jpg") 2x);
+   /* url("small-landscape-750x536.jpg") 1x,
+      url("large-landscape-2048x1536.jpg") 2x);*/
+  /*background-image: image-set(
+    url("development408x270.jpg") 408w,
+    url("../images/development767x508.jpg") 767w,
+    url("../images/development1024x678.jpg") 1024w);
+*/
   background: url('../images/development.jpg');
   background-attachment: fixed;
   background-position: center center;
@@ -221,8 +253,8 @@ a:active {
   padding: 180px 0;
   text-align: center;
 }
+
 #aboutme h2 {
-  float: right;
   width: 70%;
   margin-top: 46px;
   margin-bottom: 12px;
@@ -230,6 +262,8 @@ a:active {
   background: #0648a0;
   color: #FFF;
   border-radius: 5px;
+  display: inline-block;
+  margin: 46px auto 12px;
 }
 #about {
   background: url('../images/Mirnes-Glamocic.jpg');
@@ -254,18 +288,19 @@ a:active {
 }
 /* certifications */
 #LinkedIn {
-  background: #f2f2f2;
+  background: #FFF;
   padding: 50px 0 0;
   text-align: center;
+  margin-bottom: 40px;
 }
 #certificates {
-  background: #f2f2f2;
+  background: #FFF;
   text-align: center;
   padding-top: 50px;
 }
 #certificates h2 {
   display: inline;
-  padding: 0px 96px 5px;
+  padding: 0px 92px 5px;
   background: #0648a0;
   color: #FFF;
   text-align: center;
@@ -276,23 +311,28 @@ a:active {
 #PHP {
   display: inline;
   float: left;
-  padding-right: 20px;
+  margin-right: 20px;
+  border: 2px solid #CCC;
+  box-sizing: border-box;
 }
 #WD {
   display: inline;
   float: right;
-  padding-left: 20px;
+  margin-left: 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
 }
 #mycert {
   text-align: left;
 }
 .certificate {
   width: 200px;
-  padding: 35px 35px 15px;
+  padding: 35px 33px 15px;
   margin: 0 40px 40px 0;
-  background: #fff;
-  float: left;
+  background: #fafafa;
+  display: inline-block;
   position: relative;
+  border: 2px solid #ccc;
 }
 .certificate:nth-of-type(4n) {
   margin-right: 0;
@@ -320,6 +360,7 @@ a:active {
 #skills {
   background: #FFF;
   padding-top: 30px;
+  text-align: center;
 }
 .tooltip {
   position: relative;
@@ -349,7 +390,7 @@ a:active {
 .help_tip{
   position: absolute;
   left: 210px;
-  bottom: 324px;
+  bottom: 325px;
   text-align: center;
   background-color: #BCDBEA;
   border-radius: 50%;
@@ -439,7 +480,7 @@ a:active {
   background: #e84e1b;
   color: #FFF;
   padding: 5px 35px;
-  margin: 0 80px 40px 0;
+  margin: 0 80px 50px 0;
   border-radius: 5px;
   float: left;
   text-align: center;
@@ -469,27 +510,28 @@ a:active {
 }
 /* section project for mockup sites */
 section.project_complete {
-  border-bottom: 4px solid #ececec;
+  border-top: 4px solid #ececec;
   clear: both;
   display: -webkit-box;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  margin-bottom: 24px;
+}
+section.project_complete:first-of-type {
+  border-top: none;
+  padding-top: 0;
 }
 section.project_complete:last-of-type {
-  border-bottom: none;
   margin-bottom: 0;
 }
 /* projects mockup & desc */
-
 .project_mockup,
 .project_desc{
   width: 50%;
-  margin-bottom: 50px;
 }
 .project_mockup{
- /*overflow: hidden;*/
   position: relative;
+  display: block;
 }
-
 .project_mockup .slides {
  display: block;
   width: 600px;
@@ -500,10 +542,6 @@ section.project_complete:last-of-type {
   padding: 0;
 }
 .project_mockup .slide {
- /* float: left;
-  list-style-type: none;
-  width: 600px;
-  height: 391px;*/
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -522,10 +560,8 @@ section.project_complete:last-of-type {
 }
 /* arrows */
 .carousel-button{
-  /*margin-top: 145px;*/
   cursor: pointer;
   font-size: 1.3rem;
-  /*position: absolute;*/
   top: 35%;
   border: none;
   border-radius: .25rem;
@@ -555,22 +591,31 @@ section.project_complete:last-of-type {
   right: 1rem;
   z-index: 2;
 }
-
+ul.skills {
+  list-style: none;
+  display: block;
+  position: absolute;
+  top: 405px;
+  margin: 0 22px;
+  padding: 0;
+}
+ul.skills li {
+  display: block;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #e84e1b;
+  color: #FFF;
+  border-radius: 5px;
+  width: 60px;
+  text-align: center;
+}
+ul.skills li:nth-of-type(6n){
+  margin-right: 0;
+}
 .project_desc{
   float: left;
-}
-/*
-img.mockup {
-  clear: both;
-  width: auto;
-  height: auto;
-  float: left;
-  z-index: 1;
-}
-*/
-article.skill_thumb {
-  padding: 15px 0 0 0;
-  text-align: center;
 }
 article.project_desc h3 {
   text-align: center;
@@ -581,31 +626,37 @@ article.project_desc p {
 /* services */
 #services{
   padding-top: 30px;
+  text-align: center;
+  letter-spacing: -.31em;
+}
+#services h2{
+  letter-spacing: normal;
 }
 #services h3#service{
   text-align: center;
   color:  #C07300;
   margin-bottom: 40px;
+  letter-spacing: normal;
 }
 #services .services{
   width: 196px;
   padding: 35px 35px 15px;
   margin: 0 40px 40px 0;
   background: #faf7eb;
-  float: left;
-  position: relative;
   border: 2px solid #D5CFB9;
+  display: inline-block;
+  letter-spacing: 0;
+  text-align: left;
 }
 #services .services:nth-of-type(4) {
   margin: 0;
 }
 #services .services h4{
   color:#f39200;
- 
+  margin: 1em 0.3em 1em 0.3em;
 }
 img.usluge{
   display: block;
-  color: #f39200;
   margin: 0 auto;
   width: 50px;
   height: 50px;
@@ -1051,16 +1102,125 @@ body.development::-webkit-scrollbar-track {
   box-shadow: #e84e1b 0px 0px 2px inset;
   border-radius: 0.5em;
 }
+/*
+img#barcode,*/
+p.barcode {
+  display: none;
+}
 /* CSS for print */
 @media print {
+  @page{
+    margin: .5cm;
+  }
   body {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 16px;
     color: #000;
+    margin: 0;
+    padding: 0;
+    background: #FFF;
   }
+  .wrapper{
+    margin: 0;
+    padding: 0;
+  }
+  #headerTop {
+    margin-bottom: 20px;
+  }
+  h1, h2, h3, h4{
+    color: #000;
+  }
+  a, a:visited{
+    color: inherit;
+    text-decoration: none;
+  }
+  a[href^="https:"]::after, a:visited::after{
+    content:' (' attr(href) ')';
+    font-style: italic;
+    word-wrap: break-word;
+  }
+  #headerCenter,
+  #headerTopRight,
   #nav,
-  img,
-  #footer {
-    display: none !important;
+  img.skill,
+  #hero,
+  #about,
+  #quotes,
+  .certificate,
+  #PHP, #WD,
+  #skills,
+  .tooltip,
+  #projects,
+  #contact_me,
+  #icons p,
+  .no_print{
+    display: none;
+  }
+  #headerTop, #headerTop i,
+  #headerTopLeft span a,
+  article#hero div.wrapper h1.white,
+  #aboutme h2,
+  #certificates h2,
+  #skills h2,
+  #services h2,
+  #services .services,
+  #services .services h4,
+  section#contact h2,
+  #form h2,
+  #footer,
+  section#contact p#contact_offer,
+  #icons,
+  i.contact_icon{
+    background: #FFF;
+    color: #000;
+  }
+  span#number a,
+  #services .services h4{
+    font-size: 1.2em;
+  }
+  #services .services {
+    padding: 35px 30px 15px;
+    margin: 0 25px 25px 0;
+    width: 194px;
+  }
+  #services .services:nth-of-type(4){
+    margin-right: 0;
+  }
+  #headerTopLeft,
+  article#hero div.wrapper h1.white,
+  #certificates h2,
+  #contact, #icons{
+    width: 100%;
+    display:block;
+    text-align: center;
+    margin: 0 auto;
+    background: #FFF;
+    color: #000;
+  }
+  #services h3#service{
+    color: #000;
+  }
+  #aboutme h2{
+    display: inline;
+    padding-left: 140px;
+  }
+  #contact, #icons{
+    height: 300px;
+  }
+  footer#footer{
+    border-top: 10px solid #CCC;
+    position: relative;
+    max-height: 200px;
+    padding: 20px 0 0 170px;
+  }
+  
+  footer::after{ content:url(../images/qr-code.png); position: absolute; top:20; left:0; }
+  footer p { padding-left: 20px;}
+  p.barcode{ 
+    display: block;
+    margin:  65px auto 0 220px ;
+    float: left;
   }
 }
+
+/* MEDIA QUERIES */
