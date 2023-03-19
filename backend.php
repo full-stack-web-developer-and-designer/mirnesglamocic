@@ -10,10 +10,10 @@ require_once 'core/init.php';
     //echo "Length of title is " . strlen($title) . "characters long." . " ";
     $og_title="Mirnes Glamočić | Front-end Certificates";
 	$website_url="https://mirnesglamocic.com";
-    $meta['description']="Mirnes Glamočić is an experienced Web Developer and Designer with several years of experience in the web development and design industry ";
-    //Check length of description for SEO (140-180 characters) - 139
-    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
-	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, backend-development, backend development, back-end developer, backend developer, database development database developer, web design, web designer";
+    $meta['description']="Mirnes Glamočić is an experienced Back-end Developer with several years of experience in the web development industry. Also, he is experienced in fullstack web development and design.";
+    //Check length of description for SEO (140-180 characters) - 185
+    echo "Length of description is " . strlen($meta['description']) . "characters long.";
+	$meta['keywords']="web development, web developer, back-end development, backend development, back-end developer, backend developer, backend development";
 	$og_image="./images/MirnesGlamocic.jpg";
 	$image_alt="Mirnes Glamočić";
 	include './inc/head.php';
@@ -27,10 +27,10 @@ include 'inc/header.php';
 	<h1>Back-end Certificates</h1>
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -49,10 +49,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -67,10 +67,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -85,10 +85,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -103,10 +103,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -119,12 +119,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 	</div><!--end .wrapper-->
-    <a class="scroll-top" rel="nofollow"><i class="fa fa-arrow-up"></i></a>
-<script src="lightbox2/src/js/lightbox.js"></script>
-<script src='./JS/slider.js'></script>
 <?php
 	include_once './inc/footer.php';
 	//end #footer
-?>  
-</body>
-</html>
+?>
