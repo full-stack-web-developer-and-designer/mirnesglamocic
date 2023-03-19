@@ -8,7 +8,7 @@ require_once 'core/init.php';
 	$title="Mirnes Glamočić | UI/UX Certificates";
     //Check length of title for SEO (50-70 characters) - 38
     //echo "Length of title is " . strlen($title) . "characters long." . " ";
-    $og_title="Mirnes Glamočić | Database Certificates";
+    $og_title="Mirnes Glamočić | UI/UX Certificates";
 	$website_url="https://mirnesglamocic.com";
     $meta['description']="Mirnes Glamočić is an experienced UX/UI Designer with several years of experience in UX/UI Design. Also, he is highly skilled in full stack web development and design";
     //Check length of description for SEO (140-180 characters) - 168
