@@ -11,23 +11,15 @@ RewriteRule ^webdesigncertificates.html$ /webdesign.php [NC,L]
 RewriteRule ^uxcertificates.html$ /ux.php [NC,L]
 RewriteRule ^seocertificates.html$ /seo.php [NC,L]
 RewriteRule ^adobecertificates.html$ ./adobe.php [NC,L]
+RewriteRule ^gitcertificates.html$ ./git.php [NC,L]
+RewriteRule ^dockercertificates.html$ ./docker.php [NC,L]
 RewriteRule ^linuxcertificates.html$ /linux.php [NC,L]
 #
-ErrorDocument 404 /Error404.html
-RewriteRule ^Error404.html$ /404.php [NC,L]
 Options -Indexes
-ErrorDocument 403 /Error403.html
-RewriteRule ^Error403.html.html$ /403.php [NC,L]
-
 # php -- BEGIN cPanel-generated handler, do not edit
 # This domain inherits the “PHP” package.
 # php -- END cPanel-generated handler, do not edit
 
-#RewriteCond %{REQUEST_URI} /(en|de|it|kr)$ [NC]
-#RewriteRule (.*) /%1/ [R,L]
-#RewriteCond %{REQUEST_URI} !/(en|de|it|kr)/ [NC]
-#RewriteRule (.*) /en/$1 [R,L]
-#RewriteRule ^(en|de|it|kr)/$ /index.php?lang=$1 [L]
 
 
 
