@@ -28,10 +28,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -46,10 +46,10 @@ include 'inc/header.php';
 	
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -66,10 +66,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -84,10 +84,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -107,10 +107,10 @@ include 'inc/header.php';
 	
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -125,10 +125,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -143,10 +143,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -161,10 +161,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -182,10 +182,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -200,10 +200,10 @@ include 'inc/header.php';
 	
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -218,10 +218,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -236,10 +236,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow" href="#">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow" href="#">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -254,10 +254,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow" aria-label="Prev">
+            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow" aria-label="Next">
+            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
