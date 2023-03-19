@@ -6,13 +6,13 @@ require_once 'core/init.php';
 <head>
 <?php 
 	$title="Mirnes Glamočić | Linux Certificates";
-    //Check length of title for SEO (50-70 characters) - 42
-    echo "Length of title is " . strlen($title) . "characters long." . " ";
+    //Check length of title for SEO (50-70 characters) - 38
+    //echo "Length of title is " . strlen($title) . "characters long." . " ";
     $og_title="Mirnes Glamočić | Linux Certificates";
 	$website_url="https://mirnesglamocic.com";
-    $meta['description']="Mirnes Glamočić is an experienced Full-stack Web Developer amd Designer with several years of experience using various Linux operating systems, such as Ubuntu, Debian, Centos and Fedora.";
-    //Check length of description for SEO (140-180 characters) - 155
-    echo "Length of description is " . strlen($meta['description']) . "characters long.";
+    $meta['description']="Mirnes Glamočić is an experienced Full-stack Web Developer amd Designer with several years of experience using various Linux operating systems.";
+    //Check length of description for SEO (140-180 characters) - 145
+    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
 	$meta['keywords']="web development, operating Systems, Linux, Ubuntu, Debian, Centos, Fedora";
 	$og_image="./images/MirnesGlamocic.jpg";
 	$image_alt="Mirnes Glamočić";
