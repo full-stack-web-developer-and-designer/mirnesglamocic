@@ -10,7 +10,7 @@ class FrontendSoloLearnSlide extends Slider{
 			$alt = $row['alt'];
             $class = $row['class'];
             echo "<li class='item-a slide'>
-            <article>
+            <article class='cert'>
             <a href='./cert/BIG/$picture' data-lightbox='image-group'><img src='./cert/SMALL/$picture' alt=\"$alt\" class=\"$class\"></a>
             </article></li>";
             }
