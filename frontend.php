@@ -10,10 +10,10 @@ require_once 'core/init.php';
     //echo "Length of title is " . strlen($title) . "characters long." . " ";
     $og_title="Mirnes Glamočić | Front-end Certificates";
 	$website_url="https://mirnesglamocic.com";
-    $meta['description']="Mirnes Glamočić is an experienced Web Developer and Designer with several years of experience in the web development and design industry ";
-    //Check length of description for SEO (140-180 characters) - 139
+    $meta['description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry. Also, he is experienced in fullstack web development and design.";
+    //Check length of description for SEO (140-180 characters) - 185
     //echo "Length of description is " . strlen($meta['description']) . "characters long.";
-	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, backend-development, backend development, back-end developer, backend developer, database development database developer, web design, web designer";
+	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, web design, web designer";
 	$og_image="./images/MirnesGlamocic.jpg";
 	$image_alt="Mirnes Glamočić";
 	include './inc/head.php';
@@ -236,10 +236,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" href="#">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" href="#">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -254,10 +254,10 @@ include 'inc/header.php';
 
 	<section class="slider-container">
 	<div class="slideControls">
-            <a class="slidePrev arrow">
+            <a class="slidePrev arrow" aria-label="Prev">
               <i class="fa fa-angle-left"></i>
              </a>
-            <a class="slideNext arrow">
+            <a class="slideNext arrow" aria-label="Next">
               <i class="fa fa-angle-right"></i>
             </a>
       </div><!--end .slideControls -->
@@ -270,12 +270,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 </div><!--end .wrapper-->
-<a class="scroll-top" rel="nofollow"><i class="fa fa-arrow-up"></i></a>
-<script src='./JS/slider.js'></script>
-<script src="./lightbox2/src/js/lightbox.js"></script>
 <?php
 	include_once './inc/footer.php';
 	//end #footer
-?>  
-</body>
-</html>
+?>
