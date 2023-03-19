@@ -12,7 +12,7 @@ require_once 'core/init.php';
 	$website_url="https://mirnesglamocic.com";
     $meta['description']="Mirnes Glamočić is an experienced Back-end Developer with several years of experience in the web development industry. Also, he is experienced in fullstack web development and design.";
     //Check length of description for SEO (140-180 characters) - 185
-    echo "Length of description is " . strlen($meta['description']) . "characters long.";
+    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
 	$meta['keywords']="web development, web developer, back-end development, backend development, back-end developer, backend developer, backend development";
 	$og_image="./images/MirnesGlamocic.jpg";
 	$image_alt="Mirnes Glamočić";
