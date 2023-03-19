@@ -6,28 +6,28 @@
         <div id="headerTop">
             <div class="wrapper">
 				<div id="headerTopLeft">
-					<span id="number"><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+38763734327">&nbsp;&nbsp;+387 63 734 327</a></span>
+					<span id="number"><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+82106709555">&nbsp;&nbsp;+82 10 6709 555</a></span>
 				</div><!--end #headerTopLeft-->
                 
                 <div id="headerCenter">
-                    <span id="cv"><a href="images/Mirnes_Glamočić_-_Resume.pdf" target="_blank"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Download my resume</a></span>
+                    <span id="cv"><a href="images/MirnesGlamocic-Resume.pdf" aria-label="Download my resume" target="_blank"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Download my resume</a></span>
                 </div><!--end #headerCenter-->
        			
                 <div id="headerTopRight">
-                   <span><a href="https://www.linkedin.com/in/mirnesglamocic/" target="_blank">
+                   <span><a href="https://www.linkedin.com/in/mirnesglamocic/" aria-label="visit my linkedin profile" target="_blank">
                     <i class="header-icon fab fa-linkedin"></i>
                     </a></span>
-                    <span><a href="https://github.com/Full-Stack-Web-Developer-and-Designer/" target="_blank"><i class="header_icon fab fa-github"></i></a></span>
+                    <span><a href="https://github.com/Full-Stack-Web-Developer-and-Designer/" aria-label="visit my github profile" target="_blank"><i class="header_icon fab fa-github"></i></a></span>
        			</div><!--end #headerTopRight-->
         	</div><!--end .wrapper-->
         </div><!--end #headerTop-->
 		
         <div id="headerBottom">
             <div class="wrapper">
-				<nav id="nav">
+				<nav id="nav"><a href="#" id="respmenu"><i class="fas fa-bars"></i> <h2>MENU</h2></a>
                     <ul class="menu">
-                <!-- navigation -->
-				<?php echo $nav->render(); ?>
+                        <!-- navigation -->
+                        <?php echo $nav->render(); ?>
                     </ul>
                 </nav>
             </div><!--end .wrapper-->
