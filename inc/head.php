@@ -5,7 +5,7 @@
 <meta name="robots" content="index,follow">
 <meta name="description" content="<?php echo $meta['description']; ?>"/>
 <meta name="keywords" content="<?php echo $meta['keywords']; ?>"/>
-<meta name="theme-color" content="#e84e1b">
+<meta name="theme-color" content="#955D00">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Mirnes Glamočić">
 <!-- Google / Search Engine Tags -->
@@ -32,47 +32,34 @@
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,400i,700,700i|Dancing+Script&display=swap&amp;subset=latin-ext" rel="stylesheet">
-<link rel="icon" href="images/iconified/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="images/apple-touch-icon-iphone-60x60.png">
-<link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-ipad-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone-retina-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-ipad-retina-152x152.png">
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
 <link rel="canonical" href="https://mirnesglamocic.com/" />
-<!-- include picturefill -->
-<script>
-    // Picture element HTML5 shiv
-    document.createElement( "picture" );
-  </script>
-  <script src="./JS/picturefill.min.js" async></script>
 <!-- include fontawesome --> 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/c3fb2ab6eb.js" crossorigin="anonymous"></script>
-<!-- lightslider CSS-->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet"/>
 <!-- Custom CSS -->
 <link rel="stylesheet" href="./CSS/style.css" media="all"/>
 <link rel="stylesheet" href="./CSS/responsive.css" media="all"/>
 <!-- jQuery -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>
-	window.jQuery || document.write("<script src='./JS/jQuery-1.7.2.js'><\/script>");
+	window.jQuery || document.write("<script src='./JS/jQuery-1.7.2.min.js'><\/script>");
 </script>
+<!-- lightslider CSS-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet"/>
 <!-- lightslider js-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
-
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+<!-- lightbox css -->
+<link rel="stylesheet" type="text/css" href="./lightbox2/src/css/lightbox.min.css">
 <!--jQuery validate plugin -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-<!-- lightbox css -->
-<link rel="stylesheet" type="text/css" href="/lightbox2/src/css/lightbox.css">
 <noscript><p class="errorJS">To display the page correctly, please enable JavaScript in your browser!</p></noscript>
 <title><?php echo $title; ?></title>
-<!-- picturefill -->
-<script>
-    // Picture element HTML5 shiv
-    document.createElement( "picture" );
-  </script>
-  <script src="./JS/picturefill.min.js" async></script>
 <!-- responsive navigation -->
 <script>
 var navigation=$.noConflict();
@@ -108,5 +95,21 @@ window.onorientationchange = function() {
 
 };
 </script>
-
+<!-- picturefill -->
+<script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js" integrity="sha512-Nh/FthCqOFq56kGp1DsNb6GKK29iIv2ZJc7Fylln1WRrWpeE5LjSBWeAp61dkBASDxZT12aL9mZyIrhsAqgRpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+	window.jQuery || document.write("<script src='./JS/picturefill.min.js'><\/script>");
+  </script>
+<!-- lazy loading images -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
+<script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/polyfills.js"></script>
+<script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/webp-hero.bundle.js"></script>
+<script>
+ var webpMachine = new webpHero.WebpMachine();
+ webpMachine.polyfillDocument();
+</script>
 </head>
