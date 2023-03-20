@@ -11,7 +11,6 @@ class Skills extends ConnectSlider{
             $picturefill_img=$row['picturefill_img'];
 			$alt=$row['alt'];
 
-
             echo "<div class='tooltip'><div class='help_tip'><p>$help_tip</p></div></div><img decoding=\"async\" src=\"./images/$img\" srcset=\"./images/$picturefill_img\" sizes=\"100vw\" loading=\"lazy\" alt='$alt' class='skill'>";
             }
         }
