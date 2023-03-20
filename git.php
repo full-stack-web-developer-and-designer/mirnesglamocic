@@ -7,7 +7,7 @@ require_once 'core/init.php';
 <?php 
 	$title="Mirnes Glamočić | Version Control Certificates";
     //Check length of title for SEO (50-70 characters) - 48
-    echo "Length of title is " . strlen($title) . "characters long." . " ";
+    //echo "Length of title is " . strlen($title) . "characters long." . " ";
     $og_title="Mirnes Glamočić | Git Certificates";
 	$website_url="https://mirnesglamocic.com";
     $meta['description']="Mirnes Glamočić is an experienced Full-stack Web Developer with several years of experience in the complete process of web development and design.";
@@ -40,6 +40,8 @@ include 'inc/header.php';
 			<?php
 				$Git = new GitSlide();
 				$Git->renderSlider();
+				$Vcs = new VcsSlide();
+				$Vcs->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
