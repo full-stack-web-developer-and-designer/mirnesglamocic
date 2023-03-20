@@ -7,12 +7,12 @@ require_once 'core/init.php';
 <?php 
 	$title="Mirnes Glamočić | Certificates about Adobe CC Applications";
     //Check length of title for SEO (50-70 characters) - 60
-    echo "Length of title is " . strlen($title) . "characters long." . " ";
+    //echo "Length of title is " . strlen($title) . "characters long." . " ";
     $og_title="Mirnes Glamočić | Certificates about Adobe CC Applications";
 	$website_url="https://mirnesglamocic.com";
     $meta['description']="Mirnes Glamočić is an experienced Web Designer with several years of experience in the web design industry using various Adobe Tools.";
     //Check length of description for SEO (140-180 characters) - 135
-    echo "Length of description is " . strlen($meta['description']) . "characters long.";
+    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
 	$meta['keywords']="web design, web designer, adobe creative cloud, adobe cc, photoshop, illustrator, lightroom, bridge, animate, dreamweaver";
 	$og_image="./images/MirnesGlamocic.jpg";
 	$image_alt="Mirnes Glamočić";
