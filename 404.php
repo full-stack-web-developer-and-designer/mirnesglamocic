@@ -32,6 +32,3 @@
 	include 'inc/footer.php';
 	//end #footer
 ?>
-</div><!-- end #wrapper -->
-</body>
-</html>
