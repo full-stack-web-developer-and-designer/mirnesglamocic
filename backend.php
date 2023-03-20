@@ -61,6 +61,8 @@ include 'inc/header.php';
 			<?php
 				$PHP = new PHPSlide();
 				$PHP->renderSlider();
+				$PHPFrameworks = new PHPFrameworksSlide();
+				$PHPFrameworks->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
