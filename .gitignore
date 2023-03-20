@@ -4,11 +4,14 @@ classes/ConnectSlider.class.php
 classes/DB.class.php
 core/
 images/
+favicon/
 projects/
 services/
-JS/jQuery-1.7.2.js
+JS/jQuery-1.7.2.min.js
 JS/picturefill.min.js
+JS/lazyloading.min.js
 lightbox2/
+lightslider/
 package-lock.json
 package.json
 .BridgeLabelsAndRatings
