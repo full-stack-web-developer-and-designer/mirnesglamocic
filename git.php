@@ -19,7 +19,7 @@ require_once 'core/init.php';
 	include './inc/head.php';
 ?>
 </head>
-<body class="development seo">
+<body class="development">
 <?php
 include 'inc/header.php';
 ?>
