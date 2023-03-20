@@ -17,7 +17,7 @@ class ITA extends ConnectSlider{
             $part_4 =$row['part_4'];
             $part_5 =$row['part_5'];
 
-            echo "<h2>$title</h2><article id='PHP'><a href='./images/BIG/$picture_PHP' data-lightbox='image-group'><img src='images/$picture_PHP' alt=\"$alt_PHP\"></a></article><article id='WD'><a href='./images/BIG/$picture_WD' data-lightbox='image-group'><img src='images/$picture_WD' alt=\"$alt_WD\"></a></article><article id='mycert'><br class='none'><p>$part_1</p><br><p>$part_2</p><br><p>$part_3</p><br> <p>$part_4</p><br><p>$part_5</p>
+            echo "<h2>$title</h2><article id='PHP'><a href='./images/BIG/$picture_PHP' data-lightbox='image-group'><img src='images/$picture_PHP' alt=\"$alt_PHP\" loading=\"lazy\"></a></article><article id='WD'><a href='./images/BIG/$picture_WD' data-lightbox='image-group'><img src='images/$picture_WD' alt=\"$alt_WD\" loading=\"lazy\"></a></article><article id='mycert'><br class='none'><p>$part_1</p><br><p>$part_2</p><br><p>$part_3</p><br> <p>$part_4</p><br><p class='no_print'>$part_5</p>
             </article>";
             }
         }
