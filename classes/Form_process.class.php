@@ -5,9 +5,9 @@ $name_error = $email_error = $message_error = "";
 $error=false;
 //Load the config file
 $dbHost = "localhost:3306";
-$dbUser = "mirnesglamocic_sunyoung";
-$dbPassword = "m&102003&G";
-$dbName = "mirnesglamocic_cert";
+$dbUser = "mirnesgl_sunyoung";
+$dbPassword = "k%*HKdN@1byj";
+$dbName = "mirnesgl_cert";
 $dbCharset = "utf8";
 $pdo="";
 
@@ -84,7 +84,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$mail_contact->Body = $body;
 		
       if($mail_contact->send()) {
-		$mail_contact = "INSERT INTO mirnesglamocic_cert.contact_me (name, email, message) VALUES (:name, :email, :message)";
+		$mail_contact = "INSERT INTO mirnesgl_cert.contact_me (name, email, message) VALUES (:name, :email, :message)";
 		$stmt = $pdo->prepare($mail_contact);
 		$stmt->execute(['name' => $name, 'email' => $email, 'message' => $message]);
 		
