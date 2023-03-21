@@ -2,7 +2,7 @@
 class AngularSlide extends Slider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
-        $sql = "SELECT * FROM mirnesglamocic_cert.certifications WHERE skill='Angular' ORDER BY rand();";
+        $sql = "SELECT * FROM mirnesgl_cert.certifications WHERE skill='Angular' ORDER BY rand();";
         $stmt = $this->__connect()->query($sql);
 
 
