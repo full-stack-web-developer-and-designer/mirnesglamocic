@@ -46,7 +46,6 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <script src="https://kit.fontawesome.com/c3fb2ab6eb.js" crossorigin="anonymous"></script>
 <!-- Custom CSS -->
 <link rel="stylesheet" href="/CSS/style.css" media="all"/>
-<link rel="stylesheet" href="/CSS/responsive.css" media="all"/>
 <!-- jQuery -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>
