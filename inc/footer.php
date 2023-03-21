@@ -17,7 +17,7 @@ echo copyright(2023);
 <?php echo "<p class=\"barcode\">This page was printed from: ".$url;?></p>
 
 <script src="lightbox2/src/js/lightbox.min.js"></script>
-<script src='./JS/slider.js'></script>
+<script src='./JS/slider.min.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js" async></script>
 </body>
 </html>
