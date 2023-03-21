@@ -15,6 +15,13 @@ RewriteRule ^gitcertificates.html$ ./git.php [NC,L]
 RewriteRule ^dockercertificates.html$ ./docker.php [NC,L]
 RewriteRule ^linuxcertificates.html$ /linux.php [NC,L]
 #
+
+ErrorDocument 404 /Error404.html
+RewriteRule ^Error404.html$ /404.php [NC,L]
+Options -Indexes
+ErrorDocument 403 /Error403.html
+RewriteRule ^Error403.html$ /403.php [NC,L]
+#
 Options -Indexes
 # php -- BEGIN cPanel-generated handler, do not edit
 # This domain inherits the “PHP” package.
