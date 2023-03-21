@@ -2,7 +2,7 @@
 class Skills extends ConnectSlider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
-        $sql = "SELECT * FROM mirnesglamocic_cert.skills;";
+        $sql = "SELECT * FROM mirnesgl_cert.skills;";
         $stmt = $this->__connect()->query($sql);
        
         while($row = $stmt->fetch()) {
