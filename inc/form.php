@@ -1,7 +1,7 @@
 <h2>Contact</h2>
     <p id="contact_offer">Let's work together! I'm ready for new projects.</p>
 <form  spellcheck="false" autocomplete="off" id='contact_me' class='form ajax' name='contact_me' action='' method='POST'> 
-<h4 id="response" class="success"><!-- This will hold response from the server --></h4>
+<h3 id="response" class="success"><!-- This will hold response from the server --></h3>
             <div class="form-control InputIconBg">
                 <input type='text' value="<?php echo Input::get('name'); ?>" class='input username' name='name' id='name' placeholder="name"><label alt='name' class="valid" for="name">Name</label><i class="fas fa-user" aria-hidden="true"></i>
                 <span class="error"><?=$name_error; ?></span>
@@ -19,5 +19,6 @@
             </div><!-- end .form-control -->
             <input type="submit" id="submit" class="btn_submit" name="submit" value="SUBMIT QUERY"/>
 </form>
-<script src="./JS/form_color.js"></script>
-<script src="./JS/validate_me.js"></script>
+
+<script src="./JS/form_color.min.js"></script>
+<script src="./JS/validate_me.min.js"></script>
