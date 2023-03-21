@@ -27,8 +27,8 @@
   include './inc/header.php'; 
 ?>
 </header><!-- end #header -->
-<div id="main"><p><b><i>"The requested page does not exist!<br>Please check if you entered the address correctly!"</i></b></p></div>
+<div id="main"><p><b><i>&#34;The requested page does not exist!<br>Please check if you entered the address correctly!&#34;</i></b></p></div>
 <?php
-	include 'inc/footer.php';
+	include './inc/footer.php';
 	//end #footer
 ?>
