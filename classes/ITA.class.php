@@ -2,7 +2,7 @@
 class ITA extends ConnectSlider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
-        $sql = "SELECT * FROM mirnesglamocic_cert.ita_certificates;";
+        $sql = "SELECT * FROM mirnesgl_cert.ita_certificates;";
         $stmt = $this->__connect()->query($sql);
        
         while($row = $stmt->fetch()) {
