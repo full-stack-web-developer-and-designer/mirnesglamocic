@@ -14,10 +14,11 @@
 	include 'inc/head.php';
 ?>
 <style>
-.accomodation #main {margin: 0 0 10px 0;}
-#main p{text-align: center;}
+.error_page #main {margin: 40px 0;}
+#main p{text-align: center;
+		color: #B47814; }
 </style><!-- end #head -->
-<body class="accomodation">
+<body class="error_page">
 <div id="wrapper">
 <header id="header" class="cf">
 <?php 	
