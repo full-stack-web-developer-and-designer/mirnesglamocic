@@ -1,3 +1,6 @@
+<!--
+Wow! Welcome to my code. If you need a professional website don't hesitate to contact me: https://mirnesglamocic.com
+-->
 <head id="head">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
@@ -42,8 +45,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/c3fb2ab6eb.js" crossorigin="anonymous"></script>
 <!-- Custom CSS -->
-<link rel="stylesheet" href="./CSS/style.css" media="all"/>
-<link rel="stylesheet" href="./CSS/responsive.css" media="all"/>
+<link rel="stylesheet" href="/CSS/style.css" media="all"/>
+<link rel="stylesheet" href="/CSS/responsive.css" media="all"/>
 <!-- jQuery -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>
