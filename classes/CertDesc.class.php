@@ -2,7 +2,7 @@
 class CertDesc extends ConnectSlider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
-        $sql = "SELECT * FROM mirnesglamocic_cert.cert_desc;";
+        $sql = "SELECT * FROM mirnesgl_cert.cert_desc;";
         $stmt = $this->__connect()->query($sql);
        
         while($row = $stmt->fetch()) {
