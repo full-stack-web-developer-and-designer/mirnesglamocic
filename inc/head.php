@@ -26,6 +26,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta property="og:url" content="<?php echo $website_url;?>"/>
 <meta property="og:description" content="<?php echo $meta['og_description'];?>">
 <meta property="og:locale" content="en_us" />
+<meta property="fb:app_id" content="1568922700258839"/>
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="<?php echo $title;?>">
