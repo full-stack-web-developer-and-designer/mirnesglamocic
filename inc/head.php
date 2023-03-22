@@ -4,6 +4,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <head id="head">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
+<title><?php echo $title; ?></title>
 <!-- meta tags -->
 <meta name="robots" content="index,follow">
 <meta name="description" content="<?php echo $meta['description']; ?>"/>
@@ -14,23 +15,23 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <!-- Google / Search Engine Tags -->
 <meta itemprop="name" content="mirnesglamocic.com/">
 <meta itemprop="description" content="<?php echo $meta['description'];?>">
-<meta itemprop="image" content="<?php echo $og_image;?>">
+<meta itemprop="image" content="Mirnes Glamočić">
 <!-- Facebook (meta tags) -->
-<meta property="og:title" content="<?php echo $og_title;?>"/>
+<meta property="og:title" content="<?php echo $title;?>"/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="<?php echo $website_url;?>"/>
-<meta property="og:www.mirnesglamocic.com" content="mirnesglamocic"/>
-<meta property="fb:admins" content="Mirnes Glamočić"/>
-<meta property="og:description" content="<?php echo $meta['description'];?>">
-<meta property="og:locale" content="en" />
 <meta property="og:image" content="<?php echo $og_image;?>"/>
-<meta property="og:site_name" content="mirnesglamocic.com">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="<?php echo $og_image_alt;?>" />
+<meta property="og:url" content="<?php echo $website_url;?>"/>
+<meta property="og:description" content="<?php echo $meta['og_description'];?>">
+<meta property="og:locale" content="en_us" />
 <!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="mirnesglamocic.com">
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="<?php echo $title;?>">
 <meta name="twitter:description" content="<?php echo $meta['description'];?>">
-<meta name="twitter:image" content="<?php echo $og_image;?>">
-<meta name="twitter:image:alt" content="<?php //echo $image_alt;?>">
+<meta name="twitter:image:src" content="<?php echo $twitter_image;?>">
+<meta name="twitter:image:alt" content="<?php echo $og_image_alt;?>">
 <!-- include google fonts -->
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +62,6 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <!--jQuery validate plugin -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <noscript><p class="errorJS">To display the page correctly, please enable JavaScript in your browser!</p></noscript>
-<title><?php echo $title; ?></title>
 <!-- responsive navigation -->
 <script>
 var navigation=$.noConflict();
