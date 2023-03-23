@@ -8,14 +8,14 @@
 <head>
 <?php 
     $og_title="Mirnes Glamočić | Full-Stack Web Developer and Designer";
-    $meta['og_description']="He is an experienced Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
-	$og_url="https://mirnesglamocic.com";
+    $meta['og_description']="Full-Stack Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
     $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
     $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
 	$og_image_alt="Full-Stack Web Developer and Desiger Mirnes Glamočić";
+	$og_url="https://mirnesglamocic.com";
     $title="Mirnes Glamočić | Full-Stack Web Developer, UI/UX and Web Designer";
     $meta['description']="Mirnes Glamočić is an experienced Full-Stack Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
-	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, backend-development, backend development, back-end developer, backend developer, database development database developer, web design, web designer";
+	$meta['keywords']="portfolio, web development, web developer, front-end development, frontend development, front-end developer, frontend developer, backend-development, backend development, back-end developer, backend developer, database development database developer, web design, web designer";
 	include './inc/head.php';
 ?>
 <!-- include JS mockup slider for projects -->
