@@ -10,21 +10,24 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta name="description" content="<?php echo $meta['description']; ?>"/>
 <meta name="keywords" content="<?php echo $meta['keywords']; ?>"/>
 <meta name="theme-color" content="#0648a0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Mirnes Glamočić">
-<!-- Facebook (meta tags) -->
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="<?php echo $title;?>"/>
-<meta property="og:description" content="<?php echo $meta['og_description'];?>">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Facebook & Viber(meta tags) -->
+<meta name="title" property="og:title" content="<?php echo $fb_title;?>"/>
+<meta name="description" property="og:description" content="<?php echo $meta['og_description'];?>">
 <meta property="og:url" content="<?php echo $og_url;?>"/>
-<meta property="og:image:secure_url" itemprop="image" content="<?php echo $og_image;?>"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" itemprop="image" content="<?php echo $og_image;?>"/>
 <meta property="og:image:type" content="image/jpg">
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="<?php echo $og_image_alt;?>" />
-<meta property="og:site_name" content="<?php echo $title;?>">
+<meta property="og:site_name" content="<?php echo $linkedin_title;?>">
 <meta property="og:locale" content="en_us" />
 <meta property="fb:app_id" content="1568922700258839"/>
+<!-- LinkedIn, Whatsapp & KakaoTalk(meta tags) -->
+<meta property="og:title" content="<?php echo $linkedin_title;?>"/>
+<meta property="og:description" content="<?php echo $meta['og_description'];?>">
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="<?php echo $title;?>">
