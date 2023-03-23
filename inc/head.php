@@ -12,19 +12,17 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta name="theme-color" content="#955D00">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Mirnes Glamočić">
-<!-- Google / Search Engine Tags -->
-<meta itemprop="name" content="mirnesglamocic.com/">
-<meta itemprop="description" content="<?php echo $meta['description'];?>">
-<meta itemprop="image" content="Mirnes Glamočić">
 <!-- Facebook (meta tags) -->
-<meta property="og:title" content="<?php echo $title;?>"/>
 <meta property="og:type" content="website"/>
+<meta property="og:title" content="<?php echo $title;?>"/>
+<meta property="og:description" content="<?php echo $meta['og_description'];?>">
+<meta property="og:url" content="<?php echo $og_url;?>"/>
 <meta property="og:image" content="<?php echo $og_image;?>"/>
+<meta property="og:image:type" content="image/jpg">
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="<?php echo $og_image_alt;?>" />
-<meta property="og:url" content="<?php echo $website_url;?>"/>
-<meta property="og:description" content="<?php echo $meta['og_description'];?>">
+<meta property="og:site_name" content="<?php echo $title;?>">
 <meta property="og:locale" content="en_us" />
 <meta property="fb:app_id" content="1568922700258839"/>
 <!-- Twitter Meta Tags -->
@@ -33,6 +31,10 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta name="twitter:description" content="<?php echo $meta['description'];?>">
 <meta name="twitter:image:src" content="<?php echo $twitter_image;?>">
 <meta name="twitter:image:alt" content="<?php echo $og_image_alt;?>">
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="mirnesglamocic.com/">
+<meta itemprop="description" content="<?php echo $meta['description'];?>">
+<meta itemprop="image" content="Mirnes Glamočić">
 <!-- include google fonts -->
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
