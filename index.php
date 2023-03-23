@@ -7,14 +7,15 @@
 <html lang="en">
 <head>
 <?php 
-    $og_title="Mirnes Glamočić | Full-Stack Web Developer and Designer";
-    $meta['og_description']="Full-Stack Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
     $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
-    $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
-	$og_image_alt="Full-Stack Web Developer and Desiger Mirnes Glamočić";
+    $og_image_alt="Full-Stack Web Developer and Desiger Mirnes Glamočić";
 	$og_url="https://mirnesglamocic.com";
+    $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
     $title="Mirnes Glamočić | Full-Stack Web Developer, UI/UX and Web Designer";
-    $meta['description']="Mirnes Glamočić is an experienced Full-Stack Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
+    $meta['description']="Mirnes Glamočić is an experienced Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
+    $fb_title="Mirnes Glamočić | Web Developer and Designer";
+    $linkedin_title="Mirnes Glamočić | Web Developer, UI/UX and Web Designer";
+    $meta['og_description']="Mirnes Glamočić is an experienced Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
 	$meta['keywords']="portfolio, web development, web developer, front-end development, frontend development, front-end developer, frontend developer, backend-development, backend development, back-end developer, backend developer, database development database developer, web design, web designer";
 	include './inc/head.php';
 ?>
