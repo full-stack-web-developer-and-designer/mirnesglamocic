@@ -2,28 +2,20 @@
 	require_once 'core/init.php';
     $page_id=1;
     $result = Pages::get(1);
-        /*
-
-    */
     ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <?php 
-	$title="Mirnes Glamočić | Full-Stack Web Developer, UI/UX and Web Designer";
-    //Check length of title for SEO (50-70 characters) - 68
-    //echo "Length of title is " . strlen($title) . "characters long." . " ";
-    
     $og_title="Mirnes Glamočić | Full-Stack Web Developer and Designer";
-    //Check length of og title for SEO (50-60 characters) - 57
-    //echo "Length of og title is " . strlen($og_title) . "characters long." . " ";
-	$website_url="https://mirnesglamocic.com";
+    $meta['og_description']="He is an experienced Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
+	$og_url="https://mirnesglamocic.com";
+    $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
+    $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
+	$og_image_alt="Full-Stack Web Developer and Desiger Mirnes Glamočić";
+    $title="Mirnes Glamočić | Full-Stack Web Developer, UI/UX and Web Designer";
     $meta['description']="Mirnes Glamočić is an experienced Full-Stack Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
-    //Check length of description for SEO (140-180 characters) - 161
-    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
 	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, backend-development, backend development, back-end developer, backend developer, database development database developer, web design, web designer";
-	$og_image="./images/MirnesGlamocic.jpg";
-	$image_alt="Mirnes Glamočić";
 	include './inc/head.php';
 ?>
 <!-- include JS mockup slider for projects -->
