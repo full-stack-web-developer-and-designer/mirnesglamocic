@@ -9,7 +9,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta name="robots" content="index,follow">
 <meta name="description" content="<?php echo $meta['description']; ?>"/>
 <meta name="keywords" content="<?php echo $meta['keywords']; ?>"/>
-<meta name="theme-color" content="#955D00">
+<meta name="theme-color" content="#0648a0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Mirnes Glamočić">
 <!-- Facebook (meta tags) -->
@@ -17,7 +17,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta property="og:title" content="<?php echo $title;?>"/>
 <meta property="og:description" content="<?php echo $meta['og_description'];?>">
 <meta property="og:url" content="<?php echo $og_url;?>"/>
-<meta property="og:image" content="<?php echo $og_image;?>"/>
+<meta property="og:image:secure_url" itemprop="image" content="<?php echo $og_image;?>"/>
 <meta property="og:image:type" content="image/jpg">
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -67,38 +67,10 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <noscript><p class="errorJS">To display the page correctly, please enable JavaScript in your browser!</p></noscript>
 <!-- responsive navigation -->
 <script>
-var navigation=$.noConflict();
-	navigation(document).ready(function($) {
-		var respmenu = $('#respmenu');
-		var menu = $('#nav>ul');
-		$(respmenu).on('click', function(e){
-			e.preventDefault();
-			menu.toggleClass("open");
-		});
-		$(window).resize(function(){
-			var sirina = $(window).width();
-			if(sirina > 768 && menu.is(':hidden')){
-				menu.removeAttr('style');
-			}
-		});
-	});
+var navigation=$.noConflict();navigation(document).ready(function(n){var e=n("#respmenu"),i=n("#nav>ul");n(e).on("click",function(n){n.preventDefault(),i.toggleClass("open")}),n(window).resize(function(){n(window).width()>768&&i.is(":hidden")&&i.removeAttr("style")})});
 </script>
 <script defer>
-window.onorientationchange = function() { 
-
-    var orientation = window.orientation; 
-
-        switch(orientation) { 
-
-            case 0:
-
-            case 90:
-
-            case -90: window.location.reload(); 
-
-            break; } 
-
-};
+window.onorientationchange=function(){var a=window.orientation;switch(a){case 0:case 90:case -90:window.location.reload()}};
 </script>
 <!-- picturefill -->
 <script>
