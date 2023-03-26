@@ -2,7 +2,7 @@
 class FrontendSlide extends Slider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
-        $sql = "SELECT * FROM mirnesgl_cert.certifications WHERE skill='Frontend' AND class='LinkedIn preview' OR skill='Frontend WebDesign' ORDER BY rand();";
+        $sql = "SELECT * FROM mirnesgl_cert.certifications WHERE skill='Frontend' AND class='LinkedIn preview margin-top' OR skill='Frontend WebDesign' ORDER BY rand();";
         $stmt = $this->__connect()->query($sql);
 
         while($row = $stmt->fetch()) {
