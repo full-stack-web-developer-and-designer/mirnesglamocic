@@ -7,7 +7,7 @@ require_once 'core/init.php';
 <?php 
 	$fb_title="Frontend Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry.";
-	$og_url="https://mirnesglamocic.ba/frontendcertifikates.html";
+	$og_url="https://mirnesglamocic.com/frontendcertifikates.html";
 	$og_image="https://mirnesglamocic.com/images/frontend_og.jpg";
 	$og_image_alt="Frontend Certificates by Mirnes Glamočić";
 	$linkedin_title="Front-end, UI/UX and Web Design Certificates by Mirnes Glamočić";
