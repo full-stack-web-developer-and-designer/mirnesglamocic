@@ -5,17 +5,16 @@ require_once 'core/init.php';
 <html lang="en">
 <head>
 <?php 
-	$title="Mirnes Glamočić | Front-end Certificates";
-    //Check length of title for SEO (50-70 characters) - 42
-    //echo "Length of title is " . strlen($title) . "characters long." . " ";
-    $og_title="Mirnes Glamočić | Front-end Certificates";
-	$website_url="https://mirnesglamocic.com";
-    $meta['description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry. Also, he is experienced in fullstack web development and design.";
-    //Check length of description for SEO (140-180 characters) - 185
-    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
+	$fb_title="Mirnes Glamočić | Front-end Certificates";
+	$meta['og_description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry.";
+	$og_url="https://mirnesglamocic.ba/frontendcertifikates.html";
+	$og_image="https://mirnesglamocic.com/images/frontend_og.jpg";
+	$og_image_alt="Frontend Certificates by Mirnes Glamočić";
+	$linkedin_title="Front-end, UI/UX and Web Design Certificates by Mirnes Glamočić";
+	$title=$linkedin_title;
+	$meta['description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry. Also, he is experienced in fullstack web development and design.";
+	$twitter_image="https://mirnesglamocic.com/images/frontend_og.webp";
 	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, web design, web designer";
-	$og_image="./images/MirnesGlamocic.jpg";
-	$image_alt="Mirnes Glamočić";
 	include './inc/head.php';
 ?>
 </head>
