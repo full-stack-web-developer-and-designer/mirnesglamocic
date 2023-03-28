@@ -6,16 +6,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php 
+<?php
+    $fb_title="Mirnes Glamočić | Web Developer and Designer";
+    $meta['og_description']="Mirnes Glamočić is an experienced Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
+    $og_url="https://mirnesglamocic.com";
     $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
     $og_image_alt="Full-Stack Web Developer and Desiger Mirnes Glamočić";
-	$og_url="https://mirnesglamocic.com";
-    $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
+	$linkedin_title="Mirnes Glamočić | Web Developer, UI/UX and Web Designer";
     $title="Mirnes Glamočić | Full-Stack Web Developer, UI/UX and Web Designer";
     $meta['description']="Mirnes Glamočić is an experienced Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
-    $fb_title="Mirnes Glamočić | Web Developer and Designer";
-    $linkedin_title="Mirnes Glamočić | Web Developer, UI/UX and Web Designer";
-    $meta['og_description']="Mirnes Glamočić is an experienced Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
+    $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
 	$meta['keywords']="portfolio, web development, web developer, front-end development, frontend development, front-end developer, frontend developer, backend-development, backend development, back-end developer, backend developer, database development database developer, web design, web designer";
 	include './inc/head.php';
 ?>
@@ -289,28 +289,22 @@
             <article id="icons">
                 <p>Feel free to connect with me...</p>
                 <span class="icon_box">
-                    <a href="https://www.linkedin.com/in/mirnesglamocic/" target="_blank">
+                    <a href="https://www.linkedin.com/in/mirnesglamocic/" aria-label="visit my LinkedIN profile" target="_blank">
                     <i class="contact_icon fab fa-linkedin"></i>
                     </a>
                 </span>
                 <span class="icon_box">
-                    <a href="https://github.com/Full-Stack-Web-Developer-and-Designer/" target="_blank">
+                    <a href="https://github.com/Full-Stack-Web-Developer-and-Designer/" aria-label="visit my GitHub profile" target="_blank">
                         <i class="contact_icon fab fa-github"></i>
                     </a>
                 </span>
             </article>
         </div><!--end .wrapper-->
     </section> <!--contact-->
-    <a class="scroll-top" rel="nofollow"><i class="fa fa-arrow-up"></i></a>
-    
+<script>
+   jQuery(document).ready(function(){jQuery(function(){jQuery("#showall").click(function(){jQuery(".target").show()}),jQuery(".project").click(function(){jQuery(".target").hide(),jQuery("#div"+jQuery(this).attr("target")).show()})})});
+</script> 
 <?php
 	include_once './inc/footer.php';
 	//end #footer
 ?>
-<script src="./lightbox2/src/js/lightbox.js"></script>
-<script src='./JS/slider.js'></script>
-<script>
-   jQuery(document).ready(function(){jQuery(function(){jQuery("#showall").click(function(){jQuery(".target").show()}),jQuery(".project").click(function(){jQuery(".target").hide(),jQuery("#div"+jQuery(this).attr("target")).show()})})});
-</script>
-<script src="./JS/lazyloading.min.js"></script>
-</body>
