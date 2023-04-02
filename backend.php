@@ -5,13 +5,13 @@ require_once 'core/init.php';
 <html lang="en">
 <head>
 <?php
-	$fb_title="Mirnes Glamočić | Back-end Certificates";
+	$fb_title="Back-end Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced Backend Developer with several years of experience in the web development industry.";
 	$og_url="https://mirnesglamocic.com/backendcertifikates.html";
 	$og_image="https://mirnesglamocic.com/images/backend_og.jpg";
 	$og_image_alt="Backend Certificates by Mirnes Glamočić";
-	$linkedin_title="Back-end Certificates by Mirnes Glamočić";
-	$title=$linkedin_title;
+	$linkedin_title=$fb_title;
+	$title=$fb_title;
 	$meta['description']="Mirnes Glamočić is an experienced Back-end Developer with several years of experience in the web development industry. Also, he is experienced in fullstack web development and design.";
 	$twitter_image="https://mirnesglamocic.com/images/backend_og.webp";
 	$meta['keywords']="web development, web developer, back-end development, backend development, back-end developer, backend developer";
