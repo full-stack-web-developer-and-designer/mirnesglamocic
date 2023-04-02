@@ -256,7 +256,7 @@ a:active {
   margin: 46px auto 12px;
 }
 #about {
-  background-image: url('../images/developmentMirnes.jpg');
+  background-image: url('../images/developmentMirnes.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -353,8 +353,8 @@ a:active {
   text-align: center;
 }
 .tooltip {
-  position: relative;
   display: inline;
+  position: relative;
 }
 .tooltip:nth-of-type(4n+1) {
   display: block;
@@ -368,13 +368,15 @@ a:active {
   margin-bottom: 40px;
   border-radius: 5px;
 }
-.skill {
-  width: 240px;
+picture.skill {
+  display: inline-block;
   margin-right: 80px;
-  margin-bottom: 76px;
 }
-.skill:nth-of-type(4n) {
+picture.skill:nth-of-type(4n) {
   margin-right: 0;
+}
+img.skill{
+    margin-bottom: 76px;
 }
 /* tooltip for skills */
 .help_tip{
@@ -754,6 +756,7 @@ form .form-control textarea {
   left: 17px;
   top: 2px;
   font-size: 20px;
+  font-display: swap;
   color: #aaa;
   padding: 9px 8px;
   transition: 0.3s;
@@ -1183,7 +1186,7 @@ p.barcode {
   #headerCenter,
   #headerTopRight,
   #nav,
-  img.skill,
+  picture.skill,
   #hero,
   #about,
   #quotes,
@@ -1271,7 +1274,7 @@ p.barcode {
         background-attachment:inherit;
     }
     #about {
-        background-image: url("../images/developmentMirnes_@2x.jpg");
+        background-image: url("../images/developmentMirnes_@2x.webp");
     }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 3) {
@@ -1280,7 +1283,7 @@ p.barcode {
       background-attachment:inherit;
   }
   #about {
-      background-image: url("../images/developmentMirnes_@3x.jpg");
+      background-image: url("../images/developmentMirnes_@3x.webp");
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 4) {
@@ -1289,7 +1292,7 @@ p.barcode {
       background-attachment:inherit;
   }
   #about {
-      background-image: url("../images/developmentMirnes_@4x.jpg");
+      background-image: url("../images/developmentMirnes_@4x.webp");
   }
 }
 /* MEDIA QUERIES */
@@ -1429,7 +1432,7 @@ p.barcode {
         background-size: 1260px 835px;
     }
     #about {
-        background-image: url("../images/developmentMirnes_1260.jpg");
+        background-image: url("../images/developmentMirnes_1260.webp");
         background-size: 1260px 787px;
     }
     /* Form */
@@ -1441,9 +1444,11 @@ p.barcode {
     }
 }
 @media screen and (min-width: 1080px) and (max-width: 1260px) {
-    .skill {
-        width: 200px;
+    picture.skill {
         margin-right: 60px;
+    }
+    img.skill {
+        width: 200px;
         margin-bottom: 60px;
     }
 }
@@ -1651,16 +1656,18 @@ p.barcode {
     }
 }
 @media screen and (min-width: 1024px) and (max-width: 1079px) {
-    .skill {
-        width: 190px;
-        margin-right: 50px;
-        margin-bottom: 50px;
-    }
-    .skill:nth-of-type(3n){
+    picture.skill {
         margin-right: 50px;
     }
-    .skill:nth-of-type(12n){
+    picture.skill:nth-of-type(3n){
+        margin-right: 50px;
+    }
+    picture.skill:nth-of-type(12n){
         margin-right: 0px;
+    }
+    img.skill{
+        width: 190px;
+        margin-bottom: 50px;
     }
 }
 @media screen and (min-width: 1016px) and (max-width: 1118px) {
@@ -1688,16 +1695,23 @@ p.barcode {
     }
 }
 @media screen and (min-width: 993px) and (max-width: 1023px) {
-    .skill {
-        width: 180px;
+    picture.skill {
         margin-right: 60px;
+    }
+    img.skill{
+        width: 180px;
         margin-bottom: 60px;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    .skill {
-        width: 180px;
+    picture.skill {
         margin-right: 50px;
+    }
+    picture.skill:nth-of-type(4n) {
+        margin-right: 0;
+    }
+    img.skill{
+        width: 180px;
         margin-bottom: 50px;
     }
 }
@@ -1817,7 +1831,7 @@ p.barcode {
         background-size: 1023px 678px;
     }
     #about {
-        background-image: url("../images/developmentMirnes_1023.jpg");
+        background-image: url("../images/developmentMirnes_1023.webp");
         background-size: 1023px 639px;
         padding: 200px 0 40px;
     }
@@ -1881,13 +1895,10 @@ p.barcode {
     }
 }
 @media screen and (min-width: 768px) and (max-width: 959px){
-    .skill:nth-of-type(3n){
-        margin-right: 0;
-    }
-    .skill:nth-of-type(4n) {
+    picture.skill:nth-of-type(4n) {
         margin-right: 60px;
     }
-    .skill:nth-of-type(12n){
+    picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
 }
@@ -2156,11 +2167,13 @@ p.barcode {
       }
 }
 @media screen and (min-width: 730px) and (max-width: 767px) {
-    .skill:nth-of-type(4n) {
+    picture.skill {
+        margin-right: 40px;
+    }
+    picture.skill:nth-of-type(4n) {
         margin-right: 0;
     }
-    .skill {
-        margin-right: 40px;
+    img.skill{
         margin-bottom: 40px;
     }
 }
@@ -2180,7 +2193,7 @@ p.barcode {
     }
 }
 @media screen and (min-width: 541px) and (max-width: 767px) {
-    .skill {
+   img.skill {
         width: 140px;
     }
 }
@@ -2191,7 +2204,7 @@ p.barcode {
         padding: 103px 0;
     }
     #about {
-        background-image: url("../images/developmentMirnes_767.jpg");
+        background-image: url("../images/developmentMirnes_767.webp");
         background-size: 767px 597px;
         padding: 160px 0 20px;
     }
@@ -2249,19 +2262,21 @@ p.barcode {
     }
 }
 @media screen and (min-width: 562px) and (max-width: 729px) {
-    .skill:nth-of-type(4n) {
+    picture.skill {
         margin-right: 50px;
     }
-    .skill:nth-of-type(3n) {
+    picture.skill:nth-of-type(4n) {
+        margin-right: 50px;
+    }
+    picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    .skill {
-        margin-right: 50px;
+    img.skill{
         margin-bottom: 50px;
     }
 }
 @media screen and (min-width: 457px) and (max-width: 729px) {
-    .skill:nth-of-type(3n) {
+    picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
 }
@@ -2334,14 +2349,16 @@ p.barcode {
     }
 }
 @media screen and (min-width: 541px) and (max-width: 561px) {
-    .skill:nth-of-type(4n) {
+    picture.skill:nth-of-type(4n) {
         margin-right: 40px;
     }
-    .skill:nth-of-type(3n) {
+    picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    .skill {
+    picture.skill {
         margin-right: 40px;
+    }
+    img.skill{
         margin-bottom: 40px;
     }
 }
@@ -2352,15 +2369,17 @@ p.barcode {
     }
 }
 @media screen and (min-width: 509px) and (max-width: 540px) {
-    .skill:nth-of-type(4n) {
+    picture.skill:nth-of-type(4n) {
         margin-right: 40px;
     }
-    .skill:nth-of-type(3n) {
+    picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    .skill {
-        width: 130px;
+    picture.skill {
         margin-right: 40px;
+    }
+    img.skill{
+        width: 130px;
         margin-bottom: 40px;
     }
 }
@@ -2382,15 +2401,17 @@ p.barcode {
     }
 }
 @media screen and (min-width: 478px) and (max-width: 508px) {
-    .skill:nth-of-type(4n) {
+    picture.skill:nth-of-type(4n) {
         margin-right: 40px;
     }
-    .skill:nth-of-type(3n) {
+    picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    .skill {
-        width: 120px;
+    picture.skill {
         margin-right: 40px;
+    }
+    img.skill{
+        width: 120px;
         margin-bottom: 40px;
     }
 }
@@ -2488,15 +2509,18 @@ p.barcode {
     }
 }
 @media screen and (min-width: 457px) and (max-width: 477px) {
-    .skill:nth-of-type(4n) {
+    picture.skill:nth-of-type(4n) {
         margin-right: 30px;
     }
-    .skill:nth-of-type(3n) {
+    picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    .skill {
-        width: 120px;
+    picture.skill {
         margin-right: 30px;
+        
+    }
+    img.skill{
+        width: 120px;
         margin-bottom: 30px;
     }
 }
@@ -2546,17 +2570,19 @@ p.barcode {
      }
  }
 @media screen and (min-width: 409px) and (max-width: 456px) {
-    .skill:nth-of-type(3n) {
+    picture.skill:nth-of-type(3n) {
         margin-right: 50px;
     }
-    .skill:nth-of-type(6n),
-    .skill:nth-of-type(4n),
-    .skill:nth-of-type(2n) {
+    picture.skill:nth-of-type(6n),
+    picture.skill:nth-of-type(4n),
+    picture.skill:nth-of-type(2n) {
         margin-right: 0;
     }
-    .skill {
-        width: 120px;
+    picture.skill {
         margin-right: 50px;
+    }
+    img.skill {
+        width: 120px;
         margin-bottom: 50px;
     }
 }
@@ -2605,9 +2631,11 @@ p.barcode {
     }
 }
 @media screen and (min-width: 320px) and (max-width: 408px) {
-    .skill {
-        width: 120px;
+    picture.skill {   
         margin-right: 50px;
+    }
+    img.skill{
+        width: 120px;
         margin-bottom: 50px;
     }
     .form-control i {
@@ -2637,7 +2665,7 @@ p.barcode {
         padding: 0;
     }
     #about {
-        background-image: url("../images/developmentMirnes_408.jpg");
+        background-image: url("../images/developmentMirnes_408.webp");
         background-size: 408px 384px;
         padding: 0;
     }
@@ -2671,7 +2699,7 @@ p.barcode {
     #skills h2, #projects h2, #services h2 {
         margin-bottom: 30px;
     }
-    .skill:nth-of-type(2n) {
+    picture.skill:nth-of-type(2n) {
         margin-right: 0;
     }
     .menu {
@@ -2782,9 +2810,11 @@ p.barcode {
     }
 }
 @media screen and (min-width: 267px) and (max-width: 319px) {
-    .skill {
-        width: 105px;
+    picture.skill {
         margin-right: 30px;
+    }
+    img.skill{
+        width: 105px;
         margin-bottom: 30px;
     }
 }
@@ -2872,9 +2902,11 @@ p.barcode {
     article.project_desc h3 {
         padding-top: 1em;
     }
-    .skill {
-        width: 80%;
+    picture.skill {
         margin-right: auto;
+    }
+    img.skill{
+        width: 80%;
         margin-bottom: 30px;
     }
 }
@@ -2964,7 +2996,7 @@ screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 2){
         background-image: url("../images/development_1260_@2x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_1260_@2x.jpg");
+        background-image: url("../images/developmentMirnes_1260_@2x.webp");
     }
 }
 @media screen and (max-width: 1023px) and (min-device-pixel-ratio: 2),
@@ -2974,7 +3006,7 @@ screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 2) {
         background-attachment:inherit;
     }
     #about {
-        background-image: url("../images/developmentMirnes_1023_@2x.jpg");
+        background-image: url("../images/developmentMirnes_1023_@2x.webp");
     }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2){
@@ -2982,7 +3014,7 @@ screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 2) {
         background-image: url("../images/development_767_@2x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_767_@2x.jpg");
+        background-image: url("../images/developmentMirnes_767_@2x.webp");
     }
 }
 @media screen and (max-width: 408px) and (min-device-pixel-ratio: 2),
@@ -2991,7 +3023,7 @@ screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 2) {
         background-image: url("../images/development_408_@2x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_408_@2x.jpg");
+        background-image: url("../images/developmentMirnes_408_@2x.webp");
     }
 }
 /* CSS query device pixel ratio: 3 */
@@ -3001,7 +3033,7 @@ screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 3) {
         background-image: url("../images/development_1260_@3x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_1260_@3x.jpg");
+        background-image: url("../images/developmentMirnes_1260_@3x.webp");
     }
 }
 @media screen and (max-width: 1023px) and (min-device-pixel-ratio: 3),
@@ -3010,7 +3042,7 @@ screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 3) {
         background-image: url("../images/development_1023_@3x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_1023_@3x.jpg");
+        background-image: url("../images/developmentMirnes_1023_@3x.webp");
     }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 3),
@@ -3019,7 +3051,7 @@ screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) {
         background-image: url("../images/development_767_@3x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_767_@3x.jpg");
+        background-image: url("../images/developmentMirnes_767_@3x.webp");
     }
 }
 @media screen and (max-width: 408px) and (min-device-pixel-ratio: 3),
@@ -3029,7 +3061,7 @@ screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 3)
         background-image: url("../images/development_408_@3x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_408_@3x.jpg");
+        background-image: url("../images/developmentMirnes_408_@3x.webp");
     }
 }
 /* CSS query device pixel ratio: 4 */
@@ -3039,7 +3071,7 @@ screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 4) {
         background-image: url("../images/development_1260_@4x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_1260_@4x.jpg");
+        background-image: url("../images/developmentMirnes_1260_@4x.webp");
     }
 }
 @media screen and (max-width: 1023px) and (min-device-pixel-ratio: 4),
@@ -3048,7 +3080,7 @@ screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 4) {
         background-image: url("../images/development_1023_@4x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_1023_@4x.jpg");
+        background-image: url("../images/developmentMirnes_1023_@4x.webp");
     }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 4),
@@ -3057,7 +3089,7 @@ screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 4) {
         background-image: url("../images/development_767_@4x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_767_@4x.jpg");
+        background-image: url("../images/developmentMirnes_767_@4x.webp");
     }
 }
 @media screen and (max-width: 408px) and (min-device-pixel-ratio: 4),
@@ -3067,6 +3099,6 @@ screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 4)
         background-image: url("../images/development_408_@4x.webp");
     }
     #about {
-        background-image: url("../images/developmentMirnes_408_@4x.jpg");
+        background-image: url("../images/developmentMirnes_408_@4x.webp");
     }
 }
