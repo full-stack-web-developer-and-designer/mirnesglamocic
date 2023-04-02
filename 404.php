@@ -3,15 +3,18 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php	
-	$title="Error 404!";
-	$og_title="Error 404!";
-	$website_url="www.mirnesglamocic.com/";
-	$meta['description']="Error 404!";
+<?php
+	$fb_title="Error 404 - Page not found! ";
+	$meta['og_description']="";
+	$og_url="";
+	$og_image="https://mirnesglamocic.com/images/404_og.png.jpg";
+	$og_image_alt=$fb_title;
+	$linkedin_title=$fb_title;
+	$title=$fb_title;
+	$meta['description']="";
+	$twitter_image="https://mirnesglamocic.com/images/404_og.png.webp";
 	$meta['keywords']="";
-	$og_image="./images/error.404.png";
-	$image_alt="Error 404!";
-	include 'inc/head.php';	
+include './inc/head.php';
 ?>
 <style>
 .error_page #main {margin: 40px 0;}
