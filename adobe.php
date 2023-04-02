@@ -12,7 +12,7 @@ require_once 'core/init.php';
 	$og_image_alt="Adobe CC Certificates by Mirnes Glamočić";
 	$linkedin_title=$fb_title;
 	$title=$fb_title;
-	$meta['description']="Mirnes Glamočić is an experienced Web Designer with several years of experience in the web design industry using various Adobe Tools. Also, he is experienced in fullstack web development and design.";
+	$meta['description']="Mirnes Glamočić is an experienced Web Designer with several years of experience in the web design industry using various Adobe Tools. Also, he is experienced in full-stack web development and design.";
 	$twitter_image="https://mirnesglamocic.com/images/adobe_og.webp";
 	$meta['keywords']="web design, web designer, adobe creative cloud, adobe cc, photoshop, illustrator, lightroom, bridge, animate, dreamweaver";
 	include './inc/head.php';
