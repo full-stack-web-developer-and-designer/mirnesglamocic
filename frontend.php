@@ -12,7 +12,7 @@ require_once 'core/init.php';
 	$og_image_alt="Frontend Certificates by Mirnes Glamočić";
 	$linkedin_title="Front-end, UI/UX and Web Design Certificates by Mirnes Glamočić";
 	$title=$linkedin_title;
-	$meta['description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry. Also, he is experienced in fullstack web development and design.";
+	$meta['description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry. Also, he is experienced in full-stack web development and design.";
 	$twitter_image="https://mirnesglamocic.com/images/frontend_og.webp";
 	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, web design, web designer";
 	include './inc/head.php';
