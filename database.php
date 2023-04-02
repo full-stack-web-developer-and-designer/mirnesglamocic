@@ -5,18 +5,17 @@ require_once 'core/init.php';
 <html lang="en">
 <head>
 <?php 
-	$title="Mirnes Glamočić | Database Certificates";
-    //Check length of title for SEO (50-70 characters) - 42
-    //echo "Length of title is " . strlen($title) . "characters long." . " ";
-    $og_title="Mirnes Glamočić | Database Certificates";
-	$website_url="https://mirnesglamocic.com";
-    $meta['description']="Mirnes Glamočić is an experienced Database Developer with several years of experience in the database development using relational databases and MongoDB.";
-    //Check length of description for SEO (140-180 characters) - 155
-    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
-	$meta['keywords']="web development, database development, database developer, SQL Developer, SQL Development, MySQL Development, MySQL Developer, NoSQL Development, NoSQL Developer, MongoDB Developer, MongoDB Development";
-	$og_image="./images/MirnesGlamocic.jpg";
-	$image_alt="Mirnes Glamočić";
-	include './inc/head.php';
+$fb_title="Database Certificates by Mirnes Glamočić";
+$meta['og_description']="Mirnes Glamočić is an experienced Database Developer with several years of experience in the database development using relational and NoSQL databases.";
+$og_url="http://mirnesglamocic.ba/databasecertificates.html";
+$og_image="https://mirnesglamocic.com/images/database_og.jpg";
+$twitter_image="https://mirnesglamocic.com/images/database_og.webp";
+$og_image_alt=$fb_title;
+$linkedin_title=$fb_title;
+$title=$fb_title;
+$meta['description']="Mirnes Glamočić is an experienced Database Developer with several years of experience in the database development. Also, he is experienced in full-stack web development and design.";
+$meta['keywords']="web development, web developer, WordPress development, WordPress developer, web design, web designer";
+include './inc/head.php';
 ?>
 </head>
 <body class="development">
@@ -27,14 +26,6 @@ include 'inc/header.php';
 	<h1>Database Certificates</h1>
 
 	<section class="slider-container">
-	<div class="slideControls">
-            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
-              <i class="fa fa-angle-left"></i>
-             </a>
-            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
-              <i class="fa fa-angle-right"></i>
-            </a>
-      </div><!--end .slideControls -->
 		<ul class="content-slider">
 		<!-- slider box -->
 			<?php
@@ -47,14 +38,6 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-	<div class="slideControls">
-            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
-              <i class="fa fa-angle-left"></i>
-             </a>
-            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
-              <i class="fa fa-angle-right"></i>
-            </a>
-      </div><!--end .slideControls -->
 		<ul class="content-slider">
 		<!-- slider box -->
 			<?php
@@ -65,14 +48,6 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-	<div class="slideControls">
-            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
-              <i class="fa fa-angle-left"></i>
-             </a>
-            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
-              <i class="fa fa-angle-right"></i>
-            </a>
-      </div><!--end .slideControls -->
 		<ul class="content-slider">
 		<!-- slider box -->
 			<?php
