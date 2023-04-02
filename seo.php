@@ -4,36 +4,27 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php 
-	$title="Mirnes Glamočić | SEO Certificates";
-    //Check length of title for SEO (50-70 characters) - 36
-    //echo "Length of title is " . strlen($title) . "characters long." . " ";
-    $og_title="Mirnes Glamočić | SEO Certificates";
-	$website_url="https://mirnesglamocic.com";
-    $meta['description']="Mirnes Glamočić is an experienced SEO Analist with several years of experience in the web development and design.";
-    //Check length of description for SEO (140-180 characters) - 115
-    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
-	$meta['keywords']="web development, Search Engine Optimization, SEO";
-	$og_image="./images/MirnesGlamocic.jpg";
-	$image_alt="Mirnes Glamočić";
+<?php
+	$fb_title="SEO Certificates by Mirnes Glamočić";
+	$meta['og_description']="Mirnes Glamočić is an experienced Web Developer who specialize in optimizing search engine discovery and rankings.";
+	$og_url="https://mirnesglamocic.com/seocertificates.html";
+	$og_image="https://mirnesglamocic.com/images/seo_og.jpg";
+	$og_image_alt=$fb_title;
+	$linkedin_title=$fb_title;
+	$title=$fb_title;
+	$meta['description']="Mirnes Glamočić is an experienced Web Developer, UI/UX and Web Designer who specialize in optimizing search engine discovery and rankings. Also, he is experienced in full-stack web development and design.";
+	$twitter_image="https://mirnesglamocic.com/images/seo_og.webp";
+	$meta['keywords']="web development, Search Engine Optimization, SEO";	
 	include './inc/head.php';
 ?>
 </head>
-<body class="development seo">
+<body class="development progress">
 <?php
 include 'inc/header.php';
 ?>
-	<div class="wrapper">
-	<h1>SEO Certificates</h1>
+<div class="wrapper">
+  <h1>SEO Certificates</h1>
 	<section class="slider-container">
-	<div class="slideControls">
-            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
-              <i class="fa fa-angle-left"></i>
-             </a>
-            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
-              <i class="fa fa-angle-right"></i>
-            </a>
-      </div><!--end .slideControls -->
 		<ul class="content-slider">
 		<!-- slider box -->
 			<?php
