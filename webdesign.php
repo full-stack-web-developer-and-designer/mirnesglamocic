@@ -4,18 +4,17 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php 
-	$title="Mirnes Glamočić | Certificates about Web Services";
-    //Check length of title for SEO (50-70 characters) - 42
-    //echo "Length of title is " . strlen($title) . "characters long." . " ";
-    $og_title="Mirnes Glamočić | Certificates about Web Services";
-	$website_url="https://mirnesglamocic.com";
-    $meta['description']="Mirnes Glamočić is an experienced Web Designer with several years of experience in the web development and design industry. Also, he is experienced in fullstack web development.";
-    //Check length of description for SEO (140-180 characters) - 179
-    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
-	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, web design, web designer";
-	$og_image="./images/MirnesGlamocic.jpg";
-	$image_alt="Mirnes Glamočić";
+<?php
+	$fb_title="Web Design Certificates by Mirnes Glamočić";
+	$meta['og_description']="Mirnes Glamočić is an experienced Web Designer with several years of experience in the web development and design industry.";
+	$og_url="https://mirnesglamocic.com/webdesigncertificates.html";
+	$og_image="https://mirnesglamocic.com/images/webdesign_og.jpg";
+	$og_image_alt=$fb_title;
+	$linkedin_title=$fb_title;
+	$title=$fb_title;
+	$meta['description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry. Also, he is experienced in full-stack web development and design.";
+	$twitter_image="https://mirnesglamocic.com/images/webdesign_og.webp";
+	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, web design, web designer, ui design, ux design, ui/ux design";
 	include './inc/head.php';
 ?>
 </head>
@@ -27,14 +26,6 @@ include 'inc/header.php';
 	<h1>Web Design Certificates</h1>
 	
 	<section class="slider-container">
-	<div class="slideControls">
-            <a class="slidePrev arrow">
-              <i class="fa fa-angle-left"></i>
-             </a>
-            <a class="slideNext arrow">
-              <i class="fa fa-angle-right"></i>
-            </a>
-      </div><!--end .slideControls -->
 		<ul class="content-slider">
 		<!-- slider box -->
 			<?php
@@ -45,14 +36,6 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-	<div class="slideControls">
-            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
-              <i class="fa fa-angle-left"></i>
-             </a>
-            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
-              <i class="fa fa-angle-right"></i>
-            </a>
-      </div><!--end .slideControls -->
 		<ul class="content-slider">
 		<!-- slider box -->
 			<?php
@@ -63,14 +46,6 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 	
 	<section class="slider-container">
-	<div class="slideControls">
-            <a class="slidePrev arrow" href="#" aria-label="See the previous certificate">
-              <i class="fa fa-angle-left"></i>
-             </a>
-            <a class="slideNext arrow" href="#" aria-label="See the following certificate">
-              <i class="fa fa-angle-right"></i>
-            </a>
-      </div><!--end .slideControls -->
 		<ul class="content-slider">
 		<!-- slider box -->
 			<?php
