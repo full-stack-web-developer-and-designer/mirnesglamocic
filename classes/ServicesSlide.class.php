@@ -11,7 +11,7 @@ class ServicesSlide extends Slider{
             $title = $row['title'];
             $description = $row['description'];
             echo "<article class='services'>
-                    <img src=\"./services/$service_img\" alt=\"$service_alt\" class='usluge'><h4>$title</h4><p>$description</p>
+                    <img src=\"./services/$service_img\" alt=\"$service_alt\" loading=\"lazy\" class='usluge'><h4>$title</h4><p>$description</p>
                   </article>";
             }
         }
