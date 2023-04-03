@@ -7,7 +7,7 @@ require_once 'core/init.php';
 <?php 
 	$fb_title="Linux Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced Linux Developer with many years of experience in various operating systems.";
-	$og_url="http://mirnesglamocic.ba/databasecertificates.html";
+	$og_url="https://mirnesglamocic.ba/linuxcertificates.html";
 	$og_image="https://mirnesglamocic.com/images/linux_og.jpg";
 	$twitter_image="https://mirnesglamocic.com/images/linux_og.webp";
 	$og_image_alt=$fb_title;
