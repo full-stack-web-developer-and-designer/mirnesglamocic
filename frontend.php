@@ -98,8 +98,8 @@ include 'inc/header.php';
 			<?php
 				$WebDevelopment = new WebDevelopmentSlide();
 				$WebDevelopment->renderSlider();
-				$ViewSource = new ViewSourceSlide();
-				$ViewSource->renderSlider();
+				$Viewsource = new ViewsourceSlide();
+				$Viewsource->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
