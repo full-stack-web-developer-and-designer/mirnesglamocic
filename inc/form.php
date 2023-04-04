@@ -20,5 +20,5 @@
             <input type="submit" id="submit" class="btn_submit" name="submit" value="SUBMIT QUERY"/>
 </form>
 
-<script src="./JS/form_color.min.js"></script>
-<script src="./JS/validate_me.min.js"></script>
+<script src="https://mirnesglamocic.com/JS/form_color.min.js"></script>
+<script src="https://mirnesglamocic.com/JS/validate_me.min.js"></script>
