@@ -58,7 +58,10 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <link rel="stylesheet" type="text/css" href="./lightbox2/src/css/lightbox.min.css">
 <!-- include fontawesome  -->
 <link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" onload="this.rel='stylesheet'" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
+<!-- include fontawesome if cdn fails -->
+<script>
+window.onorientationchange=function(){var a=window.orientation;switch(a){case 0:case 90:case -90:window.location.reload()}};
+</script>
 <script src="https://kit.fontawesome.com/c3fb2ab6eb.js" crossorigin="anonymous"></script>
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -76,6 +79,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 	window.jQuery || document.write("<script src='./JS/picturefill.min.js'><\/script>");
 </script>
 <!-- lazy loading images -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
 <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/polyfills.js"></script>
 <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/webp-hero.bundle.js"></script>
 <script>

@@ -19,12 +19,14 @@ echo copyright(2023);
 <script>
 var navigation=$.noConflict();navigation(document).ready(function(n){var e=n("#respmenu"),i=n("#nav>ul");n(e).on("click",function(n){n.preventDefault(),i.toggleClass("open")}),n(window).resize(function(){n(window).width()>768&&i.is(":hidden")&&i.removeAttr("style")})});
 </script>
-<script defer>
-window.onorientationchange=function(){var a=window.orientation;switch(a){case 0:case 90:case -90:window.location.reload()}};
-</script>
-<!-- include fontawesome if cdn fails -->
+<!-- lightslider js-->
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
-window.onload=function(){if(!window.FontAwesome){var e=document.createElement("script");e.type="text/javascript",e.src="/JS/fontawesome.min.js",document.body.appendChild(e)}};
+	window.jQuery || document.write("<script src='./JS/jquery-1.9.1.min.js'><\/script>");
+</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+<script>
+	window.jQuery || document.write("<script src='./JS/lightslider.min.js'><\/script>");
 </script>
 <!--jQuery validate plugin -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
