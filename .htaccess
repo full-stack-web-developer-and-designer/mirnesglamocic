@@ -1,4 +1,4 @@
-#compress files
+# Compress files
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/html
 AddOutputFilterByType DEFLATE text/css
@@ -95,9 +95,3 @@ Options -Indexes
   ExpiresByType application/pdf "access plus 1 year"
   ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
 </IfModule>
-
-
-
-
-
-
