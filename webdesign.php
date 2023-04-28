@@ -3,7 +3,6 @@ require_once 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php
 	$fb_title="Web Design Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced Web Designer with several years of experience in the web development and design industry.";
@@ -17,7 +16,6 @@ require_once 'core/init.php';
 	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, web design, web designer, ui design, ux design, ui/ux design";
 	include './inc/head.php';
 ?>
-</head>
 <body class="development design">
 <?php
 include 'inc/header.php';

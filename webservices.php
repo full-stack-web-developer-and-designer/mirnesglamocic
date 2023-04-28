@@ -3,7 +3,6 @@ require_once 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php
 	$fb_title="Web Services Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić has experience in various web services for Web and Rich Internet Applications.";
@@ -17,7 +16,6 @@ require_once 'core/init.php';
 	$meta['keywords']="linux, ubuntu, debian, centos, fedora, windows, web development, software development, operating systems";
 	include './inc/head.php';
 ?>
-</head>
 <body class="development">
 <?php
 include 'inc/header.php';
