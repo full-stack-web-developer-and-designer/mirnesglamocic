@@ -3,7 +3,6 @@ require_once 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php 
 	$fb_title="Adobe CC Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced Web Designer with several years of experience in the web design industry using various Adobe Tools.";
@@ -17,7 +16,6 @@ require_once 'core/init.php';
 	$meta['keywords']="web design, web designer, adobe creative cloud, adobe cc, photoshop, illustrator, lightroom, bridge, animate, dreamweaver";
 	include './inc/head.php';
 ?>
-</head>
 <body class="development">
 <?php
 include 'inc/header.php';

@@ -3,7 +3,6 @@ require_once 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php
 	$fb_title="Docker Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced web developer with extensive experience to build new applications using Docker.";
@@ -17,7 +16,6 @@ require_once 'core/init.php';
 	$meta['keywords']="web development, web developer, docker development, docker, container platforms";
 	include './inc/head.php';
 ?>
-</head>
 <body class="development progress">
 <?php
 include 'inc/header.php';

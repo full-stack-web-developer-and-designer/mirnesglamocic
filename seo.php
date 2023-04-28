@@ -3,7 +3,6 @@ require_once 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php
 	$fb_title="SEO Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced Web Developer who specialize in optimizing search engine discovery and rankings.";
@@ -17,7 +16,6 @@ require_once 'core/init.php';
 	$meta['keywords']="web development, Search Engine Optimization, SEO";	
 	include './inc/head.php';
 ?>
-</head>
 <body class="development progress">
 <?php
 include 'inc/header.php';

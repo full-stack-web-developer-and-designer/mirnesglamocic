@@ -3,7 +3,6 @@ require_once 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php 
 	$fb_title="UI/UX Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced UX/UI Designer with several years of experience in UX/UI Design.";
@@ -17,7 +16,6 @@ require_once 'core/init.php';
 	$meta['keywords']="web design, web designer, UX design, UX designer, UI Design, UI Designer, Interaction Design, Interaction Designer";
 	include './inc/head.php';
 ?>
-</head>
 <body class="development">
 <?php
 include 'inc/header.php';

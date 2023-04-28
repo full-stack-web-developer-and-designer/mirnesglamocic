@@ -3,7 +3,6 @@ require_once 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php
 	$fb_title="Back-end Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced Backend Developer with several years of experience in the web development industry.";
@@ -17,7 +16,6 @@ require_once 'core/init.php';
 	$meta['keywords']="web development, web developer, back-end development, backend development, back-end developer, backend developer";
 	include './inc/head.php';
 ?>
-</head>
 <body class="development">
 <?php
 include 'inc/header.php';

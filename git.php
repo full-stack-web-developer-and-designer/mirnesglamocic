@@ -3,7 +3,6 @@ require_once 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php
 	$fb_title="Version Control Certificates by Mirnes Glamočić";
 	$meta['og_description']="Mirnes Glamočić is an experienced Full-stack Web Developer with with extensive experience using GIT.";
@@ -17,7 +16,6 @@ require_once 'core/init.php';
 	$meta['keywords']="web development, web developer, version control, version control system, git, github, bitbucket";
 	include './inc/head.php';
 ?>
-</head>
 <body class="development">
 <?php
 include 'inc/header.php';
