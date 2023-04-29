@@ -26,13 +26,12 @@ BrowserMatch ^Mozilla/4 gzip-only-text/html
 BrowserMatch ^Mozilla/4\.0[678] no-gzip
 BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
-
 # Redirect to HTTPS
-RewriteEngine On
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteEngine On
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# RewriteCond %{HTTPS} off
+# RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Change file names
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -50,7 +49,6 @@ RewriteRule ^gitcertificates.html$ ./git.php [NC,L]
 RewriteRule ^dockercertificates.html$ ./docker.php [NC,L]
 RewriteRule ^linuxcertificates.html$ /linux.php [NC,L]
 #
-
 ErrorDocument 404 /Error404.html
 RewriteRule ^Error404.html$ /404.php [NC,L]
 Options -Indexes
@@ -58,14 +56,9 @@ ErrorDocument 403 /Error403.html
 RewriteRule ^Error403.html$ /403.php [NC,L]
 #
 Options -Indexes
-# php -- BEGIN cPanel-generated handler, do not edit
-# This domain inherits the “PHP” package.
-# php -- END cPanel-generated handler, do not edit
-
 # Save cache
 <IfModule mod_expires.c>
   ExpiresActive On
-
  # Images
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
@@ -73,24 +66,20 @@ Options -Indexes
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
-
   # Video
   ExpiresByType video/webm "access plus 1 year"
   ExpiresByType video/mp4 "access plus 1 year"
   ExpiresByType video/mpeg "access plus 1 year"
-
   # Fonts
   ExpiresByType font/ttf "access plus 1 year"
   ExpiresByType font/otf "access plus 1 year"
   ExpiresByType font/woff "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType application/font-woff "access plus 1 year"
-
   # CSS, JavaScript
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType text/javascript "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
-
   # Others
   ExpiresByType application/pdf "access plus 1 year"
   ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
