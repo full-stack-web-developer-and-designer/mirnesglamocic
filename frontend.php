@@ -54,7 +54,16 @@ include 'inc/header.php';
 			?>
 		</ul>
 	</section><!--end .slider-container-->
-
+	
+	<section class="slider-container">
+		<ul class="content-slider">
+		<!-- slider box -->
+			<?php
+				$cssnew = new CSSnewSlide();
+				$cssnew->renderSlider();
+			?>
+		</ul>
+	</section><!--end .slider-container-->
 	<section class="slider-container">
 		<ul class="content-slider">
 		<!-- slider box -->
