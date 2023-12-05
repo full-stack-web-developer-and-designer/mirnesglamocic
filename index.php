@@ -18,6 +18,128 @@
 	$meta['keywords']="portfolio, web development, web developer, front-end development, frontend development, front-end developer, frontend developer, backend-development, backend development, back-end developer, backend developer, database development database developer, web design, web designer, the best web developer, the best web designer";
 	include './inc/head.php';
 ?>
+    <?php
+        $rnd = rand(1,2);
+    ?>
+<style type="text/css">
+    /* Hero img */
+    #hero.lazy {
+    background-image: none;
+    background-color: #F1F1FA;
+    }
+    #hero {
+        background: url("/images/bg<?php echo $rnd ?>.webp");
+        background-attachment: fixed;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 180px 0;
+        text-align: center;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1260px) {
+        #hero {
+            background-image: url("/images/bg1260_<?php echo $rnd ?>.webp");
+            background-size: 1260px 840px;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        #hero {
+            background-image: url("/images/bg1023_<?php echo $rnd ?>.webp");
+            background-size: 1023px 682px;
+        }
+    }
+    @media screen and (min-width: 409px) and (max-width: 767px) {
+        #hero {
+            background-image: url("/images/bg767_<?php echo $rnd ?>.webp");
+            background-size: 767px 511px;
+            background-attachment: inherit;
+            padding: 10px;
+        }
+    }
+    @media screen and (max-width: 408px) {
+        #hero {
+            background-image: url("/images/bg408_<?php echo $rnd ?>.webp");
+            background-size: 408px 600px;
+            background-attachment: inherit;
+            padding: 70px 20px;
+        }
+        h1 { padding: 25px;}
+    }
+    /* CSS query device pixel ratio: 2 */
+    @media screen and (max-width: 1260px) and (min-device-pixel-ratio: 2),
+    screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 2){
+        #hero {
+            background-image: url("/images/bg<?php echo $rnd ?>_1260@2x.webp");
+        }
+    }
+    @media screen and (max-width: 1023px) and (min-device-pixel-ratio: 2),
+    screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2) {
+        #hero {
+            background-image: url("/images/bg<?php echo $rnd ?>_1023@2x.webp");
+        }
+    }
+    @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2){
+        #hero {
+            background-image: url("/images/bg<?php echo $rnd ?>_767@2x.webp");
+        }
+    }
+    @media screen and (max-width: 408px) and (min-device-pixel-ratio: 2),
+    screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 2) {
+        #hero {
+            background-image: url("/images/bg<?php echo $rnd ?>_408@2x.webp");
+        }
+    }
+    /* CSS query device pixel ratio: 3 */
+@media screen and (max-width: 1260px) and (min-device-pixel-ratio: 3),
+screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 3) {
+    #hero {
+        background-image: url("/images/bg<?php echo $rnd ?>_1260@3x.webp");
+    }
+}
+@media screen and (max-width: 1023px) and (min-device-pixel-ratio: 3),
+screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 3) {
+    #hero {
+        background-image: url("/images/bg<?php echo $rnd ?>_1023@3x.webp");
+    }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 3),
+screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) {
+    #hero {
+        background-image: url("/images/bg<?php echo $rnd ?>_767@3x.webp");
+    }
+}
+@media screen and (max-width: 408px) and (min-device-pixel-ratio: 3),
+screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 3) {
+    #hero {
+        background-image: url("/images/bg<?php echo $rnd ?>_408@3x.webp");
+    }
+}
+/* CSS query device pixel ratio: 4 */
+@media screen and (max-width: 1260px) and (min-device-pixel-ratio: 4),
+screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 4) {
+    #hero {
+        background-image: url("/images/bg<?php echo $rnd ?>_1260@4x.webp");
+    }
+}
+@media screen and (max-width: 1023px) and (min-device-pixel-ratio: 4),
+screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 4) {
+    #hero {
+        background-image: url("/images/bg<?php echo $rnd ?>_1023@4x.webp");
+    }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 4),
+screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 4) {
+    #hero {
+        background-image: url("/images/bg<?php echo $rnd ?>_767@4x.webp");
+    }
+}
+@media screen and (max-width: 408px) and (min-device-pixel-ratio: 4),
+screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 4) {
+    #hero {
+        background-image: url("/images/bg<?php echo $rnd ?>_408@4x.webp");
+    }
+}
+</style>
 <!-- include JS mockup slider for projects -->
 <script src="./JS/project_slider.min.js" defer></script>
 <body id="home">
@@ -35,7 +157,7 @@
             </header>
         </div>
     </section>
-    <section id="LinkedIn" aria-label="Certificates by LinkedIn and Pluralsight">
+    <section id="LinkedIn" aria-label="My certificates by LinkedIn and Pluralsight">
         <div class="wrapper">
         <?php
 				$CertDesc = new CertDesc();
@@ -57,7 +179,7 @@
     <section id="projects" aria-label="Projects">
         <div class="wrapper">
             <h2>Projects</h2>
-            <div class="menu">
+            <div class="menu" aria-label="menu">
                 <a id="showall" href="#" aria-label="View all my projects"></a>
                 <a class="project" target="1" aria-label="Web sites">Web sites</a> 
                 <a class="project" target="2" aria-label="Image editing">Image editing</a> 
@@ -66,7 +188,8 @@
             </div>
             <div class="taget_box">
                 <div id="div1" class="target">
-                    <section class="project_complete"  aria-label="Projects">
+
+                    <section class="project_complete"  aria-label="Project visit-neum.com">
                         <article class="project_mockup" data-carousel><!--carousel-->
                             <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                             <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -146,12 +269,149 @@
                     </section>
 
                     <section class="project_complete">
-                     <article class="project_mockup" data-carousel><!--carousel-->
+                        <article class="project_mockup" data-carousel><!--carousel-->
                          <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
                          <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
                              <ul class="slides" data-slides><!-- slider inner-->
                              <li class='slide' data-active>
+                                 <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_KR_OliveOil_600.webp, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_600@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_600@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_600@4x.webp 4x" width="600" height="392" loading="lazy" media="(min-width: 600px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_KR_OliveOil_500.webp, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_500@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_500@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_500@4x.webp 4x" width="500" height="326" loading="lazy" media="(min-width: 520px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_KR_OliveOil_408.webp, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_408@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_408@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_408@4x.webp 4x" width="408" height="266" loading="lazy" media="(min-width: 408px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_KR_OliveOil_300.webp, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_300@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_300@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_KR_OliveOil_300@4x.webp 4x" width="300" height="196" loading="lazy" media="(min-width: 100px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img srcset="https://mirnesglamocic.com/projects/mockup_KR_OliveOil.jpg" alt="Mockup by Olive Oil Matić">
+                                 </picture>
+                                 </li>
+                             <li class='slide'>
+                             <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_EN_OliveOil_600.webp, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_600@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_600@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_600@4x.webp 4x" width="600" height="391" loading="lazy" media="(min-width: 600px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_EN_OliveOil_500.webp, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_500@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_500@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_500@4x.webp 4x" width="500" height="326" loading="lazy" media="(min-width: 520px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_EN_OliveOil_408.webp, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_408@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_408@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_408@4x.webp 4x" width="408" height="266" loading="lazy" media="(min-width: 408px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_EN_OliveOil_300.webp, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_300@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_300@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_EN_OliveOil_300@4x.webp 4x" width="300" height="196" loading="lazy" media="(min-width: 100px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img srcset="https://mirnesglamocic.com/projects/mockup_EN_OliveOil.jpg" alt="Mockup by Olive Oil Matić">
+                                 </picture>
+                                 </li>
+                                 <li class='slide'>
+                                 <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_PL_OliveOil_600.webp, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_600@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_600@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_600@4x.webp 4x" width="600" height="391" loading="lazy" media="(min-width: 600px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_PL_OliveOil_500.webp, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_500@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_500@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_500@4x.webp 4x" width="500" height="326" loading="lazy" media="(min-width: 520px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_PL_OliveOil_408.webp, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_408@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_408@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_408@4x.webp 4x" width="408" height="266" loading="lazy" media="(min-width: 408px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_PL_OliveOil_300.webp, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_300@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_300@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_PL_OliveOil_300@4x.webp 4x" width="300" height="196" loading="lazy" media="(min-width: 100px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img srcset="https://mirnesglamocic.com/projects/mockup_PL_OliveOil.jpg" alt="Mockup by Olive Oil Matić">
+                                 </picture>
+                                 </li>
+                                 <li class='slide'>
+                                 <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_HR_OliveOil_600.webp, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_600@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_600@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_600@4x.webp 4x" width="600" height="391" loading="lazy" media="(min-width: 600px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_HR_OliveOil_500.webp, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_500@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_500@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_500@4x.webp 4x" width="500" height="326" loading="lazy" media="(min-width: 520px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_HR_OliveOil_408.webp, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_408@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_408@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_408@4x.webp 4x" width="408" height="266" loading="lazy" media="(min-width: 408px)">
+                                    <source srcset="https://mirnesglamocic.com/projects/mockup_HR_OliveOil_300.webp, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_300@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_300@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_HR_OliveOil_300@4x.webp 4x" width="300" height="196" loading="lazy" media="(min-width: 100px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img srcset="https://mirnesglamocic.com/projects/mockup_HR_OliveOil.jpg" alt="Mockup by Olive Oil Matić">
+                                 </picture>
+                                 </li>
+                             </ul>
+                             <ul class="skills wp elementor">
+                             <li class="project_olive">Skills</li><li>WordPress</li><li>Elementor</li><li>Polylang</li><li>Yoast SEO</li><li>Contact Form 7</li><li>WP-Optimize</li><li>HTML</li><li>CSS</li>
+                            </ul>
+                        </article> 
+                        <article class="project_desc">
+                            <h3>Multilingual WordPress website for an Olive Oil company</h3>
+                            <p>This project contains a  responsive multilingual WordPress website  for an olive oil company created in English, Korean, Poland and Croatian language. It's created using WordPress with Elementor and Polylang plugins.</p>
+                            <p>Also, contains some other plugins such as Contact Form 7 (manage flexible contact forms), Multilingual Contact Form 7 with Polylang (Enables translation and use of the same forms in different languages of Contact Form 7 forms with Polylang), Yoast SEO (helps website perform better in search engines like Google) and WP-Optimize (cleans the database, compresses images and caches pages).</p>
+                            <p>It's used custom CSS for the header and footer, as well as JavaScript for the Copyright info in the footer. At the same time, it's installed the SSL certificate, redirected all traffic to https in the .htaccess file, as well used gzip compression and saved cache for all file types in user browsers.</p>
+                            <p><a href="https://oliveoilmatic.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
+                            </article>
+                        </section>
+
+                        <section class="project_complete">
+                            <article class="project_mockup" data-carousel><!--carousel-->
+                                <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                                <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                                    <ul class="slides" data-slides><!-- slider inner-->
+                                    <li class='slide' data-active>
+                                    <picture>
+                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumResp_600.webp, https://mirnesglamocic.com/projects/mockup_terradiumResp_600@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumResp_600@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumResp_600@4x.webp 4x" width="600" height="392" loading="lazy" media="(min-width: 600px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumResp_500.webp, https://mirnesglamocic.com/projects/mockup_terradiumResp_500@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumResp_500@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumResp_500@4x.webp 4x" width="500" height="326" loading="lazy" media="(min-width: 520px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumResp_408.webp, https://mirnesglamocic.com/projects/mockup_terradiumResp_408@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumResp_408@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumResp_408@4x.webp 4x" width="408" height="266" loading="lazy" media="(min-width: 408px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumResp_300.webp, https://mirnesglamocic.com/projects/mockup_terradiumResp_300@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumResp_300@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumResp_300@4x.webp 4x" width="300" height="196" loading="lazy" media="(min-width: 100px)">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img srcset="https://mirnesglamocic.com/projects/mockup_terradiumResp.jpg" alt="Mockup by SQL Quizzer">
+                                    </picture>
+                                    </li>
+                                <li class='slide'>
                                 <picture>
+                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumAbout_600.webp, https://mirnesglamocic.com/projects/mockup_terradiumAbout_600@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumAbout_600@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumAbout_600@4x.webp 4x" width="600" height="391" loading="lazy" media="(min-width: 600px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumAbout_500.webp, https://mirnesglamocic.com/projects/mockup_terradiumAbout_500@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumAbout_500@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumAbout_500@4x.webp 4x" width="500" height="326" loading="lazy" media="(min-width: 520px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumAbout_408.webp, https://mirnesglamocic.com/projects/mockup_terradiumAbout_408@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumAbout_408@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumAbout_408@4x.webp 4x" width="408" height="266" loading="lazy" media="(min-width: 408px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumAbout_300.webp, https://mirnesglamocic.com/projects/mockup_terradiumAbout_300@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumAbout_300@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumAbout_300@4x.webp 4x" width="300" height="196" loading="lazy" media="(min-width: 100px)">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img srcset="https://mirnesglamocic.com/projects/mockup_terradiumAbout.jpg" alt="Mockup by Terradium">
+                                    </picture>
+                                    </li>
+                                    <li class='slide'>
+                                    <picture>
+                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_600.webp, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_600@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_600@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_600@4x.webp 4x" width="600" height="391" loading="lazy" media="(min-width: 600px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_500.webp, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_500@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_500@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_500@4x.webp 4x" width="500" height="326" loading="lazy" media="(min-width: 520px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_408.webp, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_408@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_408@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_408@4x.webp 4x" width="408" height="266" loading="lazy" media="(min-width: 408px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_300.webp, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_300@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_300@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumDesign-service_300@4x.webp 4x" width="300" height="196" loading="lazy" media="(min-width: 100px)">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img srcset="https://mirnesglamocic.com/projects/mockup_terradiumDesign-service.jpg" alt="Mockup by Terradium">
+                                    </picture>
+                                    </li>
+                                    <li class='slide'>
+                                    <picture>
+                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumSolutions_600.webp, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_600@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_600@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_600@4x.webp 4x" width="600" height="391" loading="lazy" media="(min-width: 600px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumSolutions_500.webp, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_500@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_500@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_500@4x.webp 4x" width="500" height="326" loading="lazy" media="(min-width: 520px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumSolutions_408.webp, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_408@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_408@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_408@4x.webp 4x" width="408" height="266" loading="lazy" media="(min-width: 408px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumSolutions_300.webp, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_300@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_300@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumSolutions_300@4x.webp 4x" width="300" height="196" loading="lazy" media="(min-width: 100px)">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img srcset="https://mirnesglamocic.com/projects/mockup_terradiumSolutions.jpg" alt="Mockup by Terradium">
+                                    </picture>
+                                    </li>
+                                    <li class='slide'>
+                                    <picture>
+                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumContact_600.webp, https://mirnesglamocic.com/projects/mockup_terradiumContact_600@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumContact_600@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumContact_600@4x.webp 4x" width="600" height="391" loading="lazy" media="(min-width: 600px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumContact_500.webp, https://mirnesglamocic.com/projects/mockup_terradiumContact_500@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumContact_500@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumContact_500@4x.webp 4x" width="500" height="326" loading="lazy" media="(min-width: 520px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumContact_408.webp, https://mirnesglamocic.com/projects/mockup_terradiumContact_408@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumContact_408@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumContact_408@4x.webp 4x" width="408" height="266" loading="lazy" media="(min-width: 408px)">
+                                        <source srcset="https://mirnesglamocic.com/projects/mockup_terradiumContact_300.webp, https://mirnesglamocic.com/projects/mockup_terradiumContact_300@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_terradiumContact_300@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_terradiumContact_300@4x.webp 4x" width="300" height="196" loading="lazy" media="(min-width: 100px)">
+                                        <!--[if IE 9]></video><![endif]-->
+                                        <img srcset="https://mirnesglamocic.com/projects/mockup_terradiumContact.jpg" alt="Mockup by Terradium">
+                                    </picture>
+                                    </li>
+                                </ul>
+                                <ul class="skills wp">
+                                <li class="project_wp">Skills</li><li>WordPress</li><li>Elementor</li><li>HTML</li><li>CSS</li><li>JS</li>
+                                </ul>
+                            </article> 
+                            <article class="project_desc">
+                                <h3>WordPress site for the fictional company Terradium</h3>
+                                <p>This project contains five pages with a consistent design across all pages. It's created using Hello Elementor WordPress theme and the entire project was done using the Elementor plugin.</p>
+                                <p>Various widgets are implemented on this website, such as a slideshow with background images on the home page, a carousel gallery, an image gallery, a video, an svg mask on an image, a list of icons, a map, and a brief description of the company's offerings on each page.</p>
+                                <p>Also it's used custom CSS for the header and footer, as well as JavaScript for the Copyright info in the footer. At the same time, it's installed the SSL certificate, redirected all traffic to https in the .htaccess file, as well used gzip compression and saved cache for all file types in user browsers.</p>
+                                <p><a href="https://terradium.epizy.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
+                                </article>
+                        </section>
+
+                        <section class="project_complete"  aria-label="Project Shoutbox application">
+                            <article class="project_mockup" data-carousel><!--carousel-->
+                            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                                <ul class="slides" data-slides><!-- slider inner-->
+                                <li class='slide' data-active>
+                                    <picture>
                                     <!--[if IE 9]><video style="display: none;"><![endif]-->
                                     <source srcset="https://mirnesglamocic.com/projects/mockup_shoutbox_600.webp, https://mirnesglamocic.com/projects/mockup_shoutbox_600_@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_shoutbox_600_@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_shoutbox_600_@4x.webp 4x" type="image/webp" width="600" height="391" loading="lazy" media="(min-width: 600px)">
                                     <source srcset="https://mirnesglamocic.com/projects/mockup_shoutbox_500.webp, https://mirnesglamocic.com/projects/mockup_shoutbox_500_@2x.webp 2x, https://mirnesglamocic.com/projects/mockup_shoutbox_500_@3x.webp 3x, https://mirnesglamocic.com/projects/mockup_shoutbox_500_@4x.webp 4x" type="image/webp" width="500" height="326" loading="lazy" media="(min-width: 520px)">
@@ -184,7 +444,7 @@
                                  </picture>
                                  </li>
                              </ul>
-                             <ul class="skills">
+                             <ul class="skills simple">
                                     <li class="project_title">Skills</li><li>HTML</li><li>CSS</li><li>jQuery</li><li>AJAX</li><li>PHP</li><li>MySQL</li>
                             </ul>
                         </article> 
@@ -193,7 +453,7 @@
                             <p>This project contains a dynamic responsive Shoutbox built using PHP, MySQL, jQuery, AJAX, HTML, and CSS. So, when the user sends a name and a message, that information appears at the top of the Shoutbox along with the time the message was sent. Also, this data is entered into the database and with the help of AJAX, it appears instantly on the page, without reloading the page.</p>
                             <p>At the same time, this form has validation, and empty data cannot be sent, and with AJAX and jQuery validation plugin, the answer "Please fill in your name and message!" appears immediately when the user tries to send empty data. This was done with jQuery validate groups to display one message for all inputs, instead of each input separately.</p>
                             <p>Moreover, there are built-in some PHP functions like ucwords which work in case when the user writes his name in lowercase letters, the first letter of the user's first and last name will be capitalized, and with a function ucfirst it's capitalized the first letter of a sentence if the user wrote their message in lowercase.</p>
-                            <p><a href="http://shoutbox.epizy.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
+                            <p><a href="https://shoutbox.epizy.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
                         </article>
                     </section> 
 
@@ -236,7 +496,7 @@
                                  </picture>
                                  </li>
                              </ul>
-                             <ul class="skills simple">
+                             <ul class="skills verysimple">
                              <li class="project_simple">Skills</li><li>HTML</li><li>CSS</li><li>PHP</li><li>MySQL</li>
                             </ul>
                         </article> 
@@ -245,35 +505,15 @@
                             <p>This project contains a dynamic responsive SQL quizzer made with PHP MySQL, HTML, and CSS. So, quizz contain some questions by w3school where user need to choose correct answer.</p>
                             <p>There is also the possibility of adding a question, and after that that question appears with the other questions in the quizz, and is instantly inserted into the database. For adding questions there is PHP validation so blank questions can not be added. It's necessary add a question, minimum 2 choices for answer and correct answer.</p>
                             <p>There are two tables in the database, one for questions and the other for answers, and with the help of the PHP mysqli api, the entered answer is checked. Each answer has the value of one point and after all the questions the total number of points won appears. This is achieved with the help of PHP sessions, which are started during each quiz and are destroyed at the same time so that the number of points is not added up for each quiz.</p>
-                            <p><a href="http://mysql-quizzer.epizy.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
+                            <p><a href="https://mysql-quizzer.epizy.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
                             </article>
-                        </section>   
+                        </section>
+                        
                 </div>
 
                 
                 
-                <div id="div2" class="target">
-                
-                    <h3 class="projects">Removed objects from images using Content Aware</h3>
-               <article class="edit_img">
-                    <a href='./projects/BIG/Channel-Marker.jpg' data-lightbox='project-group'><img src='./projects/Channel-Marker.jpg' alt="test" class="edit_img" loading="lazy"></a>
-                </article>
-                <article class="edit_img">
-                    <a href='./projects/BIG/Channel-Marker_e.jpg' data-lightbox='project-group'><img src='./projects/Channel-Marker_e.jpg' alt="test" class="edit_img" loading="lazy"></a>
-                </article>
-                <article class="edit_img">
-                    <a href='./projects/BIG/Door.jpg' data-lightbox='project-group'><img src='./projects/Door.jpg' alt="test" class="edit_img" loading="lazy"></a>
-                </article>
-                <article class="edit_img">
-                    <a href='./projects/BIG/Door_e.jpg' data-lightbox='project-group'><img src='./projects/Door_e.jpg' alt="test" class="edit_img" loading="lazy"></a>
-                </article>
-                <article class="edit_img">
-                    <a href='./projects/BIG/Birds.jpg' data-lightbox='project-group'><img src='./projects/Birds.jpg' alt="test" class="edit_img" loading="lazy"></a>
-                </article>
-                <article class="edit_img">
-                    <a href='./projects/BIG/Birds_e.jpg' data-lightbox='project-group'><img src='./projects/Birds_e.jpg' alt="test" class="edit_img" loading="lazy"></a>
-                </article>     
-                </div>
+                <div id="div2" class="target"><p class="future">&apos;Something really cool will coming soon!&apos;</p></div>
                 <div id="div3" class="target"><p class="future">&apos;Something really cool will coming soon!&apos;</p></div>
                 <div id="div4" class="target"><p class="future">&apos;Something really cool will coming soon!&apos;</p></div>
         </div>
