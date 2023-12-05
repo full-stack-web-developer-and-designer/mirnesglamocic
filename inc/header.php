@@ -16,7 +16,7 @@
                 <div id="headerTopRight">
                     <span><a href="https://www.linkedin.com/in/mirnesglamocic/" aria-label="visit my LinkedIn profile" target="_blank"><i class="header-icon fab fa-linkedin"></i></a></span>
                     <span><a href="https://github.com/Full-Stack-Web-Developer-and-Designer/" aria-label="visit my GitHub profile" target="_blank"><i class="header_icon fab fa-github"></i></a></span>
-                    <span><a href="https://twitter.com/mirnesglamocic/" aria-label="visit my Twitter profile" target="_blank"><i class="header_icon fab fa-github"></i></a></span>
+                    <span><a href="https://twitter.com/mirnesglamocic/" aria-label="visit my Twitter profile" target="_blank"><i class="header_icon fa-brands fa-x-twitter"></i></a></span>
        			</div><!--end #headerTopRight-->
         	</div><!--end .wrapper-->
         </div><!--end #headerTop-->
