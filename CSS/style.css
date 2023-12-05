@@ -1910,6 +1910,9 @@ p.barcode {
         width: auto;
         display: block;
     }
+    #certificates h2 {
+        width: 100%;
+    }
     .imgLeft {
         padding: 4% 4% 0% 0;
         width: 30%;
