@@ -545,18 +545,26 @@ screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 4) {
             include './inc/form.php';
             ?>
             </article>
+            
             <article id="icons">
                 <p>Feel free to connect with me...</p>
-                <span class="icon_box">
-                    <a href="https://www.linkedin.com/in/mirnesglamocic/" aria-label="visit my LinkedIN profile" target="_blank">
-                    <i class="contact_icon fab fa-linkedin"></i>
-                    </a>
-                </span>
-                <span class="icon_box">
-                    <a href="https://github.com/Full-Stack-Web-Developer-and-Designer/" aria-label="visit my GitHub profile" target="_blank">
-                        <i class="contact_icon fab fa-github"></i>
-                    </a>
-                </span>
+                    <article id="icon_box">
+                        <span class="icon_box">
+                            <a href="https://www.linkedin.com/in/mirnesglamocic/" aria-label="visit my LinkedIN profile" target="_blank">
+                            <i class="contact_icon fab fa-linkedin"></i>
+                            </a>
+                        </span>
+                        <span class="icon_box">
+                            <a href="https://github.com/Full-Stack-Web-Developer-and-Designer/" aria-label="visit my GitHub profile" target="_blank">
+                                <i class="contact_icon fab fa-github"></i>
+                            </a>
+                        </span>
+                        <span class="icon_box">
+                            <a href="https://twitter.com/mirnesglamocic/" aria-label="visit my Twitter profile" target="_blank">
+                            <i class="contact_icon fa-brands fa-x-twitter"></i>
+                            </a>
+                        </span>
+                    </article>
             </article>
         </div><!--end .wrapper-->
     </section> <!--contact-->
