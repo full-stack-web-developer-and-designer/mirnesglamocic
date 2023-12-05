@@ -10,14 +10,13 @@
 				</div><!--end #headerTopLeft-->
                 
                 <div id="headerCenter">
-                    <span id="cv"><a href="images/MirnesGlamocic-Resume.pdf" aria-label="Download my resume" target="_blank"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Download my resume</a></span>
+                    <span id="cv"><a href="https://mirnesglamocic.com/images/MirnesGlamocic-Resume.pdf" aria-label="Download my resume" target="_blank"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Download my resume</a></span>
                 </div><!--end #headerCenter-->
        			
                 <div id="headerTopRight">
-                   <span><a href="https://www.linkedin.com/in/mirnesglamocic/" aria-label="visit my linkedin profile" target="_blank">
-                    <i class="header-icon fab fa-linkedin"></i>
-                    </a></span>
-                    <span><a href="https://github.com/Full-Stack-Web-Developer-and-Designer/" aria-label="visit my github profile" target="_blank"><i class="header_icon fab fa-github"></i></a></span>
+                    <span><a href="https://www.linkedin.com/in/mirnesglamocic/" aria-label="visit my LinkedIn profile" target="_blank"><i class="header-icon fab fa-linkedin"></i></a></span>
+                    <span><a href="https://github.com/Full-Stack-Web-Developer-and-Designer/" aria-label="visit my GitHub profile" target="_blank"><i class="header_icon fab fa-github"></i></a></span>
+                    <span><a href="https://twitter.com/mirnesglamocic/" aria-label="visit my Twitter profile" target="_blank"><i class="header_icon fab fa-github"></i></a></span>
        			</div><!--end #headerTopRight-->
         	</div><!--end .wrapper-->
         </div><!--end #headerTop-->
