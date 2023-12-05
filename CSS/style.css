@@ -2393,24 +2393,13 @@ p.barcode {
     .slide > img {
         display: inline-block;
     }
-    #icon_box{
-        display: block;
-        margin: 0 auto;
-        width: 60%;
-    }
-    .icon_box {
-        width: 100px;
-        margin: 0;
-        padding: 0 0 50px;
-        float: none;
-        display: inline-block;
-        text-align: center;
-        width: 30%;
-    }
 }
 @media screen and (min-width: 451px) and (max-width: 767px) {
     #headerCenter {
         width: 37%;
+    }
+    #icon_box{
+        width: 75%;
     }
 }
 @media screen and (min-width: 562px) and (max-width: 729px) {
@@ -2739,6 +2728,9 @@ p.barcode {
     #headerCenter{
         width: 50%;
     }
+    #icon_box{
+        width: 90%;
+    }
 }
 /* mobiles */
 @media screen and (min-width: 382px) and (max-width: 408px) {
@@ -2889,6 +2881,22 @@ p.barcode {
     }
     #WD{
         margin-left: 2.5%;
+    }
+    #icon_box{
+        display: block;
+        margin: 0 auto;
+    }
+    .icon_box {
+        width: 100px;
+        margin: 0 5px 0 0;
+        padding: 0 0 50px;
+        float: none;
+        display: inline-block;
+        text-align: center;
+        width: 30%;
+    }
+    .icon_box:last-of-type{
+        margin: 0;
     }
 }
 @media screen and (min-width: 354px) and (max-width: 408px) {
