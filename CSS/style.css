@@ -152,7 +152,7 @@ a:active {
 #headerCenter {
   text-align: center;
   padding: 19px 0;
-  width: 79%;
+  width: 74%;
   display: inline-block;
 }
 #headerTopLeft span:nth-of-type(3n),
@@ -934,7 +934,7 @@ label.error {
   background: #032B62;
   width: 400px;
   float: right;
-  margin: 30px 0 0;
+  margin: 30px 0;
   height: 674px;
   border-radius: 5px;
 }
@@ -2018,6 +2018,7 @@ p.barcode {
     }
     #icons {
         width: 25%;
+        height: 658px;
     }
 }
 @media screen and (min-width: 1057px) and (max-width: 1112px) {
@@ -2120,7 +2121,7 @@ p.barcode {
 }
 /* tablets */
 @media screen and (max-width: 767px) {
-        a:link,
+    a:link,
     a:visited {
     text-decoration: none;
     color: #955D00;
@@ -2322,23 +2323,12 @@ p.barcode {
     #icons {
         width: 100%;
         height: auto;
-        float: none;
         overflow: hidden;
+        display: inline;
+        text-align: center;
     }
     #icons p {
         padding: 50px 0;
-    }
-    .icon_box {
-        margin: 0;
-        width: 50%;
-        padding: 0 0 50px;
-        float: left;
-    }
-    i.contact_icon.fab.fa-linkedin {
-        float: left;
-    }
-    i.contact_icon.fab.fa-github {
-        float: right;
     }
     .scroll-top i {
         font-size: 1em;
@@ -2397,24 +2387,22 @@ p.barcode {
     .carousel-button {
         top: 150px;
     }
-    .icon_box {
-        margin: 0;
-        width: 50%;
-        padding: 0 0 50px;
-        float: left;
-    }
     .slide > img {
         display: inline-block;
     }
-    i.contact_icon.fab.fa-linkedin,
-    i.contact_icon.fab.fa-github {
+    #icon_box{
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+    }
+    .icon_box {
+        width: 100px;
+        margin: 0;
+        padding: 0 0 50px;
         float: none;
-    }
-    i.contact_icon.fab.fa-linkedin {
-        margin-left: 100px;
-    }
-    i.contact_icon.fab.fa-github {
-        margin-right: 100px;
+        display: inline-block;
+        text-align: center;
+        width: 30%;
     }
 }
 @media screen and (min-width: 451px) and (max-width: 767px) {
@@ -2881,6 +2869,10 @@ p.barcode {
     #contact {
         padding-top: 40px;
     }
+    .icon_box {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
 }
 @media screen and (min-width: 354px) and (max-width: 767px) {
     #PHP, #WD {
@@ -2918,7 +2910,7 @@ p.barcode {
     #headerTopLeft,
     #headerCenter,
     #headerTopRight {
-        width: auto;
+        width: 100%;
     }
     #headerTopLeft{
         text-align: left;
@@ -2935,28 +2927,6 @@ p.barcode {
     }
     #PHP{
         margin-bottom: 30px;
-    }
-}
-@media screen and (min-width: 281px) and (max-width: 408px) {
-    i.contact_icon.fab.fa-linkedin {
-        margin-left: 50px;
-    }
-    i.contact_icon.fab.fa-github {
-        margin-right: 50px;
-    }
-}
-@media screen and (min-width: 261px) and (max-width: 408px) {
-    .icon_box {
-        margin: 0;
-        width: 50%;
-        padding: 0 0 50px;
-        float: left;
-    }
-    i.contact_icon.fab.fa-linkedin {
-        float: left;
-    }
-    i.contact_icon.fab.fa-github {
-        float: right;
     }
 }
 @media screen and (min-width: 329px) and (max-width: 408px) {
@@ -3047,14 +3017,6 @@ p.barcode {
         float: none;
       }
 }
-@media screen and (min-width: 261px) and (max-width: 280px) {
-    i.contact_icon.fab.fa-linkedin {
-        margin-left: 40px;
-    }
-    i.contact_icon.fab.fa-github {
-        margin-right: 40px;
-    }
-}
 @media screen and (min-width: 222px) and  (max-width: 266px) {
     h1 {
         font-size: 2em;
@@ -3074,20 +3036,6 @@ p.barcode {
     img.skill{
         width: 80%;
         margin-bottom: 30px;
-    }
-}
-@media screen and (max-width: 260px) {
-    .icon_box {
-        margin: 0;
-        width: 100%;
-        padding: 0 0 50px;
-        float: none;
-    }
-    i.contact_icon.fab.fa-linkedin,
-    i.contact_icon.fab.fa-github {
-        float: none;
-        margin: 0 auto;
-        width: 60px;
     }
 }
 @media screen and (max-width: 209px){
