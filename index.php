@@ -22,13 +22,13 @@
         $rnd = rand(1,2);
     ?>
 <style type="text/css">
-/* Hero img */
-#hero.lazy {
+    /* Hero img */
+    #hero.lazy {
         background-image: none;
         background-color: #F1F1FA;
     }
     #hero {
-        background: url("/images/bg1.webp");
+         background: url("/images/bg<?php echo $rnd ?>.webp");
         background-attachment: fixed;
         background-position: center center;
         background-repeat: no-repeat;
@@ -38,13 +38,13 @@
     }
 @media screen and (min-width: 1024px) and (max-width: 1260px) {
     #hero {
-        background-image: url("/images/bg1260_1.webp");
+        background-image: url("/images/<?php echo $rnd ?>.webp");
         background-size: 1260px 840px;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #hero {
-        background-image: url("/images/bg1023_1.webp");
+        background-image: url("/images/<?php echo $rnd ?>.webp");
         background-size: 1023px 682px;
     }
 }
@@ -55,7 +55,7 @@
             -o-background-size: cover;
             background-size: cover;
             background-attachment: inherit;
-            background-position: center;
+            background-position: top right;
         }
         /* section project for mockup sites */
         .content:link,
@@ -69,13 +69,13 @@
     }
     @media screen and (min-width: 409px) and (max-width: 767px) {
         #hero {
-            background-image: url("/images/bg767_1.webp");
+            background-image: url("/images/<?php echo $rnd ?>.webp");
             padding: 70px 35px;
         }
     }
     @media screen and (max-width: 408px) {
         #hero {
-            background-image: url("/images/bg408_1.webp");
+            background-image: url("/<?php echo $rnd ?>.webp");
             padding: 70px 20px;
         }
         h1 { padding: 25px;}
@@ -84,74 +84,74 @@
     @media screen and (max-width: 1260px) and (min-device-pixel-ratio: 2),
     screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 2){
         #hero {
-            background-image: url("/images/bg1_1260@2x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_1260@2x.webp");
         }
     }
     @media screen and (max-width: 1023px) and (min-device-pixel-ratio: 2),
     screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2) {
         #hero {
-            background-image: url("/images/bg1_1023@2x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_1023@2x.webp");
         }
     }
     @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2){
         #hero {
-            background-image: url("/images/bg1_767@2x.webp");
+            background-image: url("/images/<?php echo $rnd ?>_767@2x.webp");
         }
     }
     @media screen and (max-width: 408px) and (min-device-pixel-ratio: 2),
     screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 2) {
         #hero {
-            background-image: url("/images/bg1_408@2x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_408@2x.webp");
         }
     }
     /* CSS query device pixel ratio: 3 */
     @media screen and (max-width: 1260px) and (min-device-pixel-ratio: 3),
     screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 3) {
         #hero {
-            background-image: url("/images/bg1_1260@3x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_1260@3x.webp");
         }
     }
     @media screen and (max-width: 1023px) and (min-device-pixel-ratio: 3),
     screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 3) {
         #hero {
-            background-image: url("/images/bg1_1023@3x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_1023@3x.webp");
         }
     }
     @media screen and (max-width: 767px) and (min-device-pixel-ratio: 3),
     screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) {
         #hero {
-            background-image: url("/images/bg1_767@3x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_767@3x.webp");
         }
     }
     @media screen and (max-width: 408px) and (min-device-pixel-ratio: 3),
     screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 3) {
         #hero {
-            background-image: url("/images/bg1_408@3x.webp");
+            background-image: url("/images/<?php echo $rnd ?>_408@3x.webp");
         }
     }
     /* CSS query device pixel ratio: 4 */
     @media screen and (max-width: 1260px) and (min-device-pixel-ratio: 4),
     screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 4) {
         #hero {
-            background-image: url("/images/bg1_1260@4x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_1260@4x.webp");
         }
     }
     @media screen and (max-width: 1023px) and (min-device-pixel-ratio: 4),
     screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 4) {
         #hero {
-            background-image: url("/images/bg1_1023@4x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_1023@4x.webp");
         }
     }
     @media screen and (max-width: 767px) and (min-device-pixel-ratio: 4),
     screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 4) {
         #hero {
-            background-image: url("/images/bg1_767@4x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_767@4x.webp");
         }
     }
     @media screen and (max-width: 408px) and (min-device-pixel-ratio: 4),
     screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 4) {
         #hero {
-            background-image: url("/images/bg1_408@4x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_408@4x.webp");
         }
 }
 </style>
@@ -537,22 +537,19 @@
 
                 <div id="div2" class="target"><p class="future">&apos;Something really cool will coming soon!&apos;</p></div>
                 <div id="div3" class="target">
-                    <section class='illustrator'>
-                        <article class='illustrations'>
-                        <a href='./illustrations/BIG/orange.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="illustration blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created using the Ellipse and Rectangle Tool with the Scale and Rotate Tool.</p></div></a>
-                        </article>
-
-                        <article class='illustrations'>
-                            <a href='./illustrations/BIG/sheriff.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/sheriff.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="illustration blur" loading="lazy"><div class="content"><p>Illustration of Sheriff's badge with star along with a bunch of circles and a big elipse using the Shape Builder and an inset reflection.</p></div></a>
-                        </article>
-                        <article class='illustrations'>
-                            <a href='./illustrations/BIG/coil.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/coil.jpg' alt="Illustration Coil" class="illustration blur" loading="lazy"><div class="content"><p>Illustration of coil created with complex paths using the "Join" command.</p></div></a>
-                        </article>
-                        <article class='illustrations'>
-                            <a href='./illustrations/BIG/house.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/house.jpg' alt="Illustration of Simple house by Mirnes Glamočić" class="illustration blur" loading="lazy"><div class="content fade"><p>Illustration of a simple house created with the Shaper Tool.</p></div></a>
-                        </article>
-                        <article class='illustrations'>
-                            <a href='./illustrations/BIG/factory.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/factory.jpg' alt="Illustration of the Factory by Mirnes Glamočić" class="illustration blur" loading="lazy"><div class="content fade"><p>Illustration of company created with the Line Segment Tool, Scissors, Arc, Rectangular Grid, Polar Grid and Spiral Tool.</p></div></a>
+                    <section class='illustrations'>
+                        <article class='illustration'><a href='./illustrations/BIG/orange.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created using the Ellipse and Rectangle Tool with the Scale and Rotate Tool.</p></div></a>
+                        </article><!--
+                        --><article class='illustration'><a href='./illustrations/BIG/sheriff.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/sheriff.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of Sheriff's badge with star along with a bunch of circles and a big elipse using the Shape Builder and an inset reflection.</p></div></a>
+                        </article><!--
+                        --><article class='illustration'>
+                            <a href='./illustrations/BIG/coil.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/coil.jpg' alt="Illustration of Coil" class="blur" loading="lazy"><div class="content"><p>Illustration of coil created with complex paths using the "Join" command.</p></div></a>
+                        </article><!--
+                        --><article class='illustration'>
+                            <a href='./illustrations/BIG/house.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/house.jpg' alt="Illustration of Simple house by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of a simple house created with the Shaper Tool.</p></div></a>
+                        </article><!--
+                    --><article class='illustration'>
+                            <a href='./illustrations/BIG/factory.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/factory.jpg' alt="Illustration of the Factory by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of company created with the Line Segment Tool, Scissors, Arc, Rectangular Grid, Polar Grid and Spiral Tool.</p></div></a>
                         </article>
                     </section>
                 </div>
