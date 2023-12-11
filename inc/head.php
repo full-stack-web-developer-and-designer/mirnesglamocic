@@ -51,7 +51,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <link rel="manifest" href="/favicon/site.webmanifest">
 <link rel="canonical" href="https://mirnesglamocic.com/" />
 <!-- Custom CSS -->
-<link rel="stylesheet" href="/CSS/style.css" media="all"/>
+<link rel="stylesheet" href="/CSS/style.min.css" media="all"/>
 <!-- lightslider CSS-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet"/>
 <!-- lightbox css -->
