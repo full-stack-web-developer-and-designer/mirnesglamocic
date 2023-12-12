@@ -20,6 +20,7 @@
 ?>
     <?php
         $rnd = rand(1,2);
+        $pos = ($rnd == 1) ? "left;" : ($rnd == 2) ? "right;" : "center";
     ?>
 <style type="text/css">
     /* Hero img */
@@ -55,7 +56,7 @@
             -o-background-size: cover;
             background-size: cover;
             background-attachment: inherit;
-            background-position: top right;
+            background-position: top <?php echo $pos ?>;
         }
         /* section project for mockup sites */
         .content:link,
