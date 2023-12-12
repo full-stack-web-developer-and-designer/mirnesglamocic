@@ -28,7 +28,7 @@
         background-color: #F1F1FA;
     }
     #hero {
-         background: url("/images/bg<?php echo $rnd ?>.webp");
+        background: url("/images/bg<?php echo $rnd ?>.webp");
         background-attachment: fixed;
         background-position: center center;
         background-repeat: no-repeat;
@@ -38,13 +38,13 @@
     }
 @media screen and (min-width: 1024px) and (max-width: 1260px) {
     #hero {
-        background-image: url("/images/<?php echo $rnd ?>.webp");
+        background-image: url("/images/bg<?php echo $rnd ?>.webp");
         background-size: 1260px 840px;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #hero {
-        background-image: url("/images/<?php echo $rnd ?>.webp");
+        background-image: url("/images/bg<?php echo $rnd ?>.webp");
         background-size: 1023px 682px;
     }
 }
@@ -69,14 +69,14 @@
     }
     @media screen and (min-width: 409px) and (max-width: 767px) {
         #hero {
-            background-image: url("/images/<?php echo $rnd ?>.webp");
-            padding: 70px 35px;
+            background-image: url("/images/bg<?php echo $rnd ?>.webp");
+            padding: 35px;
         }
     }
     @media screen and (max-width: 408px) {
         #hero {
-            background-image: url("/<?php echo $rnd ?>.webp");
-            padding: 70px 20px;
+            background-image: url("/images/bg<?php echo $rnd ?>.webp");
+            padding: 20px;
         }
         h1 { padding: 25px;}
     }
@@ -95,7 +95,7 @@
     }
     @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2){
         #hero {
-            background-image: url("/images/<?php echo $rnd ?>_767@2x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_767@2x.webp");
         }
     }
     @media screen and (max-width: 408px) and (min-device-pixel-ratio: 2),
@@ -126,7 +126,7 @@
     @media screen and (max-width: 408px) and (min-device-pixel-ratio: 3),
     screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 3) {
         #hero {
-            background-image: url("/images/<?php echo $rnd ?>_408@3x.webp");
+            background-image: url("/images/bg<?php echo $rnd ?>_408@3x.webp");
         }
     }
     /* CSS query device pixel ratio: 4 */
