@@ -56,7 +56,7 @@
             -o-background-size: cover;
             background-size: cover;
             background-attachment: inherit;
-            background-position: top <?php echo $pos ?>;
+            background-position: <?php echo $pos ?> top;
         }
         /* section project for mockup sites */
         .content:link,
@@ -84,9 +84,7 @@
     /* CSS query device pixel ratio: 2 */
     @media screen and (max-width: 1260px) and (min-device-pixel-ratio: 2),
     screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 2){
-        #hero {
-            background-image: url("/images/bg<?php echo $rnd ?>_1260@2x.webp");
-        }
+        #hero {background-image: url("/images/bg<?php echo $rnd ?>_1260@2x.webp");}
     }
     @media screen and (max-width: 1023px) and (min-device-pixel-ratio: 2),
     screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -541,16 +539,20 @@
                     <section class='illustrations'>
                         <article class='illustration'><a href='./illustrations/BIG/orange.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created using the Ellipse and Rectangle Tool with the Scale and Rotate Tool.</p></div></a>
                         </article><!--
-                        --><article class='illustration'><a href='./illustrations/BIG/sheriff.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/sheriff.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of Sheriff's badge with star along with a bunch of circles and a big elipse using the Shape Builder and an inset reflection.</p></div></a>
+                        --><article class='illustration'><a href='./illustrations/BIG/electron.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/electron.jpg' alt="Illustration of the atomic symbol by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the atomic symbol created using the Ellipse Tool with the help of the Effects from the Appearance panel.</p></div></a>
                         </article><!--
                         --><article class='illustration'>
-                            <a href='./illustrations/BIG/coil.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/coil.jpg' alt="Illustration of Coil" class="blur" loading="lazy"><div class="content"><p>Illustration of coil created with complex paths using the "Join" command.</p></div></a>
+                        <a href='./illustrations/BIG/ellipses.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/ellipses.jpg' alt="Illustration of multiple ellipses by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of multiple ellipses created using the Ellipse and Rectangle Tool with the help of the Effects from the Appearance panel.</p></div></a></article><!--
+                        --><article class='illustration'><a href='./illustrations/BIG/sheriff.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/sheriff.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of Sheriff's badge with a star along with a bunch of circles and a big ellipse using the Shape Builder and an inset reflection.</p></div></a>
                         </article><!--
                         --><article class='illustration'>
-                            <a href='./illustrations/BIG/house.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/house.jpg' alt="Illustration of Simple house by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of a simple house created with the Shaper Tool.</p></div></a>
+                            <a href='./illustrations/BIG/coil.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/coil.jpg' alt="Illustration of Coil" class="blur" loading="lazy"><div class="content"><p>Illustration of a coil created with the Ellipse Tool and compound paths using the Join command.</p></div></a>
+                        </article><!--
+                        --><article class='illustration'>
+                            <a href='./illustrations/BIG/house.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/house.jpg' alt="Illustration of Simple house by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the simple house created with the Rectangle and Shaper Tool.</p></div></a>
                         </article><!--
                     --><article class='illustration'>
-                            <a href='./illustrations/BIG/factory.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/factory.jpg' alt="Illustration of the Factory by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of company created with the Line Segment Tool, Scissors, Arc, Rectangular Grid, Polar Grid and Spiral Tool.</p></div></a>
+                            <a href='./illustrations/BIG/factory.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/factory.jpg' alt="Illustration of the Factory by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the company created with the Line Segment Tool, Scissors, Arc, Rectangular Grid, Polar Grid and Spiral Tool.</p></div></a>
                         </article>
                     </section>
                 </div>
