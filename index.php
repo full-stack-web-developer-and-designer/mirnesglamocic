@@ -272,8 +272,8 @@
                             </article> 
                             <article class="project_desc">
                                 <h3>Tourism Website</h3>
-                                <p>This project contains a complex dynamic responsive website with a complete reservation system in one city, where users can contact directly the owners of properties such as hotels, apartments, villas, rooms, restaurants, boats and car rentals, similar to the website booking.com.</p>
-                                <p>On home page is embedded the time for the next 7 days, the value of the currency at the NLB Bank exchange rate, and with help of the LightSlider JavaScript library, object-oriented PHP and SQL function rand() the properties are displayed randomly each time when home page is opened.</p>
+                                <p>This project contains a complex dynamic responsive website with a complete reservation system in one city, where users can directly contact the owners of properties such as hotels, apartments, villas, rooms, restaurants, boats and car rentals, similar to the website booking.com.</p>
+                                <p>On the home page is embedded the time for the next 7 days, the value of the currency at the NLB Bank exchange rate, and with help of the LightSlider JavaScript library, object-oriented PHP and SQL function rand() the properties are displayed randomly each time when home page is opened.</p>
                                 <p>Each property contains a short description, a location on a google map, an image gallery displayed with the help of the LightBox JavaScript library, and some properties also contain a video embedded by YouTube.</p>
                                 <p>Also, all properties contain a contact form, which is created on a popup modal created with jQuery. At the same time, all pages contain another popup modal with contact form for contacting the site administrator.</p>
                                 <p>With excellent SEO, all properties have improved the site to appear at the top of Google searches.</p>
@@ -341,9 +341,9 @@
                             </article> 
                             <article class="project_desc">
                                 <h3>Multilingual WordPress website for an Olive Oil company</h3>
-                                <p>This project contains a  responsive multilingual WordPress website  for an olive oil company created in English, Korean, Poland and Croatian language. It's created using WordPress with Elementor and Polylang plugins.</p>
+                                <p>This project contains a responsive multilingual WordPress website for an olive oil company created in English, Korean, Poland, and Croatian language. It's created using WordPress with Elementor and Polylang plugins.</p>
                                 <p>Also, contains some other plugins such as Contact Form 7 (manage flexible contact forms), Multilingual Contact Form 7 with Polylang (Enables translation and use of the same forms in different languages of Contact Form 7 forms with Polylang), Yoast SEO (helps website perform better in search engines like Google) and WP-Optimize (cleans the database, compresses images and caches pages).</p>
-                                <p>It's used custom CSS for the header and footer, as well as JavaScript for the Copyright info in the footer. At the same time, it's installed the SSL certificate, redirected all traffic to https in the .htaccess file, as well used gzip compression and saved cache for all file types in user browsers.</p>
+                                <p>Custom CSS was used for the header and footer, as well as JavaScript for the copyright information in the footer. At the same time, an SSL certificate was installed, all traffic was redirected to https in the .htaccess file, gzip compression was used and cache memory was saved for all types of files in user browsers.</p>
                                 <p><a href="https://oliveoilmatic.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
                             </article>
                         <div><!-- end .main-outer -->
@@ -417,9 +417,9 @@
                             </article> 
                             <article class="project_desc">
                                 <h3>WordPress site for the fictional company Terradium</h3>
-                                <p>This project contains five pages with a consistent design across all pages. It's created using Hello Elementor WordPress theme and the entire project was done using the Elementor plugin.</p>
-                                <p>Various widgets are implemented on this website, such as a slideshow with background images on the home page, a carousel gallery, an image gallery, a video, an svg mask on an image, a list of icons, a map, and a brief description of the company's offerings on each page.</p>
-                                <p>Also it's used custom CSS for the header and footer, as well as JavaScript for the Copyright info in the footer. At the same time, it's installed the SSL certificate, redirected all traffic to https in the .htaccess file, as well used gzip compression and saved cache for all file types in user browsers.</p>
+                                <p>This project contains five pages with a consistent design across all pages. It's created using the Hello Elementor WordPress theme and the entire project was done using the Elementor plugin.</p>
+                                <p>Various widgets are implemented on this website, such as a slideshow with background images on the home page, a carousel gallery, an image gallery, a video, an SVG mask on an image, a list of icons, a map, and a brief description of the company's offerings on each page.</p>
+                                <p>Also, custom CSS was used for the header and footer, as well as JavaScript for the copyright information in the footer. At the same time, an SSL certificate was installed, all traffic was redirected to https in the .htaccess file, as well as gzip compression was used and cache memory was saved for all types of files in user browsers.</p>
                                 <p><a href="https://terradium.epizy.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
                             </article>
                         <div><!-- end .main-outer -->
@@ -471,8 +471,8 @@
                             </article> 
                             <article class="project_desc">
                                 <h3>Shoutbox application</h3>
-                                <p>This project contains a dynamic responsive Shoutbox built using PHP, MySQL, jQuery, AJAX, HTML, and CSS. So, when the user sends a name and a message, that information appears at the top of the Shoutbox along with the time the message was sent. Also, this data is entered into the database and with the help of AJAX, it appears instantly on the page, without reloading the page.</p>
-                                <p>At the same time, this form has validation, and empty data cannot be sent, and with AJAX and jQuery validation plugin, the answer "Please fill in your name and message!" appears immediately when the user tries to send empty data. This was done with jQuery validate groups to display one message for all inputs, instead of each input separately.</p>
+                                <p>This project contains a dynamic responsive Shoutbox built using PHP, MySQL, jQuery, AJAX, HTML, and CSS. So, when the user sends a name and a message, that information appears at the top of the Shoutbox along with the time the message was sent. Also, this data is entered into the database, and with the help of AJAX, it appears instantly on the page, without reloading the page.</p>
+                                <p>At the same time, this form has validation, and empty data cannot be sent, with AJAX and jQuery validation plugin, the answer "Please fill in your name and message!" appears immediately when the user tries to send empty data. This was done with jQuery validate groups to display one message for all inputs, instead of each input separately.</p>
                                 <p>Moreover, there are built-in some PHP functions like ucwords which work in case when the user writes his name in lowercase letters, the first letter of the user's first and last name will be capitalized, and with a function ucfirst it's capitalized the first letter of a sentence if the user wrote their message in lowercase.</p>
                                 <p><a href="https://shoutbox.epizy.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
                             </article>
@@ -525,8 +525,8 @@
                             </article> 
                             <article class="project_desc">
                                 <h3>SQL Quizzer</h3>
-                                <p>This project contains a dynamic responsive SQL quizzer made with PHP MySQL, HTML, and CSS. So, quizz contain some questions by w3school where user need to choose correct answer.</p>
-                                <p>There is also the possibility of adding a question, and after that that question appears with the other questions in the quizz, and is instantly inserted into the database. For adding questions there is PHP validation so blank questions can not be added. It's necessary add a question, minimum 2 choices for answer and correct answer.</p>
+                                <p>This project contains a dynamic responsive SQL quizzer made with PHP MySQL, HTML, and CSS. So, the quiz contains some questions by w3school where user need to choose correct answer.</p>
+                                <p>There is also the possibility of adding a question, and after that, that question appears with the other questions in the quiz and is instantly inserted into the database. For adding questions there is PHP validation so blank questions can not be added. It's necessary add a question, minimum 2 choices for answer and correct answer.</p>
                                 <p>There are two tables in the database, one for questions and the other for answers, and with the help of the PHP mysqli api, the entered answer is checked. Each answer has the value of one point and after all the questions the total number of points won appears. This is achieved with the help of PHP sessions, which are started during each quiz and are destroyed at the same time so that the number of points is not added up for each quiz.</p>
                                 <p><a href="https://mysql-quizzer.epizy.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a></p>    
                             </article>
