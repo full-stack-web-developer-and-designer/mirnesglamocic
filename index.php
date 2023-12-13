@@ -273,9 +273,9 @@
                             <article class="project_desc">
                                 <h3>Tourism Website</h3>
                                 <p>This project contains a complex dynamic responsive website with a complete reservation system in one city, where users can directly contact the owners of properties such as hotels, apartments, villas, rooms, restaurants, boats and car rentals, similar to the website booking.com.</p>
-                                <p>On the home page is embedded the time for the next 7 days, the value of the currency at the NLB Bank exchange rate, and with help of the LightSlider JavaScript library, object-oriented PHP and SQL function rand() the properties are displayed randomly each time when home page is opened.</p>
-                                <p>Each property contains a short description, a location on a google map, an image gallery displayed with the help of the LightBox JavaScript library, and some properties also contain a video embedded by YouTube.</p>
-                                <p>Also, all properties contain a contact form, which is created on a popup modal created with jQuery. At the same time, all pages contain another popup modal with contact form for contacting the site administrator.</p>
+                                <p>On the home page is embedded the time for the next 7 days, the value of the currency at the NLB Bank exchange rate, and with the help of the LightSlider JavaScript library, object-oriented PHP, and SQL function rand() the properties are displayed randomly each time when home page is opened.</p>
+                                <p>Each property contains a short description, a location on a Google map, an image gallery displayed with the help of the LightBox JavaScript library, and some properties also contain a video embedded by YouTube.</p>
+                                <p>Also, all properties contain a contact form, which is created on a popup modal created with jQuery. At the same time, all pages contain another popup modal with a contact form for contacting the site administrator.</p>
                                 <p>With excellent SEO, all properties have improved the site to appear at the top of Google searches.</p>
                                 <p>
                                     <a href="https://visit-neum.com/" target="_blank" class="button view_project" >VIEW PROJECT &raquo;</a>
