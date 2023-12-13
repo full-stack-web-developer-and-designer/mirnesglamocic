@@ -443,7 +443,6 @@ img.skill {
     overflow: hidden;
     margin-top: 40px;
     padding-top: 30px;
-    padding-bottom: 30px;
 }
 #projects a.project {
     display: block;
@@ -699,7 +698,7 @@ p.future {
 .illustration:nth-of-type(6n),
 .illustration:nth-of-type(7n),
 .illustration:nth-of-type(8n) {
-    margin-bottom: 0;
+    margin-bottom: 26px;
 }
 .content {
     width: auto;
@@ -1358,9 +1357,6 @@ p.barcode {
     }
 }
 @media screen and (min-width: 1237px) and (max-width: 1260px) {
-    #projects {
-        padding-bottom: 15px;
-    }
     ul.skills li {
         padding: 10px 5px;
     }
