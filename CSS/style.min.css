@@ -331,6 +331,7 @@ a:active {
 #skills {
     background: #fff;
     padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
 }
 .tooltip {
@@ -339,7 +340,7 @@ a:active {
 }
 .tooltip:nth-of-type(4n + 1) {
     display: block;
-    top: 316px;
+    top: 240px;
 }
 #skills h2,
 #projects h2,
@@ -357,13 +358,19 @@ picture.skill {
 picture.skill:nth-of-type(4n) {
     margin-right: 0;
 }
-img.skill {
+picture.skill {
     margin-bottom: 76px;
+}
+picture.skill:nth-of-type(33n),
+picture.skill:nth-of-type(34n),
+picture.skill:nth-of-type(35n),
+picture.skill:nth-of-type(36n){
+    margin-bottom: 0;
 }
 .help_tip {
     position: absolute;
     left: 210px;
-    bottom: 325px;
+    bottom: 250px;
     text-align: center;
     background-color: #bcdbea;
     border-radius: 50%;
@@ -523,7 +530,7 @@ section.project_complete:last-of-type {
 .slide[data-active] {
     opacity: 1;
     z-index: 1;
-    transition-delay: 0;
+    transition-delay: 0ms;
 }
 .carousel-button {
     cursor: pointer;
@@ -1397,9 +1404,6 @@ p.barcode {
     a.button.view_project {
         margin: 20px auto 0;
     }
-    section.project_complete:last-of-type {
-        padding-bottom: 0;
-    }
     section.project_complete:last-of-type a.button.view_project {
         margin: 4% auto 0;
     }
@@ -1471,6 +1475,9 @@ p.barcode {
     }
 }
 @media screen and (min-width: 1115px) and (max-width: 1173px) {
+    section.project_complete:last-of-type {
+        padding-bottom: 15px;
+    }
     ul.skills,
     ul.verysimple {
         width: 425px;
@@ -1556,10 +1563,10 @@ p.barcode {
 @media screen and (min-width: 1080px) and (max-width: 1260px) {
     picture.skill {
         margin-right: 60px;
+        margin-bottom: 60px;
     }
     img.skill {
         width: 200px;
-        margin-bottom: 60px;
     }
 }
 @media screen and (max-width: 1114px) {
@@ -1572,14 +1579,14 @@ p.barcode {
     a.button.view_project:last-of-type {
         margin: 30px auto;
     }
-    section.project_complete {
-        padding-bottom: 50px;
-    }
 }
 @media screen and (min-width: 894px) and (max-width: 1114px) {
     section.project_complete {
         display: block;
     }
+    section.project_complete:last-of-type {
+        padding-bottom: 30px;
+    }    
     .carousel-button {
         top: 10rem;
     }
@@ -1839,6 +1846,7 @@ p.barcode {
 @media screen and (min-width: 1024px) and (max-width: 1079px) {
     picture.skill {
         margin-right: 50px;
+        margin-bottom: 50px;
     }
     picture.skill:nth-of-type(3n) {
         margin-right: 50px;
@@ -1848,7 +1856,6 @@ p.barcode {
     }
     img.skill {
         width: 190px;
-        margin-bottom: 50px;
     }
 }
 @media screen and (min-width: 1016px) and (max-width: 1118px) {
@@ -1887,22 +1894,22 @@ p.barcode {
 @media screen and (min-width: 993px) and (max-width: 1023px) {
     picture.skill {
         margin-right: 60px;
+        margin-bottom: 60px;
     }
     img.skill {
         width: 180px;
-        margin-bottom: 60px;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 960px) and (max-width: 992px) {
     picture.skill {
         margin-right: 50px;
+        margin-bottom: 50px;
     }
     picture.skill:nth-of-type(4n) {
         margin-right: 0;
     }
     img.skill {
         width: 180px;
-        margin-bottom: 50px;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1260px) {
@@ -2064,10 +2071,9 @@ p.barcode {
     .illustration:nth-of-type(4n) {
         margin-right: 3.5%;
     }
-    .illustration:nth-of-type(4n),
-    .illustration:nth-of-type(5n),
-    .illustration:nth-of-type(6n) {
-        margin-bottom: 0;
+    .illustration:nth-of-type(5n), 
+    .illustration:nth-of-type(6n){
+        margin-bottom: 3.5%;
     }
 }
 @media screen and (min-width: 1057px) and (max-width: 1112px) {
@@ -2112,10 +2118,14 @@ p.barcode {
     }
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
+    picture.skill,
     picture.skill:nth-of-type(4n) {
         margin-right: 60px;
     }
-    picture.skill:nth-of-type(3n) {
+    picture.skill:nth-of-type(3n),
+    picture.skill:nth-of-type(12n),
+    picture.skill:nth-of-type(24n),
+    picture.skill:nth-of-type(36n){
         margin-right: 0;
     }
 }
@@ -2384,12 +2394,10 @@ p.barcode {
 @media screen and (min-width: 730px) and (max-width: 767px) {
     picture.skill {
         margin-right: 40px;
+        margin-bottom: 40px;
     }
     picture.skill:nth-of-type(4n) {
         margin-right: 0;
-    }
-    img.skill {
-        margin-bottom: 40px;
     }
 }
 @media screen and (min-width: 640px) and (max-width: 767px) {
@@ -2416,11 +2424,7 @@ p.barcode {
     }
     .illustration:nth-of-type(5n),
     .illustration:nth-of-type(6n) {
-        margin-bottom: 0;
-    }
-    .illustration:nth-of-type(7n),
-    .illustration:nth-of-type(8n) {
-        margin-bottom: 0;
+        margin-bottom: 36px;
     }
 }
 @media screen and (max-width: 648px) {
@@ -2431,9 +2435,6 @@ p.barcode {
     }
     .illustration:nth-of-type(2n) {
         margin-right: auto;
-    }
-    .illustration:last-of-type {
-        margin-bottom: 0;
     }
 }
 @media screen and (min-width: 541px) and (max-width: 767px) {
@@ -2467,7 +2468,7 @@ p.barcode {
         display: inline-block;
     }
     a.button.view_project:last-of-type {
-        margin: 30px auto;
+        margin: 0px auto 30px;
     }
 }
 @media screen and (min-width: 451px) and (max-width: 767px) {
@@ -2481,15 +2482,13 @@ p.barcode {
 @media screen and (min-width: 562px) and (max-width: 729px) {
     picture.skill {
         margin-right: 50px;
+        margin-bottom: 50px;
     }
     picture.skill:nth-of-type(4n) {
         margin-right: 50px;
     }
     picture.skill:nth-of-type(3n) {
         margin-right: 0;
-    }
-    img.skill {
-        margin-bottom: 50px;
     }
 }
 @media screen and (min-width: 457px) and (max-width: 729px) {
@@ -2566,17 +2565,16 @@ p.barcode {
     }
 }
 @media screen and (min-width: 541px) and (max-width: 561px) {
+    picture.skill,
     picture.skill:nth-of-type(4n) {
         margin-right: 40px;
+        margin-bottom: 40px;
     }
     picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    picture.skill {
-        margin-right: 40px;
-    }
-    img.skill {
-        margin-bottom: 40px;
+    picture.skill:nth-of-type(34n), picture.skill:nth-of-type(35n), picture.skill:nth-of-type(36n) {
+        margin-bottom: 0;
     }
 }
 @media screen and (max-width: 569px) {
@@ -2586,18 +2584,19 @@ p.barcode {
     }
 }
 @media screen and (min-width: 509px) and (max-width: 540px) {
+    picture.skill,
     picture.skill:nth-of-type(4n) {
         margin-right: 40px;
+        margin-bottom: 40px;
     }
     picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    picture.skill {
-        margin-right: 40px;
+    picture.skill:nth-of-type(34n), picture.skill:nth-of-type(35n), picture.skill:nth-of-type(36n){
+        margin-bottom: 0;
     }
     img.skill {
         width: 130px;
-        margin-bottom: 40px;
     }
 }
 @media screen and (min-width: 513px) and (max-width: 533px) {
@@ -2624,18 +2623,18 @@ p.barcode {
     }
 }
 @media screen and (min-width: 478px) and (max-width: 508px) {
+    picture.skill {
+        margin-right: 40px;
+        margin-bottom: 40px;
+    }
     picture.skill:nth-of-type(4n) {
         margin-right: 40px;
     }
     picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    picture.skill {
-        margin-right: 40px;
-    }
     img.skill {
         width: 120px;
-        margin-bottom: 40px;
     }
 }
 @media screen and (min-width: 521px) and (max-width: 767px) {
@@ -2730,18 +2729,18 @@ p.barcode {
     }
 }
 @media screen and (min-width: 457px) and (max-width: 477px) {
+    picture.skill {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
     picture.skill:nth-of-type(4n) {
         margin-right: 30px;
     }
     picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    picture.skill {
-        margin-right: 30px;
-    }
     img.skill {
         width: 120px;
-        margin-bottom: 30px;
     }
 }
 @media screen and (min-width: 450px) and (max-width: 460px) {
@@ -2793,6 +2792,11 @@ p.barcode {
         padding: 5px 0;
     }
 }
+@media screen and (min-width: 320px) and (max-width: 456px) {
+    picture.skill:nth-of-type(33n), picture.skill:nth-of-type(34n){
+        margin-bottom: 50px;
+    }
+}
 @media screen and (min-width: 409px) and (max-width: 456px) {
     picture.skill:nth-of-type(3n) {
         margin-right: 50px;
@@ -2804,10 +2808,10 @@ p.barcode {
     }
     picture.skill {
         margin-right: 50px;
+        margin-bottom: 50px;
     }
     img.skill {
         width: 120px;
-        margin-bottom: 50px;
     }
 }
 @media screen and (min-width: 354px) and (max-width: 450px) {
@@ -2863,10 +2867,13 @@ p.barcode {
     }
     picture.skill {
         margin-right: 50px;
+        margin-bottom: 50px;
+    }
+    picture.skill:nth-of-type(33n), picture.skill:nth-of-type(34n){
+        margin-bottom: 50px;
     }
     img.skill {
         width: 120px;
-        margin-bottom: 50px;
     }
     .form-control i {
         left: 7px;
@@ -2942,7 +2949,6 @@ p.barcode {
         margin: 15px auto 35px;
     }
     #services {
-        padding-top: 30px;
         text-align: center;
     }
     #services .services,
@@ -3063,10 +3069,13 @@ p.barcode {
 @media screen and (min-width: 267px) and (max-width: 319px) {
     picture.skill {
         margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    picture.skill:nth-of-type(33n), picture.skill:nth-of-type(34n){
+        margin-bottom: 30px;
     }
     img.skill {
         width: 105px;
-        margin-bottom: 30px;
     }
 }
 @media screen and (min-width: 210px) and (max-width: 408px) {
@@ -3170,12 +3179,10 @@ p.barcode {
     h3 {
         font-size: 1.4em;
     }
-    picture.skill {
-        margin-right: auto;
-    }
-    img.skill {
-        width: 80%;
-        margin-bottom: 30px;
+    picture.skill,
+    picture.skill:nth-of-type(33n), picture.skill:nth-of-type(34n), picture.skill:nth-of-type(35n) {
+        display: block;
+        margin: 0 auto 30px; 
     }
 }
 @media screen and (max-width: 209px) {
