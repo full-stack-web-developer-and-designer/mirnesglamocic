@@ -96,7 +96,6 @@ a:active {
     line-height: 1;
     padding: 17px 30px 15px;
     margin: 20px 0;
-    text-transform: uppercase;
     transition: 800ms all ease;
 }
 .button:hover {
@@ -1475,9 +1474,6 @@ p.barcode {
     }
 }
 @media screen and (min-width: 1115px) and (max-width: 1173px) {
-    section.project_complete:last-of-type {
-        padding-bottom: 15px;
-    }
     ul.skills,
     ul.verysimple {
         width: 425px;
@@ -2192,7 +2188,8 @@ p.barcode {
         color: #714600;
     }
     .button:link,
-    .button:visited {
+    .button:visited,
+    #nav ul li a {
         transition: none;
     }
     h3#response,
@@ -2372,6 +2369,9 @@ p.barcode {
     }
     .form-control i {
         left: 15px;
+    }
+    .form-control i.fas.fa-pencil-alt {
+        padding: 98.5px 22px;
     }
     .form .btn_submit {
         width: 96%;
@@ -2892,15 +2892,12 @@ p.barcode {
     #nav ul li a:visited {
         border-bottom: 1px solid #fff;
     }
-    #nav ul li a:hover {
-        border-bottom: 1px solid #955d00;
-    }
+    #nav ul li a:hover,
     #nav ul li a:active {
         border-bottom: 1px solid #462c00;
     }
     #about {
         background-image: url(../images/developmentMirnes_408.webp);
-        background-size: 408px 384px;
         padding: 0;
     }
     #certificates h2 {
@@ -3050,11 +3047,6 @@ p.barcode {
         margin-bottom: 30px;
     }
 }
-@media screen and (min-width: 329px) and (max-width: 408px) {
-    #quotes {
-        padding: 20px;
-    }
-}
 @media screen and (min-width: 202px) and (max-width: 328px) {
     #quotes {
         padding: 0;
@@ -3098,6 +3090,17 @@ p.barcode {
 @media screen and (min-width: 209px) and (max-width: 319px) {
     .form-control i {
         left: 6px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 639px) {
+    section.project_complete,
+    section.project_complete:last-of-type {
+        padding-bottom: 57px;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 599px) {
+    section.project_complete:last-of-type {
+        padding-bottom: 30px;
     }
 }
 @media screen and (min-width: 520px) and (max-width: 599px) {
