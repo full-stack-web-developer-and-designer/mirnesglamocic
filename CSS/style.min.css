@@ -239,6 +239,9 @@ a:active {
     background-image: url(../images/developmentMirnes.webp);
     background-position: center center;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     padding: 200px 0;
     text-align: center;
@@ -1547,6 +1550,9 @@ p.barcode {
 @media screen and (min-width: 1024px) and (max-width: 1260px) {
     #about {
         background-image: url(../images/developmentMirnes_1260.webp);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: 1260px 787px;
     }
     #form {
@@ -2026,6 +2032,9 @@ p.barcode {
     }
     #about {
         background-image: url(../images/developmentMirnes_1023.webp);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: 1023px 639px;
         padding: 200px 0 40px;
     }
@@ -2445,6 +2454,9 @@ p.barcode {
 @media screen and (min-width: 409px) and (max-width: 767px) {
     #about {
         background-image: url(../images/developmentMirnes_767.webp);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: 767px 597px;
         padding: 160px 0 20px;
     }
