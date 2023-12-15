@@ -20,7 +20,7 @@
 ?>
     <?php
         $rnd = rand(1,2);
-        $pos = ($rnd == 1) ? "left;" : ($rnd == 2) ? "right;" : "center";
+        $pos = ($rnd == 1) ? "left;" : ($rnd == 2) ? "right;" : "top";
     ?>
 <style type="text/css">
     /* Hero img */
@@ -33,7 +33,11 @@
         background-attachment: fixed;
         background-position: center center;
         background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover;
+        min-height: 100%;
         padding: 180px 0;
         text-align: center;
     }
@@ -55,8 +59,8 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            background-attachment: inherit;
-            background-position: <?php echo $pos ?> top;
+            background-attachment: scroll;
+            background-position: top <?php echo $pos ?>;
         }
         /* section project for mockup sites */
         .content:link,
@@ -543,6 +547,8 @@
                         </article><!--
                         --><article class='illustration'>
                         <a href='./illustrations/BIG/ellipses.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/ellipses.jpg' alt="Illustration of multiple ellipses by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of multiple ellipses created using the Ellipse and Rectangle Tool with the help of the Effects from the Appearance panel.</p></div></a></article><!--
+                        --><article class='illustration'><a href='./illustrations/BIG/honeycomb.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/honeycomb.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of honeycomb created with Polygon Tool using a combination of Effects from Appearance panel.</p></div></a>
+                        </article><!--
                         --><article class='illustration'><a href='./illustrations/BIG/sheriff.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/sheriff.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of Sheriff's badge with a star along with a bunch of circles and a big ellipse using the Shape Builder and an inset reflection.</p></div></a>
                         </article><!--
                         --><article class='illustration'>
