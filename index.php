@@ -199,10 +199,10 @@
             <h2>Projects</h2>
             <div class="menu" aria-label="menu">
                 <a id="showall" href="#" aria-label="View all my projects"></a>
-                <a class="project" target="1" aria-label="Web sites">Web sites</a> 
+                <a class="project" target="1" aria-label="Web sites">Web sites</a>
                 <a class="project" target="2" aria-label="Image editing">Image editing</a> 
                 <a class="project" target="3" aria-label="Illustrations">Illustrations</a> 
-                <a class="project" target="4" aria-label="Logo design">Logo design</a>
+                <a class="project" target="4" aria-label="Logo design">Logo design</a> 
             </div>
             <div class="taget_box">
                 <div id="div1" class="target">
@@ -541,7 +541,9 @@
                 <div id="div2" class="target"><p class="future">&apos;Something really cool will coming soon!&apos;</p></div>
                 <div id="div3" class="target">
                     <section class='illustrations'>
-                        <article class='illustration'><a href='./illustrations/BIG/orange.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created using the Ellipse and Rectangle Tool with the Scale and Rotate Tool.</p></div></a>
+                        <article class='illustration'><a href='./illustrations/BIG/ribbon.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/ribbon.jpg' alt="Illustration of Möbius strip by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of an overlapping ribbon created by a combination of hexagons, a blend of objects, the Rotate Tool, and the Live Paint Bucket.</p></div></a>
+                        </article><!--
+                        --><article class='illustration'><a href='./illustrations/BIG/orange.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created using the Ellipse and Rectangle Tool with the Scale and Rotate Tool.</p></div></a>
                         </article><!--
                         --><article class='illustration'><a href='./illustrations/BIG/electron.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/electron.jpg' alt="Illustration of the atomic symbol by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the atomic symbol created using the Ellipse Tool with the help of the Effects from the Appearance panel.</p></div></a>
                         </article><!--
@@ -562,7 +564,30 @@
                         </article>
                     </section>
                 </div>
-                <div id="div4" class="target"><p class="future">&apos;Something really cool will coming soon!&apos;</p></div>
+
+                <div id="div4" class="target">
+                <section class='logos'>
+                        <article class='logo'><a href='./logos/BIG/pixelworkerstar.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworkerstar.jpg' alt="Star logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Star logo inspired by United Pixelworkers created using the Ellipse, Rotate, Scale and Shear Tools with skewed gradient shadows.</p></div></a>
+                        </article><!--
+                        --><article class='logo'><a href='./logos/BIG/electron.jpg' data-lightbox='logos'><img src='./logos/SMALL/electron.jpg' alt="Illustration of the atomic symbol by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the atomic symbol created using the Ellipse Tool with the help of the Effects from the Appearance panel.</p></div></a>
+                        </article><!--
+                        --><article class='logo'>
+                        <a href='./logos/BIG/ellipses.jpg' data-lightbox='logos'><img src='./logos/SMALL/ellipses.jpg' alt="Illustration of multiple ellipses by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of multiple ellipses created using the Ellipse and Rectangle Tool with the help of the Effects from the Appearance panel.</p></div></a></article><!--
+                        --><article class='logo'><a href='./logos/BIG/honeycomb.jpg' data-lightbox='logos'><img src='./logos/SMALL/honeycomb.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of honeycomb created with Polygon Tool using a combination of Effects from Appearance panel.</p></div></a>
+                        </article><!--
+                        --><article class='logo'><a href='./logos/BIG/sheriff.jpg' data-lightbox='logos'><img src='./ilogos/SMALL/sheriff.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of Sheriff's badge with a star along with a bunch of circles and a big ellipse using the Shape Builder and an inset reflection.</p></div></a>
+                        </article><!--
+                        --><article class='logo'>
+                            <a href='./logos/BIG/coil.jpg' data-lightbox='logos'><img src='./logos/SMALL/coil.jpg' alt="Illustration of Coil" class="blur" loading="lazy"><div class="content"><p>Illustration of a coil created with the Ellipse Tool and compound paths using the Join command.</p></div></a>
+                        </article><!--
+                        --><article class='logo'>
+                            <a href='./logos/BIG/house.jpg' data-lightbox='logos'><img src='./logos/SMALL/house.jpg' alt="Illustration of Simple house by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the simple house created with the Rectangle and Shaper Tool.</p></div></a>
+                        </article><!--
+                    --><article class='logo'>
+                            <a href='./logos/BIG/factory.jpg' data-lightbox='logos'><img src='./logos/SMALL/factory.jpg' alt="Illustration of the Factory by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the company created with the Line Segment Tool, Scissors, Arc, Rectangular Grid, Polar Grid and Spiral Tool.</p></div></a>
+                        </article>
+                    </section>
+                </div>
         </div>
             
         </div><!--end .wrapper-->
