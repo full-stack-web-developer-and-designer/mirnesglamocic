@@ -541,7 +541,9 @@
                 <div id="div2" class="target"><p class="future">&apos;Something really cool will coming soon!&apos;</p></div>
                 <div id="div3" class="target">
                     <section class='illustrations'>
-                        <article class='illustration'><a href='./illustrations/BIG/ribbon.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/ribbon.jpg' alt="Illustration of Möbius strip by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of an overlapping ribbon created by a combination of hexagons, a blend of objects, the Rotate Tool, and the Live Paint Bucket.</p></div></a>
+                        <article class='illustration'><a href='./illustrations/BIG/cubes.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/cubes.jpg' alt="Illustration of dynamic cubes by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of dynamic cubes created using the Line Tool, Transform, and Outer Glow Effects.</p></div></a>
+                        </article><!--
+                        --><article class='illustration'><a href='./illustrations/BIG/ribbon.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/ribbon.jpg' alt="Illustration of Möbius strip by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of an overlapping ribbon created by a combination of hexagons, a blend of objects, the Rotate Tool, and the Live Paint Bucket.</p></div></a>
                         </article><!--
                         --><article class='illustration'><a href='./illustrations/BIG/orange.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created using the Ellipse and Rectangle Tool with the Scale and Rotate Tool.</p></div></a>
                         </article><!--
