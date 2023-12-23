@@ -547,6 +547,8 @@
                         </article><!--
                         --><article class='illustration'><a href='./illustrations/BIG/orange.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created using the Ellipse and Rectangle Tool with the Scale and Rotate Tool.</p></div></a>
                         </article><!--
+                        --><article class='illustration'><a href='./illustrations/BIG/flower_petals.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/flower_petals.jpg' alt="Illustration of flower petals by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of flower petals created using Ellipse Tool, Transform Effects, Pucker & Bloat, and Zig Zag.</p></div></a>
+                        </article><!--
                         --><article class='illustration'><a href='./illustrations/BIG/electron.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/electron.jpg' alt="Illustration of the atomic symbol by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the atomic symbol created using the Ellipse Tool with the help of the Effects from the Appearance panel.</p></div></a>
                         </article><!--
                         --><article class='illustration'>
