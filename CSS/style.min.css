@@ -89,13 +89,13 @@ a:active {
     border: 1px solid #955d00;
     border-radius: 5px;
     color: #955d00;
-    display: inline-block;
+    display: block;
     font-size: 0.75em;
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 1;
     padding: 17px 30px 15px;
-    margin: 20px 0;
+    margin: 20px auto 10px;
     transition: 800ms all ease;
 }
 .button:hover {
@@ -104,6 +104,7 @@ a:active {
 }
 .button:active {
     background: #714600;
+    color: #fff;
 }
 .white .button {
     border: 1px solid #fff;
@@ -366,7 +367,7 @@ picture.skill {
 picture.skill:nth-of-type(33n),
 picture.skill:nth-of-type(34n),
 picture.skill:nth-of-type(35n),
-picture.skill:nth-of-type(36n){
+picture.skill:nth-of-type(36n) {
     margin-bottom: 0;
 }
 .help_tip {
@@ -532,7 +533,7 @@ section.project_complete:last-of-type {
 .slide[data-active] {
     opacity: 1;
     z-index: 1;
-    transition-delay: 0ms;
+    transition-delay: 0;
 }
 .carousel-button {
     cursor: pointer;
@@ -860,6 +861,7 @@ form .form-control input {
 form .form-control textarea {
     padding: 15px 15px 10px 70px;
     box-sizing: border-box;
+    height: 220px;
 }
 .form-control i {
     position: absolute;
@@ -1597,7 +1599,7 @@ p.barcode {
     }
     section.project_complete:last-of-type {
         padding-bottom: 30px;
-    }    
+    }
     .carousel-button {
         top: 10rem;
     }
@@ -2090,10 +2092,10 @@ p.barcode {
     .logo:nth-of-type(4n) {
         margin-right: 3.5%;
     }
-    .illustration:nth-of-type(9), 
+    .illustration:nth-of-type(9),
     .illustration:nth-of-type(10),
-    .logo:nth-of-type(9), 
-    .logo:nth-of-type(10){
+    .logo:nth-of-type(9),
+    .logo:nth-of-type(10) {
         margin-bottom: 3.5%;
     }
 }
@@ -2146,7 +2148,7 @@ p.barcode {
     picture.skill:nth-of-type(3n),
     picture.skill:nth-of-type(12n),
     picture.skill:nth-of-type(24n),
-    picture.skill:nth-of-type(36n){
+    picture.skill:nth-of-type(36n) {
         margin-right: 0;
     }
 }
@@ -2202,20 +2204,23 @@ p.barcode {
     a:link,
     a:visited {
         text-decoration: none;
-        color: #955d00;
     }
-    a:hover {
-        background-color: #fff;
-        color: #714600;
-    }
+    a:hover,
     a:active {
         background-color: #fff;
         color: #714600;
     }
     .button:link,
     .button:visited,
+    .button:hover,
+    .button:active,
     #nav ul li a {
         transition: none;
+    }
+    .button:hover,
+    .button:active {
+        background: #714600;
+        color: #fff;
     }
     h3#response,
     h4 {
@@ -2465,8 +2470,7 @@ p.barcode {
         margin: 0 auto 30px;
         float: none;
     }
-    .illustration:nth-of-type(2n)
-    .logo:nth-of-type(2n) {
+    .illustration:nth-of-type(2n) .logo:nth-of-type(2n) {
         margin-right: auto;
     }
 }
@@ -2504,7 +2508,10 @@ p.barcode {
         display: inline-block;
     }
     a.button.view_project:last-of-type {
-        margin: 0px auto 30px;
+        margin: 0 auto 30px;
+    }
+    #contact h2 {
+        margin: 30px auto;
     }
 }
 @media screen and (min-width: 451px) and (max-width: 767px) {
@@ -2609,7 +2616,9 @@ p.barcode {
     picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    picture.skill:nth-of-type(34n), picture.skill:nth-of-type(35n), picture.skill:nth-of-type(36n) {
+    picture.skill:nth-of-type(34n),
+    picture.skill:nth-of-type(35n),
+    picture.skill:nth-of-type(36n) {
         margin-bottom: 0;
     }
 }
@@ -2628,7 +2637,9 @@ p.barcode {
     picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    picture.skill:nth-of-type(34n), picture.skill:nth-of-type(35n), picture.skill:nth-of-type(36n){
+    picture.skill:nth-of-type(34n),
+    picture.skill:nth-of-type(35n),
+    picture.skill:nth-of-type(36n) {
         margin-bottom: 0;
     }
     img.skill {
@@ -2829,7 +2840,8 @@ p.barcode {
     }
 }
 @media screen and (min-width: 320px) and (max-width: 456px) {
-    picture.skill:nth-of-type(33n), picture.skill:nth-of-type(34n){
+    picture.skill:nth-of-type(33n),
+    picture.skill:nth-of-type(34n) {
         margin-bottom: 50px;
     }
 }
@@ -2905,7 +2917,8 @@ p.barcode {
         margin-right: 50px;
         margin-bottom: 50px;
     }
-    picture.skill:nth-of-type(33n), picture.skill:nth-of-type(34n){
+    picture.skill:nth-of-type(33n),
+    picture.skill:nth-of-type(34n) {
         margin-bottom: 50px;
     }
     img.skill {
@@ -3099,7 +3112,8 @@ p.barcode {
         margin-right: 30px;
         margin-bottom: 30px;
     }
-    picture.skill:nth-of-type(33n), picture.skill:nth-of-type(34n){
+    picture.skill:nth-of-type(33n),
+    picture.skill:nth-of-type(34n) {
         margin-bottom: 30px;
     }
     img.skill {
@@ -3220,9 +3234,11 @@ p.barcode {
         font-size: 1.4em;
     }
     picture.skill,
-    picture.skill:nth-of-type(33n), picture.skill:nth-of-type(34n), picture.skill:nth-of-type(35n) {
+    picture.skill:nth-of-type(33n),
+    picture.skill:nth-of-type(34n),
+    picture.skill:nth-of-type(35n) {
         display: block;
-        margin: 0 auto 30px; 
+        margin: 0 auto 30px;
     }
 }
 @media screen and (max-width: 209px) {
@@ -3280,7 +3296,9 @@ p.barcode {
         display: none;
     }
     .button:link,
-    .button:visited {
+    .button:visited,
+    .button:hover,
+    .button:active {
         padding: 17px 3px;
     }
     #projects a.project {
@@ -3296,6 +3314,12 @@ p.barcode {
     #services .services:nth-of-type(4) {
         width: 90%;
         padding: 5%;
+    }
+}
+@media (hover: hover) {
+    .button:hover {
+        background: #fff;
+        color: #955d00;
     }
 }
 @media screen and (max-width: 1260px) and (min-device-pixel-ratio: 2), screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 2) {
