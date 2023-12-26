@@ -12,7 +12,7 @@
             </div><!-- end .form-control -->
 
             <div class="form-control InputIconBg">
-                <textarea maxlength="1000" name="message" class="textinput message" cols="46" rows="8" id="message" placeholder=" "></textarea>
+                <textarea maxlength="1000" name="message" class="textinput message" id="message" placeholder=" "></textarea>
                 <label id="floated_textarea" for="message">Message</label>
                 <i class="fas fa-pencil-alt" aria-hidden="true"></i>
                 <span class="error"><?= $message_error; ?></span>
