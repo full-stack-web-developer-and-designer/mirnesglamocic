@@ -1143,7 +1143,63 @@
 
 
 
-                <div id="div4" class="target"><p class="future">&apos;Something really cool will coming soon!&apos;</p>
+                <div id="div4" class="target">
+                    <section class='logos'>
+
+                        <article class='logo'><a href='./logos/BIG/cubes.jpg' data-lightbox='logos'><img src='./logos/SMALL/cubes.jpg' alt="Illustration of dynamic cubes by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of dynamic cubes created using the Line Tool, Transform, and Outer Glow Effects.</p></div></a>
+
+                        </article><!--
+
+                        --><article class='logo'><a href='./logos/BIG/3D-Star.jpg' data-lightbox='logos'><img src='./logos/SMALL/3D-Star.jpg' alt="Illustration of 3D Star by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a five-pointed 3D twisted woven metal star created using the Ellipse, Rectangle, Line, Rotate, and Scale Tools.</p></div></a>
+
+                        </article><!--
+                        --><article class='logo'><a href='./logos/BIG/ribbon.jpg' data-lightbox='logos'><img src='./logos/SMALL/ribbon.jpg' alt="Illustration of Möbius strip by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of an overlapping ribbon created by a combination of hexagons, a blend of objects, the Rotate Tool, and the Live Paint Bucket.</p></div></a>
+
+                        </article><!--
+
+                        --><article class='logo'><a href='./logos/BIG/orange.jpg' data-lightbox='logos'><img src='./logos/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created using the Ellipse and Rectangle Tool with the Scale and Rotate Tool.</p></div></a>
+
+                        </article><!--
+
+                        --><article class='logo'><a href='./logos/BIG/flower_petals.jpg' data-lightbox='logos'><img src='./logos/SMALL/flower_petals.jpg' alt="Illustration of flower petals by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of flower petals created using Ellipse Tool, Transform Effects, Pucker & Bloat, and Zig Zag.</p></div></a>
+
+                        </article><!--
+
+                        --><article class='logo'><a href='./logos/BIG/electron.jpg' data-lightbox='logos'><img src='./logos/SMALL/electron.jpg' alt="Illustration of the atomic symbol by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the atomic symbol created using the Ellipse Tool with the help of the Effects from the Appearance panel.</p></div></a>
+
+                        </article><!--
+
+                        --><article class='logo'>
+
+                        <a href='./logos/BIG/ellipses.jpg' data-lightbox='logos'><img src='./logos/SMALL/ellipses.jpg' alt="Illustration of multiple ellipses by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of multiple ellipses created using the Ellipse and Rectangle Tool with the help of the Effects from the Appearance panel.</p></div></a></article><!--
+
+                        --><article class='logo'><a href='./logos/BIG/honeycomb.jpg' data-lightbox='logos'><img src='./logos/SMALL/honeycomb.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of honeycomb created with Polygon Tool using a combination of Effects from Appearance panel.</p></div></a>
+
+                        </article><!--
+
+                        --><article class='logo'><a href='./logos/BIG/sheriff.jpg' data-lightbox='logos'><img src='./logos/SMALL/sheriff.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of Sheriff's badge with a star along with a bunch of circles and a big ellipse using the Shape Builder and an inset reflection.</p></div></a>
+
+                        </article><!--
+
+                        --><article class='logo'>
+
+                            <a href='./logos/BIG/coil.jpg' data-lightbox='logos'><img src='./logos/SMALL/coil.jpg' alt="Illustration of Coil" class="blur" loading="lazy"><div class="content"><p>Illustration of a coil created with the Ellipse Tool and compound paths using the Join command.</p></div></a>
+
+                        </article><!--
+
+                        --><article class='logo'>
+
+                            <a href='./logos/BIG/house.jpg' data-lightbox='logos'><img src='./logos/SMALL/house.jpg' alt="Illustration of Simple house by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the simple house created with the Rectangle and Shaper Tool.</p></div></a>
+
+                        </article><!--
+
+                    --><article class='logo'>
+
+                            <a href='./logos/BIG/pixelworkerstar.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworkerstar.jpg' alt="Star logo of United Pixelworkers by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Star logo by United Pixelworkers created using Ellipse, Rotate, Scale, and Shear tools with warped gradient shadows.</p></div></a>
+
+                        </article>
+
+                    </section>
 
                 </div>
 
