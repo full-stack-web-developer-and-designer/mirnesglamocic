@@ -1088,7 +1088,7 @@
 
                         </article><!--
 
-                        --><article class='illustration'><a href='./illustrations/BIG/3D-Star.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/3D-Star.jpg' alt="Illustration of 3D Star by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of five-pointed 3D twisted woven metal Star created using Ellipse, Rectangle, Line, Rotate, and Scale Tool.</p></div></a>
+                        --><article class='illustration'><a href='./illustrations/BIG/3D-Star.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/3D-Star.jpg' alt="Illustration of 3D Star by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a five-pointed 3D twisted woven metal star created using the Ellipse, Rectangle, Line, Rotate, and Scale Tools.</p></div></a>
 
                         </article><!--
                         --><article class='illustration'><a href='./illustrations/BIG/ribbon.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/ribbon.jpg' alt="Illustration of Möbius strip by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of an overlapping ribbon created by a combination of hexagons, a blend of objects, the Rotate Tool, and the Live Paint Bucket.</p></div></a>
