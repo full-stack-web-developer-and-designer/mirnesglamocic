@@ -2094,9 +2094,17 @@ p.barcode {
     }
     .illustration:nth-of-type(9),
     .illustration:nth-of-type(10),
+    .illustration:nth-of-type(11),
+    .illustration:nth-of-type(12),
     .logo:nth-of-type(9),
-    .logo:nth-of-type(10) {
+    .logo:nth-of-type(10),
+    .logo:nth-of-type(11),
+    .logo:nth-of-type(12) {
         margin-bottom: 3.5%;
+    }
+    .illustration:nth-of-type(12),
+    .logo:nth-of-type(12){
+        margin-right: 0;
     }
 }
 @media screen and (min-width: 1057px) and (max-width: 1112px) {
