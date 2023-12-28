@@ -2218,10 +2218,6 @@ p.barcode {
         background-color: #fff;
         color: #714600;
     }
-    .button:link,
-    .button:visited,
-    .button:hover,
-    .button:active,
     #nav ul li a {
         transition: none;
     }
@@ -2426,6 +2422,12 @@ p.barcode {
     }
     .scroll-top i {
         font-size: 1em;
+    }
+}
+@media screen and (max-width: 767px) and (hover: hover) {
+    .button:hover {
+        background: #fff;
+        color: #955d00;
     }
 }
 @media screen and (min-width: 730px) and (max-width: 767px) {
@@ -3319,12 +3321,6 @@ p.barcode {
     #services .services:nth-of-type(4) {
         width: 90%;
         padding: 5%;
-    }
-}
-@media (hover: hover) {
-    .button:hover {
-        background: #fff;
-        color: #955d00;
     }
 }
 @media screen and (max-width: 1260px) and (min-device-pixel-ratio: 2), screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 2) {
