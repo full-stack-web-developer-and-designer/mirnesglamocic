@@ -101,6 +101,7 @@ a:active {
 .button:hover {
     background: #955d00;
     color: #fff;
+    -webkit-tap-highlight-color: transparent;
 }
 .button:active {
     background: #714600;
@@ -2223,7 +2224,6 @@ p.barcode {
     }
     .button:hover,
     .button:active {
-        -webkit-tap-highlight-color: transparent;
         background: #fff;
         color: #955d00;
     }
