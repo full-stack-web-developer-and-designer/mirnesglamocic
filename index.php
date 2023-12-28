@@ -51,39 +51,22 @@
     /* Hero img */
 
     #hero.lazy {
-
         background-image: none;
-
         background-color: #F1F1FA;
-
     }
 
     #hero {
-
         background-image: url("/images/bg<?php echo $rnd ?>.webp");
-
         background-repeat: no-repeat;
-
         background-attachment: fixed;
-
         background-position: center center;
-
         -webkit-background-size: cover;
-
         -moz-background-size: cover;
-
         -o-background-size: cover;
-
         background-size: cover;
-
         min-height: 100%;
-
-        overflow: hidden;
-
         padding: 180px 0;
-
         text-align: center;
-
     }
 
 @media screen and (min-width: 1024px) and (max-width: 1260px) {
@@ -99,9 +82,7 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
     #hero {
-
         background-image: url("/images/bg_1023<?php echo $rnd ?>.webp");
-
     }
 
 }
@@ -1088,28 +1069,28 @@
 
                         </article><!--
 
-                        --><article class='illustration'><a href='./illustrations/BIG/3D-Star.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/3D-Star.jpg' alt="Illustration of 3D Star by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a five-pointed 3D twisted woven metal star created using the Ellipse, Rectangle, Line, Rotate, and Scale Tools.</p></div></a>
+                        --><article class='illustration'><a href='./illustrations/BIG/3D-Star.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/3D-Star.jpg' alt="Illustration of 3D Star by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a five-pointed 3D twisted woven metal star created using the Ellipse, Rectangle, Line, Rotate, and Scale tools.</p></div></a>
 
                         </article><!--
                         --><article class='illustration'><a href='./illustrations/BIG/ribbon.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/ribbon.jpg' alt="Illustration of Möbius strip by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of an overlapping ribbon created by a combination of hexagons, a blend of objects, the Rotate Tool, and the Live Paint Bucket.</p></div></a>
 
                         </article><!--
 
-                        --><article class='illustration'><a href='./illustrations/BIG/orange.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created using the Ellipse and Rectangle Tool with the Scale and Rotate Tool.</p></div></a>
+                        --><article class='illustration'><a href='./illustrations/BIG/orange.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/orange.jpg' alt="Illustration of orange wedge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a single orange slice created with the Ellipse, Rectangle, Scale, and Rotate tools.</p></div></a>
 
                         </article><!--
 
-                        --><article class='illustration'><a href='./illustrations/BIG/flower_petals.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/flower_petals.jpg' alt="Illustration of flower petals by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of flower petals created using Ellipse Tool, Transform Effects, Pucker & Bloat, and Zig Zag.</p></div></a>
+                        --><article class='illustration'><a href='./illustrations/BIG/flower_petals.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/flower_petals.jpg' alt="Illustration of flower petals by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of flower petals created using the Ellipse tool, Transform Effects, Pucker & Bloat, and Zig Zag tools.</p></div></a>
 
                         </article><!--
 
-                        --><article class='illustration'><a href='./illustrations/BIG/electron.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/electron.jpg' alt="Illustration of the atomic symbol by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the atomic symbol created using the Ellipse Tool with the help of the Effects from the Appearance panel.</p></div></a>
+                        --><article class='illustration'><a href='./illustrations/BIG/electron.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/electron.jpg' alt="Illustration of the atomic symbol by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of an atomic symbol created with the Ellipse tool using Effects from the Appearance panel.</p></div></a>
 
                         </article><!--
 
                         --><article class='illustration'>
 
-                        <a href='./illustrations/BIG/ellipses.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/ellipses.jpg' alt="Illustration of multiple ellipses by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of multiple ellipses created using the Ellipse and Rectangle Tool with the help of the Effects from the Appearance panel.</p></div></a></article><!--
+                        <a href='./illustrations/BIG/ellipses.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/ellipses.jpg' alt="Illustration of multiple ellipses by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of multiple ellipses created with the Ellipse and Rectangle tools using Effects from the Appearance panel.</p></div></a></article><!--
 
                         --><article class='illustration'><a href='./illustrations/BIG/honeycomb.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/honeycomb.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of honeycomb created with Polygon Tool using a combination of Effects from Appearance panel.</p></div></a>
 
@@ -1127,7 +1108,7 @@
 
                         --><article class='illustration'>
 
-                            <a href='./illustrations/BIG/house.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/house.jpg' alt="Illustration of Simple house by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the simple house created with the Rectangle and Shaper Tool.</p></div></a>
+                            <a href='./illustrations/BIG/house.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/house.jpg' alt="Illustration of Simple house by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of a simple house created using the Rectangle and Shaper tools.</p></div></a>
 
                         </article><!--
 
