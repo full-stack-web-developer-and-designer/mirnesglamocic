@@ -2223,8 +2223,9 @@ p.barcode {
     }
     .button:hover,
     .button:active {
-        background: #714600;
-        color: #fff;
+        -webkit-tap-highlight-color: transparent;
+        background: #fff;
+        color: #955d00;
     }
     h3#response,
     h4 {
@@ -2422,12 +2423,6 @@ p.barcode {
     }
     .scroll-top i {
         font-size: 1em;
-    }
-}
-@media screen and (max-width: 767px) and (hover: hover) {
-    .button:hover {
-        background: #fff;
-        color: #955d00;
     }
 }
 @media screen and (min-width: 730px) and (max-width: 767px) {
