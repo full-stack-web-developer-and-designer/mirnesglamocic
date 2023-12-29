@@ -1102,7 +1102,7 @@
 
                         --><article class='illustration'>
 
-                            <a href='./illustrations/BIG/coil.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/coil.jpg' alt="Illustration of Coil" class="blur" loading="lazy"><div class="content"><p>Illustration of a coil created with the Ellipse Tool and compound paths using the Join command.</p></div></a>
+                            <a href='./illustrations/BIG/coil.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/coil.jpg' alt="Illustration of Coil by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of a coil created with the Ellipse Tool and compound paths using the Join command.</p></div></a>
 
                         </article><!--
 
@@ -1158,35 +1158,26 @@
 
                         </article><!--
 
-                        --><article class='logo'><a href='./logos/BIG/sheriff.jpg' data-lightbox='logos'><img src='./logos/SMALL/sheriff.jpg' alt="Illustration of Sheriff's badge by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Illustration of Sheriff's badge with a star along with a bunch of circles and a big ellipse using the Shape Builder and an inset reflection.</p></div></a>
-
-                        </article><!--
-
                         --><article class='logo'>
-
-                            <a href='./logos/BIG/coil.jpg' data-lightbox='logos'><img src='./logos/SMALL/coil.jpg' alt="Illustration of Coil" class="blur" loading="lazy"><div class="content"><p>Illustration of a coil created with the Ellipse Tool and compound paths using the Join command.</p></div></a>
-
-                        </article><!--
-
-                        --><article class='logo'>
-
                             <a href='./logos/BIG/pixelworkerstar.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworkerstar.jpg' alt="Star logo of United Pixelworkers by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Star logo by United Pixelworkers created using Ellipse, Rotate, Scale, and Shear tools with warped gradient shadows.</p></div></a>
-
                         </article><!--
+
+                        --><article class='logo'><a href='./logos/BIG/complementary_rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/complementary_rings.jpg' alt="Complemtary ring logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Complemtary ring logo, created from a interwoven ring logo stitched together using the Ellipse, Rotate, and Scissors tools, along with the paths join command.</p></div></a>
+                        </article><!--
+
                         --><article class='logo'>
-
-                            <a href='./logos/BIG/bullseye_logo.jpg' data-lightbox='logos'><img src='./logos/SMALL/bullseye_logo.jpg' alt="Bullseye logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Expertly rendered Bullseye logo created from a single @ sign using Polargrid and Scale tools.</p></div></a>
-
+                        <a href='./logos/BIG/interwoven_rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/interwoven_rings.jpg' alt="Illustration of Coil" class="blur" loading="lazy"><div class="content"><p>The interwoven rings logo created from the bullseye logo using the Rotate tool, and the paths join command.</p></div></a>
                         </article><!--
 
+                        --><article class='logo'>
+                            <a href='./logos/BIG/bullseye_logo.jpg' data-lightbox='logos'><img src='./logos/SMALL/bullseye_logo.jpg' alt="Bullseye logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Expertly rendered Bullseye logo created from a single @ sign using Polargrid and Scale tools.</p></div></a>
+                        </article>
 
                     </section>
 
                 </div>
 
         </div>
-
-            
 
         </div><!--end .wrapper-->
 
