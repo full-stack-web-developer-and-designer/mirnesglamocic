@@ -1170,15 +1170,15 @@
 
                         --><article class='logo'>
 
-                            <a href='./logos/BIG/house.jpg' data-lightbox='logos'><img src='./logos/SMALL/house.jpg' alt="Illustration of Simple house by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the simple house created with the Rectangle and Shaper Tool.</p></div></a>
+                            <a href='./logos/BIG/pixelworkerstar.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworkerstar.jpg' alt="Star logo of United Pixelworkers by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Star logo by United Pixelworkers created using Ellipse, Rotate, Scale, and Shear tools with warped gradient shadows.</p></div></a>
+
+                        </article><!--
+                        --><article class='logo'>
+
+                            <a href='./logos/BIG/bullseye_logo.jpg' data-lightbox='logos'><img src='./logos/SMALL/bullseye_logo.jpg' alt="Bullseye logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Expertly rendered Bullseye logo created from a single @ sign using Polargrid and Scale tools.</p></div></a>
 
                         </article><!--
 
-                    --><article class='logo'>
-
-                            <a href='./logos/BIG/pixelworkerstar.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworkerstar.jpg' alt="Star logo of United Pixelworkers by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Star logo by United Pixelworkers created using Ellipse, Rotate, Scale, and Shear tools with warped gradient shadows.</p></div></a>
-
-                        </article>
 
                     </section>
 
