@@ -1166,7 +1166,7 @@
                         </article><!--
 
                         --><article class='logo'>
-                        <a href='./logos/BIG/interwoven_rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/interwoven_rings.jpg' alt="Illustration of Coil" class="blur" loading="lazy"><div class="content"><p>The interwoven rings logo created from the bullseye logo using the Rotate tool, and the paths join command.</p></div></a>
+                        <a href='./logos/BIG/interwoven_rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/interwoven_rings.jpg' alt="The interwoven rings logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>The interwoven rings logo created from the bullseye logo using the Rotate tool, and the paths join command.</p></div></a>
                         </article><!--
 
                         --><article class='logo'>
