@@ -6,9 +6,10 @@ function copyright($startYear) {
 	$currentYear = date('Y');
 	if ($startYear < $currentYear) {
 		$currentYear = date('y');
-		return "<p class='no_print'><small>&copy Copyright $startYear &ndash; $currentYear" . " | mirnesglamocic.com<span class='footer_comma'>,</span></small></p>";
+		return "<p class='no_print'><small><span class='copyear'>&copy; Copyright $startYear &ndash; $currentYear" . "</span><span class='footer_comma'>,</span><span class='footer_none'> | 
+		</span><a id='footerlink' href='https://mirnesglamocic.com'>Mirnes Glamočić</a><span class='footer_comma2'>,</span><span class='footer_none2'> | </span><span id='copyrighter'>Web Developer, UI/UX and Web Designer</span></small></p>";
 	} else {
-		return "<p class='no_print'><small>&copy Copyright $startYear " . " | Mirnes Glamočić<span class='footer_comma'>,</span></small></p>";
+		return "<p class='no_print'><small><span class='copyear'>&copy; Copyright $startYear " . " </span><span class='footer_comma'>,</span><span class='footer_none'> | </span><a id='footerlink' href='https://mirnesglamocic.com'>Mirnes Glamočić</a><span class='footer_comma2'>,</span><span class='footer_none2'> | </span><span id='copyrighter'>Web Developer, UI/UX and Web Designer</span></small></p>";
 	}
 }
 echo copyright(2023);
