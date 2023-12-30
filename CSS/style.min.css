@@ -1101,20 +1101,18 @@ i.contact_icon:hover {
 }
 #footer p a:link,
 #footer p a:visited {
+    color: #faf7eb;
     text-decoration: underline;
-    color: #fff;
 }
 #footer p a:hover {
-    color: red;
+    color:#bcaa96;
+    text-decoration: none;
 }
 #footer p a:active {
-    color: #696969;
+    color: #FFF;
 }
-.footer_comma {
+.footer_comma, .footer_comma2 {
     display: none;
-}
-#copyright {
-    color: #e84e1b;
 }
 body.development {
     background: #fff;
@@ -2665,6 +2663,13 @@ p.barcode {
         padding: 25px;
     }
 }
+@media screen and (max-width: 512px) {
+    #copyrighter {
+        display: block;
+        line-height: 2em;
+        padding-top: 5px;
+    }
+}
 @media screen and (min-width: 492px) and (max-width: 512px) {
     #projects a.project {
         margin: 0 50px 50px 0;
@@ -3122,6 +3127,14 @@ p.barcode {
         width: 105px;
     }
 }
+@media screen and (min-width: 267px) and (max-width: 512px) {
+    .footer_comma2 {
+        display: inline;
+    }
+    .footer_none2 {
+        display: none;
+    }
+}
 @media screen and (min-width: 210px) and (max-width: 408px) {
     #aboutme h2,
     #certificates h2,
@@ -3242,7 +3255,23 @@ p.barcode {
         display: block;
         margin: 0 auto 30px;
     }
+    .copyear {
+        display: inline-block;
+    }
+    #footerlink {
+        width: 100%;
+        display: inline-block;
+        padding-top: 10px;
+    }
+    .footer_comma {
+        display: inline;
+    }
+    .footer_none,
+    .footer_none2 { 
+        display: none;
+    }
 }
+
 @media screen and (max-width: 209px) {
     #headerTopRight {
         text-align: center;
