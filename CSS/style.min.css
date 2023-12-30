@@ -2701,6 +2701,10 @@ p.barcode {
         line-height: 2em;
         padding-top: 5px;
     }
+    #footer p a:link,
+    #footer p a:visited {
+        text-decoration: none;
+    }
     #footer p a:hover,
     #footer p a:active {
         -webkit-tap-highlight-color: transparent;
