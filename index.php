@@ -16,8 +16,9 @@
 
     $fb_title="Mirnes Glamočić | Web Developer and Designer";
 
-    $meta['og_description']="Mirnes Glamočić is an experienced Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
-
+    $meta['og_description']="Professional website development and design services by Mirnes Glamočić, who is certified by several IT organizations.";
+    //Check length of description for SEO (max 120 characters)-120
+    //echo "Length of description is " . strlen($meta['og_description']) . "characters long.";
     $og_url="https://mirnesglamocic.com";
 
     $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
@@ -28,8 +29,9 @@
 
     $title="Mirnes Glamočić | Full-Stack Web Developer and Designer";
 
-    $meta['description']="Mirnes Glamočić is an experienced Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry.";
-
+    $meta['description']="Professional website development, UI/UX and design services by Mirnes Glamočić from Bosnia and Herzegovina, who is certified by several IT organizations.";
+    //Check length of description for SEO (120-158 characters)-155
+    //echo "Length of description is " . strlen($meta['description']) . "characters long.";
     $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
 
 	$meta['keywords']="portfolio, web development, web developer, front-end development, frontend development, front-end developer, frontend developer, backend-development, backend development, back-end developer, backend developer, database development database developer, web design, web designer, the best web developer, the best web designer";
@@ -1278,11 +1280,9 @@
         </div><!--end .wrapper-->
 
     </section> <!--contact-->
-
+<!-- Placed at the end of the document so the pages load faster -->
 <script>
-
    jQuery(document).ready(function(){jQuery(function(){jQuery("#showall").click(function(){jQuery(".target").show()}),jQuery(".project").click(function(){jQuery(".target").hide(),jQuery("#div"+jQuery(this).attr("target")).show()})})});
-
 </script> 
 
 <?php
