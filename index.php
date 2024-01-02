@@ -75,7 +75,7 @@
 
     #hero {
 
-        background-image: url("/images/bg_1260<?php echo $rnd ?>.webp");
+        background-image: url("/images/bg<?php echo $rnd ?>_1260.webp");
 
     }
 
@@ -84,7 +84,7 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
     #hero {
-        background-image: url("/images/bg_1023<?php echo $rnd ?>.webp");
+        background-image: url("/images/bg<?php echo $rnd ?>_1023.webp");
     }
 
 }
@@ -1115,9 +1115,7 @@
                         </article><!--
 
                     --><article class='illustration'>
-
                             <a href='./illustrations/BIG/factory.jpg' data-lightbox='illustrations'><img src='./illustrations/SMALL/factory.jpg' alt="Illustration of the Factory by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Illustration of the company created with the Line Segment Tool, Scissors, Arc, Rectangular Grid, Polar Grid and Spiral Tool.</p></div></a>
-
                         </article>
 
                     </section>
@@ -1161,18 +1159,18 @@
                         </article><!--
 
                         --><article class='logo'>
-                            <a href='./logos/BIG/pixelworkerstar.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworkerstar.jpg' alt="Star logo of United Pixelworkers by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Star logo by United Pixelworkers created using Ellipse, Rotate, Scale, and Shear tools with warped gradient shadows.</p></div></a>
+                            <a href='./logos/BIG/pixelworker-star.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworker-star.jpg' alt="Star logo of United Pixelworkers by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Star logo by United Pixelworkers created using Ellipse, Rotate, Scale, and Shear tools with warped gradient shadows.</p></div></a>
                         </article><!--
 
-                        --><article class='logo'><a href='./logos/BIG/complementary_rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/complementary_rings.jpg' alt="Complemtary ring logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Complemtary ring logo, created from a interwoven ring logo stitched together using the Ellipse, Rotate, and Scissors tools, along with the paths join command.</p></div></a>
-                        </article><!--
-
-                        --><article class='logo'>
-                        <a href='./logos/BIG/interwoven_rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/interwoven_rings.jpg' alt="The interwoven rings logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>The interwoven rings logo created from the bullseye logo using the Rotate tool, and the paths join command.</p></div></a>
+                        --><article class='logo'><a href='./logos/BIG/complementary-rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/complementary-rings.jpg' alt="Complemtary ring logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Complemtary ring logo, created from a interwoven ring logo stitched together using the Ellipse, Rotate, and Scissors tools, along with the paths join command.</p></div></a>
                         </article><!--
 
                         --><article class='logo'>
-                            <a href='./logos/BIG/bullseye_logo.jpg' data-lightbox='logos'><img src='./logos/SMALL/bullseye_logo.jpg' alt="Bullseye logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Expertly rendered Bullseye logo created from a single @ sign using Polargrid and Scale tools.</p></div></a>
+                        <a href='./logos/BIG/interwoven-rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/interwoven-rings.jpg' alt="The interwoven rings logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>The interwoven rings logo created from the bullseye logo using the Rotate tool, and the paths join command.</p></div></a>
+                        </article><!--
+
+                        --><article class='logo'>
+                            <a href='./logos/BIG/bullseye-logo.jpg' data-lightbox='logos'><img src='./logos/SMALL/bullseye-logo.jpg' alt="Bullseye logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Expertly rendered Bullseye logo created from a single @ sign using Polargrid and Scale tools.</p></div></a>
                         </article>
 
                     </section>
