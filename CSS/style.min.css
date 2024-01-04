@@ -2693,62 +2693,58 @@ p.barcode {
         font-size: 1.3em;
     }
 }
-@media screen and (min-width: 231px) and (max-width: 946px) {
+@media screen and (min-width: 892px) and (max-width: 1034px) {
     picture.skill {
         margin-right: 30px;
         margin-bottom: 30px;
     }
 }
-@media screen and (min-width: 679px) and (max-width: 847px) {
-    picture.skill:nth-of-type(5n){
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(6n){
-        margin-right: 30px;
-    }
-    picture.skill:nth-of-type(12n){
-        margin-right: 30px;
-    }
-    picture.skill:nth-of-type(30){
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(36){
-        display: none;
-    }
-}
-@media screen and (min-width: 537px) and (max-width: 678px) {
-    picture.skill:nth-of-type(4n){
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(6n){
-        margin-right: 30px;
-    }
-    picture.skill:nth-of-type(12n){
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(31), picture.skill:nth-of-type(32){
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (min-width: 465px) and (max-width: 536px) {
-    picture.skill{ 
+@media screen and (min-width: 758px) and (max-width: 891px) {
+    picture.skill {
         margin-right: 20px;
         margin-bottom: 20px;
+    }
+}
+@media screen and (min-width: 611px) and (max-width: 757px) {
+    picture.skill {
+        margin-right: 30px;
+        margin-bottom: 30px;
     }
     picture.skill:nth-of-type(4n) {
         margin-right: 0;
     }
+    picture.skill:nth-of-type(6n) {
+        margin-right: 30px;
+    }
+    picture.skill:nth-of-type(12n) {
+        margin-right: 0;
+    }
     picture.skill:nth-of-type(31), 
-    picture.skill:nth-of-type(32), 
-    picture.skill:nth-of-type(33) {
+    picture.skill:nth-of-type(32) {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 232px) and (max-width: 610px) {
+    picture.skill {
+        margin: 0 20px 20px 0;
+     }
+}
+@media screen and (min-width: 485px) and (max-width: 610px) {
+    picture.skill:nth-of-type(4n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(6n) {
+        margin-right: 20px;
+    }
+    picture.skill:nth-of-type(12n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(31), 
+    picture.skill:nth-of-type(32) {
         margin-bottom: 20px;
     }
 }
-@media screen and (min-width: 358px) and (max-width: 464px) {
-    picture.skill {
-       margin: 0 20px 20px 0;
-    }
+@media screen and (min-width: 358px) and (max-width: 484px) {
     picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
@@ -2759,9 +2755,6 @@ p.barcode {
     }
 }
 @media screen and (min-width: 232px) and (max-width: 357px) {
-    picture.skill {
-       margin: 0 20px 20px 0;
-    }
     picture.skill:nth-of-type(2n) {
         margin-right: 0;
     }
