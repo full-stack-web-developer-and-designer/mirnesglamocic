@@ -349,12 +349,15 @@ a:active {
 }
 picture.skill {
     display: inline-block;
-    margin-right: 42px;
-    margin-bottom: 42px;
+    margin-right: 37.5px;
+    margin-bottom: 37.5px;
 }
-picture.skill:nth-of-type(6n) {
+picture.skill:nth-of-type(9n) {
     margin-right: 0;
 }
+picture.skill:nth-of-type(28),
+picture.skill:nth-of-type(29),
+picture.skill:nth-of-type(30),
 picture.skill:nth-of-type(31),
 picture.skill:nth-of-type(32),
 picture.skill:nth-of-type(33),
@@ -2693,83 +2696,337 @@ p.barcode {
         font-size: 1.3em;
     }
 }
-@media screen and (min-width: 892px) and (max-width: 1034px) {
+@media screen and (min-width: 1240px) and (max-width: 1260px) {
     picture.skill {
         margin-right: 30px;
         margin-bottom: 30px;
     }
 }
-@media screen and (min-width: 758px) and (max-width: 891px) {
+@media screen and (min-width: 1196px) and (max-width: 1239px) {
+    picture.skill {
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
+}
+@media screen and (min-width: 1153px) and (max-width: 1195px) {
     picture.skill {
         margin-right: 20px;
         margin-bottom: 20px;
     }
 }
-@media screen and (min-width: 611px) and (max-width: 757px) {
+@media screen and (min-width: 1020px) and (max-width: 1152px) {
+    picture.skill:nth-of-type(9n) {
+        margin-right: 37.5px;
+    }
+    picture.skill:nth-of-type(6n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30) {
+        margin-bottom: 37.5px;
+    }
+}
+@media screen and (min-width: 922px) and (max-width: 1019px) {
+    picture.skill{
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 30px;
+    }
+    picture.skill:nth-of-type(6n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30) {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 881px) and (max-width: 921px) {
+    picture.skill{
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 30px;
+    }
+    picture.skill:nth-of-type(6n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30) {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 789px) and (max-width: 880px) {
+    picture.skill{
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 25px;
+    }
+    picture.skill:nth-of-type(6n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30) {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (min-width: 737px) and (max-width: 788px) {
+    picture.skill{
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 20px;
+    }
+    picture.skill:nth-of-type(6n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30) {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width: 711px) and (max-width: 736px) {
+    picture.skill {
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 15px;
+    }
+    picture.skill:nth-of-type(6n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30) {
+        margin-bottom: 15px;
+    }
+}
+@media screen and (min-width: 611px) and (max-width: 710px) {
+    picture.skill {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 20px;
+    }
+    picture.skill:nth-of-type(5n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30) {
+        margin-bottom: 20px;
+    }
+    picture.skill:last-of-type{
+        display: none;
+    }
+}
+@media screen and (min-width: 590px) and (max-width: 610px) {
+    picture.skill {
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 15px;
+    }
+    picture.skill:nth-of-type(5n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30) {
+        margin-bottom: 15px;
+    }
+    picture.skill:last-of-type{
+        display: none;
+    }
+}
+@media screen and (min-width: 516px) and (max-width: 589px) {
     picture.skill {
         margin-right: 30px;
         margin-bottom: 30px;
     }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 30px;
+    }
     picture.skill:nth-of-type(4n) {
         margin-right: 0;
     }
-    picture.skill:nth-of-type(6n) {
-        margin-right: 30px;
-    }
-    picture.skill:nth-of-type(12n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(31), 
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
     picture.skill:nth-of-type(32) {
         margin-bottom: 30px;
     }
 }
-@media screen and (min-width: 232px) and (max-width: 610px) {
+@media screen and (min-width: 500px) and (max-width: 515px) {
     picture.skill {
-        margin: 0 20px 20px 0;
-     }
-}
-@media screen and (min-width: 485px) and (max-width: 610px) {
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 25px;
+    }
     picture.skill:nth-of-type(4n) {
         margin-right: 0;
     }
-    picture.skill:nth-of-type(6n) {
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
+    picture.skill:nth-of-type(32) {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (min-width: 485px) and (max-width: 499px) {
+    picture.skill {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    picture.skill:nth-of-type(9n) {
         margin-right: 20px;
     }
-    picture.skill:nth-of-type(12n) {
+    picture.skill:nth-of-type(4n) {
         margin-right: 0;
     }
-    picture.skill:nth-of-type(31), 
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
     picture.skill:nth-of-type(32) {
         margin-bottom: 20px;
     }
 }
-@media screen and (min-width: 358px) and (max-width: 484px) {
+@media screen and (min-width: 469px) and (max-width: 484px) {
+    picture.skill {
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 15px;
+    }
+    picture.skill:nth-of-type(4n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
+    picture.skill:nth-of-type(32) {
+        margin-bottom: 15px;
+    }
+}
+@media screen and (min-width: 358px) and (max-width: 468px) {
     picture.skill:nth-of-type(3n) {
         margin-right: 0;
     }
-    picture.skill:nth-of-type(31), 
-    picture.skill:nth-of-type(32), 
-    picture.skill:nth-of-type(33){
+}
+@media screen and (min-width: 379px) and (max-width: 468px) {
+    picture.skill {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
+    picture.skill:nth-of-type(32),
+    picture.skill:nth-of-type(33) {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 369px) and (max-width: 378px) {
+    picture.skill {
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
+    picture.skill:nth-of-type(32),
+    picture.skill:nth-of-type(33) {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (min-width: 358px) and (max-width: 368px) {
+    picture.skill {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
+    picture.skill:nth-of-type(32),
+    picture.skill:nth-of-type(33) {
         margin-bottom: 20px;
     }
 }
-@media screen and (min-width: 232px) and (max-width: 357px) {
+@media screen and (min-width: 237px) and (max-width: 357px) {
+    picture.skill {
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 25px;
+    }
     picture.skill:nth-of-type(2n) {
         margin-right: 0;
     }
-    picture.skill:nth-of-type(31), 
-    picture.skill:nth-of-type(32), 
-    picture.skill:nth-of-type(33), 
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
+    picture.skill:nth-of-type(32),
+    picture.skill:nth-of-type(33),
+    picture.skill:nth-of-type(34) {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (min-width: 232px) and (max-width: 236px) {
+    picture.skill {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    picture.skill:nth-of-type(9n) {
+        margin-right: 20px;
+    }
+    picture.skill:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
+    picture.skill:nth-of-type(32),
+    picture.skill:nth-of-type(33),
     picture.skill:nth-of-type(34) {
         margin-bottom: 20px;
     }
 }
 @media screen and (max-width: 231px){
     picture.skill,
-    picture.skill:nth-of-type(33n),
-    picture.skill:nth-of-type(34n),
-    picture.skill:nth-of-type(35n) {
+    picture.skill:nth-of-type(28), 
+    picture.skill:nth-of-type(29),
+    picture.skill:nth-of-type(30),
+    picture.skill:nth-of-type(31),
+    picture.skill:nth-of-type(32),
+    picture.skill:nth-of-type(33),
+    picture.skill:nth-of-type(34),
+    picture.skill:nth-of-type(35) {
         display: block;
         margin: 0 auto 20px;
     }
@@ -3077,13 +3334,6 @@ p.barcode {
 @media screen and (max-width: 230px){
     button:link, .button:visited {
         padding: 17px 10px 15px;
-    }
-    picture.skill,
-    picture.skill:nth-of-type(33n),
-    picture.skill:nth-of-type(34n),
-    picture.skill:nth-of-type(35n) {
-        display: block;
-        margin: 0 auto 20px;
     }
 }
 @media screen and (min-width: 222px) and (max-width: 266px) {
