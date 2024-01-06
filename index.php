@@ -14,23 +14,23 @@
 
 <?php
 
-    $fb_title="Mirnes Glamočić | Web Developer and Designer";
+    $fb_title="Website Development, UI/UX and Web Design services by certified IT expert";
 
-    $meta['og_description']="Professional website development and design services by Mirnes Glamočić, who is certified by several IT organizations.";
-    //Check length of description for SEO (max 120 characters)-120
-    //echo "Length of description is " . strlen($meta['og_description']) . "characters long.";
+    $meta['og_description']="Professional website development, UI/UX and web design services by certified IT expert  from Bosnia and Herzegovina.";
+    //Check length of description for SEO (max 120 characters)-116
+    //echo "Length of og description is " . strlen($meta['og_description']) . "characters long.";
     $og_url="https://mirnesglamocic.com";
 
     $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
 
     $og_image_alt="Full-Stack Web Developer and Desiger Mirnes Glamočić";
 
-	$linkedin_title="Mirnes Glamočić | Web Developer, UI/UX and Web Designer";
+	$linkedin_title="Website Development, UI/UX and Web Design services by certified IT expert";
 
-    $title="Mirnes Glamočić | Full-Stack Web Developer and Designer";
+    $title="Website Development, UI/UX and Web Design services by certified IT expert | Mirnes Glamočić";
 
-    $meta['description']="Professional website development, UI/UX and design services by Mirnes Glamočić from Bosnia and Herzegovina, who is certified by several IT organizations.";
-    //Check length of description for SEO (120-158 characters)-155
+    $meta['description']="Professional website development, UI/UX and web design services by Mirnes Glamočić from Bosnia and Herzegovina, certified by several IT organizations.";
+    //Check length of description for SEO (120-158 characters)-152
     //echo "Length of description is " . strlen($meta['description']) . "characters long.";
     $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
 
