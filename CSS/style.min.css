@@ -261,6 +261,12 @@ a:active {
     width: 350px;
     float: right;
 }
+.cS-hidden {
+    height: 1px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+}
 #LinkedIn {
     background: #fff;
     padding: 50px 0 0;
