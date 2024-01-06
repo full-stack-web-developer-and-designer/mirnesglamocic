@@ -24,7 +24,7 @@ include 'inc/header.php';
 	<h1>Adobe CC Certificates</h1>
 	
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$Photoshop = new PhotoshopSlide();
@@ -34,7 +34,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$PhotoshopDesign = new PhotoshopDesignSlide();
@@ -44,7 +44,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$Lightroom = new LightroomSlide();

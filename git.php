@@ -24,7 +24,7 @@ include 'inc/header.php';
 	<h1>Version Control Certificates</h1>
 	
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$Git = new GitSlide();
@@ -36,7 +36,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$GitHub = new GitHubSlide();

@@ -23,7 +23,7 @@ include 'inc/header.php';
 	<div class="wrapper">
 	<h1>Linux Certificates</h1>
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$LinuxEngineer = new LinuxEngineerSlide();
@@ -33,7 +33,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$Linux = new LinuxSlide();
@@ -43,7 +43,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 	
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$LinuxDistro = new LinuxDistroSlide();
@@ -53,7 +53,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$CentOS = new CentOSSlide();
@@ -63,7 +63,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$Bash = new BashSlide();
@@ -73,7 +73,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 	
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$Editors = new EditorsSlide();
@@ -83,7 +83,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 		<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$LinuxFoundation = new LinuxFoundationSlide();

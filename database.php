@@ -24,7 +24,7 @@ include 'inc/header.php';
 	<h1>Database Certificates</h1>
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$SQL = new SQLSlide();
@@ -36,7 +36,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$MySQL = new MySQLSlide();
@@ -46,7 +46,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$MongoDB = new MongoDBSlide();

@@ -23,7 +23,7 @@ include 'inc/header.php';
 	<div class="wrapper">
 	<h1>Back-end Certificates</h1>
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$backendPHP = new BackendPHPSlide();
@@ -37,7 +37,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$PHP = new PHPSlide();
@@ -49,7 +49,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$PHPluralsight = new PHPluralsightSlide();
@@ -59,7 +59,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$Python = new PythonSlide();
@@ -69,7 +69,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$Node = new NodeSlide();

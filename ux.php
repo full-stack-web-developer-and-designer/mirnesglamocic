@@ -23,7 +23,7 @@ include 'inc/header.php';
 	<div class="wrapper">
 	<h1>UI/UX Design Certificates</h1>
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$UXPath = new UXPathSlide();
@@ -35,7 +35,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 	
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$InteractionDesign = new InteractionDesignSlide();
@@ -45,7 +45,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$UX = new UXSlide();
@@ -55,7 +55,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$UXParts = new UXPartsSlide();
@@ -65,7 +65,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$UXFoundation = new UXFoundationSlide();

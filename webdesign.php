@@ -24,7 +24,7 @@ include 'inc/header.php';
 	<h1>Web Design Certificates</h1>
 	
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$WebDesignPath = new WebDesignPathSlide();
@@ -34,7 +34,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$WebDesigners = new WebDesignersSlide();
@@ -44,7 +44,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 	
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$WebDesign = new WebDesignSlide();

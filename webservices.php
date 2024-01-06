@@ -24,7 +24,7 @@ include 'inc/header.php';
 	<h1>Web Services Certificates</h1>
 	
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$WebServices = new WebServicesSlide();
@@ -34,7 +34,7 @@ include 'inc/header.php';
 	</section><!--end .slider-container-->
 
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$JSON = new JSONSlide();

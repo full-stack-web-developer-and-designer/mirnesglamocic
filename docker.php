@@ -23,7 +23,7 @@ include 'inc/header.php';
 	<div class="wrapper">
 	<h1>Docker Certificates</h1>
 	<section class="slider-container">
-		<ul class="content-slider">
+		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
 				$docker = new DockerSlide();
