@@ -261,18 +261,6 @@ a:active {
     width: 350px;
     float: right;
 }
-.cS-hidden {
-    height: 1px;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    overflow: hidden;
-}
-#LinkedIn {
-    background: #fff;
-    padding: 50px 0 0;
-    text-align: center;
-    margin-bottom: 40px;
-}
 #certificates {
     background: #fff;
     text-align: center;
@@ -1073,8 +1061,18 @@ body.development h1 {
     margin: 15px auto 0;
     padding: 5px 0;
 }
-.development #headerBottom {
-    border-bottom: 4px solid #ececec;
+/* cert images */
+.cS-hidden {
+    height: 1px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+}
+#LinkedIn {
+    background: #fff;
+    padding: 50px 0 0;
+    text-align: center;
+    margin-bottom: 40px;
 }
 .lightSlider.lsGrab > * {
     cursor: pointer;
@@ -1126,6 +1124,10 @@ body.development.progress footer {
     width: 100%;
     box-sizing: border-box;
 }
+.development #headerBottom {
+    border-bottom: 4px solid #ececec;
+}
+
 * {
     scrollbar-width: thin;
     scrollbar-color: #955d00 #eee;
@@ -2381,12 +2383,53 @@ p.barcode {
         margin: 30px auto;
     }
 }
-@media screen and (min-width: 451px) and (max-width: 767px) {
+@media screen and (min-width: 521px) and (max-width: 767px) {
     #headerCenter {
         width: 37%;
     }
+    body.development h1 {
+        margin: 4% auto 3%;
+    }
+    article.cert:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    li.item-a.slide.lslide:nth-of-type(2n) {
+        margin-right: 0;
+    }
+        .LinkedIn {
+            width: 100%;
+            margin: 0 0 12px;
+        }
+        .LinkedInNew {
+            width: 96% !important;
+            margin: 0 0 12px;
+            padding-block-start: 1%;
+        }
+        .SoloLearn {
+            width: 99%;
+            margin: 0 auto 12px 0.5%;
+        }
+        .Pluralsight {
+            width: 99% !important;
+            margin: 0 auto 12px 0.6%;
+        }
+        .LinkedIn:nth-of-type(2n),
+        .LinkedInNew:nth-of-type(2n),
+        .Pluralsight:nth-of-type(2n),
+        .SoloLearn:nth-of-type(2n) {
+            margin-right: 0;
+        }
+        body.development #footer {
+            margin-top: 1%;
+        }
     #icon_box {
         width: 75%;
+    }
+    #footer {
+        margin-top: 0;
+    }
+    body#home #footer {
+        margin-top: 4%;
     }
 }
 @media screen and (min-width: 674px) and (max-width: 690px) {
@@ -2515,75 +2558,42 @@ p.barcode {
         padding: 5px 15px;
     }
 }
-@media screen and (min-width: 521px) and (max-width: 767px) {
-    body.development h1 {
-        margin: 4% auto 3%;
-    }
-    article.cert:nth-of-type(2n) {
-        margin-right: 0;
-    }
-    .SoloLearn,
-    .Pluralsight {
-        margin: 0 2% 4% 2.8%;
-    }
-    .LinkedIn {
-        margin: 0 2% 4%;
-    }
-    .LinkedInNew {
-        width: 96% !important;
-        margin: 0 3% 4%;
-        padding-block-start: 0;
-        padding-inline-start: 1%;
-    }
-    img.LinkedIn.margin-top {
-        margin-top: 1%;
-    }
-    .SoloLearn,
-    .Pluralsight {
-        width: 98% !important;
-    }
-    .LinkedIn:nth-of-type(2n),
-    .LinkedInNew:nth-of-type(2n),
-    .Pluralsight:nth-of-type(2n),
-    .SoloLearn:nth-of-type(2n) {
-        margin-right: 0;
-    }
-    #footer {
-        margin-top: 0;
-    }
-    body#home #footer {
-        margin-top: 4%;
-    }
-}
 @media screen and (max-width: 520px) {
     body.development h1 {
         margin: 4% auto 0;
         font-size: 1.6em;
         line-height: 1.6em;
     }
+    #headerCenter {
+        width: 37%;
+    }
+    /* Lightslider */
+    .lSSlideOuter .lSPager, .lSSlideOuter .lightSlider {
+        display: inline;
+    }
+    .lSAction>a {
+        display: none!important;
+    }
+    li.item-a.slide.lslide {
+        width: 100%!important;
+        margin: 0 auto 1% 0!important;
+    }
     .LinkedIn {
         width: 100%;
-        display: block;
         margin: 3% auto 0;
     }
     .LinkedInNew {
-        width: 96% !important;
-        margin: 2.5% auto 0;
+        width: 96%!important;
+        margin: 4% auto 1%;
         padding-block-start: 1%;
     }
     .SoloLearn {
         width: 99%;
-        margin: 3% auto 0 0.8%;
+         margin: 3% auto 0 0.5%;
     }
     .Pluralsight {
-        width: 98% !important;
-        margin: 3% auto 0;
-    }
-    img.LinkedIn.margin-top {
-        margin-top: 3%;
-    }
-    body.development #footer {
-        margin-top: 4%;
+        width: 99%!important;
+        margin: 4% auto 0 0.6%;
     }
 }
 @media screen and (min-width: 482px) and (max-width: 491px) {
