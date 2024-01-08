@@ -1094,6 +1094,12 @@ section.slider-container li.item-a.slide {
 i {
     font-size: 30px;
 }
+.icons{
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 15px auto;
+}
 .LinkedIn {
     width: 288px;
     float: left;
