@@ -8,7 +8,6 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <!-- meta tags -->
 <meta name="robots" content="index,follow">
 <meta name="description" content="<?php echo $meta['description']; ?>"/>
-<meta name="keywords" content="<?php echo $meta['keywords']; ?>"/>
 <meta name="theme-color" content="#0648a0">
 <meta name="author" content="Mirnes Glamočić">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
