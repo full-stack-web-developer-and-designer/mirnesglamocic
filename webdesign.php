@@ -53,8 +53,19 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
+	<section class="slider-container">
+		<ul class="content-slider cs-hidden">
+		<!-- slider box -->
+			<?php
+				$Svg = new SvgSlide();
+				$Svg->renderSlider();
+			?>
+		</ul>
+	</section><!--end .slider-container-->
+
 </div><!--end .wrapper-->
 <?php
 	include_once './inc/footer.php';
 	//end #footer
 ?>
+SvgSlide
