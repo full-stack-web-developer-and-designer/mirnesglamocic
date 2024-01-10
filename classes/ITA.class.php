@@ -1,24 +1,37 @@
 <?php
 class ITA extends ConnectSlider{
-    // Fetch data from MySQL using PDO - PHP Data Object	
+     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
         $sql = "SELECT * FROM mirnesgl_cert.ita_certificates;";
         $stmt = $this->__connect()->query($sql);
        
         while($row = $stmt->fetch()) {
-			$title = $row['title'];
-            $picture_PHP = $row['picture_PHP'];
-            $alt_PHP = $row['alt_PHP'];
-            $picture_WD = $row['picture_WD'];
-            $alt_WD = $row['alt_WD'];
-            $part_1=$row['part_1'];
-            $part_2=$row['part_2'];
-            $part_3 =$row['part_3'];
-            $part_4 =$row['part_4'];
-            $part_5 =$row['part_5'];
+            $article = $row['article'];
+            $href = $row['href'];
+			$img_400 = $row['img_400'];
+            $img_300 = $row['img_300'];
+            $img_250 = $row['img_250'];
+            $img_200 = $row['img_200'];
+            $img_180 = $row['img_180'];
+            $img_170=$row['img_170'];
+            $img = $row['img'];
+            $alt = $row['alt'];
 
-            echo "<h2>$title</h2><article id='PHP'><a href='./images/BIG/$picture_PHP' data-lightbox='image-group'><img width=\"400\" height=\"auto\" src='images/$picture_PHP' alt=\"$alt_PHP\" aria-label=\"ITAcademy Certificate 'PHP Web Development by Mirnes Glamočić'\"</a></article><article id='WD'><a href='./images/BIG/$picture_WD' data-lightbox='image-group'><img width=\"400\" height=\"auto\" src='images/$picture_WD' alt=\"$alt_WD\" aria-label=\"ITAcademy Certificate 'Web Design by Mirnes Glamočić'\"></a></article><article id='mycert'><br class='none'><p>$part_1</p><br><p>$part_2</p><br><p>$part_3</p><br> <p>$part_4</p><br><p class='no_print'>$part_5</p>
-            </article>";
-            }
+            echo "<article id=\"$article\">
+                    <a href=\"./images/BIG/$href\" data-lightbox=\"ita\">
+                        <picture>
+                            <!--[if IE 9]><video style='display: none;'><![endif]-->
+                            <source srcset=\"$img_400\" type=\"image/webp\" width=\"400\" height=\"565\" loading=\"lazy\" media=\"(min-width: 1261px)\">
+                            <source srcset=\"$img_300\" type=\"image/webp\" width=\"300\" height=\"424\" loading=\"lazy\" media=\"(min-width: 1023px)\">
+                            <source srcset=\"$img_250\" type=\"image/webp\" width=\"250\" height=\"353\" loading=\"lazy\" media=\"(min-width: 564px)\">
+                            <source srcset=\"$img_200\" type=\"image/webp\" width=\"200\" height=\"283\" loading=\"lazy\" media=\"(min-width: 453px)\">
+                            <source srcset=\"$img_180\" type=\"image/webp\" width=\"180\" height=\"254\" loading=\"lazy\" media=\"(min-width: 414px)\">
+                            <source srcset=\"$img_170\" type=\"image/webp\" width=\"170\" height=\"240\" loading=\"lazy\" media=\"(min-width: 390px)\">
+                            <source srcset=\"$img_300\" type=\"image/webp\" width=\"300\" height=\"424\" loading=\"lazy\" media=\"(max-width: 389px)\">
+                            <!--[if IE 9]></video><![endif]-->
+                            <img decoding=\"async\" srcset=\"$img\" width=\"400\" height=\"565\" loading=\"lazy\" alt=\"$alt\">
+                        </picture></a>
+                </article>";
         }
     }
+}
