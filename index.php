@@ -1072,17 +1072,20 @@
 
                 <div id="div4" class="target">
                     <section class='logos'>
-                        <article class='logo'><a href='./logos/BIG/samsung.jpg' data-lightbox='logos'><img src='./logos/SMALL/samsung.jpg' alt="Samsung logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Samsung logo created using the Ellipse and Type tools, along with the Pathfinder options.</p></div></a>
+                        <article class='logo'><a href='./logos/BIG/samsung.jpg' data-lightbox='logos'><img src='./logos/SMALL/samsung.jpg' alt="Samsung logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Samsung logo created using the Ellipse and Type tools, along with the Pathfinder options.</p></div></a>
                         </article><!--
                             
+                        --><article class='logo'><a href='./logos/BIG/frontiers.jpg' data-lightbox='logos'><img src='./logos/SMALL/frontiers.jpg' alt="Frontiers Unlimited logo of tour company by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Frontiers Unlimited Logo for tour company created using the Rectangle, Ellipse, Pen and Type tools along with the Pathfinder options.</p></div></a>
+                        </article><!--
+
                         --><article class='logo'><a href='./logos/BIG/pixelworker-star.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworker-star.jpg' alt="Star logo of United Pixelworkers by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Star logo by United Pixelworkers created using Ellipse, Rotate, Scale, and Shear tools with warped gradient shadows.</p></div></a>
                         </article><!--
 
-                        --><article class='logo'><a href='./logos/BIG/complementary-rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/complementary-rings.jpg' alt="Complemtary ring logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>Complemtary ring logo, created from a interwoven ring logo stitched together using the Ellipse, Rotate, and Scissors tools, along with the paths join command.</p></div></a>
+                        --><article class='logo'><a href='./logos/BIG/complementary-rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/complementary-rings.jpg' alt="Complemtary ring logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Complemtary ring logo, created from a interwoven ring logo stitched together using the Ellipse, Rotate, and Scissors tools, along with the paths join command.</p></div></a>
                         </article><!--
 
                         --><article class='logo'>
-                        <a href='./logos/BIG/interwoven-rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/interwoven-rings.jpg' alt="The interwoven rings logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content"><p>The interwoven rings logo created from the bullseye logo using the Rotate tool, and the paths join command.</p></div></a>
+                        <a href='./logos/BIG/interwoven-rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/interwoven-rings.jpg' alt="The interwoven rings logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>The interwoven rings logo created from the bullseye logo using the Rotate tool, and the paths join command.</p></div></a>
                         </article><!--
 
                         --><article class='logo'>
