@@ -27,11 +27,11 @@ BrowserMatch ^Mozilla/4\.0[678] no-gzip
 BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
 # Redirect to HTTPS
-  RewriteEngine On
-# RewriteCond %{HTTP:X-Forwarded-Proto} !https
-# RewriteCond %{HTTPS} off
-# RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
-# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#  RewriteEngine On
+#  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#  RewriteCond %{HTTPS} off
+#  RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
+#  RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Change file names
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -58,6 +58,7 @@ RewriteRule ^Error403.html$ /403.php [NC,L]
 Options -Indexes
 # Save cache
 <IfModule mod_expires.c>
+# Enable expirations
   ExpiresActive On
  # Images
   ExpiresByType image/jpeg "access plus 1 year"
