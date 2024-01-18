@@ -1074,11 +1074,19 @@
                     <section class='logos'>
                         <article class='logo'><a href='./logos/BIG/samsung.jpg' data-lightbox='logos'><img src='./logos/SMALL/samsung.jpg' alt="Samsung logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Samsung logo created using the Ellipse and Type tools, along with the Pathfinder options.</p></div></a>
                         </article><!--
-                            
+                        
+                        --><article class='logo'><a href='./logos/BIG/bbc.jpg' data-lightbox='logos'><img src='./logos/SMALL/bbc.jpg' alt="BBC logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>BBC logo created using the Rectangle and Type tools along with the Align options.</p></div></a>
+                        </article><!--
+
+                        --><article class='logo'><a href='./logos/BIG/recycle.jpg' data-lightbox='logos'><img src='./logos/SMALL/recycle.jpg' alt="The Recycle logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>The Recycle Logo created using the Polygon, Rectangle, Scissors, Rotate and Shape Builder tools along with the Stroke options in the Appearance panel.</p></div></a>
+                        </article><!--
+
+                        --><article class='logo'><a href='./logos/BIG/british-national-rail.jpg' data-lightbox='logos'><img src='./logos/SMALL/british-national-rail.jpg' alt="The British National Rail logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>The British National Rail logo created using the Line Segment Tool and Rectangle Tool along with the Pathfinder and Stroke options.</p></div></a>
+                        </article><!--
                         --><article class='logo'><a href='./logos/BIG/frontiers.jpg' data-lightbox='logos'><img src='./logos/SMALL/frontiers.jpg' alt="Frontiers Unlimited logo of tour company by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Frontiers Unlimited Logo for tour company created using the Rectangle, Ellipse, Pen and Type tools along with the Pathfinder options.</p></div></a>
                         </article><!--
 
-                        --><article class='logo'><a href='./logos/BIG/pixelworker-star.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworker-star.jpg' alt="Star logo of United Pixelworkers by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Star logo by United Pixelworkers created using Ellipse, Rotate, Scale, and Shear tools with warped gradient shadows.</p></div></a>
+                        --><article class='logo'><a href='./logos/BIG/pixelworker-star.jpg' data-lightbox='logos'><img src='./logos/SMALL/pixelworker-star.jpg' alt="Star logo of United Pixelworkers by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Star logo by United Pixelworkers created using the Ellipse, Rotate, Scale, and Shear tools with warped gradient shadows.</p></div></a>
                         </article><!--
 
                         --><article class='logo'><a href='./logos/BIG/complementary-rings.jpg' data-lightbox='logos'><img src='./logos/SMALL/complementary-rings.jpg' alt="Complemtary ring logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Complemtary ring logo, created from a interwoven ring logo stitched together using the Ellipse, Rotate, and Scissors tools, along with the paths join command.</p></div></a>
@@ -1089,7 +1097,7 @@
                         </article><!--
 
                         --><article class='logo'>
-                            <a href='./logos/BIG/bullseye-logo.jpg' data-lightbox='logos'><img src='./logos/SMALL/bullseye-logo.jpg' alt="Bullseye logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Expertly rendered Bullseye logo created from a single @ sign using Polargrid and Scale tools.</p></div></a>
+                            <a href='./logos/BIG/bullseye-logo.jpg' data-lightbox='logos'><img src='./logos/SMALL/bullseye-logo.jpg' alt="Bullseye logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Expertly rendered Bullseye logo created from a single @ sign using the Polargrid and Scale tools.</p></div></a>
                         </article>
 
                     </section>
