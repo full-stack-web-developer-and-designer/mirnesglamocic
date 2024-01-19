@@ -1075,6 +1075,9 @@
                         <article class='logo'><a href='./logos/BIG/samsung.jpg' data-lightbox='logos'><img src='./logos/SMALL/samsung.jpg' alt="Samsung logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Samsung logo created using the Ellipse and Type tools, along with the Pathfinder options.</p></div></a>
                         </article><!--
                         
+                        --><article class='logo'><a href='./logos/BIG/google-drive.jpg' data-lightbox='logos'><img src='./logos/SMALL/google-drive.jpg' alt="The Google Drive logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>The Google Drive Logo created using the Pollygon, Rotate, Pen, Shape Builder and Direct Selection tools along with the Pathfinder options.</p></div></a>
+                        </article><!--
+
                         --><article class='logo'><a href='./logos/BIG/bbc.jpg' data-lightbox='logos'><img src='./logos/SMALL/bbc.jpg' alt="BBC logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>BBC logo created using the Rectangle and Type tools along with the Align options.</p></div></a>
                         </article><!--
 
@@ -1083,6 +1086,10 @@
 
                         --><article class='logo'><a href='./logos/BIG/british-national-rail.jpg' data-lightbox='logos'><img src='./logos/SMALL/british-national-rail.jpg' alt="The British National Rail logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>The British National Rail logo created using the Line Segment Tool and Rectangle Tool along with the Pathfinder and Stroke options.</p></div></a>
                         </article><!--
+                         
+                        --><article class='logo'><a href='./logos/BIG/olympic-ring.jpg' data-lightbox='logos'><img src='./logos/SMALL/olympic-ring.jpg' alt="The Olympic Ring logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>The Olympic Ring logo created using a grid and the Ellipse Tool along with the Pathfinder options.</p></div></a>
+                        </article><!--
+
                         --><article class='logo'><a href='./logos/BIG/frontiers.jpg' data-lightbox='logos'><img src='./logos/SMALL/frontiers.jpg' alt="Frontiers Unlimited logo of tour company by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Frontiers Unlimited Logo for tour company created using the Rectangle, Ellipse, Pen and Type tools along with the Pathfinder options.</p></div></a>
                         </article><!--
 
