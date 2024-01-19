@@ -1075,6 +1075,9 @@
                         <article class='logo'><a href='./logos/BIG/samsung.jpg' data-lightbox='logos'><img src='./logos/SMALL/samsung.jpg' alt="Samsung logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>Samsung logo created using the Ellipse and Type tools, along with the Pathfinder options.</p></div></a>
                         </article><!--
                         
+                        --><article class='logo'><a href='./logos/BIG/google-chrome.jpg' data-lightbox='logos'><img src='./logos/SMALL/google-chrome.jpg' alt="The Google Chrome logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>The Google Chrome logo created using the Ellipse, Line Segment, Rotate, Selection and Shape Builders tools.</p></div></a>
+                        </article><!--
+
                         --><article class='logo'><a href='./logos/BIG/google-drive.jpg' data-lightbox='logos'><img src='./logos/SMALL/google-drive.jpg' alt="The Google Drive logo by Mirnes Glamočić" class="blur" loading="lazy"><div class="content fade"><p>The Google Drive Logo created using the Pollygon, Rotate, Pen, Shape Builder and Direct Selection tools along with the Pathfinder options.</p></div></a>
                         </article><!--
 
