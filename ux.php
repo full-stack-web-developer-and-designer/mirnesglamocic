@@ -27,7 +27,7 @@ include 'inc/header.php';
 		<!-- slider box -->
 			<?php
 				$UxPath = new UxPathSlide();
-				$UXPath->renderSlider();
+				$UxPath->renderSlider();
 				$UxIntro = new UxIntroSlide();
 				$UxIntro->renderSlider();
 			?>
