@@ -59,6 +59,16 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
+				$HtmlCss = new HtmlCssSlide();
+				$HtmlCss->renderSlider();
+			?>
+		</ul>
+	</section><!--end .slider-container-->
+	
+	<section class="slider-container">
+		<ul class="content-slider cs-hidden">
+		<!-- slider box -->
+			<?php
 				$CssNew = new CssNewSlide();
 				$CssNew->renderSlider();
 			?>
@@ -75,16 +85,6 @@ include 'inc/header.php';
 				$Tailwind = new TailwindSlide();
 				$Tailwind->renderSlider();
 
-			?>
-		</ul>
-	</section><!--end .slider-container-->
-	
-	<section class="slider-container">
-		<ul class="content-slider cs-hidden">
-		<!-- slider box -->
-			<?php
-				$HtmlCss = new HtmlCssSlide();
-				$HtmlCss->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
