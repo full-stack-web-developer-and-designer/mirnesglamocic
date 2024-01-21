@@ -27,7 +27,7 @@ BrowserMatch ^Mozilla/4\.0[678] no-gzip
 BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
 # Redirect to HTTPS
-#  RewriteEngine On
+  RewriteEngine On
 #  RewriteCond %{HTTP:X-Forwarded-Proto} !https
 #  RewriteCond %{HTTPS} off
 #  RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
