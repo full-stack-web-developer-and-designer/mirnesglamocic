@@ -1,5 +1,5 @@
 <?php
-class UXPathSlide extends Slider{
+class UxPathSlide extends Slider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
         $sql = "SELECT * FROM mirnesgl_cert.certifications WHERE skill='UX Path' ORDER BY rand();";
