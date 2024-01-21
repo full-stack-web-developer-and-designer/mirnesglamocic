@@ -27,8 +27,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$SQL = new SQLSlide();
-				$SQL->renderSlider();
+				$Sql = new SqlSlide();
+				$Sql->renderSlider();
 				$Postgre = new PostgreSlide();
 				$Postgre->renderSlider();
 			?>
@@ -39,8 +39,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$MySQL = new MySQLSlide();
-				$MySQL->renderSlider();
+				$MySql = new MySqlSlide();
+				$MySql->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -49,8 +49,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$MongoDB = new MongoDBSlide();
-				$MongoDB->renderSlider();
+				$MongoDb = new MongoDbSlide();
+				$MongoDb->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
