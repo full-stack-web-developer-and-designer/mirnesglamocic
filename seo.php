@@ -26,8 +26,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$SEO = new SEOSlide();
-				$SEO->renderSlider();
+				$Seo = new SeoSlide();
+				$Seo->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
