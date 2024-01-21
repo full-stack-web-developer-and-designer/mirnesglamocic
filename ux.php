@@ -26,10 +26,10 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$UXPath = new UXPathSlide();
+				$UxPath = new UxPathSlide();
 				$UXPath->renderSlider();
-				$UXIntro = new UXIntroSlide();
-				$UXIntro->renderSlider();
+				$UxIntro = new UxIntroSlide();
+				$UxIntro->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -48,8 +48,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$UX = new UXSlide();
-				$UX->renderSlider();
+				$Ux = new UxSlide();
+				$Ux->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -58,8 +58,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$UXParts = new UXPartsSlide();
-				$UXParts->renderSlider();
+				$UxParts = new UxPartsSlide();
+				$UxParts->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -68,8 +68,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$UXFoundation = new UXFoundationSlide();
-				$UXFoundation->renderSlider();
+				$UxFoundation = new UxFoundationSlide();
+				$UxFoundation->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
