@@ -12,7 +12,7 @@ class AngularSlide extends Slider{
             $class = $row['class'];
             echo "<li class='item-a slide'>
             <article class='cert'>
-            <a href='./cert/BIG/$picture' data-href='./cert/SMALL/$picture' class='progressive replace' data-lightbox='image-group'><img src='./cert/SMALL/$picture' alt=\"$alt\" class=\"$class margin-top\" loading=\"lazy\"></a>
+            <a href='./cert/BIG/$picture.webp' data-href='./cert/SMALL/$picture.webp' class='progressive replace' data-lightbox='image-group'><img src='./cert/SMALL/$picture.webp' alt=\"$alt by Web Designer and Developer Mirnes Glamočić from Bosnia and Herzegovina\" class=\"$class margin-top\" loading=\"lazy\"></a>
             </article></li>";
             }
         }
