@@ -37,8 +37,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$JSON = new JSONSlide();
-				$JSON->renderSlider();
+				$Json = new JsonSlide();
+				$Json->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
