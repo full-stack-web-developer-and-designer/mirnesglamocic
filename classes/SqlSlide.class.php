@@ -1,5 +1,5 @@
 <?php
-class SQLSlide extends Slider{
+class SqlSlide extends Slider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
         $sql = "SELECT * FROM mirnesgl_cert.certifications WHERE skill='SQL' ORDER BY rand();";
