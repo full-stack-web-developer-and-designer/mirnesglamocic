@@ -1,5 +1,5 @@
 <?php
-class CSSSlide extends Slider{
+class CssSlide extends Slider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
         $sql = "SELECT * FROM mirnesgl_cert.certifications WHERE skill='CSS' AND class='LinkedIn preview'
