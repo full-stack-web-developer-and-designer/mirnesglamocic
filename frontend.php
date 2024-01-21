@@ -27,8 +27,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$frontendSoloLearn = new FrontendSoloLearnSlide();
-				$frontendSoloLearn->renderSlider();
+				$FrontendSoloLearn = new FrontendSoloLearnSlide();
+				$FrontendSoloLearn->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -37,10 +37,10 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$frontend = new FrontendSlide();
-				$frontend->renderSlider();
-				$frontendIntro = new FrontendIntroSlide();
-				$frontendIntro->renderSlider();
+				$Frontend = new FrontendSlide();
+				$Frontend->renderSlider();
+				$FrontendIntro = new FrontendIntroSlide();
+				$FrontendIntro->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -49,8 +49,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$html = new HTMLSlide();
-				$html->renderSlider();
+				$Html = new HtmlSlide();
+				$Html->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -59,8 +59,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$cssnew = new CSSnewSlide();
-				$cssnew->renderSlider();
+				$CssNew = new CssNewSlide();
+				$CssNew->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -68,12 +68,12 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$css = new CSSSlide();
-				$css->renderSlider();
-				$sass = new SassSlide();
-				$sass->renderSlider();
-				$tailwind = new TailwindSlide();
-				$tailwind->renderSlider();
+				$Css = new CssSlide();
+				$Css->renderSlider();
+				$Sass = new SassSlide();
+				$Sass->renderSlider();
+				$Tailwind = new TailwindSlide();
+				$Tailwind->renderSlider();
 
 			?>
 		</ul>
@@ -83,7 +83,7 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$HtmlCss = new HTMLCSSSlide();
+				$HtmlCss = new HtmlCssSlide();
 				$HtmlCss->renderSlider();
 			?>
 		</ul>
@@ -105,8 +105,8 @@ include 'inc/header.php';
 			<?php
 				$WebDevelopment = new WebDevelopmentSlide();
 				$WebDevelopment->renderSlider();
-				$Viewsource = new ViewsourceSlide();
-				$Viewsource->renderSlider();
+				$ViewSource = new ViewSourceSlide();
+				$ViewSource->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -116,7 +116,6 @@ include 'inc/header.php';
 		<!-- slider box -->
 			<?php
 				$JavaScript = new JavaScriptSlide();
-				$JavaScript->renderSlider();
 				$JavaScript->renderSlider();
 				$TypeScript = new TypeScriptSlide();
 				$TypeScript->renderSlider();
@@ -138,8 +137,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$jQuery = new jQuerySlide();
-				$jQuery->renderSlider();
+				$Jquery = new JquerySlide();
+				$Jquery->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
@@ -148,8 +147,8 @@ include 'inc/header.php';
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
-				$jQueryPluralsight = new jQueryPluralsightSlide();
-				$jQueryPluralsight->renderSlider();
+				$JqueryPluralsight = new JqueryPluralsightSlide();
+				$JqueryPluralsight->renderSlider();
 			?>
 		</ul>
 	</section><!--end .slider-container-->
