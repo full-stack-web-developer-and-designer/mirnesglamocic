@@ -448,43 +448,12 @@ section.project_complete:last-of-type {
     z-index: 1;
     transition-delay: 0;
 }
-.carousel-button {
-    cursor: pointer;
-    font-size: 1.3rem;
-    top: 200px;
-    border: none;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.carousel-button:hover,
-.carousel-button:focus {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-.carousel-button:focus {
-    outline: 1px solid #000;
-}
-.carousel-button:active {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-.carousel-button.prev {
-    float: left;
-    position: relative;
-    left: 1rem;
-    z-index: 2;
-}
-.carousel-button.next {
-    float: right;
-    position: relative;
-    right: 1rem;
-    z-index: 2;
-}
+
 ul.skills {
     display: block;
     width: 555px;
     list-style-type: none;
-    margin: 0 auto;
+    margin: 15px auto 0;
     padding: 0;
 }
 ul.wp {
@@ -583,25 +552,28 @@ h3.projects {
     margin-bottom: 40px;
     clear: both;
 }
-article.edit_img {
-    margin-right: 40px;
-    float: left;
-}
-article.edit_img:nth-of-type(2n) {
-    margin-right: 0;
-}
-img.edit_img {
-    border: 2px solid #ccc;
-    margin-bottom: 40px;
-}
-p.future {
-    text-align: center;
-    margin: 0 auto 30px;
-    color: #b47814;
-}
+.photoshops,
 .illustrations,
 .logos {
     text-align: center;
+    padding-bottom: 14px;
+}
+.photoshop,
+.photoshop-edit {
+    width: 580px;
+    height: 388px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #717171;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 36px;
+}
+.photoshop {
+    margin-right: 40px;
+}
+.photoshop-edit {
+    margin-left: -4px;
 }
 .illustrations > .illustration,
 .logos > .logo {
@@ -611,7 +583,7 @@ p.future {
 .illustration,
 .logo {
     position: relative;
-    margin: 0 16px 16px 0;
+    margin: 0 16px 12px 0;
     overflow: hidden;
     border: 3px solid #717171;
     box-sizing: border-box;
@@ -621,18 +593,8 @@ p.future {
 .logo:nth-of-type(4n) {
     margin-right: 0;
 }
-.illustration:nth-of-type(9),
-.illustration:nth-of-type(10),
-.illustration:nth-of-type(11),
-.illustration:nth-of-type(12),
-.logo:nth-of-type(9),
-.logo:nth-of-type(10),
-.logo:nth-of-type(11),
-.logo:nth-of-type(12) {
-    margin-bottom: 26px;
-}
 .content {
-    width: auto;
+    width: 100%;
     height: 100%;
     top: 0;
     left: 0;
@@ -669,6 +631,7 @@ p.future {
     -o-transform: translateY(0);
     transform: translateY(0);
 }
+.photoshop-edit a:hover > img.blur,
 .illustration a:hover > img.blur,
 .logo a:hover > img.blur {
     filter: blur(5px);
@@ -1377,6 +1340,62 @@ p.barcode {
         margin-top: 30px;
     }
 }
+@media screen and (min-width: 1209px) and (max-width: 1260px) {
+    .photoshop, .photoshop-edit {
+        width: 534px;
+        height: 357px;
+    }
+}
+@media screen and (min-width: 1140px) and (max-width: 1208px) {
+    .photoshop, .photoshop-edit {
+        width: 504px;
+        height: 337px;
+    }
+}
+@media screen and (min-width: 1031px) and (max-width: 1139px) {
+    .photoshop, .photoshop-edit {
+        width: 454px;
+        height: 304px;
+    }
+}
+@media screen and (min-width: 922px) and (max-width: 1030px) {
+    .photoshop, .photoshop-edit {
+        width: 404px;
+        height: 271px;
+    }
+}
+@media screen and (min-width: 815px) and (max-width: 921px) {
+    .photoshop, .photoshop-edit {
+        width: 354px;
+        height: 237px;
+    }
+}
+@media screen and (min-width: 690px) and (max-width: 814px) {
+    .photoshop, .photoshop-edit {
+        width: 304px;
+        height: 204px;
+    }
+}
+@media screen and (max-width: 689px) {
+    .photoshop {
+       margin-right: auto;
+    }
+    .photoshop-edit {
+        margin-left: auto;
+    }
+}
+@media screen and (min-width: 560px) and (max-width: 689px) {
+    .photoshop, .photoshop-edit {
+        width: 534px;
+        height: 357px;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 559px) {
+    .photoshop, .photoshop-edit {
+        width: 504px;
+        height: 337px;
+    }
+}
 @media screen and (min-width: 1195px) and (max-width: 1236px) {
     a.button.view_project {
         margin: 47px 0 32px;
@@ -1543,13 +1562,6 @@ p.barcode {
     section.project_complete:last-of-type {
         padding-bottom: 30px;
     }
-    .carousel-button {
-        top: 10rem;
-    }
-    .carousel-button.next {
-        float: none;
-        right: 1rem;
-    }
     .project_mockup {
         display: inline-block;
         width: 100%;
@@ -1668,17 +1680,6 @@ p.barcode {
     }
     section.project_complete {
         display: block;
-    }
-    .carousel-button {
-        top: 10rem;
-    }
-    .carousel-button.prev {
-        float: none;
-        left: -15rem;
-    }
-    .carousel-button.next {
-        float: none;
-        left: 15rem;
     }
     .project_mockup,
     .project_desc {
@@ -1993,16 +1994,6 @@ p.barcode {
     .logo:nth-of-type(4n) {
         margin-right: 3.5%;
     }
-    .illustration:nth-of-type(9),
-    .illustration:nth-of-type(10),
-    .illustration:nth-of-type(11),
-    .illustration:nth-of-type(12),
-    .logo:nth-of-type(9),
-    .logo:nth-of-type(10),
-    .logo:nth-of-type(11),
-    .logo:nth-of-type(12) {
-        margin-bottom: 3.5%;
-    }
     .illustration:nth-of-type(12),
     .logo:nth-of-type(12) {
         margin-right: 0;
@@ -2313,16 +2304,6 @@ p.barcode {
     ul.skills {
         width: 600px;
     }
-    .carousel-button.prev {
-        float: none;
-        left: -15rem;
-        display: inline-block;
-    }
-    .carousel-button.next {
-        float: none;
-        left: 15rem;
-        display: inline-block;
-    }
 }
 @media screen and (min-width: 649px) and (max-width: 767px) {
     .illustration,
@@ -2333,17 +2314,10 @@ p.barcode {
     .logo:nth-of-type(2n) {
         margin-right: 0;
     }
-    .illustration:nth-of-type(9),
-    .illustration:nth-of-type(10),
-    .logo:nth-of-type(9),
-    .logo:nth-of-type(10) {
-        margin-bottom: 36px;
-    }
 }
 @media screen and (max-width: 648px) {
     .illustrations > .illustration,
     .logos > .logo {
-        display: block;
         margin: 0 auto 30px;
         float: none;
     }
@@ -2372,9 +2346,6 @@ p.barcode {
     ul.skills li {
         display: inline-block;
         float: none;
-    }
-    .carousel-button {
-        top: 150px;
     }
     .slide > img {
         display: inline-block;
@@ -3109,15 +3080,6 @@ p.barcode {
     #projects a.project {
         width: 140px;
     }
-    .carousel-button {
-        top: 100px;
-    }
-    .carousel-button.prev {
-        left: 0.5rem;
-    }
-    .carousel-button.next {
-        right: 0.5rem;
-    }
     a.button.view_project:last-of-type {
         margin: 15px auto 35px;
     }
@@ -3283,12 +3245,6 @@ p.barcode {
         height: 266px;
         margin: 0 auto;
     }
-    .carousel-button.prev {
-        left: 7%;
-    }
-    .carousel-button.next {
-        right: 7%;
-    }
 }
 @media screen and (min-width: 300px) and (max-width: 767px) {
     .content {
@@ -3320,9 +3276,6 @@ p.barcode {
         display: block;
         width: auto;
         height: 200px;
-    }
-    .carousel-button {
-        font-size: 1rem;
     }
     .project_desc {
         float: none;
