@@ -2,7 +2,7 @@
 class VcsSlide extends Slider{
     // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
-        $sql = "SELECT * FROM mirnesgl_cert.certifications WHERE skill='VCS' ORDER BY rand();";
+        $sql = "SELECT * FROM mirnesgl_cert.certifications WHERE skill='VCS' AND class='LinkedIn preview' ORDER BY rand();";
         $stmt = $this->__connect()->query($sql);
 
         while($row = $stmt->fetch()) {
