@@ -20,7 +20,7 @@ class Website extends ConnectSlider{
                 echo "<section class='project_complete' aria-label=\"Project $title by Expert Web Designer and Developer Mirnes Glamočić from Bosnia and Herzegovina\">
                         <div class='main-outer'>
                             <article class='project_mockup'>
-                                <picture><!--[if IE 9]><video style='display: none;'><![endif]-->
+                                <picture class='mockup'><!--[if IE 9]><video style='display: none;'><![endif]-->
                                     <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 600px)\">
                                     <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 520px)\">
                                     <source srcset=\"./websites/$img_408\", type=\"image/webp\" width=\"408\" height=\"266\" loading=\"lazy\" media=\"(min-width: 408px)\">
