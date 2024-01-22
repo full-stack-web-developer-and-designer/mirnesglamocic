@@ -2,7 +2,7 @@
 class Logos extends ConnectSlider{
      // Fetch data from MySQL using PDO - PHP Data Object	
 	public function renderSlider(){
-        $sql = "SELECT * FROM mirnesgl_cert.projects WHERE article='logo';";
+        $sql = "SELECT * FROM mirnesgl_cert.projects WHERE article='logo' ORDER BY projects_id DESC;";
         $stmt = $this->__connect()->query($sql);
        
         while($row = $stmt->fetch()) {
