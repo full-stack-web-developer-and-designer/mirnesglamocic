@@ -314,51 +314,7 @@
                 </div>
                 <!-- image editing -->
                 <div id="div2" class="target">
-                    <section class="photoshops">
-                        <article class='photoshop'>
-                            <a href='./photoshops/BIG/coffee-cup.jpg' data-lightbox='photoshops'>
-                            <picture>
-                            <!--[if IE 9]><video style='display: none;'><![endif]-->
-                                <source srcset="./photoshops/SMALL/coffee-cup.jpg" type="image/jpg" width="576" height="384" loading="lazy" media="(min-width: 1261px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup.jpg" type="image/jpg" width="530" height="353" loading="lazy" media="(min-width: 1209px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup.jpg" type="image/jpg" width="500" height="333" loading="lazy" media="(min-width: 1140px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup.jpg" type="image/jpg" width="450" height="300" loading="lazy" media="(min-width: 1031px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup.jpg" type="image/jpg" width="400" height="267" loading="lazy" media="(min-width: 922px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup.jpg" type="image/jpg" width="350" height="267" loading="lazy" media="(min-width: 815px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup.jpg" type="image/jpg" width="300" height="200" loading="lazy" media="(min-width: 690px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup.jpg" type="image/jpg" width="530" height="353" loading="lazy" media="(min-width: 560px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup.jpg" type="image/jpg" width="500" height="333" loading="lazy" media="(min-width: 500px)">
-                                <!--[if IE 9]></video><![endif]-->
-                                <img decoding="async" srcset="./photoshops/SMALL/coffee-cup.jpg" width="576" height="384" loading="lazy" alt="Coffee cup">
-                            </picture></a>
-                        </article>
-                        <article class='photoshop-edit'>
-                            <a href='./photoshops/BIG/coffee-cup_e.jpg' data-lightbox='photoshops'>
-                            <picture>
-                            <!--[if IE 9]><video style='display: none;'><![endif]-->
-                                <source srcset="./photoshops/SMALL/coffee-cup_e.jpg" type="image/jpg" width="576" height="384" loading="lazy" media="(min-width: 1261px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup_e.jpg" type="image/jpg" width="530" height="353" loading="lazy" media="(min-width: 1209px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup_e.jpg" type="image/jpg" width="500" height="333" loading="lazy" media="(min-width: 1140px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup_e.jpg" type="image/jpg" width="450" height="300" loading="lazy" media="(min-width: 1031px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup_e.jpg" type="image/jpg" width="400" height="267" loading="lazy" media="(min-width: 922px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup_e.jpg" type="image/jpg" width="350" height="267" loading="lazy" media="(min-width: 815px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup_e.jpg" type="image/jpg" width="300" height="267" loading="lazy" media="(min-width: 690px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup_e.jpg" type="image/jpg" width="530" height="353" loading="lazy" media="(min-width: 560px)">
-                                <source srcset="./photoshops/SMALL/coffee-cup_e.jpg" type="image/jpg" width="500" height="333" loading="lazy" media="(min-width: 500px)">
-                                <!--[if IE 9]></video><![endif]-->
-                                <img decoding="async" srcset="./photoshops/SMALL/coffee-cup_e.jpg" width="576" height="384" loading="lazy" alt="Removed object from a coffee cup using Patch Tool">
-                            </picture><div class="content fade"><p>Removed object from a coffee cup using Patch Tool.</p></div></a>
-                        </article>
-                        <article class='photoshop'>
-                            <a href='./photoshops/BIG/coffee-cup.jpg' data-lightbox='photoshops'>
-                                <img src='./photoshops/SMALL/coffee-cup.jpg' alt="Illustration of dynamic cubes by Mirnes Glamočić" loading="lazy"></a>
-                        </article>
-                        <article class='photoshop-edit'>
-                            <a href='./photoshops/BIG/coffee-cup_e.jpg' data-lightbox='photoshops'>
-                                <img src='./photoshops/SMALL/coffee-cup_e.jpg' alt="Removed object from a coffee cup using Patch Tool" class="blur" loading="lazy">
-                                <div class="content fade"><p>Removed object from a coffee cup using Patch Tool.</p></div></a>
-                        </article>
-                    </section> <!-- end photoshops -->
+                    <p class="future">'Something really cool will coming soon!'</p>
                 </div>
                 <!-- illustrations -->
                 <div id="div3" class="target">
