@@ -34,7 +34,7 @@ class Website extends ConnectSlider{
                                     <source srcset=\"./websites/$img_408\", type=\"image/webp\" width=\"408\" height=\"266\" loading=\"lazy\" media=\"(min-width: 457px)\">
                                     <source srcset=\"./websites/$img_300\", type=\"image/webp\" width=\"300\" height=\"196\" loading=\"lazy\" media=\"(max-width: 456px)\">
                                     <!--[if IE 9]></video><![endif]-->
-                                    <img decoding=\"async\" srcset=\"./websites/$img\" alt=\"Mockup of $title by Expert Web Designer and Developer Mirnes Glamočić from Bosnia and Herzegovina\">
+                                    <img decoding=\"async\" srcset=\"./websites/$img\" loading=\"lazy\" alt=\"Mockup of $title by Expert Web Designer and Developer Mirnes Glamočić from Bosnia and Herzegovina\">
                                 </picture>
 
                                 <ul class=\"skills $skills_class\">
