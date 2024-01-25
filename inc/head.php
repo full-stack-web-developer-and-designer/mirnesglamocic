@@ -60,10 +60,11 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <!-- include fontawesome  -->
 <link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" onload="this.rel='stylesheet'" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <!-- include fontawesome if cdn fails -->
+<script src="https://kit.fontawesome.com/c3fb2ab6eb.js" crossorigin="anonymous"></script>
+<!-- page reload if the user changes mobile orientation -->
 <script>
 window.onorientationchange=function(){var a=window.orientation;switch(a){case 0:case 90:case -90:window.location.reload()}};
 </script>
-<script src="https://kit.fontawesome.com/c3fb2ab6eb.js" crossorigin="anonymous"></script>
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>
