@@ -18,7 +18,7 @@ class Website extends ConnectSlider{
             $description = $row['description'];
             $href        = $row['href'];
 
-                echo "<section class='project_complete clearfix' aria-label=\"Project $title by Expert Web Designer and Developer Mirnes Glamočić from Bosnia and Herzegovina\">
+                echo "<section class='project_complete clearfix' aria-label=\"Project $title by expert web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\">
                         <div class='main-outer'>
                             <article class='project_mockup clearfix'>
                                 <picture class='mockup'><!--[if IE 9]><video style='display: none;'><![endif]-->
