@@ -18,18 +18,18 @@ class Website extends ConnectSlider{
             $description = $row['description'];
             $href        = $row['href'];
 
-                echo "<section class='project_complete clearfix' aria-label=\"Project $title by expert web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\">
+                echo "<section class='project_complete clearfix' aria-label=\"Project $title by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\">
                         <div class='main-outer'>
                             <article class='project_mockup clearfix'>
                                 <picture class='mockup'><!--[if IE 9]><video style='display: none;'><![endif]-->
                                     <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 1261px)\">
                                     <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 1192px)\">
-                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 1115px)\">
+                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 1148px)\">
                                     <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 997px)\">
                                     <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 937px)\">
                                     <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 894px)\">
-                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 625px)\">
-                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 591px)\">
+                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 634px)\">
+                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 580px)\">
                                     <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 557px)\">
                                     <source srcset=\"./websites/$img_408\", type=\"image/webp\" width=\"408\" height=\"266\" loading=\"lazy\" media=\"(min-width: 457px)\">
                                     <source srcset=\"./websites/$img_300\", type=\"image/webp\" width=\"300\" height=\"196\" loading=\"lazy\" media=\"(max-width: 456px)\">
