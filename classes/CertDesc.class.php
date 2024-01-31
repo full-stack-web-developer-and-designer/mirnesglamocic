@@ -16,7 +16,7 @@ class CertDesc extends ConnectSlider{
             <span>$icon</span>
             <h3>$title</h3>
             <p class='intro'>$first_part<br><br>$second_part</p>
-            <p><a href='$href' class='button'>VIEW CERTIFICATES &raquo;</a></p>
+            <p><a href='./$href' class='button'>VIEW CERTIFICATES &raquo;</a></p>
         </article>";
             }
         }
