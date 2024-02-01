@@ -4,19 +4,19 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="en">
 <?php
-	$fb_title="SEO Certificates by Mirnes Glamočić";
-	$meta['og_description']="Mirnes Glamočić is an experienced Web Developer who specialize in optimizing search engine discovery and rankings.";
+	$fb_title="SEO certificates of IT expert Mirnes Glamočić";
+	$meta['og_description']="See the SEO certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$title = $fb_title;
+	$meta['description'] = $meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/seocertificates.html";
 	$og_image="https://mirnesglamocic.com/images/seo_og.jpg";
 	$og_image_alt=$fb_title;
 	$linkedin_title=$fb_title;
-	$title=$fb_title;
-	$meta['description']="Mirnes Glamočić is an experienced Web Developer, UI/UX and Web Designer who specialize in optimizing search engine discovery and rankings. Also, he is experienced in full-stack web development and design.";
 	$twitter_image="https://mirnesglamocic.com/images/seo_og.webp";
-	$meta['keywords']="web development, Search Engine Optimization, SEO";	
+	$canonical = "https://mirnesglamocic.com/seocertificates.html";	
 	include './inc/head.php';
 ?>
-<body class="development progress">
+<body class="development">
 <?php
 include 'inc/header.php';
 ?>
