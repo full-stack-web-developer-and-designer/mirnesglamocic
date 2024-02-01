@@ -4,16 +4,16 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-	$fb_title="UI/UX Certificates by Mirnes Glamočić";
-	$meta['og_description']="Mirnes Glamočić is an experienced UX/UI Designer with several years of experience in UX/UI Design.";
+	$fb_title="UI/UX certificates of IT expert Mirnes Glamočić";
+	$meta['og_description']="See the UI/UX certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$title=$fb_title;
+	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/uxcertificates.html";
 	$og_image="https://mirnesglamocic.com/images/ux_og.jpg";
 	$og_image_alt=$fb_title;
 	$linkedin_title=$fb_title;
-	$title=$fb_title;
-	$meta['description']="Mirnes Glamočić is an experienced UX/UI Designer with several years of experience in UX/UI Design. Also, he is highly skilled in full-stack web development and design.";
 	$twitter_image="https://mirnesglamocic.com/images/ux_og.webp";
-	$meta['keywords']="web design, web designer, UX design, UX designer, UI Design, UI Designer, Interaction Design, Interaction Designer";
+	$canonical = "https://mirnesglamocic.com/uxcertificates.html";
 	include './inc/head.php';
 ?>
 <body class="development">
