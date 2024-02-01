@@ -35,7 +35,8 @@ BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 # Change file names
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^Home.html$ /index.php [NC,L]
+RewriteRule ^home.html$ /index.php [NC,L]
+RewriteRule ^projects.html$ /projects.php [NC,L]
 RewriteRule ^frontendcertifikates.html$ /frontend.php [NC,L]
 RewriteRule ^backendcertifikates.html$ /backend.php [NC,L]
 RewriteRule ^databasecertificates.html$ /database.php [NC,L]
