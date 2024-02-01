@@ -8,7 +8,7 @@ body {
     font-weight: 300;
     background: #f2f2f2;
     scrollbar-width: thin;
-    scrollbar-color: #955d00;
+    scrollbar-color: #635336;
 }
 h1,
 h2,
@@ -16,22 +16,34 @@ h3,
 h4,
 h5,
 h6 {
+    letter-spacing: normal;
+    text-align: center;
     font-weight: 900;
-    margin: 1em 0 0.5em;
     color: #696969;
     word-break: break-word;
 }
 h1 {
     font-size: 3em;
-    background: red;
     padding: 30px;
     color: #000;
+    margin: 1em 0 0.5em;
 }
 h2 {
+    width: 100%;
+    display: inline-block;
+    background: #273142;
+    color: #fff;
     font-size: 2em;
-    text-align: center;
-    margin: 0;
-    padding: 30px 0;
+    margin: 0 auto;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+#aboutme h2 {
+    width: 850px;
+    margin: 0 auto 30px;
+}
+#skills h2 {
+    margin: 0 auto 40px;
 }
 h3 {
     font-size: 2em;
@@ -41,22 +53,14 @@ h3#response {
     height: 50px;
     margin: 1em 1.9em 1em 0.7em;
     color: #a2d838;
-    text-align: center;
 }
 h4 {
     font-size: 1.6em;
     height: 50px;
     margin: 1em 1.9em 1em 0.7em;
-    text-align: center;
-}
-h5 {
-    font-size: 1.4em;
-}
-h6 {
-    font-size: 1.2em;
 }
 p {
-    margin: 0.4em 0 0.5em;
+    margin: 0 0 0.5em;
 }
 img {
     vertical-align: bottom;
@@ -65,14 +69,14 @@ img {
 a:link,
 a:visited {
     text-decoration: none;
-    color: #955d00;
+    color: #635336;
 }
 a:hover {
-    color: #714600;
+    color: #574320;
     -webkit-tap-highlight-color: transparent;
 }
 a:active {
-    color: #696969;
+    color: #402E0E;
 }
 .white {
     color: #fff;
@@ -81,16 +85,14 @@ a:active {
 }
 .white h2,
 .white h3,
-.white h4,
-.white h5,
-.white h6 {
+.white h4 {
+    background: none;
     color: #fff;
 }
-.button:link,
-.button:visited {
-    border: 1px solid #955d00;
+.button:link{
+    border: 1px solid #635336;
     border-radius: 5px;
-    color: #955d00;
+    color: #635336;
     display: block;
     font-size: 0.75em;
     font-weight: 400;
@@ -100,22 +102,21 @@ a:active {
     margin: 20px auto 10px;
     transition: 800ms all ease;
 }
+.button:visited,
 .button:hover {
-    background: #955d00;
+    background: #574320;
     color: #fff;
     -webkit-tap-highlight-color: transparent;
 }
 .button:active {
-    background: #714600;
-    color: #fff;
+    background: #402E0E;
 }
 .white .button {
     border: 1px solid #fff;
-    color: #fff;
 }
 .white .button:hover {
     background: #fff;
-    color: #955d00;
+    color: #574320;
     text-decoration: none;
 }
 .wrapper {
@@ -177,7 +178,7 @@ a:active {
 }
 #headerCenter a:hover,
 #headerTopRight a:hover i {
-    color: #363636;
+    color: #574320;
     background: #fff;
 }
 #headerBottom {
@@ -218,31 +219,26 @@ a:active {
 #nav ul li a:link,
 #nav ul li a:visited {
     text-decoration: none;
-    color: #0648a0;
+    color: #273142;
     border-bottom: 4px solid #fff;
 }
 #nav ul li a:hover {
     background: #faf7eb;
-    color: #955d00;
-    border-bottom: 4px solid #955d00;
+    color: #574320;
+    border-bottom: 4px solid #635336;
 }
 #nav ul li a:active {
     background: #eee;
     border-bottom: 4px solid #ccc;
 }
-#aboutme h2 {
-    width: 70%;
-    padding: 5px 0;
-    background: #0648a0;
-    color: #fff;
-    border-radius: 5px;
-    display: inline-block;
-    margin: 46px auto 12px;
+#about.lazy {
+    background-image: none;
+    background-color: #F1F1FA;
 }
 #about {
     background-image: url(../images/developmentMirnes.webp);
-    background-position: center center;
     background-repeat: no-repeat;
+    background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -250,12 +246,32 @@ a:active {
     padding: 200px 0;
     text-align: center;
 }
-#aboutme {
+#aboutme,
+#LinkedIn,
+#services,
+#contact {
     background: #fff;
+    padding-top: 40px;
+}
+#aboutme,
+#services,
+#contact{
+    padding-bottom: 40px;
+}
+#LinkedIn,
+#skills,
+#services,
+#contact {
+    margin-bottom: 40px;
+}
+#LinkedIn,
+#projects,
+#services {
+    text-align: center;
 }
 .imgLeft {
     float: left;
-    padding: 46px 50px 50px 0;
+    padding-right: 40px;
 }
 #quotes {
     background: rgba(0, 0, 0, 0.4);
@@ -266,36 +282,33 @@ a:active {
 #certificates {
     background: #fff;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 #certificates h2 {
-    display: inline-block;
-    width: 350px;
-    padding-top: 2px;
-    padding-bottom: 3px;
-    background: #0648a0;
-    color: #fff;
-    text-align: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    border-radius: 5px;
+    width: 352px;
+}
+.ita {
+    width: 400px;
+    height: 565px;
+    display: block;
 }
 #PHP {
-    display: inline;
-    float: left;
-    margin-right: 20px;
+    width: 400px;
+    height: 565px;
     border: 2px solid #ccc;
-    box-sizing: border-box;
+    float: left; 
 }
 #WD {
-    display: inline;
-    float: right;
-    margin-left: 20px;
-    box-sizing: border-box;
+    width: 400px;
+    height: 565px;
     border: 2px solid #ccc;
+    float: right;
 }
 #mycert {
     text-align: left;
+    display: inline-block;
+    width: 352px;
+    padding: 40px 20px 0;
 }
 .certificate {
     width: 200px;
@@ -330,18 +343,9 @@ a:active {
 }
 #skills {
     background: #fff;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center;
-}
-#skills h2,
-#projects h2,
-#services h2 {
-    padding: 5px 0;
-    background: #0648a0;
-    color: #fff;
-    margin-bottom: 40px;
-    border-radius: 5px;
 }
 picture.skill {
     display: inline-block;
@@ -362,21 +366,12 @@ picture.skill:nth-of-type(35),
 picture.skill:nth-of-type(36) {
     margin-bottom: 0;
 }
-#projects {
-    background: #fff;
-    overflow: hidden;
-    margin-top: 40px;
-    padding-top: 30px;
-}
-#projects a.project {
-    display: block;
-    background: #955d00;
-    color: #fff;
+#projects a.project h2 {
+    background: #635336;
+    font-size: 16px;
+    font-weight: 300;
     padding: 5px 35px;
-    margin: 0 80px 40px 0;
-    border-radius: 5px;
-    float: left;
-    text-align: center;
+    margin: 40px 76px 40px -4px;
     width: 170px;
     height: 40px;
     line-height: 40px;
@@ -385,27 +380,29 @@ picture.skill:nth-of-type(36) {
     cursor: pointer;
     pointer-events: all;
 }
-#projects a.project:nth-of-type(5n) {
+#projects a.project:last-child h2 {
     margin-right: 0;
 }
-#projects a.project:link,
-#projects a.project:visited {
-    background: #714600;
+#projects a.project:link h2,
+#projects a.project:visited h2 {
+    background: #635336;
 }
-#projects a.project:hover {
-    background: #714600;
+#projects a.project:hover h2 {
+    background: #574320;
 }
-#projects a.project:active {
-    background: #462c00;
+#projects a.project:active h2 {
+    background: #402E0E;
 }
 .target {
     display: none;
 }
 section.project_complete {
+    display: inline-block;
+    margin-right: -4px;
     border-top: 4px solid #ececec;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 21px;
     clear: both;
 }
 .clearfix::after {
@@ -417,18 +414,12 @@ section.project_complete:first-of-type {
     border-top: none;
     padding-top: 0;
 }
-section.project_complete:last-of-type {
-    padding-bottom: 15px;
-}
 .project_mockup,
 .project_desc {
     width: 600px;
     display: block;
     box-sizing: border-box;
     float: left;
-}
-.project_mockup{
-    margin-right: -4px;
 }
 .mockup {
     display: inline-block;
@@ -439,19 +430,10 @@ section.project_complete:last-of-type {
 }
 ul.skills {
     display: block;
-    width: 555px;
+    width: 596px;
     list-style-type: none;
     margin: 15px auto 0;
     padding: 0;
-}
-ul.wp {
-    width: 540px;
-}
-ul.wp.elementor {
-    width: 570px;
-}
-ul.simple {
-    width: 555px;
 }
 ul.verysimple {
     width: 365px;
@@ -461,7 +443,7 @@ ul.skills li {
     margin-right: 15px;
     margin-bottom: 15px;
     padding: 10px;
-    background: #d69a35;
+    background: #273142;
     color: #fff;
     border-radius: 5px;
     width: 60px;
@@ -469,7 +451,7 @@ ul.skills li {
 }
 ul.skills li:first-of-type {
     margin-right: 0;
-    background: #b47814;
+    background: #635336;
 }
 ul.wp li {
     width: 76px;
@@ -513,7 +495,7 @@ ul.elementor li:nth-of-type(10) {
 .project_desc h3 {
     margin: 0 1em 0.5em;
     text-align: center;
-    color: #b47814;
+    color: #635336;
 }
 .project_desc p {
     text-align: left;
@@ -529,44 +511,41 @@ a.button.view_project {
     display: block;
     width: 150px;
 }
-h3.projects {
+h2.projects {
     text-align: center;
     color: #fff;
-    background-color: #b47814;
+    background-color: #635336;
     padding: 5px;
     margin-bottom: 40px;
     clear: both;
-}
-p.future {
-    text-align: center;
-    margin: 0 auto 30px;
-    color: #b47814;
 }
 .photoshops,
 .illustrations,
 .logos {
     text-align: center;
-    padding-bottom: 14px;
+    padding-bottom: 36px;
 }
-.photoshop,
-.photoshop-edit {
-    width: 580px;
-    height: 388px;
+.photoshop {
     position: relative;
+    width: 580px;
     overflow: hidden;
-    border: 2px solid #717171;
     box-sizing: border-box;
     display: inline-block;
     margin-bottom: 36px;
-}
-.photoshop {
     margin-right: 40px;
 }
-.photoshop-edit {
-    margin-left: -4px;
+.photoshop:nth-of-type(2n){
+    margin-right: 0;
+    margin-left: -4px
 }
-.illustrations > .illustration,
-.logos > .logo {
+.image {
+    display: inline-block;
+    width: 576px;
+    height: 384px;
+    border: 2px solid #717171;
+}
+.illustration,
+ .logo {
     width: 286px;
     height: 192px;
 }
@@ -582,6 +561,18 @@ p.future {
 .illustration:nth-of-type(4n),
 .logo:nth-of-type(4n) {
     margin-right: 0;
+}
+.illustration:nth-last-child(4),
+.illustration:nth-last-child(3),
+.illustration:nth-last-child(2),
+.illustration:last-child,
+.logo:nth-last-child(4),
+.logo:nth-last-child(3),
+.logo:nth-last-child(2),
+.logo:last-child,
+.photoshop:nth-last-child(2),
+.photoshop:last-child {
+    margin-bottom: -4px;
 }
 .content {
     width: 100%;
@@ -621,7 +612,7 @@ p.future {
     -o-transform: translateY(0);
     transform: translateY(0);
 }
-.photoshop-edit a:hover > img.blur,
+.photoshop a:hover > img.blur,
 .illustration a:hover > img.blur,
 .logo a:hover > img.blur {
     filter: blur(5px);
@@ -633,34 +624,27 @@ img > .content.fade:hover {
     opacity: 1;
 }
 #services {
-    padding-top: 30px;
-    text-align: center;
     letter-spacing: -0.31em;
 }
-#services h2 {
-    letter-spacing: normal;
+h3#service {
+    color: #635336;
+    margin: 40px auto 0;
 }
-#services h3#service {
-    text-align: center;
-    color: #955d00;
-    margin-bottom: 40px;
-    letter-spacing: normal;
-}
-#services .services {
+.services {
     width: 196px;
     padding: 35px 35px 15px;
-    margin: 0 40px 40px 0;
+    margin: 40px 40px 0 0;
     background: #faf7eb;
     border: 2px solid #d5cfb9;
     display: inline-block;
     letter-spacing: 0;
     text-align: left;
 }
-#services .services:nth-of-type(4) {
+.services:nth-of-type(4) {
     margin: 0;
 }
-#services .services h4 {
-    color: #b47814;
+.services h4 {
+    color: #635336;
     margin: 1em 0.3em;
 }
 img.usluge {
@@ -669,22 +653,12 @@ img.usluge {
     width: 50px;
     height: 50px;
 }
-#services,
-#contact {
-    background: #fff;
-    margin-top: 40px;
-}
 p#contact_offer {
     text-align: center;
 }
 #contact h2 {
-    width: 96%;
-    margin: 30px auto;
-    padding: 5px 0;
-    background: #0648a0;
-    color: #fff;
-    margin-right: 4%;
-    border-radius: 5px;
+    width: 760px;
+    margin: 0 40px 30px 0;
 }
 #form {
     width: 800px;
@@ -742,7 +716,6 @@ form .form-control textarea {
     left: 17px;
     top: 0;
     font-size: 20px;
-    font-display: swap;
     color: #aaa;
     padding: 9px 8px;
     transition: 0.3s;
@@ -819,17 +792,15 @@ label.error {
     pointer-events: none;
 }
 .form .btn_submit {
-    background: #073d88;
-    border: 2px solid #073d88;
+    background: #0D182A;
     color: #fff;
     padding: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     width: 92%;
-    margin: 2%;
+    margin: 2% 2% 0;
     cursor: pointer;
-    border: none !important;
     outline: none;
     opacity: 0.9;
     display: block;
@@ -838,12 +809,12 @@ label.error {
     font-family: inherit;
 }
 .form .btn_submit:hover {
-    background: #04316e;
-    border: 2px solid #043981;
+    background: #050D1A;
+    border: 2px solid #01050C;
 }
 .form .btn_submit:active {
-    background: #022350;
-    border: 2px solid #032b62;
+    background: #01050C;
+    border: 2px solid #000103;
 }
 .error,
 .errorJS {
@@ -858,7 +829,6 @@ label.error {
     background: #032b62;
     width: 400px;
     float: right;
-    margin: 30px 0;
     height: 674px;
     border-radius: 5px;
 }
@@ -872,10 +842,12 @@ label.error {
     text-align: center;
     margin-top: 50px;
 }
+.contact_icon,
 i.contact_icon {
     font-size: 65px;
     color: #fff;
 }
+.contact_icon:hover,
 i.contact_icon:hover {
     color: #04102d;
     background: #fff;
@@ -899,7 +871,7 @@ i.contact_icon:hover {
     right: 20px;
     text-align: center;
     z-index: 9999;
-    background: #955d00;
+    background: #635336;
 }
 .scroll-top:before {
     content: "";
@@ -910,7 +882,7 @@ i.contact_icon:hover {
     width: 100%;
     height: 100%;
     border-radius: 9999px;
-    background-color: #955d00;
+    background-color: #635336;
     opacity: 0;
     z-index: -1;
     pointer-events: none;
@@ -931,7 +903,7 @@ i.contact_icon:hover {
     width: 100%;
     height: 100%;
     border-radius: 9999px;
-    background-color: #955d00;
+    background-color: #635336;
     opacity: 0;
     z-index: -1;
     pointer-events: none;
@@ -974,15 +946,14 @@ i.contact_icon:hover {
     line-height: 40px;
 }
 #footer {
-    margin-top: 20px;
     text-align: center;
     color: #fff;
     padding: 10px;
-    background: #333;
-    clear: both;
+    background: #635336;
 }
 #footer p {
     margin: 0;
+    line-height: 50px;
 }
 #footer p a:link,
 #footer p a:visited {
@@ -990,11 +961,9 @@ i.contact_icon:hover {
     text-decoration: underline;
 }
 #footer p a:hover {
-    color: #bcaa96;
     text-decoration: none;
 }
 #footer p a:active {
-    background: #333;
     color: #fff;
 }
 #footer br#none {
@@ -1009,23 +978,18 @@ body.development {
 body.development h1 {
     font-size: 2em;
     text-align: center;
-    background: #0648a0;
+    background: #273142;
     color: #fff;
     width: 100%;
     margin: 15px auto 0;
     padding: 5px 0;
+    border-radius: 5px;
 }
 .cS-hidden {
     height: 1px;
     opacity: 0;
     filter: alpha(opacity=0);
     overflow: hidden;
-}
-#LinkedIn {
-    background: #fff;
-    padding: 50px 0 0;
-    text-align: center;
-    margin-bottom: 40px;
 }
 .lightSlider.lsGrab > * {
     cursor: pointer;
@@ -1035,6 +999,9 @@ body.development h1 {
     position: relative;
     width: 100%;
     overflow: hidden;
+}
+.slider-container:last-child {
+    padding-bottom: 20px;
 }
 section.slider-container li.item-a.slide {
     list-style: none;
@@ -1078,32 +1045,27 @@ i {
 body.development.design img.LinkedIn.margin-top {
     margin-top: 15px;
 }
-body.development.progress footer {
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
 .development #headerBottom {
     border-bottom: 4px solid #ececec;
 }
 * {
     scrollbar-width: thin;
-    scrollbar-color: #955d00 #eee;
+    scrollbar-color: #635336 #eee;
 }
 html::-webkit-scrollbar {
     width: 1vw;
 }
 html::-webkit-scrollbar-thumb {
-    background: #d69a3520;
-    border: 3px solid #955d0020;
+    background: #27314220;
+    border: 3px solid #63533620;
 }
 html::-webkit-scrollbar-thumb:hover {
-    background: #d69a3550;
-    border: 3px solid #955d0050;
+    background: #27314250;
+    border: 3px solid #63533650;
 }
 html::-webkit-scrollbar-track {
     background-color: #eee5;
-    box-shadow: #955d00 0 0 2px inset;
+    box-shadow: #635336 0 0 2px inset;
     border-radius: 0.5em;
 }
 html::-webkit-scrollbar-track:hover {
@@ -1111,147 +1073,6 @@ html::-webkit-scrollbar-track:hover {
 }
 p.barcode {
     display: none;
-}
-@media print {
-    @page {
-        margin: 0.5cm;
-    }
-    body {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 16px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-        background: #fff;
-    }
-    .wrapper {
-        margin: 0;
-        padding: 0;
-    }
-    #headerTop {
-        margin-bottom: 20px;
-    }
-    h1,
-    h2,
-    h3,
-    h4 {
-        color: #000;
-    }
-    a,
-    a:visited {
-        color: inherit;
-        text-decoration: none;
-    }
-    a[href^="https:"]::after,
-    a:visited::after {
-        content: " (" attr(href) ")";
-        font-style: italic;
-        word-wrap: break-word;
-        color: #000;
-    }
-    #headerCenter,
-    #headerTopRight,
-    #nav,
-    picture.skill,
-    #hero,
-    #about,
-    #quotes,
-    .certificate,
-    #PHP,
-    #WD,
-    #LinkedIn,
-    #skills,
-    #projects,
-    .scroll-top i,
-    #contact_me,
-    #icons p,
-    .no_print {
-        display: none;
-    }
-    a.scroll-top {
-        display: none !important;
-    }
-    #aboutme p,
-    #mycert {
-        padding-right: 50px;
-    }
-    #certificates {
-        padding-top: 0;
-    }
-    #headerTop,
-    #headerTop i,
-    #headerTopLeft span a,
-    #hero div.wrapper h1.white,
-    #aboutme h2,
-    #certificates h2,
-    #skills h2,
-    #services h2,
-    #services .services,
-    #services .services h4,
-    section#contact h2,
-    #form h2,
-    #footer,
-    section#contact p#contact_offer,
-    #icons,
-    i.contact_icon {
-        background: #fff;
-        color: #000;
-    }
-    span#number a,
-    #services .services h4 {
-        font-size: 1.2em;
-    }
-    #services .services {
-        padding: 35px 30px 15px;
-        margin: 0 25px 25px 0;
-        width: 194px;
-    }
-    #services .services:nth-of-type(4) {
-        margin-right: 0;
-    }
-    #headerTopLeft,
-    #hero div.wrapper h1.white,
-    #certificates h2,
-    #contact,
-    #icons {
-        width: 100%;
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-        background: #fff;
-        color: #000;
-    }
-    #services h3#service {
-        color: #000;
-    }
-    #aboutme h2 {
-        display: inline;
-        padding-left: 140px;
-    }
-    #contact,
-    #icons {
-        height: 300px;
-    }
-    footer#footer {
-        border-top: 10px solid #ccc;
-        position: relative;
-        max-height: 200px;
-        padding: 20px 0 0 170px;
-    }
-    footer::after {
-        content: url(../images/qr-code.png);
-        position: absolute;
-        top: 20px;
-        left: 0;
-    }
-    footer p {
-        padding-left: 20px;
-    }
-    p.barcode {
-        display: block;
-        margin: 65px auto 0 220px;
-        float: left;
-    }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
     #about {
@@ -1289,61 +1110,25 @@ p.barcode {
         margin-bottom: 25px;
     }
 }
-@media screen and (min-width: 1237px) and (max-width: 1260px) {
-    ul.skills li {
-        padding: 10px 5px;
-    }
-    ul.elementor {
-        width: 400px;
-    }
-    ul.skills,
-    ul.simple {
-        width: 510px;
-    }
-    ul.verysimple {
-        width: 325px;
-    }
-    ul.skills li.title {
-        width: 485px;
-    }
-    ul.elementor li:first-of-type {
-        width: 520px;
-    }
-    ul.skills li.project_simple {
-        width: 315px;
-    }
-    ul.wp {
-        width: 510px;
-    }
-    ul.wp.elementor {
-        width: 530px;
-    }
-    ul.wp li.title {
-        width: 485px;
-    }
-    ul.skills li.project_wp {
-        width: 480px;
-    }
-    #services,
-    #contact {
-        margin-top: 30px;
-    }
-}
 @media screen and (min-width: 1232px) and (max-width: 1260px) {
-    #certificates h2 {
-        display: block;
-    }
     #services .services {
         padding: 25px 25px 15px;
     }
 }
 @media screen and (min-width: 1209px) and (max-width: 1260px) {
-    .photoshop, .photoshop-edit {
+    .photoshop {
         width: 534px;
         height: 357px;
     }
+    .image {
+        width: 530px;
+        height: 353px;
+    }
 }
 @media screen and (min-width: 1192px) and (max-width: 1260px) {
+    #projects a.project h2{
+        width: 245px;
+    }
     .project_mockup, .project_desc {
         width: 550px;
     }
@@ -1351,7 +1136,31 @@ p.barcode {
         width: 546px;
         height: 362px;
     }
-    a.button.view_project {
+    ul.skills.essential li {
+        padding: 10px 8px;
+    }
+    ul.skills {
+        width: 546px;
+    }
+    ul.verysimple {
+        width: 365px;
+    }
+    ul.wp.elementor li {
+        width: 112px;
+    }
+    ul.wp.elementor li:nth-of-type(4),
+    ul.wp.elementor li:nth-of-type(5),
+    ul.wp.elementor li:nth-of-type(8),
+    ul.wp.elementor li:nth-of-type(9) {
+        width: 95px;
+    }
+    ul.skills li.title {
+        width: 516px;
+    }
+    ul.skills.elementor li.title {
+        width: 520px;
+    }
+    ul.skills a.button.view_project {
         margin: 50px auto 0;
     }
 }
@@ -1376,9 +1185,6 @@ p.barcode {
     img.LinkedIn.margin-top {
         margin-top: 15px;
     }
-    #footer {
-        margin-top: 15px;
-    }
 }
 @media screen and (min-width: 1024px) and (max-width: 1260px) {
     #about {
@@ -1388,7 +1194,18 @@ p.barcode {
         -o-background-size: cover;
         background-size: 1260px 787px;
     }
-
+    #PHP, #WD,
+    .ita {
+        width: 300px;
+        height: 424px;
+    }
+    #WD {
+        margin-left: 12px;
+    }
+    #mycert {
+        display: inline;
+        padding: 0;
+    }
     #form {
         width: 75%;
     }
@@ -1396,13 +1213,15 @@ p.barcode {
         width: 25%;
     }
 }
-@media screen and (min-width: 1021px) and (max-width: 1260px) {
+@media screen and (min-width: 1014px) and (max-width: 1260px) {
     .project_desc {
         padding-left: 30px;
     }
     .illustration,
-    .logo {
-        margin: 0 3.5% 3.5% 0;
+    .illustration:nth-last-child(4),
+    .logo,
+    .logo:nth-last-child(4) {
+        margin: 0 30px 26px 0;
     }
     .illustration:nth-of-type(3n),
     .logo:nth-of-type(3n) {
@@ -1410,7 +1229,7 @@ p.barcode {
     }
     .illustration:nth-of-type(4n),
     .logo:nth-of-type(4n) {
-        margin-right: 3.5%;
+        margin-right: 30px;
     }
     .illustration:nth-of-type(12),
     .logo:nth-of-type(12) {
@@ -1418,58 +1237,41 @@ p.barcode {
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1260px) {
-    br.none {
-        display: none;
+    #aboutme h2 {
+        width: 100%;
+        margin: 0 auto 40px;
     }
     .wrapper {
         width: auto;
         margin: 0 auto;
-        padding: 0 4%;
+        padding: 0 40px;
     }
     #headerTopLeft,
     #headerCenter {
         width: 33.5%;
     }
-    #aboutme {
-        padding-top: 4%;
-        padding-bottom: 3%;
-    }
-    #aboutme h2 {
-        margin-top: 0;
-        margin-bottom: 4%;
-        text-align: inherit;
-        width: auto;
-        display: block;
-    }
     #certificates h2 {
         width: 100%;
-    }
-    .imgLeft {
-        padding: 4% 4% 0 0;
-        margin-top: 48px;
-    }
-    #certificates {
-        padding-top: 4%;
-    }
-    #certificates h2 {
         display: block;
-        margin-bottom: 4%;
+        margin-bottom: 40px;
     }
-    #PHP,
     #WD {
-        margin-left: 20px;
+        margin-left: 12px;
     }
-    #PHP {
+
+    #PHP{
+        margin-left: 40px;
         float: right;
-        margin-right: 0;
     }
-    #projects a.project {
+    #projects a.project h2 {
         padding: 5px 0;
-        margin: 0 4% 4% 0;
-        width: 22%;
+        margin: 40px 40px 40px -4px;
     }
     #icons p {
         padding: 100px 20px 50px;
+    }
+    #contact h2 {
+        width: 95%;
     }
 }
 @media screen and (min-width: 1239px) and (max-width: 1249px) {
@@ -1501,48 +1303,19 @@ p.barcode {
         width: 97% !important;
     }
 }
-@media screen and (min-width: 1174px) and (max-width: 1236px) {
-    #projects {
-        margin-top: 30px;
-    }
-    section.project_complete {
-        padding-bottom: 35px;
-    }
-    ul.skills li {
-        padding: 10px 5.5px;
-    }
-    ul.skills li.title {
-        width: 480px;
-        padding: 10px;
-    }
-    ul.wp.elementor li:nth-of-type(4),
-    ul.wp.elementor li:nth-of-type(5),
-    ul.wp.elementor li:nth-of-type(8),
-    ul.wp.elementor li:nth-of-type(9) {
-        width: 95px;
-    }
-    ul.skills li.project_simple {
-        width: 320px;
-    }
-    ul.skills li.project_wp {
-        width: 485px;
-    }
-    ul.skills li:nth-of-type(7) {
-        margin-right: 0;
-    }
-    ul.wp.elementor li:nth-of-type(7) {
-        margin-right: 15px;
-    }
-}
 @media screen and (min-width: 1188px) and (max-width: 1231px) {
     #services .services {
         padding: 20px 20px 15px;
     }
 }
 @media screen and (min-width: 1140px) and (max-width: 1208px) {
-    .photoshop, .photoshop-edit {
+    .photoshop {
         width: 504px;
         height: 337px;
+    }
+    .image {
+        width: 500px;
+        height: 333px;
     }
 }
 @media screen and (min-width: 1162px) and (max-width: 1205px) {
@@ -1565,6 +1338,9 @@ p.barcode {
     }
 }
 @media screen and (min-width: 1148px) and (max-width: 1191px) {
+    #projects a.project h2{
+        width: 230px;
+    }
     .project_mockup, .project_desc {
         width: 530px;
     }
@@ -1572,26 +1348,13 @@ p.barcode {
         width: 504px;
         height: 330px;
     }
-}
-@media screen and (min-width: 1160px) and (max-width: 1187px) {
-    .SoloLearn {
-        width: 97%;
-        margin: 22px 15px 0 4px;
+    ul.skills,
+    ul.wp.elementor {
+        width: 504px;
     }
-    .Pluralsight {
-        width: 97% !important;
+    ul.skills li.title {
+        padding: 10px;
     }
-}
-@media screen and (min-width: 849px) and (max-width: 1187px) {
-    #services .services:nth-of-type(2n) {
-        margin-right: 0;
-    }
-    #services .services {
-        width: 300px;
-        padding: 30px 30px 15px;
-    }
-}
-@media screen and (min-width: 1115px) and (max-width: 1173px) {
     ul.skills {
         width: 425px;
     }
@@ -1608,34 +1371,32 @@ p.barcode {
     ul.simple li {
         width: 60px;
     }
-    ul.skills li:nth-of-type(5),
-    ul.skills li:nth-of-type(9) {
-        margin-right: 0;
-    }
-    ul.skills li:nth-of-type(7) {
+    ul.skills li:nth-of-type(7),
+    ul.wp li:nth-of-type(5),
+    ul.wp.elementor li:nth-of-type(5),
+    ul.simple li:nth-of-type(6) {
         margin-right: 15px;
     }
+    ul.skills li:nth-of-type(5),
+    ul.skills li:nth-of-type(9),
     ul.wp.elementor li:nth-of-type(4),
     ul.wp.elementor li:nth-of-type(7),
     ul.simple li:nth-of-type(7) {
         margin-right: 0;
     }
-    ul.simple li:nth-of-type(5),
-    ul.wp li:nth-of-type(5),
-    ul.wp.elementor li:nth-of-type(5) {
+    ul.simple li:nth-of-type(5){
         margin-right: 15px;
     }
-    ul.simple li:nth-of-type(6) {
-        margin-right: 15px;
-    }
-    ul.skills li.title,
-    ul.verysimple li.project_simple {
-        width: 415px;
+    ul.skills li.title {
+        width: 406px;
     }
     ul.simple li.title,
     ul.skills li.project_wp,
     ul.wp.elementor li:first-of-type {
-        width: 485px;
+        width: 476px;
+    }
+    ul.skills li.project_wp {
+        width: 486px;
     }
     ul.wp li:nth-of-type(3),
     ul.wp li:nth-of-type(4),
@@ -1650,6 +1411,32 @@ p.barcode {
     ul.wp.elementor li:nth-of-type(9) {
         display: none;
     }
+    ul li.project_simple {
+        width: 415px;
+    }
+    a.button.view_project {
+        margin: 30px auto 0;
+    }
+}
+@media screen and (min-width: 1160px) and (max-width: 1187px) {
+    .SoloLearn {
+        width: 97%;
+        margin: 22px 15px 0 4px;
+    }
+    .Pluralsight {
+        width: 97% !important;
+    }
+}
+@media screen and (min-width: 849px) and (max-width: 1187px) {
+    .services {
+        width: 300px;
+        padding: 30px 30px 15px;
+        margin: 40px 40px 0 0;
+    }
+    .services:nth-of-type(2n) {
+        margin-right: 0;
+    }
+
 }
 @media screen and (min-width: 1124px) and (max-width: 1161px) {
     .certificate {
@@ -1671,8 +1458,12 @@ p.barcode {
     }
 }
 @media screen and (min-width: 1020px) and (max-width: 1152px) {
+    picture.skill {
+        margin-right: 40px;
+        margin-bottom: 40px;
+    }
     picture.skill:nth-of-type(9n) {
-        margin-right: 37.5px;
+        margin-right: 40px;
     }
     picture.skill:nth-of-type(6n) {
         margin-right: 0;
@@ -1680,55 +1471,16 @@ p.barcode {
     picture.skill:nth-of-type(28),
     picture.skill:nth-of-type(29),
     picture.skill:nth-of-type(30) {
-        margin-bottom: 37.5px;
+        margin-bottom: 40px;
     }
 }
-@media screen and (min-width: 1115px) and (max-width: 1147px) {
-    .project_mockup, .project_desc {
-        width: 500px;
-    }
-    .mockup {
-        width: 504px;
-        height: 330px;
-    }
-}
-@media screen and (min-width: 1031px) and (max-width: 1139px) {
-    .photoshop, .photoshop-edit {
-        width: 454px;
-        height: 304px;
-    }
-}
-@media screen and (min-width: 1028px) and (max-width: 1123px) {
-    .certificate {
-        padding: 35px 35px 5px;
-    }
-    .certificate:nth-of-type(4n) {
-        margin-right: 40px;
-    }
-    .certificate:nth-of-type(3n) {
+@media screen and (max-width: 1147px) {
+    section.project_complete {
+        display: block;
         margin-right: 0;
     }
-}
-@media screen and (min-width: 1016px) and (max-width: 1118px) {
-    .LinkedIn {
-        width: 100%;
-    }
-    .LinkedInNew {
-        width: 96.5% !important;
-        margin-block-start: 15px;
-        margin-inline-start: 5px;
-        padding-block-start: 0;
-    }
-    .SoloLearn {
-        width: 97.5%;
-    }
-    .Pluralsight {
-        width: 97.5% !important;
-    }
-}
-@media screen and (max-width: 1114px) {
     a.button.view_project {
-        margin: 30px auto;
+        margin: 40px auto;
     }
     div.main-outer {
         display: flex;
@@ -1739,7 +1491,6 @@ p.barcode {
     .project_mockup,
     .project_desc {
         float: none;
-        display: block;
         width: auto;
     }
     .project_mockup{
@@ -1751,19 +1502,25 @@ p.barcode {
     .project_desc {
         padding-left: 0;
     }
-}
-@media screen and (min-width: 894px) and (max-width: 1114px) {
-    section.project_complete {
-        display: block;
+    .project_desc h3 {
+        margin: 0 auto 40px;
     }
-    section.project_complete:last-of-type {
-        padding-bottom: 30px;
+}
+@media screen and (min-width: 1120px) and (max-width: 1147px) {
+    #projects a.project h2 {
+        width: 230px;
+    }
+}
+@media screen and (min-width: 894px) and (max-width: 1147px) {
+    section.project_complete {
+        padding-bottom: 40px;
     }
     .mockup {
-        margin-right: 30px;
+        margin-right: 40px;
     }
     ul.skills {
        display: inline-block;
+       margin-left: -4px;
     }
     a.button.view_project {
         width: 600px;
@@ -1831,6 +1588,49 @@ p.barcode {
         margin-right: 15px;
     }
 }
+@media screen and (min-width: 1031px) and (max-width: 1139px) {
+    .photoshop {
+        width: 454px;
+        height: 304px;
+    }
+    .image {
+        width: 450px;
+        height: 300px;
+    }
+}
+@media screen and (min-width: 1028px) and (max-width: 1123px) {
+    .certificate {
+        padding: 35px 35px 5px;
+    }
+    .certificate:nth-of-type(4n) {
+        margin-right: 40px;
+    }
+    .certificate:nth-of-type(3n) {
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 1056px) and (max-width: 1119px) {
+    #projects a.project h2 {
+        width: 215px;
+    }
+}
+@media screen and (min-width: 1016px) and (max-width: 1118px) {
+    .LinkedIn {
+        width: 100%;
+    }
+    .LinkedInNew {
+        width: 96.5% !important;
+        margin-block-start: 15px;
+        margin-inline-start: 5px;
+        padding-block-start: 0;
+    }
+    .SoloLearn {
+        width: 97.5%;
+    }
+    .Pluralsight {
+        width: 97.5% !important;
+    }
+}
 @media screen and (min-width: 1057px) and (max-width: 1112px) {
     .form-control i {
         left: 16px;
@@ -1842,9 +1642,13 @@ p.barcode {
     }
 }
 @media screen and (min-width: 922px) and (max-width: 1030px) {
-    .photoshop, .photoshop-edit {
+    .photoshop {
         width: 404px;
         height: 271px;
+    }
+    .image {
+        width: 400px;
+        height: 267px;
     }
 }
 @media screen and (min-width: 962px) and (max-width: 1027px) {
@@ -1856,6 +1660,12 @@ p.barcode {
     }
     .certificate:nth-of-type(3n) {
         margin-right: 0;
+    }
+}
+@media screen and (max-width: 1023px) {
+    #mycert {
+        display: inline;
+        padding: 0;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1870,14 +1680,16 @@ p.barcode {
         background-size: 1023px 639px;
         padding: 200px 0 40px;
     }
-    #skills {
-        padding-top: 4%;
-        display: inline-block;
+    #PHP, #WD,
+    .ita {
+        width: 250px;
+        height: 353px;
     }
-    #skills h2,
-    #projects h2,
-    #services h2 {
-        margin-bottom: 4%;
+    #WD {
+        margin-left: 12px;
+    }
+    #skills {
+        display: inline-block;
     }
     #services .services:nth-of-type(2n) {
         margin-right: 0;
@@ -1890,14 +1702,22 @@ p.barcode {
         height: 658px;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 1020px) {
+@media screen and (min-width: 768px) and (max-width: 1013px) {
     .illustration,
-    .logo {
-        margin: 0 4% 4% 0;
+    .illustration:nth-last-child(4),
+    .logo,
+    .logo:nth-last-child(4) {
+        margin: 0 40px 36px 0;
     }
     .illustration:nth-of-type(2n),
-    .logo:nth-of-type(2n) {
+    .illustration:nth-last-child(3),
+    .logo:nth-of-type(2n),
+    .logo:nth-last-child(3) {
         margin-right: 0;
+    }
+    .illustration:nth-last-child(3),
+    .logo:nth-last-child(3) {
+        margin-bottom: 36px;
     }
 }
 @media screen and (min-width: 922px) and (max-width: 1019px) {
@@ -1933,6 +1753,38 @@ p.barcode {
         width: 98% !important;
     }
 }
+
+@media screen and (min-width: 1000px) and (max-width: 1055px) {
+    #projects a.project h2 {
+        width: 200px;
+    }
+}
+@media screen and (min-width: 956px) and (max-width: 999px) {
+    #projects a.project h2 {
+        width: 190px;
+    }
+}
+@media screen and (min-width: 916px) and (max-width: 955px) {
+    #projects a.project h2 {
+        width: 180px;
+    }
+}
+@media screen and (min-width: 836px) and (max-width: 875px) {
+    #projects a.project h2 {
+        width: 160px;
+    }
+}
+@media screen and (min-width: 796px) and (max-width: 835px) {
+    #projects a.project h2 {
+        width: 150px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 795px) {
+    #projects a.project h2 {
+        width: 140px;
+    }
+}
+
 @media screen and (min-width: 937px) and (max-width: 996px) {
     .mockup {
         width: 554px;
@@ -2012,9 +1864,13 @@ p.barcode {
     }
 }
 @media screen and (min-width: 815px) and (max-width: 921px) {
-    .photoshop, .photoshop-edit {
+    .photoshop {
         width: 354px;
         height: 237px;
+    }
+    .image {
+        width: 350px;
+        height: 233px;
     }
 }
 @media screen and (min-width: 625px) and (max-width: 893px) {
@@ -2065,10 +1921,14 @@ p.barcode {
         margin-right: 0;
     }
 }
-@media screen and (min-width: 690px) and (max-width: 814px) {
-    .photoshop, .photoshop-edit {
-        width: 304px;
-        height: 204px;
+@media screen and (min-width: 634px) and (max-width: 814px) {
+    .photoshop {
+        width: 286px;
+        height: 192px;
+    }
+    .image {
+        width: 282px;
+        height: 188px;
     }
 }
 @media screen and (min-width: 737px) and (max-width: 788px) {
@@ -2128,6 +1988,7 @@ p.barcode {
     }
     #nav h2 {
         display: inline;
+        background: none;
         color: #fff;
         padding-left: 10px;
         font-weight: 400;
@@ -2176,8 +2037,8 @@ p.barcode {
     #nav ul li a:hover,
     #nav ul li a:active {
         background: #eee;
-        color: #462c00;
-        border-bottom: 2px solid #462c00;
+        color: #574320;
+        border-bottom: 2px solid #574320;
     }
     #aboutme {
         padding: 30px 0;
@@ -2185,7 +2046,6 @@ p.barcode {
     #aboutme h2 {
         display: block;
         width: auto;
-        margin-top: 0;
     }
     .wrapper {
         width: 95%;
@@ -2208,23 +2068,7 @@ p.barcode {
         margin-right: 0;
     }
     #PHP, #WD {
-        display: inline-block;
         float: none;
-    }
-    #skills {
-        text-align: center;
-    }
-    #projects {
-        text-align: center;
-    }
-    #projects a.project {
-        display: inline-block;
-        text-align: center;
-        float: none;
-    }
-    .project_mockup,
-    .project_desc {
-        width: 100%;
     }
     ul.skills li:first-of-type {
         margin-top: 15px;
@@ -2233,7 +2077,6 @@ p.barcode {
         text-align: left;
         margin: 20px;
     }
-    .photoshop-edit a:hover > img.blur,
     .illustration a:hover > img.blur,
     .logo a:hover > img.blur {
         filter: blur(0);
@@ -2249,9 +2092,6 @@ p.barcode {
         -ms-transform: none;
         -o-transform: none;
         transform: none;
-    }
-    #services .services:nth-of-type(2n) {
-        margin: 0 0 40px;
     }
     #form {
         width: 100%;
@@ -2274,8 +2114,8 @@ p.barcode {
     #icons {
         width: 100%;
         height: auto;
-        overflow: hidden;
-        display: inline;
+        display: block;
+        margin: 40px auto 0;
         text-align: center;
     }
     #icons p {
@@ -2286,38 +2126,37 @@ p.barcode {
     }
 }
 @media screen and (min-width: 649px) and (max-width: 767px) {
-    #projects a.project {
+    #projects a.project h2 {
         width: 119px;
         padding: 5px 10px; 
-        margin: 0 16px 40px 0;
+        margin: 40px 16px 40px 0;
     }
-    #projects a.project:nth-of-type(3n) {
+    #projects a.project:nth-of-type(3n) h2 {
         margin-right: 16px;
     }
-    .illustration:nth-of-type(2n),
-    .logo:nth-of-type(2n) {
-        margin-right: 0;
+    .photoshop {
+        margin: 0 18px 14px 0;
     }
 }
-@media screen and (min-width: 625px) and (max-width: 767px) {
-    section.project_complete {
-        display: block;
-        padding-top: 35px;
-        padding-bottom: 35px;
+@media screen and (min-width: 570px) and (max-width: 767px) {
+    #mycert {
+        clear: both;
     }
 }
 @media screen and (min-width: 521px) and (max-width: 767px) {
     #headerCenter {
         width: 37%;
     }
-    body.development h1 {
-        margin: 4% auto 3%;
-    }
     .cert:nth-of-type(2n) {
         margin-right: 0;
     }
     li.item-a.slide.lslide:nth-of-type(2n) {
         margin-right: 0;
+    }
+    #PHP, #WD,
+    .ita {
+        width: 200px;
+        height: 283px;
     }
     .LinkedIn {
         width: 100%;
@@ -2336,23 +2175,20 @@ p.barcode {
         width: 99% !important;
         margin: 0 auto 12px 0.6%;
     }
+    .SoloLearn:nth-of-type(2n),
     .LinkedIn:nth-of-type(2n),
     .LinkedInNew:nth-of-type(2n),
-    .Pluralsight:nth-of-type(2n),
-    .SoloLearn:nth-of-type(2n) {
+    .Pluralsight:nth-of-type(2n) {
         margin-right: 0;
     }
-    body.development #footer {
-        margin-top: 1%;
+    .slider-container:first-of-type {
+        margin-top: 15px;
+    }
+    .slider-container:last-child {
+        padding-bottom: 5px;
     }
     #icon_box {
         width: 75%;
-    }
-    #footer {
-        margin-top: 0;
-    }
-    body#home #footer {
-        margin-top: 4%;
     }
 }
 @media screen and (min-width: 409px) and (max-width: 767px) {
@@ -2367,11 +2203,16 @@ p.barcode {
     #certificates h2 {
         margin: 0 0 5%;
     }
-    #mycert {
-        clear: both;
+    #PHP, #WD {
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+    #WD {
+        margin-left: 40px;
     }
     #contact h2 {
-        margin: 30px auto;
+        width: 100%;
+        margin: 0 auto 40px;
     }
 }
 @media screen and (min-width: 354px) and (max-width: 767px) {
@@ -2434,47 +2275,103 @@ p.barcode {
         left: 14px;
     }
 }
-@media screen and (max-width: 689px) {
-    .photoshop {
-       margin-right: auto;
-    }
-    .photoshop-edit {
-        margin-left: auto;
-    }
-}
-@media screen and (min-width: 560px) and (max-width: 689px) {
-    .photoshop, .photoshop-edit {
-        width: 534px;
-        height: 357px;
-    }
-}
 @media screen and (min-width: 530px) and (max-width: 667px) {
     .form-control i {
         left: 12px;
     }
 }
-@media screen and (max-width: 648px) {
-    .illustrations > .illustration,
-    .logos > .logo {
-        margin: 0 auto 30px;
-        float: none;
+@media screen and (min-width: 634px) and (max-width: 767px) {
+    .photoshop,
+    .illustration,
+    .logo,
+    .illustration:nth-last-child(4),
+    .logo:nth-last-child(4) {
+        margin: 0 30px 26px 0;
+    }
+    .illustration:nth-of-type(2n),
+    .logo:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .illustration:nth-last-child(3),
+    .logo:nth-last-child(3){
+        margin-bottom: 26px;
+    }
+    .illustration:nth-last-child(4),
+    .logo:nth-last-child(4){
+        margin: 0 30px 26px 0;
     }
     .illustration:nth-of-type(2n), .logo:nth-of-type(2n) {
         margin-right: 0;
     }
+    .illustration:nth-last-child(4),
+    .logo:nth-last-child(4),
+    .illustration:nth-last-child(3),
+    .logo:nth-last-child(3){
+        margin-bottom: 26px;
+    }
 }
-@media screen and (min-width: 336px) and (max-width: 648px) {
-    #projects a.project {
+@media screen and (min-width: 333px) and (max-width: 648px) {
+    body.development h1 {
+        margin: 26px auto 20px;
+    }
+    #projects a.project h2 {
         padding: 5px 10px; 
         margin: 0 40px 40px 0;
     }
-    #projects a.project:nth-of-type(3n) {
+    #projects a.project:nth-of-type(3n) h2 {
         margin-right: 0;
     }
 }
-@media screen and (max-width: 624px) {
-    section.project_complete {
+@media screen and (max-width: 633px) {
+    #mycert {
         display: block;
+        width: auto;
+    }
+    .photoshops, .illustrations, .logos {
+        padding-bottom: 30px;
+    }
+    .photoshop,
+    .photoshop:nth-last-child(2),
+    .illustration,
+    .logo {
+        margin: 0 auto 30px;
+        display: block;
+    }
+    .photoshop:nth-of-type(2n) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .illustration:nth-last-child(4),
+    .illustration:nth-last-child(3),
+    .illustration:nth-last-child(2),
+    .logo:nth-last-child(4),
+    .logo:nth-last-child(3),
+    .logo:nth-last-child(2){
+        margin-bottom: 26px;
+    }
+    .illustration:nth-of-type(4n), .logo:nth-of-type(4n) {
+        margin-right: 0;
+    }
+    .illustration:nth-of-type(4n),
+    .logo:nth-of-type(4n) {
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 580px) and (max-width: 633px) {
+    .mockup {
+        width: 554px;
+        height: 362px;
+    }
+    a.button.view_project {
+        width: 492px;
+    }
+    .photoshop {
+        width: 504px;
+        height: 337px;
+    }
+    .image {
+        width: 500px;
+        height: 333px;
     }
 }
 @media screen and (min-width: 612px) and (max-width: 624px) {
@@ -2487,30 +2384,12 @@ p.barcode {
         padding: 30px 30px 15px;
     }
 }
-@media screen and (min-width: 591px) and (max-width: 624px) {
-    .mockup {
-        width: 554px;
-        height: 362px;
-    }
-    a.button.view_project {
-        width: 494px;
-    }
-}
 @media screen and (max-width: 619px) {
+    section.project_complete {
+        padding-bottom: 40px;
+    }
     ul.skills {
         display: none;
-    }
-    #PHP {
-        margin-right: 0;
-    }
-}
-@media screen and (min-width: 409px) and (max-width: 619px) {
-    section.project_complete {
-        padding-top: 40px;
-        padding-bottom: 65px;
-    }
-    section.project_complete:last-of-type {
-        padding-bottom: 30px;
     }
 }
 @media screen and (min-width: 591px) and (max-width: 611px) {
@@ -2540,22 +2419,13 @@ p.barcode {
 }
 @media screen and (min-width: 583px) and (max-width: 603px) {
     #services .services {
-        margin: 0 40px 40px 0;
+        margin: 40px 40px 0 0;
         padding: 30px 10px 15px;
     }
 }
 @media screen and (min-width: 570px) and (max-width: 590px) {
     .certificate {
         padding: 30px 20px 15px;
-    }
-}
-@media screen and (min-width: 557px) and (max-width: 590px) {
-    .mockup {
-        width: 504px;
-        height: 330px;
-    }
-    a.button.view_project {
-        width: 444px;
     }
 }
 @media screen and (min-width: 516px) and (max-width: 589px) {
@@ -2579,27 +2449,43 @@ p.barcode {
 }
 @media screen and (min-width: 409px) and (max-width: 582px) {
     #services .services {
-        margin: 0 auto 40px;
+        margin: 40px auto 0;
         width: 80%;
         padding: 40px 40px 15px;
     }
 }
+@media screen and (min-width: 557px) and (max-width: 579px) {
+    .mockup {
+        width: 504px;
+        height: 330px;
+    }
+    a.button.view_project {
+        width: 444px;
+    }
+    .photoshop {
+        width: 504px;
+        height: 337px;
+    }
+    .image {
+        width: 500px;
+        height: 333px;
+    }
+}
 @media screen and (min-width: 534px) and (max-width: 576px) {
-    #projects a.project {
+    #projects a.project h2 {
         margin: 0 50px 50px 0;
         padding: 5px 25px;
+    }
+}
+@media screen and (min-width: 492px) and (max-width: 576px) {
+    #projects a.project h2 {
+        margin: 0 50px 50px 0;
     }
 }
 @media screen and (max-width: 569px) {
     .certificate {
         width: 80%;
         margin: 0 auto 40px;
-    }
-}
-@media screen and (min-width: 500px) and (max-width: 559px) {
-    .photoshop, .photoshop-edit {
-        width: 504px;
-        height: 337px;
     }
 }
 @media screen and (min-width: 457px) and (max-width: 556px) {
@@ -2610,10 +2496,17 @@ p.barcode {
     a.button.view_project {
         width: 351px;
     }
+    .photoshop {
+        width: 412px;
+        height: 276px;
+    }
+    .image {
+        width: 408px;
+        height: 272px;
+    }
 }
 @media screen and (min-width: 513px) and (max-width: 533px) {
-    #projects a.project {
-        margin: 0 50px 50px 0;
+    #projects a.project h2 {
         padding: 5px 20px;
     }
 }
@@ -2623,11 +2516,6 @@ p.barcode {
     }
 }
 @media screen and (max-width: 520px) {
-    body.development h1 {
-        margin: 4% auto 0;
-        font-size: 1.6em;
-        line-height: 1.6em;
-    }
     #headerCenter {
         width: 37%;
     }
@@ -2658,6 +2546,20 @@ p.barcode {
     .Pluralsight {
         width: 99% !important;
         margin: 4% auto 0 0.6%;
+    }
+}
+@media screen and (min-width: 430px) and (max-width: 520px) {
+    #PHP, #WD,
+    .ita {
+        width: 180px;
+        height: 254px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 429px) {
+    #PHP, #WD,
+    .ita {
+        width: 170px;
+        height: 240px;
     }
 }
 @media screen and (min-width: 409px) and (max-width: 516px) {
@@ -2691,14 +2593,12 @@ p.barcode {
         line-height: 2em;
         padding-top: 5px;
     }
+    #footer p {
+        line-height: normal;
+    }
     #footer p a:link,
     #footer p a:visited {
         text-decoration: none;
-    }
-    #footer p a:hover,
-    #footer p a:active {
-        -webkit-tap-highlight-color: transparent;
-        background: #333;
     }
     #footerlink {
         display: inline-block;
@@ -2713,10 +2613,12 @@ p.barcode {
     .footer_none {
         display: none;
     }
+    .scroll-top{
+        bottom: 28px;
+    }
 }
 @media screen and (min-width: 492px) and (max-width: 512px) {
-    #projects a.project {
-        margin: 0 50px 50px 0;
+    #projects a.project h2 {
         padding: 5px 15px;
     }
 }
@@ -2740,17 +2642,12 @@ p.barcode {
     }
 }
 @media screen and (min-width: 482px) and (max-width: 491px) {
-    #projects a.project {
+    #projects a.project h2 {
         padding: 5px 15px;
     }
 }
 @media screen and (min-width: 461px) and (max-width: 491px) {
-    #skills h2,
-    #projects h2,
-    #services h2 {
-        margin-bottom: 40px;
-    }
-    #projects a.project {
+    #projects a.project h2 {
         margin: 0 40px 40px 0;
     }
 }
@@ -2774,7 +2671,7 @@ p.barcode {
     }
 }
 @media screen and (min-width: 461px) and (max-width: 481px) {
-    #projects a.project {
+    #projects a.project h2 {
         padding: 5px 10px;
     }
 }
@@ -2803,7 +2700,7 @@ p.barcode {
     #services h2 {
         margin-bottom: 30px;
     }
-    #projects a.project {
+    #projects a.project h2 {
         margin: 0 30px 30px 0;
         padding: 5px 10px;
     }
@@ -2815,6 +2712,14 @@ p.barcode {
     }
     a.button.view_project {
         width: 243px;
+    }
+    .photoshop {
+        width: 286px;
+        height: 192px;
+    }
+    .image {
+        width: 282px;
+        height: 188px;
     }
 }
 @media screen and (min-width: 354px) and (max-width: 450px) {
@@ -2832,35 +2737,41 @@ p.barcode {
     #services h2 {
         margin-bottom: 30px;
     }
-    #projects a.project {
+    #projects a.project h2 {
         margin: 0 30px 30px 0;
         padding: 5px;
     }
 }
 @media screen and (min-width: 424px) and (max-width: 428px) {
+    section.project_complete:first-of-type {
+        padding-top: 10px;
+    }
     #projects h2 {
         margin-bottom: 25px;
     }
-    #projects a.project {
+    #projects a.project h2 {
         margin: 0 25px 25px 0;
         padding: 5px;
     }
 }
 @media screen and (min-width: 419px) and (max-width: 423px) {
-    #projects a.project {
+    #projects a.project h2 {
         padding: 5px;
     }
 }
 @media screen and (min-width: 409px) and (max-width: 423px) {
+    section.project_complete:first-of-type {
+        padding-top: 20px;
+    }
     #projects h2 {
         margin-bottom: 20px;
     }
-    #projects a.project {
+    #projects a.project h2 {
         margin: 0 20px 20px 0;
     }
 }
 @media screen and (min-width: 409px) and (max-width: 418px) {
-    #projects a.project {
+    #projects a.project h2 {
         padding: 5px 0;
     }
 }
@@ -2879,7 +2790,7 @@ p.barcode {
     }
     #nav ul li a:hover,
     #nav ul li a:active {
-        border-bottom: 1px solid #462c00;
+        border-bottom: 1px solid #574320;
     }
     #about {
         background-image: url(../images/developmentMirnes_408.webp);
@@ -2912,7 +2823,7 @@ p.barcode {
         width: 100%;
         margin: auto;
     }
-    #projects a.project {
+    #projects a.project h2 {
         width: 140px;
     }
     a.button.view_project {
@@ -2925,13 +2836,11 @@ p.barcode {
     #services .services:nth-of-type(4) {
         width: 80%;
         padding: 2.5%;
-        margin: 0 auto 40px;
+        margin: 40px auto 0;
         display: inline-block;
-        text-align: left;
     }
     #skills h2,
     #projects h2,
-    #services h2,
     #contact h2 {
         margin: 0 auto 30px;
         width: 96%;
@@ -2947,8 +2856,17 @@ p.barcode {
         margin-bottom: 50px;
     }
 }
-@media screen and (min-width: 382px) and (max-width: 408px) {
-    #projects a.project {
+@media screen and (min-width: 389px) and (max-width: 408px) {
+    #PHP, #WD {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    #WD {
+        margin-left: 20px;
+    }
+}
+@media screen and (min-width: 382px) and (max-width: 408px) { 
+    #projects a.project h2 {
         padding: 5px;
         text-align: center;
         letter-spacing: 0;
@@ -2970,12 +2888,7 @@ p.barcode {
     }
 }
 @media screen and (min-width: 210px) and (max-width: 408px) {
-    #aboutme h2,
-    #certificates h2,
-    #skills h2,
-    #projects h2,
-    #services h2,
-    #contact h2 {
+    h2 {
         font-size: 1.7em;
     }
     label#floated_textarea {
@@ -2986,16 +2899,8 @@ p.barcode {
         left: 5rem;
     }
 }
-@media screen and (max-width: 389px) {
-    #PHP {
-        margin-bottom: 30px;
-    }
-    #WD {
-        margin-left: 0;
-    }
-}
 @media screen and (min-width: 360px) and (max-width: 381px) {
-    #projects a.project {
+    #projects a.project h2 {
         padding: 5px;
         letter-spacing: 0;
         margin: 0 10% 10% 0;
@@ -3029,11 +2934,24 @@ p.barcode {
         margin-bottom: 20px;
     }
 }
-@media screen and (min-width: 336px) and (max-width: 359px) {
-    #projects a.project {
+@media screen and (max-width: 388px) {
+    #PHP, #WD,
+    .ita {
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    #PHP, #WD {
+        width: auto;
+        margin: 0 auto 30px;
+        float: none;
+    }
+}
+@media screen and (min-width: 343px) and (max-width: 359px) {
+    #projects a.project h2 {
         padding: 5px;
         letter-spacing: 0;
-        margin: 0 5% 5% 0;
+        margin: 0 25px 25px 0;
     }
 }
 @media screen and (min-width: 237px) and (max-width: 357px) {
@@ -3069,50 +2987,55 @@ p.barcode {
     #headerTopRight {
         text-align: right;
     }
-}
-@media screen and (max-width: 353px) {
     h1 {
         font-size: 1.9em;
         margin: 0.4em 0;
     }
 }
-@media screen and (max-width: 335px) {
+@media screen and (max-width: 342px) {
     h3#response,
     h4 {
         font-size: 1.3em;
     }
-    #projects a.project {
-        float: none;
+    #projects a.project h2 {
+        display: block;
         margin: 0 auto 30px;
         letter-spacing: 0;
     }
-    #projects a.project:nth-of-type(3n),
-    #projects a.project:nth-of-type(5n) {
+    #projects a.project:nth-of-type(3n) h2,
+    #projects a.project:nth-of-type(5n) h2 {
         margin-right: auto;
     }
 }
 @media screen and (min-width: 202px)  and (max-width: 335px) {
-    #projects a.project {
+    #projects a.project h2 {
         width: 80%;
         padding: 5px;
     }
 }
 @media screen and (max-width: 332px) {
+    body.development h1 {
+        margin: 16px auto 40px;
+        font-size: 1.6em;
+        line-height: 1.6em;
+    }
     section.project_complete {
         padding: 25px 0;
     }
     .project_desc {
         float: none;
     }
+    .photoshop,
     .mockup,
-    .illustrations > .illustration,
-    .logos > .logo {
+    .image,
+    .illustration,
+    .logo {
         width: auto;
         height: auto;
         border: none;
     }
     a.button.view_project {
-        width: auto;
+        width: 70%;
     }
 }
 @media screen and (min-width: 202px) and (max-width: 328px) {
@@ -3144,7 +3067,7 @@ p.barcode {
     }
 }
 @media screen and (min-width: 231px) and (max-width: 261px) {
-    button:link,
+    .button:link,
     .button:visited {
         padding: 17px 15px 15px;
     }
@@ -3258,10 +3181,9 @@ p.barcode {
     .button:active {
         padding: 17px 3px;
     }
-    #projects a.project {
+    #projects a.project h2 {
         padding: 5px 0;
         width: auto;
-        display: block;
     }
 }
 @media screen and (max-width: 108px) {
@@ -3333,5 +3255,142 @@ p.barcode {
 @media screen and (max-width: 408px) and (min-device-pixel-ratio: 4), screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 4) {
     #about {
         background-image: url(../images/developmentMirnes_408_@4x.webp);
+    }
+}
+/* print CSS */
+@media print {
+    @page {
+        margin: 0.5cm;
+    }
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+    }
+    .wrapper {
+        margin: 0;
+        padding: 0;
+    }
+    #headerTop {
+        margin-bottom: 20px;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: #000;
+    }
+    a,
+    a:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+    a[href^="https:"]::after,
+    a:visited::after {
+        content: " (" attr(href) ")";
+        font-style: italic;
+        word-wrap: break-word;
+        color: #000;
+    }
+    #headerCenter,
+    #headerTopRight,
+    #nav,
+    picture.skill,
+    #hero,
+    #about,
+    #quotes,
+    .certificate,
+    #PHP,
+    #WD,
+    #LinkedIn,
+    #skills,
+    #projects,
+    .scroll-top i,
+    #contact_me,
+    #icons p,
+    .no_print {
+        display: none;
+    }
+    a.scroll-top {
+        display: none !important;
+    }
+    #aboutme p,
+    #mycert {
+        padding-right: 50px;
+    }
+    #certificates {
+        padding-top: 0;
+    }
+    #headerTop,
+    #headerTop i,
+    #headerTopLeft span a,
+    #aboutme h2,
+    #certificates h2,
+    #skills h2,
+    #services h2,
+    #services .services,
+    #services .services h4,
+    h2,
+    #footer,
+    section#contact p#contact_offer,
+    #icons,
+    i.contact_icon {
+        background: #fff;
+        color: #000;
+    }
+    span#number a,
+    #services .services h4 {
+        font-size: 1.2em;
+    }
+    #services .services {
+        padding: 35px 30px 15px;
+        margin: 0 25px 25px 0;
+        width: 194px;
+    }
+    #headerTopLeft,
+    h1.white,
+    #certificates h2,
+    #mycert,
+    #contact,
+    #icons {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        background: #fff;
+        color: #000;
+    }
+    #services h3#service {
+        color: #000;
+    }
+    #aboutme h2 {
+        display: inline;
+        padding-left: 140px;
+    }
+    #contact,
+    #icons {
+        height: 300px;
+    }
+    footer#footer {
+        border-top: 10px solid #ccc;
+        position: relative;
+        max-height: 200px;
+        padding: 20px 0 0 170px;
+    }
+    footer::after {
+        content: url(../images/qr-code.png);
+        position: absolute;
+        top: 20px;
+        left: 0;
+    }
+    footer p {
+        padding-left: 20px;
+    }
+    p.barcode {
+        display: block;
+        margin: 65px auto 0 220px;
+        float: left;
     }
 }
