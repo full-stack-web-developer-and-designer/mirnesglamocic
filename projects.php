@@ -5,14 +5,15 @@ require_once 'core/init.php';
 <html lang="en">
 <?php
 	$fb_title="Portfolio of web design and development projects by Mirnes Glamočić";
-	$meta['og_description']="View a portfolio of web design and development projects by Mirnes Glamočić, certified IT expert. The best of the best!";
+	$meta['og_description']="View a portfolio of web design and development projects by professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$title=$fb_title;
+	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/projects.html";
 	$og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
 	$og_image_alt=$fb_title;
 	$linkedin_title=$fb_title;
-	$title=$fb_title;
-	$meta['description']="View a portfolio of web design and development projects by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";
+	$twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
+	$canonical = "https://mirnesglamocic.com/projects.html";
 	include './inc/head.php';
 ?>
 <body class="development">
