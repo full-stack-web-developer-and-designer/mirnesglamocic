@@ -2,3 +2,6 @@ User-Agent: *
 Allow:/
 Sitemap: https://mirnesglamocic.com/sitemap.xml
 Sitemap: https://mirnesglamocic.com/certificates.xml
+User-agent: Googlebot-Image
+Disallow: /lightbox2/src/images/*.png$
+Disallow: /lightbox2/src/images/*.gif$
