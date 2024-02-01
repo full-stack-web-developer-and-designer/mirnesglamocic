@@ -4,16 +4,16 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-	$fb_title="Frontend Certificates by Mirnes Glamočić";
-	$meta['og_description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry.";
+	$fb_title="Frontend Certificates of IT expert Mirnes Glamočić";
+	$meta['og_description']="See the Frontend certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$title=$fb_title;
+	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/frontendcertifikates.html";
 	$og_image="https://mirnesglamocic.com/images/frontend_og.jpg";
 	$og_image_alt="Frontend Certificates by Mirnes Glamočić";
-	$linkedin_title="Front-end, UI/UX and Web Design Certificates by Mirnes Glamočić";
-	$title=$linkedin_title;
-	$meta['description']="Mirnes Glamočić is an experienced Frontend Developer with several years of experience in the web development industry. Also, he is experienced in full-stack web development and design.";
+	$linkedin_title=$title;
 	$twitter_image="https://mirnesglamocic.com/images/frontend_og.webp";
-	$meta['keywords']="web development, web developer, front-end development, frontend development, front-end developer, frontend developer, web design, web designer";
+	$canonical = "https://mirnesglamocic.com/frontendcertifikates.html";
 	include './inc/head.php';
 ?>
 <body class="development">
