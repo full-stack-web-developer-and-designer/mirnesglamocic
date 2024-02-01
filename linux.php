@@ -4,16 +4,16 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-	$fb_title="Linux Certificates by Mirnes Glamočić";
-	$meta['og_description']="Mirnes Glamočić is an experienced Linux Developer with many years of experience in various operating systems.";
+	$fb_title="Linux certificates of IT expert Mirnes Glamočić";
+	$meta['og_description']="See the Linux certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$title=$fb_title;
+	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.ba/linuxcertificates.html";
 	$og_image="https://mirnesglamocic.com/images/linux_og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/linux_og.webp";
 	$og_image_alt=$fb_title;
 	$linkedin_title=$fb_title;
-	$title=$fb_title;
-	$meta['description']="Mirnes Glamočić is an experienced Linux Developer with many years of experience in various operating systems. He also has experience in full-stack web development and design.";
-	$meta['keywords']="linux, ubuntu, debian, centos, fedora, windows, web development, software development, operating systems";
+	$twitter_image="https://mirnesglamocic.com/images/linux_og.webp";
+	$canonical = "https://mirnesglamocic.com/webdesigncertificates.html";
 	include './inc/head.php';
 ?>
 <body class="development">
@@ -91,6 +91,7 @@ include 'inc/header.php';
 			?>
 		</ul>
 	</section><!--end .slider-container-->
+	
 </div><!--end .wrapper-->
 <?php
 	include_once './inc/footer.php';

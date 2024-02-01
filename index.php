@@ -7,14 +7,16 @@
 <html lang="en">
 <?php
     $fb_title="Website Development and Web Design services by certified IT expert";
-    $meta['og_description']="Professional website development, UI/UX and web design services by certified IT expert from Bosnia and Herzegovina. The best of the best!";
+    $meta['og_description']="Professional website development, UI/UX and web design services by certified IT expert from Bosnia and Herzegovina.";
+    $title="Mirnes Glamočić | Expert Web Developer and Designer";
+    $meta['description']=$meta['og_description'] ." The best of the best!";
     $og_url="https://mirnesglamocic.com";
     $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
-    $og_image_alt="Mirnes Glamočić | Full-Stack Web Developer and Designer, Bosnia & Herzegovina";
+    $og_image_alt="Professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina";
 	$linkedin_title="Website Development, UI/UX and Web Design services by certified IT expert";
-    $title="Mirnes Glamočić | Expert Web Developer and Designer";
-    $meta['description']=$meta['og_description'];
     $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
+    $canonical = "https://mirnesglamocic.com";
+    
 	include './inc/head.php';
 ?>
 <?php
