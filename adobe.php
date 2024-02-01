@@ -4,16 +4,16 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-	$fb_title="Adobe CC Certificates by Mirnes Glamočić";
-	$meta['og_description']="Mirnes Glamočić is an experienced Web Designer with several years of experience in the web design industry using various Adobe Tools.";
+	$fb_title="Adobe CC certificates of IT expert Mirnes Glamočić";
+	$meta['og_description']="See the Adobe CC certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$title=$fb_title;
+	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/adobecertificates.html";
 	$og_image="https://mirnesglamocic.com/images/adobe_og.jpg";
-	$og_image_alt="Adobe CC Certificates by Mirnes Glamočić";
+	$og_image_alt=$fb_title;
 	$linkedin_title=$fb_title;
-	$title=$fb_title;
-	$meta['description']="Mirnes Glamočić is an experienced Web Designer with several years of experience in the web design industry using various Adobe Tools. Also, he is experienced in full-stack web development and design.";
 	$twitter_image="https://mirnesglamocic.com/images/adobe_og.webp";
-	$meta['keywords']="web design, web designer, adobe creative cloud, adobe cc, photoshop, illustrator, lightroom, bridge, animate, dreamweaver";
+	$canonical = "https://mirnesglamocic.com/adobecertificates.html";
 	include './inc/head.php';
 ?>
 <body class="development">

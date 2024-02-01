@@ -4,16 +4,16 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="en">
 <?php
-	$fb_title="Back-end Certificates by Mirnes Glamočić";
-	$meta['og_description']="Mirnes Glamočić is an experienced Backend Developer with several years of experience in the web development industry.";
+	$fb_title="Back-end certificates of IT expert Mirnes Glamočić";
+	$meta['og_description']="See the Back-end certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$title=$fb_title;
+	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/backendcertifikates.html";
 	$og_image="https://mirnesglamocic.com/images/backend_og.jpg";
-	$og_image_alt="Backend Certificates by Mirnes Glamočić";
+	$og_image_alt=$fb_title;
 	$linkedin_title=$fb_title;
-	$title=$fb_title;
-	$meta['description']="Mirnes Glamočić is an experienced Back-end Developer with several years of experience in the web development industry. Also, he is experienced in fullstack web development and design.";
 	$twitter_image="https://mirnesglamocic.com/images/backend_og.webp";
-	$meta['keywords']="web development, web developer, back-end development, backend development, back-end developer, backend developer";
+	$canonical = "https://mirnesglamocic.com/backendcertifikates.html";
 	include './inc/head.php';
 ?>
 <body class="development">

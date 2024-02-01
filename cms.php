@@ -4,16 +4,16 @@ require_once 'core/init.php';
 <!DOCTYPE html>
 <html lang="en">
 <?php
-	$fb_title="WordPress Certificates by Mirnes Glamočić";
-	$meta['og_description']="Mirnes Glamočić is an experienced WordPress Developer with several years of experience in the web development industry.";
+	$fb_title="WordPress certificates of IT expert Mirnes Glamočić";
+	$meta['og_description']="See the WordPress certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$title=$fb_title;
+	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/wordpresscertificates.html";
 	$og_image="https://mirnesglamocic.com/images/wordpress_og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/backend_og.webp";
-	$og_image_alt="WordPress Certificates by Mirnes Glamočić";
+	$og_image_alt=$fb_title;
 	$linkedin_title=$fb_title;
-	$title=$fb_title;
-	$meta['description']="Mirnes Glamočić is an experienced WordPress Developer with several years of experience in the web development industry. Also, he is experienced in full-stack web development and design.";
-	$meta['keywords']="web development, web developer, WordPress development, WordPress developer, web design, web designer";
+	$twitter_image="https://mirnesglamocic.com/images/backend_og.webp";
+	$canonical = "https://mirnesglamocic.com/wordpresscertificates.html";
 	include './inc/head.php';
 ?>
 <body class="development">
