@@ -82,14 +82,3 @@ include 'inc/header.php';
         jQuery(function(){jQuery("#showall").click(function(){
         jQuery(".target").show()}),jQuery(".project").click(function(){jQuery(".target").hide(),jQuery("#div"+jQuery(this).attr("target")).show()})})});
 </script>
-<script>
-jQuery(document).ready(function(){
-
-jQuery("div").mouseenter(function(){
-  var id = jQuery(this).attr('id');
-  jQuery('a').removeClass('active');
-  jQuery("[href=#"+id+"]").addClass('active');
-});
-
-});
-</script>
