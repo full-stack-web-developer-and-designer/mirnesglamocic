@@ -16,7 +16,6 @@ class Photoshops extends ConnectSlider{
             $img_282     = $row['img_282'];
             $img         = $row['img'];
             $alt         = $row['alt'];
-            $content     = $row['content'];
 
                 echo "<article class='photoshop'>
                 <a href='./photoshops/BIG/$big_img' data-lightbox='photoshops'>
@@ -24,17 +23,17 @@ class Photoshops extends ConnectSlider{
                         <source srcset=\"./photoshops/SMALL/$img_576\" type=\"image/webp\" width=\"576\" height=\"384\" loading=\"lazy\" media=\"(min-width: 1261px)\">
                         <source srcset=\"./photoshops/SMALL/$img_530\" type=\"image/webp\" width=\"530\" height=\"353\" loading=\"lazy\" media=\"(min-width: 1209px)\">
                         <source srcset=\"./photoshops/SMALL/$img_500\" type=\"image/webp\" width=\"500\" height=\"333\" loading=\"lazy\" media=\"(min-width: 1140px)\">
-                        <source srcset=\"./photoshops/SMALL/$img_450\" type=\"image/webp\" width=\"450\" height=\"300\" loading=\"lazy\" media=\"(min-width: 1031px)\">
-                        <source srcset=\"./photoshops/SMALL/$img_408\" type=\"image/webp\" width=\"408\" height=\"272\" loading=\"lazy\" media=\"(min-width: 922px)\">
-                        <source srcset=\"./photoshops/SMALL/$img_350\" type=\"image/webp\" width=\"350\" height=\"233\" loading=\"lazy\" media=\"(min-width: 815px)\">
-                        <source srcset=\"./photoshops/SMALL/$img_282\" type=\"image/webp\" width=\"282\" height=\"188\" loading=\"lazy\" media=\"(min-width: 634px)\">
+                        <source srcset=\"./photoshops/SMALL/$img_450\" type=\"image/webp\" width=\"450\" height=\"300\" loading=\"lazy\" media=\"(min-width: 1040px)\">
+                        <source srcset=\"./photoshops/SMALL/$img_408\" type=\"image/webp\" width=\"408\" height=\"272\" loading=\"lazy\" media=\"(min-width: 954px)\">
+                        <source srcset=\"./photoshops/SMALL/$img_350\" type=\"image/webp\" width=\"350\" height=\"233\" loading=\"lazy\" media=\"(min-width: 840px)\">
+                        <source srcset=\"./photoshops/SMALL/$img_282\" type=\"image/webp\" width=\"282\" height=\"188\" loading=\"lazy\" media=\"(min-width: 640px)\">
                         <source srcset=\"./photoshops/SMALL/$img_500\" type=\"image/webp\" width=\"500\" height=\"333\" loading=\"lazy\" media=\"(min-width: 557px)\">
                         <source srcset=\"./photoshops/SMALL/$img_408\" type=\"image/webp\" width=\"408\" height=\"272\" loading=\"lazy\" media=\"(min-width: 457px)\">
                         <source srcset=\"./photoshops/SMALL/$img_282\" type=\"image/webp\" width=\"282\" height=\"188\" loading=\"lazy\" media=\"(max-width: 456px)\">
                         
                         <!--[if IE 9]></video><![endif]-->
-                        <img decoding=\"async\" srcset=\"./photoshops/SMALL/$img\" width=\"576\" height=\"384\" loading=\"lazy\" alt=\"Image of $alt\">
-                    </picture><div class=\"content fade\"><p>$content</p></div></a>
+                        <img decoding=\"async\" srcset=\"./photoshops/SMALL/$img\" width=\"576\" height=\"384\" loading=\"lazy\" alt=\"$alt\">
+                    </picture><div class=\"content fade\"><p>$alt</p></div></a>
             </article><!-- end photoshop -->
             ";
             }

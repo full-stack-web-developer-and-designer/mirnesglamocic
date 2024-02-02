@@ -25,10 +25,10 @@ class Website extends ConnectSlider{
                                     <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 1261px)\">
                                     <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 1192px)\">
                                     <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 1148px)\">
-                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 997px)\">
-                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 937px)\">
-                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 894px)\">
-                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 634px)\">
+                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 1007px)\">
+                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 947px)\">
+                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 904px)\">
+                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 639px)\">
                                     <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 580px)\">
                                     <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 557px)\">
                                     <source srcset=\"./websites/$img_408\", type=\"image/webp\" width=\"408\" height=\"266\" loading=\"lazy\" media=\"(min-width: 457px)\">
