@@ -23,7 +23,7 @@ include 'inc/header.php';
 	<div class="wrapper">
 	<h1>Front-end Certificates</h1>
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Front-end certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -33,7 +33,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 	
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Front-end certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -45,7 +45,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="HTML certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -55,7 +55,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 	
-	<section class="slider-container">
+	<section class="slider-container" aria-label="HTML and CSS certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -65,7 +65,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 	
-	<section class="slider-container">
+	<section class="slider-container" aria-label="CSS certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -74,7 +74,7 @@ include 'inc/header.php';
 			?>
 		</ul>
 	</section><!--end .slider-container-->
-	<section class="slider-container">
+	<section class="slider-container" aria-label="CSS certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -89,7 +89,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Bootstrap certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -99,7 +99,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Web Development certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -111,7 +111,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="JavaScript certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -123,7 +123,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="JavaScript certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -133,7 +133,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 	
-	<section class="slider-container">
+	<section class="slider-container" aria-label="jQuery certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -143,7 +143,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="jQuery certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -153,7 +153,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Angular certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -163,7 +163,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="React certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php

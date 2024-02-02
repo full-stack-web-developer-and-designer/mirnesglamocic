@@ -33,7 +33,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Photoshop CC certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -43,7 +43,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Lightroom CC certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php

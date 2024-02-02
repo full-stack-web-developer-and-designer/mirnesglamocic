@@ -5,7 +5,7 @@ require_once 'core/init.php';
 <html lang="en">
 <?php
 	$fb_title="Web Services certificates of IT expert Mirnes Glamočić";
-	$meta['og_description']="See Web Services certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$meta['og_description']="See the Web Services certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
 	$title=$fb_title;
 	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/webservicescertificates.html";
@@ -23,7 +23,7 @@ include 'inc/header.php';
 	<div class="wrapper">
 	<h1>Web Services Certificates</h1>
 	
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Web Services certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -33,7 +33,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="JSON certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php

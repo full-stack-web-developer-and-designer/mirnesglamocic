@@ -23,7 +23,7 @@ include 'inc/header.php';
 	<div class="wrapper">
 	<h1>Database Certificates</h1>
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="SQL certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -35,7 +35,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="MySQL certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -45,7 +45,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="MongoDB certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php

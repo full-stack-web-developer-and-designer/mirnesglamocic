@@ -22,7 +22,7 @@ include 'inc/header.php';
 ?>
 	<div class="wrapper">
 	<h1>Linux Certificates</h1>
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Linux certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -32,7 +32,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Linux certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -42,7 +42,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 	
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Linux certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -52,7 +52,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="CentOS certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -62,7 +62,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Bash certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -72,7 +72,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 	
-	<section class="slider-container">
+	<section class="slider-container" aria-label="Linux certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
@@ -82,7 +82,7 @@ include 'inc/header.php';
 		</ul>
 	</section><!--end .slider-container-->
 
-		<section class="slider-container">
+		<section class="slider-container" aria-label="Linux certificates of professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina">
 		<ul class="content-slider cs-hidden">
 		<!-- slider box -->
 			<?php
