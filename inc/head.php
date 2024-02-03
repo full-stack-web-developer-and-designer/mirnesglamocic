@@ -31,7 +31,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta name="twitter:title" content="<?php echo $title;?>">
 <meta name="twitter:description" content="<?php echo $meta['description'];?>">
 <meta name="twitter:image:src" content="<?php echo $twitter_image;?>">
-<meta name="twitter:image:alt" content="<?php echo $og_image_alt;?>">
+<meta name="twitter:image:alt" content="<?php echo $title;?>">
 <!-- Google / Search Engine Tags -->
 <meta itemprop="name" content="mirnesglamocic.com/">
 <meta itemprop="description" content="<?php echo $meta['description'];?>">
@@ -49,7 +49,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <link rel="android-chrome-icon" sizes="192x192" href="./android-chrome-192x192.png">
-<link rel="canonical" href="<?php echo $canonical;?>">
+<link rel="canonical" href="<?php echo $og_url;?>">
 <!-- Custom CSS -->
 <link rel="stylesheet" href="./CSS/style.min.css" media="all">
 <link rel="stylesheet" href="./CSS/<?php echo $css;?>" media="all">
@@ -63,7 +63,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <script src="https://kit.fontawesome.com/c3fb2ab6eb.js" crossorigin="anonymous"></script>
 <!-- page reload if the user changes mobile orientation -->
 <script>
-window.onorientationchange=function(){var a=window.orientation;switch(a){case 0:case 90:case -90:window.location.reload()}};
+    window.onorientationchange=function(){var a=window.orientation;switch(a){case 0:case 90:case -90:window.location.reload()}};
 </script>
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -85,7 +85,7 @@ window.onorientationchange=function(){var a=window.orientation;switch(a){case 0:
 <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/polyfills.js"></script>
 <script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/webp-hero.bundle.js"></script>
 <script>
- var webpMachine = new webpHero.WebpMachine();
- webpMachine.polyfillDocument();
+    var webpMachine = new webpHero.WebpMachine();
+    webpMachine.polyfillDocument();
 </script>
 </head>
