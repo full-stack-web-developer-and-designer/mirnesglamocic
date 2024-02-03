@@ -7,7 +7,7 @@
 <html lang="en">
 
 <?php
-    $title="Mirnes Glamočić - Jajce, BiH | Expert Web Developer and Designer";
+    $title="Mirnes Glamočić | Expert Web Developer and Web Designer";
     $meta['description']="Professional website development, UI/UX and web design services by certified IT expert from Bosnia and Herzegovina. The best of the best!";
     $og_url="https://mirnesglamocic.com";
     $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
