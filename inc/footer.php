@@ -1,4 +1,4 @@
-<a role="link" tabindex="0" aria-label="Scroll to top" class="scroll-top"><i class="fa fa-arrow-up"></i></a>
+<a href="#" name="Scroll-to-top" aria-label="Scroll to top" class="scroll-top"><i class="fa fa-arrow-up"></i></a>
 <?php $url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>
 <footer id="footer">
 <?php
