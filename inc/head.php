@@ -12,7 +12,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta name="author" content="Mirnes Glamočić">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Facebook & Viber -->
-<meta name="title" property="og:title" content="<?php echo $title;?>"/>
+<meta name="title" property="og:title" content="<?php echo $title;?>">
 <!-- Facebook, Viber, LinkedIn, Whatsapp & KakaoTalk(meta tags) -->
 <meta property="og:url" content="<?php echo $og_url;?>">
 <meta property="og:type" content="website">
