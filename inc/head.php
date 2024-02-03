@@ -16,7 +16,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <!-- Facebook, Viber, LinkedIn, Whatsapp & KakaoTalk(meta tags) -->
 <meta property="og:url" content="<?php echo $og_url;?>">
 <meta property="og:type" content="website">
-<meta property="og:image" itemprop="image" content="<?php echo $og_image;?>">
+<meta itemprop="image" content="<?php echo $og_image;?>">
 <meta property="og:image:type" content="image/jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
