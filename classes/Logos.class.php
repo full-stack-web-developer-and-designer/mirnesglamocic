@@ -11,7 +11,7 @@ class Logos extends ConnectSlider{
             $alt = $row['alt'];
             $content = $row['content'];
 
-            echo "<article class=\"$article\"><a href=\"./logos/BIG/$image.jpg\" data-lightbox=\"logos\"><img src=\"./logos/SMALL/$image.jpg\" alt=\"$alt by Web Designer and Developer Mirnes Glamočić from Bosnia and Herzegovina\" class='blur' loading='lazy'><div class='content fade'><p>$content</p></div></a></article>";
+            echo "<article class=\"$article\"><a href=\"./logos/BIG/$image.jpg\" data-lightbox=\"logos\"><img src=\"./logos/SMALL/$image.jpg\" alt=\"$alt by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\" class='blur' loading='lazy'><div class='content fade'><p>$content</p></div></a></article>";
         }
     }
 }
