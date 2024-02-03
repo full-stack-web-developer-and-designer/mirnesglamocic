@@ -7,7 +7,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <title><?php echo $title; ?></title>
 <!-- meta tags -->
 <meta name="robots" content="index,follow">
-<meta name="description" content="<?php echo $meta['description']; ?>"/>
+<meta name="description" content="<?php echo $meta['description']; ?>">
 <meta name="theme-color" content="#0648a0">
 <meta name="author" content="Mirnes Glamočić">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,17 +15,17 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta name="title" property="og:title" content="<?php echo $fb_title;?>"/>
 <meta name="description" property="og:description" content="<?php echo $meta['og_description'];?>">
 <meta property="og:url" content="<?php echo $og_url;?>"/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" itemprop="image" content="<?php echo $og_image;?>"/>
+<meta property="og:type" content="website">
+<meta property="og:image" itemprop="image" content="<?php echo $og_image;?>">
 <meta property="og:image:type" content="image/jpg">
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="<?php echo $og_image_alt;?>" />
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="<?php echo $og_image_alt;?>">
 <meta property="og:site_name" content="<?php echo $linkedin_title;?>">
-<meta property="og:locale" content="en_us" />
-<meta property="fb:app_id" content="1568922700258839"/>
+<meta property="og:locale" content="en_us">
+<meta property="fb:app_id" content="1568922700258839">
 <!-- LinkedIn, Whatsapp & KakaoTalk(meta tags) -->
-<meta property="og:title" content="<?php echo $linkedin_title;?>"/>
+<meta property="og:title" content="<?php echo $linkedin_title;?>">
 <meta property="og:description" content="<?php echo $meta['og_description'];?>">
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary" />
@@ -50,11 +50,11 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <link rel="android-chrome-icon" sizes="192x192" href="./android-chrome-192x192.png">
-<link rel="canonical" href="<?php echo $canonical;?>" />
+<link rel="canonical" href="<?php echo $canonical;?>">
 <!-- Custom CSS -->
 <link rel="stylesheet" href="/CSS/style.min.css" media="all"/>
 <!-- lightslider CSS-->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet">
 <!-- lightbox css -->
 <link rel="stylesheet" type="text/css" href="./lightbox2/src/css/lightbox.min.css">
 <!-- include fontawesome  -->
