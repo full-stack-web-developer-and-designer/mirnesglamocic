@@ -13,8 +13,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Facebook & Viber(meta tags) -->
 <meta name="title" property="og:title" content="<?php echo $fb_title;?>"/>
-<meta name="description" property="og:description" content="<?php echo $meta['og_description'];?>">
-<meta property="og:url" content="<?php echo $og_url;?>"/>
+<meta property="og:url" content="<?php echo $og_url;?>">
 <meta property="og:type" content="website">
 <meta property="og:image" itemprop="image" content="<?php echo $og_image;?>">
 <meta property="og:image:type" content="image/jpg">
@@ -26,9 +25,8 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <meta property="fb:app_id" content="1568922700258839">
 <!-- LinkedIn, Whatsapp & KakaoTalk(meta tags) -->
 <meta property="og:title" content="<?php echo $linkedin_title;?>">
-<meta property="og:description" content="<?php echo $meta['og_description'];?>">
 <!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="<?php echo $title;?>">
 <meta name="twitter:description" content="<?php echo $meta['description'];?>">
 <meta name="twitter:image:src" content="<?php echo $twitter_image;?>">
@@ -52,7 +50,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <link rel="android-chrome-icon" sizes="192x192" href="./android-chrome-192x192.png">
 <link rel="canonical" href="<?php echo $canonical;?>">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="/CSS/style.min.css" media="all"/>
+<link rel="stylesheet" href="./CSS/style.min.css" media="all">
 <!-- lightslider CSS-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet">
 <!-- lightbox css -->
