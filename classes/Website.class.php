@@ -18,7 +18,7 @@ class Website extends ConnectSlider{
             $description = $row['description'];
             $href        = $row['href'];
 
-                echo "<section class='project_complete clearfix' aria-label=\"Project $title by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\">
+                echo "<section id='websites' class='project_complete clearfix' aria-label=\"Project $title by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\">
                         <div class='main-outer'>
                             <article class='project_mockup clearfix'>
                                 <picture class='mockup'><!--[if IE 9]><video style='display: none;'><![endif]-->
@@ -26,7 +26,7 @@ class Website extends ConnectSlider{
                                     <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 1192px)\">
                                     <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 1148px)\">
                                     <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 1007px)\">
-                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 947px)\">
+                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 949px)\">
                                     <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 904px)\">
                                     <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 639px)\">
                                     <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 580px)\">
