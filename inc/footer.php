@@ -15,6 +15,7 @@ function copyright($startYear) {
 echo copyright(2023);
 ?>
 </footer>
+<!-- print barcode -->
 <?php echo "<p class=\"barcode\">This page was printed from: ".$url;?></p>
 <!-- responsive navigation -->
 <script>
@@ -38,5 +39,3 @@ var navigation=$.noConflict();navigation(document).ready(function(n){var e=n("#r
 <script src='./JS/slider.min.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js" async></script>
 <script src="./JS/lazyloading.min.js"></script>
-</body>
-</html>
