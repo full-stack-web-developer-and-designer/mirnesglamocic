@@ -22,17 +22,17 @@ class Website extends ConnectSlider{
                         <div class='main-outer'>
                             <article class='project_mockup clearfix'>
                                 <picture class='mockup'><!--[if IE 9]><video style='display: none;'><![endif]-->
-                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 1261px)\">
-                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 1192px)\">
-                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 1148px)\">
-                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 1007px)\">
-                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 949px)\">
-                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 904px)\">
-                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" loading=\"lazy\" media=\"(min-width: 639px)\">
-                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" loading=\"lazy\" media=\"(min-width: 580px)\">
-                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" loading=\"lazy\" media=\"(min-width: 557px)\">
-                                    <source srcset=\"./websites/$img_408\", type=\"image/webp\" width=\"408\" height=\"266\" loading=\"lazy\" media=\"(min-width: 457px)\">
-                                    <source srcset=\"./websites/$img_300\", type=\"image/webp\" width=\"300\" height=\"196\" loading=\"lazy\" media=\"(max-width: 456px)\">
+                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" media=\"(min-width: 1261px)\">
+                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" media=\"(min-width: 1192px)\">
+                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" media=\"(min-width: 1148px)\">
+                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" media=\"(min-width: 1007px)\">
+                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" media=\"(min-width: 949px)\">
+                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" media=\"(min-width: 904px)\">
+                                    <source srcset=\"./websites/$img_600\", type=\"image/webp\" width=\"600\" height=\"391\" media=\"(min-width: 639px)\">
+                                    <source srcset=\"./websites/$img_550\", type=\"image/webp\" width=\"550\" height=\"358\" media=\"(min-width: 580px)\">
+                                    <source srcset=\"./websites/$img_500\", type=\"image/webp\" width=\"500\" height=\"326\" media=\"(min-width: 557px)\">
+                                    <source srcset=\"./websites/$img_408\", type=\"image/webp\" width=\"408\" height=\"266\" media=\"(min-width: 457px)\">
+                                    <source srcset=\"./websites/$img_300\", type=\"image/webp\" width=\"300\" height=\"196\" media=\"(max-width: 456px)\">
                                     <!--[if IE 9]></video><![endif]-->
                                     <img decoding=\"async\" srcset=\"./websites/$img\" loading=\"lazy\" alt=\"Mockup of $title by Expert Web Designer and Developer Mirnes Glamočić from Bosnia and Herzegovina\">
                                 </picture>
