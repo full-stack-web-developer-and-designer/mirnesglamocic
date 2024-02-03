@@ -5,9 +5,8 @@ require_once 'core/init.php';
 <html lang="en">
 <?php
 	$fb_title="Docker certificates of IT expert Mirnes Glamočić";
-	$meta['og_description']="See the Docker certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$meta['description']="See the Docker certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
 	$title=$fb_title;
-	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/dockercertificates.html";
 	$og_image="https://mirnesglamocic.com/images/docker-og.jpg";
 	$og_image_alt=$fb_title;
@@ -16,7 +15,7 @@ require_once 'core/init.php';
 	$canonical = "https://mirnesglamocic.com/dockercertificates.html";
 	include './inc/head.php';
 ?>
-<body class="development progress">
+<body class="development">
 <?php
 include 'inc/header.php';
 ?>

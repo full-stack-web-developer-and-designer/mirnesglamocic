@@ -5,9 +5,8 @@ require_once 'core/init.php';
 <html lang="en">
 <?php 
 	$fb_title="Frontend Certificates of IT expert Mirnes Glamočić";
-	$meta['og_description']="See the Frontend certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$meta['description']="See the Frontend certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";
 	$title=$fb_title;
-	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/frontendcertifikates.html";
 	$og_image="https://mirnesglamocic.com/images/frontend_og.jpg";
 	$og_image_alt="Frontend Certificates by Mirnes Glamočić";

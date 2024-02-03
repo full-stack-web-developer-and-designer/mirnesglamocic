@@ -5,9 +5,8 @@ require_once 'core/init.php';
 <html lang="en">
 <?php
 	$fb_title="Version Control certificates of IT expert Mirnes Glamočić";
-	$meta['og_description']="See the GIT certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$meta['description']="See the GIT certificates of professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";
 	$title=$fb_title;
-	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/gitcertificates.html";
 	$og_image="https://mirnesglamocic.com/images/git_og.jpg";
 	$og_image_alt=$fb_title;

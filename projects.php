@@ -5,9 +5,8 @@ require_once 'core/init.php';
 <html lang="en">
 <?php
 	$fb_title="Portfolio of web design and development projects by Mirnes Glamočić";
-	$meta['og_description']="View a portfolio of web design and development projects by professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina.";
+	$meta['description']="View a portfolio of web design and development projects by professional web designer and developer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";
 	$title=$fb_title;
-	$meta['description']=$meta['og_description'] ." The best of the best!";
 	$og_url="https://mirnesglamocic.com/projects.html";
 	$og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
 	$og_image_alt=$fb_title;
@@ -25,10 +24,10 @@ include 'inc/header.php';
             <h1>Projects</h1>
             <div class="menu" aria-label="menu">
                 <a id="showall" href="./projects.html" aria-label="View all my projects"></a>
-                <a role="button" tabindex="0" class="project" target="1" aria-label="Web sites"><h2>Web sites</h2></a>
-                <a role="link" tabindex="0" class="project" target="2" aria-label="Image editing"><h2>Image editing</h2></a> 
-                <a role="link" tabindex="0" class="project" target="3" aria-label="Illustrations"><h2>Illustrations</h2></a> 
-                <a role="link" tabindex="0" class="project" target="4" aria-label="Logo design"><h2>Logo design</h2></a> 
+                <a name="websites" class="project" target="1" aria-label="Web sites"><h2>Web sites</h2></a>
+                <a name="photoshops" class="project" target="2" aria-label="Image editing"><h2>Image editing</h2></a> 
+                <a name="illustrations" class="project" target="3" aria-label="Illustrations"><h2>Illustrations</h2></a> 
+                <a name="logos" class="project" target="4" aria-label="Logo design"><h2>Logo design</h2></a> 
             </div>
 
             <div class="taget_box">

@@ -7,9 +7,8 @@
 <html lang="en">
 <?php
     $fb_title="Website Development and Web Design services by certified IT expert";
-    $meta['og_description']="Professional website development, UI/UX and web design services by certified IT expert from Bosnia and Herzegovina.";
+    $meta['description']="Professional website development, UI/UX and web design services by certified IT expert from Bosnia and Herzegovina. The best of the best!";
     $title="Mirnes Glamočić | Expert Web Developer and Designer";
-    $meta['description']=$meta['og_description'] ." The best of the best!";
     $og_url="https://mirnesglamocic.com";
     $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
     $og_image_alt="Professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina";
@@ -22,7 +21,7 @@
 <?php
     $rnd = rand(1,2);
 ?>
-<style type="text/css">
+<style>
     /* Hero img */
     #hero.lazy {
         background-image: none;
