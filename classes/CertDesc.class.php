@@ -13,7 +13,7 @@ class CertDesc extends ConnectSlider{
             $href=$row['href'];
 
             echo "<article class='certificate'>
-            <span>$icon</span>
+            <span><img class='icons' src='./images/$icon' alt='$title icon' loading='lazy'></span>
             <h3>$title</h3>
             <p class='intro'>$first_part<br><br>$second_part</p>
             <p><a href='./$href' class='button'>VIEW CERTIFICATES &raquo;</a></p>
