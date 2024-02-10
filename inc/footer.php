@@ -1,4 +1,4 @@
-<a href="#" name="Scroll-to-top" aria-label="Scroll to top" class="scroll-top"><i class="fa fa-arrow-up"></i></a>
+<a href="#headerTop" aria-label="Scroll to top" class="scroll-top"><svg id="scroll-top" xmlns="http://www.w3.org/2000/svg" width="16.5px" height="40px" viewBox="0 0 384 512"><path fill="#fff" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></a>
 <?php $url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>
 <footer id="footer">
 <?php
@@ -35,7 +35,7 @@ var navigation=$.noConflict();navigation(document).ready(function(n){var e=n("#r
 <script>
 	window.jQuery || document.write("<script src='./JS/jquery.validate.min.js'><\/script>");
 </script>
-<script src="./lightbox2/src/js/lightbox.min.js"></script>
-<script src='./JS/slider.min.js'></script>
+<script src="/lightbox2/src/js/lightbox.min.js"></script>
+<script src='/JS/slider.min.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js" async></script>
-<script src="./JS/lazyloading.min.js"></script>
+<script src="/JS/lazyloading.min.js"></script>

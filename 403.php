@@ -4,29 +4,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php		
-	$title="Error 403";
-	$og_title="Error 403";
-	$website_url="www.mirnesglamocic.com/";
+	$title="403 Forbidden";
 	$meta['description']="Forbidden to view the site&#39;s folders!";
-	$meta['keywords']="";
-	$og_image="images/error.403.png";
-	$image_alt="Error 403!";
-	include 'inc/head.php';
+	$og_url="https://mirnesglamocic.com/error403.html";
+	$og_image="https://mirnesglamocic.com/images/frontend_og.jpg";
+	$twitter_image="https://mirnesglamocic.com/images/frontend_og.webp";
+	$css="error.min.css";
+	include './inc/head.php';
 ?>
-<style>
-.error_page #main {margin: 40px 0;}
-#main p{text-align: center;
-		color: #B47814; }
-</style><!-- end #head -->
-<body class="error_page">
-<div id="wrapper">
-<header id="header" class="cf">
+<body>
 <?php 	
   include './inc/header.php'; 
 ?>
-</header><!-- end #header -->
-<div id="main"><p><b><i>&#34;You are forbidden to view the site&#39;s folders!&#34;</i></b></p></div>
-<?php
-	include './inc/footer.php';
-	//end #footer
-?>
+<div class="wrapper">
+<h1>Forbidden</h1>
+<div id="main">
+	<p id="error"><b><i>&#34;You don't have permission to access this resource.&#34;</i></b></p>
+</div><!-- end #main -->
+</div><!-- end .wrapper -->
+<?php include_once './inc/footer.php';//end #footer?>
+
+</body>
+</html>

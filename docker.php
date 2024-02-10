@@ -1,6 +1,6 @@
 <?php require_once 'core/init.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html itemscope lang="en">
 <?php
 	$title="Docker certificates of IT expert Mirnes Glamočić";
 	$meta['description']="See the Docker certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.";
@@ -10,7 +10,7 @@
 	$css = "certificates.min.css";
 	include './inc/head.php';
 ?>
-<body class="development">
+<body>
 	<?php include 'inc/header.php';?>
 		<div class="wrapper">
 			<h1>Docker Certificates</h1>

@@ -1,3 +1,4 @@
+<head>
 <!--
 Wow! Welcome to my code. If you need a professional website don't hesitate to contact me: https://mirnesglamocic.com
 -->
@@ -14,7 +15,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <!-- Facebook, Viber, LinkedIn, Whatsapp & KakaoTalk(meta tags) -->
 <meta property="og:url" content="<?php echo $og_url;?>">
 <meta property="og:type" content="website">
-<meta itemprop="image" content="<?php echo $og_image;?>">
+<meta property="og:image" itemprop="image" content="<?php echo $og_image;?>">
 <meta property="og:image:type" content="image/jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -55,16 +56,6 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet">
 <!-- lightbox css -->
 <link rel="stylesheet" type="text/css" href="/lightbox2/src/css/lightbox.min.css">
-<!-- include fontawesome  -->
-<link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" onload="this.rel='stylesheet'" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-<noscript>
-    <style type="text/css">
-    .cert { display:none;}
-    </style>
-    To display the page correctly, please enable JavaScript in your browser!
-</noscript>
-<!-- include fontawesome if cdn fails -->
-<script src="https://kit.fontawesome.com/c3fb2ab6eb.js" crossorigin="anonymous"></script>
 <!-- page reload if the user changes mobile orientation -->
 <script>
     window.onorientationchange=function(){var a=window.orientation;switch(a){case 0:case 90:case -90:window.location.reload()}};
@@ -92,4 +83,4 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <script>
     var webpMachine = new webpHero.WebpMachine();
     webpMachine.polyfillDocument();
-</script>
+</script></head>

@@ -1,6 +1,6 @@
 <?php require_once 'core/init.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html itemscope lang="en">
 <?php 
 	$title="Linux certificates of IT expert Mirnes Glamočić";
 	$meta['description']="See the Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";

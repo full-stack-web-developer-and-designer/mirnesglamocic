@@ -4,34 +4,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-	$fb_title="Error 404 - Page not found! ";
-	$meta['og_description']="";
-	$og_url="";
+	$title="404 Not Found! ";
+	$meta['description']="The requested URL was not found on this server!";
+	$og_url="https://mirnesglamocic.com/error403.html";
 	$og_image="https://mirnesglamocic.com/images/404_og.png.jpg";
-	$og_image_alt=$fb_title;
-	$linkedin_title=$fb_title;
-	$title=$fb_title;
-	$meta['description']="";
 	$twitter_image="https://mirnesglamocic.com/images/404_og.png.webp";
-	$meta['keywords']="";
+	$css="error.min.css";
 include './inc/head.php';
 ?>
-<style>
-.error_page #main {margin: 40px 0;}
-#main p{text-align: center;
-		color: #B47814; }
-</style><!-- end #head -->
-
-<body class="error_page">
+<body>
 <div id="wrapper">
-<header id="header" class="cf">
 <?php 
  // echo $postArr->render(); 	
   include './inc/header.php'; 
 ?>
-</header><!-- end #header -->
-<div id="main"><p><b><i>&#34;The requested page does not exist!<br>Please check if you entered the address correctly!&#34;</i></b></p></div>
-<?php
-	include './inc/footer.php';
-	//end #footer
-?>
+<div class="wrapper">
+<h1>Not Found</h1>
+<div id="main">
+	<p id="error"><b><i>&#34;The requested URL was not found on this server.&#34;</i></b></p>
+</div><!-- end #main -->
+</div><!-- end .wrapper -->
+<?php include_once './inc/footer.php';//end #footer?>
+</body>
+</html>
