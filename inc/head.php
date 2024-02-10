@@ -64,7 +64,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <!-- include jQuery if cdn fails-->
 <script>
-	window.jQuery || document.write("<script src='./JS/jQuery-1.7.2.min.js'><\/script>");
+	window.jQuery || document.write("<script src='./JS/jquery-1.7.2.min.js'><\/script>");
 </script>
 <!-- picturefill -->
 <script>
