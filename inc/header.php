@@ -6,7 +6,7 @@
         <div id="headerTop">
             <div class="wrapper">
 				<div id="headerTopLeft">
-					<span id="number"><img src='/images/phone-icon.svg' width='12' height='12' alt='Phone icon'><a href="tel:+82106709555">&nbsp;&nbsp;+387 63 734 327</a></span>
+					<span id="number"><img src='/images/phone-icon.svg' width='12' height='12' alt='Phone icon'><a href="tel:+38763734327">&nbsp;&nbsp;+387 63 734 327</a></span>
 				</div><!--end #headerTopLeft-->
                 
                 <div id="headerCenter">
