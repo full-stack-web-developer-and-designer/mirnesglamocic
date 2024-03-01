@@ -87,7 +87,7 @@
 
         <section id="contact" aria-label="Contact">
             <div class="wrapper">
-                <?php include_once './classes/Form_process.class.php';?>
+                <?php include_once './form_process.php';?>
                     <article id="form">
                         <?php include './inc/form.php';?>
                     </article>
