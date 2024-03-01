@@ -1,23 +1,22 @@
 <?php
 	require_once 'core/init.php';
+    $head = Meta::get(1);
     $page_id=1;
-    $result = Pages::get(1);
+    $page = Pages::get(1);
 ?>
+
 <!DOCTYPE html>
 <html itemscope lang="en">
     <?php
-        $title="Mirnes Glamočić | Expert Web Developer and Web Designer";
-        $meta['description']="Professional website development, UI/UX and web design services by certified IT expert from Bosnia and Herzegovina. The best of the best!";
-        $og_url="https://mirnesglamocic.com";
-        $og_image="https://mirnesglamocic.com/images/Mirnes_og.jpg";
-        $twitter_image="https://mirnesglamocic.com/images/MirnesGlamocic.webp";
-        $css = "css.min.php";
-        include './inc/head.php';
+        echo $head->render();
     ?>
-<body id="home">
-    <?php include 'inc/header.php';?>
+    <body id="home">
+        <?php include 'inc/header.php';?>
+
         <article id='hero' class='lazy'>
-            <div class='wrapper'><h1 class='white'>Web Development, UI/UX and Web Design</h1></div>
+            <div class='wrapper'>
+                <?php echo $page->render(); ?>
+            </div>
         </article>
 
         <article id='aboutme'>
