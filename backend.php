@@ -1,19 +1,20 @@
-<?php require_once 'core/init.php';?>
+<?php
+	require_once 'core/init.php';
+	$head = Head::get(3);
+    $page_id=3;
+    $page = Pages::get(3);
+    
+?>
 <!DOCTYPE html>
 <html itemscope lang="en">
 <?php
-	$title="Back-end certificates of IT expert Mirnes Glamočić";
-	$meta['description']="See the Back-end certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";
-	$og_url="https://mirnesglamocic.com/backendcertifikates.html";
-	$og_image="https://mirnesglamocic.com/images/backend_og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/backend_og.webp";
-	$css = "certificates.min.css";
-	include './inc/head.php';
-?>
-<body>
-	<?php include 'inc/header.php';?>
+		echo $head->render();
+	?>
+	<body>
+		<?php include 'inc/header.php';?>
 		<div class="wrapper">
-			<h1>Back-end Certificates</h1>
+
+			<?php echo $page->render(); ?>
 
 			<section class="slider-container" aria-label="Back-end certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
@@ -70,7 +71,8 @@
 					?>
 				</ul>
 			</section><!--end .slider-container-->
+			
 		</div><!--end .wrapper-->
-	<?php include_once './inc/footer.php';//end #footer ?>
-</body>
+		<?php include_once './inc/footer.php';//end #footer ?>
+	</body>
 </html>
