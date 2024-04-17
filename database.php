@@ -1,19 +1,20 @@
-<?php require_once 'core/init.php';?>
+<?php
+	require_once 'core/init.php';
+	$head = Head::get(4);
+    $page_id=4;
+    $page = Pages::get(4);
+    
+?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-<?php 
-$title="Database certificates of IT expert Mirnes Glamočić";
-$meta['description']="See the Database certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.";
-$og_url="http://mirnesglamocic.ba/databasecertificates.html";
-$og_image="https://mirnesglamocic.com/images/database_og.jpg";
-$twitter_image="https://mirnesglamocic.com/images/database_og.webp";
-$css = "certificates.min.css";
-include './inc/head.php';
-?>
-<body>
-	<?php include 'inc/header.php';?>
+	<?php
+		echo $head->render();
+	?>
+	<body>
+		<?php include 'inc/header.php';?>
 		<div class="wrapper">
-			<h1>Database Certificates</h1>
+			
+			<?php echo $page->render(); ?>
 
 			<section class="slider-container" aria-label="SQL certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
@@ -46,7 +47,8 @@ include './inc/head.php';
 					?>
 				</ul>
 			</section><!--end .slider-container-->
+
 		</div><!--end .wrapper-->
-	<?php include_once './inc/footer.php';//end #footer?>
-</body>
+		<?php include_once './inc/footer.php';//end #footer?>
+	</body>
 </html>
