@@ -1,19 +1,22 @@
-<?php require_once 'core/init.php';?>
+<?php
+	require_once 'core/init.php';
+	$head = Head::get(5);
+    $page_id=5;
+    $page = Pages::get(5);
+    
+?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-<?php
-	$title="WordPress certificates of IT expert Mirnes Glamočić";
-	$meta['description']="See the WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.";
-	$og_url="https://mirnesglamocic.com/wordpresscertificates.html";
-	$og_image="https://mirnesglamocic.com/images/wordpress_og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/backend_og.webp";
-	$css = "certificates.min.css";
-	include './inc/head.php';
-?>
-<body>
-	<?php include 'inc/header.php';?>
+	
+	<?php 
+		echo $head->render();
+	?>
+
+	<body>
+		<?php include 'inc/header.php';?>
 		<div class="wrapper">
-			<h1>WordPress Certificates</h1>
+
+			<?php echo $page->render(); ?>
 			
 			<section class="slider-container" aria-label="WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
@@ -56,6 +59,6 @@
 			</section><!--end .slider-container-->
 
 		</div><!--end .wrapper-->
-	<?php include_once './inc/footer.php';//end #footer?>
-</body>
+		<?php include_once './inc/footer.php';//end #footer?>
+	</body>
 </html>
