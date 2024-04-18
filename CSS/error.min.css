@@ -11,10 +11,7 @@ h1 {
     margin: 0 auto;
     padding: 5px 0;
 }
-#error p {
-    text-align: center;
-    color: #B47814;
-}
+#error p{text-align: center;color: #B47814;}
 #main {
     display: grid;
     place-items: center;
