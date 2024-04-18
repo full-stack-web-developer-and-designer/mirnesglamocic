@@ -1,19 +1,19 @@
-<?php require_once 'core/init.php'; ?>
+<?php
+	require_once 'core/init.php';
+	$head = Head::get(13);
+    $page_id=13;
+    $page = Pages::get(13);
+?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-<?php 
-	$title="Linux certificates of IT expert Mirnes Glamočić";
-	$meta['description']="See the Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";
-	$og_url="https://mirnesglamocic.ba/linuxcertificates.html";
-	$og_image="https://mirnesglamocic.com/images/linux_og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/linux_og.webp";
-	$css = "certificates.min.css";
-	include './inc/head.php';
-?>
-<body>
-	<?php include 'inc/header.php'; ?>
+	<?php
+		echo $head->render();
+	?>
+	<body>
+		<?php include 'inc/header.php';?>
 		<div class="wrapper">
-			<h1>Linux Certificates</h1>
+
+			<?php echo $page->render(); ?>
 
 			<section class="slider-container" aria-label="Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
@@ -75,17 +75,17 @@
 				</ul>
 			</section><!--end .slider-container-->
 
-				<section class="slider-container" aria-label="Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
-				<ul class="content-slider cs-hidden">
-				<!-- slider box -->
-					<?php
-						$LinuxFoundation = new LinuxFoundationSlide();
-						$LinuxFoundation->renderSlider();
-					?>
-				</ul>
-			</section><!--end .slider-container-->
+			<section class="slider-container" aria-label="Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+			<ul class="content-slider cs-hidden">
+			<!-- slider box -->
+				<?php
+					$LinuxFoundation = new LinuxFoundationSlide();
+					$LinuxFoundation->renderSlider();
+				?>
+			</ul>
+		</section><!--end .slider-container-->
 			
 		</div><!--end .wrapper-->
-	<?php include_once './inc/footer.php'; ?>
-</body>
+		<?php include_once './inc/footer.php'; ?>
+	</body>
 </html>

@@ -1,10 +1,9 @@
 <?php
 	require_once 'core/init.php';
-    $head = Meta::get(1);
+    $head = Head::get(1);
     $page_id=1;
     $page = Pages::get(1);
 ?>
-
 <!DOCTYPE html>
 <html itemscope lang="en">
     <?php

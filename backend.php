@@ -3,11 +3,10 @@
 	$head = Head::get(3);
     $page_id=3;
     $page = Pages::get(3);
-    
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-<?php
+	<?php
 		echo $head->render();
 	?>
 	<body>
@@ -71,7 +70,7 @@
 					?>
 				</ul>
 			</section><!--end .slider-container-->
-			
+
 		</div><!--end .wrapper-->
 		<?php include_once './inc/footer.php';//end #footer ?>
 	</body>

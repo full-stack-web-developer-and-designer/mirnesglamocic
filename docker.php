@@ -1,19 +1,20 @@
-<?php require_once 'core/init.php'; ?>
+<?php
+	require_once 'core/init.php';
+	$head = Head::get(10);
+    $page_id=10;
+    $page = Pages::get(10);
+?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-<?php
-	$title="Docker certificates of IT expert Mirnes Glamočić";
-	$meta['description']="See the Docker certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.";
-	$og_url="https://mirnesglamocic.com/dockercertificates.html";
-	$og_image="https://mirnesglamocic.com/images/docker-og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/docker-og.webp";
-	$css = "certificates.min.css";
-	include './inc/head.php';
-?>
-<body>
-	<?php include 'inc/header.php';?>
+	<?php
+		echo $head->render();
+	?>
+	<body>
+		<?php include 'inc/header.php';?>
 		<div class="wrapper">
-			<h1>Docker Certificates</h1>
+
+			<?php echo $page->render(); ?>
+
 			<section class="slider-container" aria-label="Docker certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
@@ -23,7 +24,8 @@
 					?>
 				</ul>
 			</section><!--end .slider-container-->
+			
 		</div><!--end .wrapper-->
-	<?php include_once './inc/footer.php';//end #footer?>
-</body>
+		<?php include_once './inc/footer.php';//end #footer?>
+	</body>
 </html>

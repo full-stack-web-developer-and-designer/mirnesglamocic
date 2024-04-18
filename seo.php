@@ -1,19 +1,19 @@
-<?php require_once 'core/init.php'; ?>
+<?php
+	require_once 'core/init.php';
+	$head = Head::get(9);
+    $page_id=9;
+    $page = Pages::get(9);
+?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-<?php
-	$title="SEO certificates of IT expert Mirnes Glamočić";
-	$meta['description']="See the SEO certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";
-	$og_url="https://mirnesglamocic.com/seocertificates.html";
-	$og_image="https://mirnesglamocic.com/images/seo_og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/seo_og.webp";
-	$css="certificates.min.css";
-	include './inc/head.php';
-?>
-<body>
-	<?php include 'inc/header.php'; ?>
+	<?php
+		echo $head->render();
+	?>
+	<body>
+		<?php include 'inc/header.php';?>
 		<div class="wrapper">
-			<h1>SEO Certificates</h1>
+
+			<?php echo $page->render(); ?>
 			
 			<section class="slider-container" aria-label="SEO certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
@@ -26,6 +26,6 @@
 			</section><!--end .slider-container-->
 			
 		</div><!--end .wrapper-->
-	<?php include_once './inc/footer.php';//end #footer ?>
-</body>
+		<?php include_once './inc/footer.php';//end #footer ?>
+	</body>
 </html>

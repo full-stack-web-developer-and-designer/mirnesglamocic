@@ -1,19 +1,19 @@
-<?php require_once 'core/init.php'; ?>
+<?php
+	require_once 'core/init.php';
+	$head = Head::get(8);
+    $page_id=8;
+    $page = Pages::get(8);
+?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-<?php 
-	$title="UI/UX certificates of IT expert Mirnes Glamočić";
-	$meta['description']="See the UI/UX certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";
-	$og_url="https://mirnesglamocic.com/uxcertificates.html";
-	$og_image="https://mirnesglamocic.com/images/ux_og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/ux_og.webp";
-	$css="certificates.min.css";
-	include './inc/head.php';
-?>
-<body>
-	<?php include 'inc/header.php'; ?>
+	<?php
+		echo $head->render();
+	?>
+	<body>
+		<?php include 'inc/header.php';?>
 		<div class="wrapper">
-			<h1>UI/UX Design Certificates</h1>
+
+			<?php echo $page->render(); ?>
 
 			<section class="slider-container" aria-label="UI/UX certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
@@ -68,6 +68,6 @@
 			</section><!--end .slider-container-->
 			
 		</div><!--end .wrapper-->
-	<?php include_once './inc/footer.php';//end #footer ?>
-</body>
+		<?php include_once './inc/footer.php';//end #footer ?>
+	</body>
 </html>

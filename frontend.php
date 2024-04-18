@@ -3,7 +3,6 @@
 	$head = Head::get(2);
     $page_id=2;
     $page = Pages::get(2);
-    
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">

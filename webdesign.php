@@ -1,19 +1,19 @@
-<?php require_once 'core/init.php'; ?>
+<?php
+	require_once 'core/init.php';
+	$head = Head::get(7);
+    $page_id=7;
+    $page = Pages::get(7);
+?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-<?php
-	$title="Web Design Certificates of IT expert Mirnes Glamočić";
-	$meta['description']="See the Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.";
-	$og_url="https://mirnesglamocic.com/webdesigncertificates.html";
-	$og_image="https://mirnesglamocic.com/images/webdesign_og.jpg";
-	$twitter_image="https://mirnesglamocic.com/images/webdesign_og.webp";
-	$css="certificates.min.css";
-	include './inc/head.php';
-?>
-<body>
-	<?php include 'inc/header.php'; ?>
+	<?php
+		echo $head->render();
+	?>
+	<body>
+		<?php include 'inc/header.php';?>
 		<div class="wrapper">
-			<h1>Web Design Certificates</h1>
+
+			<?php echo $page->render(); ?>
 			
 			<section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">

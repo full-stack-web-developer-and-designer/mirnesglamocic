@@ -1,27 +1,27 @@
-<?php require_once 'core/init.php';?>
-<!DOCTYPE html>
-<html lang="en">
 <?php
-	$title = "Portfolio of web design and web development projects by Mirnes Glamočić";
-	$meta['description'] = "View a portfolio of web design and web development projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina. The best of the best!";
-	$og_url = "https://mirnesglamocic.com/projects.html";
-	$og_image = "https://mirnesglamocic.com/images/Mirnes_og.jpg";
-	$twitter_image = "https://mirnesglamocic.com/images/MirnesGlamocic.webp";
-    $css = "projects.min.css";
-	include './inc/head.php';
+	require_once 'core/init.php';
+	$head = Head::get(14);
+    $page_id=14;
+    $page = Pages::get(14);
 ?>
-<body>
-<?php include 'inc/header.php'; ?>
-    <div class="wrapper">
-        <section id="projects" aria-label="Web design and web development projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
-            <h1>Projects</h1>
+<!DOCTYPE html>
+<html itemscope lang="en">
+    <?php
+		echo $head->render();
+	?>
+    <body>
+        <?php include 'inc/header.php'; ?>
+        <div class="wrapper">
+            <section id="projects" aria-label="Web design and web development projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+                <?php echo $page->render(); ?>
                 <div class="menu" aria-label="menu">
                     <a id="showall" href="./projects.html" aria-label="View all my projects"></a>
                     <a class="project" target="1" aria-label="Web sites"><h2>Web sites</h2></a>
                     <a class="project" target="2" aria-label="Projects of edited images by web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"><h2>Image editing</h2></a> 
                     <a class="project" target="3" aria-label="Illustration projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"><h2>Illustrations</h2></a> 
                     <a class="project" target="4" aria-label="Logo projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"><h2>Logo design</h2></a> 
-                </div>
+                </div><!-- end .menu -->
+
                 <!-- websites -->
                 <div class="taget_box">
                     <div id="div1" class="target">
@@ -47,7 +47,7 @@
                                 $Illustrations->renderSlider();
                             ?>
                         </section>
-                    </div>
+                    </div><!-- end illustrations -->
                     <!-- Logos -->
                     <div id="div4" class="target">
                         <section id="logos" class='logos'>
@@ -55,16 +55,16 @@
                                 $Logos = new Logos();
                                 $Logos->renderSlider();
                             ?>
-                        </section>
-                    </div>
-            </div>
+                        </section><!-- end logos -->
+                    </div><!--end .target -->
+                </div><!-- end .target-box -->
 
-        </section><!--end #projects-->
-    </div><!--end .wrapper-->
-<?php include_once './inc/footer.php';//end #footer ?>
-<!-- Placed at the end of the document so the pages load faster -->
-<script>
-    jQuery("#div1").css("display","block"),jQuery(document).ready(function(){jQuery(function(){jQuery("#showall").click(function(){jQuery(".target").show()}),jQuery(".project").click(function(){jQuery(".target").hide(),jQuery("#div"+jQuery(this).attr("target")).show()})})});
-</script>
-</body>
+            </section><!--end #projects-->
+        </div><!--end .wrapper-->
+        <?php include_once './inc/footer.php';//end #footer ?>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script>
+            jQuery("#div1").css("display","block"),jQuery(document).ready(function(){jQuery(function(){jQuery("#showall").click(function(){jQuery(".target").show()}),jQuery(".project").click(function(){jQuery(".target").hide(),jQuery("#div"+jQuery(this).attr("target")).show()})})});
+        </script>
+    </body>
 </html>
