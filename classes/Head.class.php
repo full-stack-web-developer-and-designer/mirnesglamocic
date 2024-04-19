@@ -11,14 +11,14 @@
                 <meta charset=\"UTF-8\">
                 <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
                 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-                <title>\"$this->title\"</title>
-                <meta name=\"description\" content=\"$this->description\">
+                <title>$this->title</title>
+                <meta name=\"description\" content=$this->description>
                 <meta name=\"author\" content=\"Mirnes Glamočić\">
                 <meta name=\"robots\" content=\"index,follow\">
                 <meta name=\"theme-color\" content=\"#273142;\">
 
                 <!-- Facebook & Viber -->
-                <meta name=\"title\" property=\"og:title\" content=\"$this->title\">
+                <meta name=\"title\" property=\"og:title\" content=$this->title>
 
                 <!-- Facebook, Viber, LinkedIn, Whatsapp & KakaoTalk(meta tags) -->
                 <meta property=\"og:url\" content=\"https://$this->og_url\">
@@ -27,24 +27,24 @@
                 <meta property=\"og:image:type\" content=\"image/jpg\">
                 <meta property=\"og:image:width\" content=\"1200\">
                 <meta property=\"og:image:height\" content=\"630\">
-                <meta property=\"og:image:alt\" content=\"$this->title\">
-                <meta property=\"og:site_name\" content=\"$this->title\">
+                <meta property=\"og:image:alt\" content=$this->title>
+                <meta property=\"og:site_name\" content=$this->title>
                 <meta property=\"og:locale\" content=\"en_us\">
                 <meta property=\"fb:app_id\" content=\"1568922700258839\">
 
                 <!-- LinkedIn, Whatsapp & KakaoTalk(meta tag) -->
-                <meta property=\"og:title\" content=\"$this->title\">
+                <meta property=\"og:title\" content=$this->title>
                 
                 <!-- Twitter Meta Tags -->
                 <meta name=\"twitter:card\" content=\"summary\">
-                <meta name=\"twitter:title\" content=\"$this->title\">
-                <meta name=\"twitter:description\" content=\"$this->description\">
-                <meta name=\"twitter:image:src\" content=\"$this->twitter_image\">
-                <meta name=\"twitter:image:alt\" content=\"$this->title\">
+                <meta name=\"twitter:title\" content=$this->title>
+                <meta name=\"twitter:description\" content=$this->description>
+                <meta name=\"twitter:image:src\" content=$this->twitter_image>
+                <meta name=\"twitter:image:alt\" content=$this->title>
                 
                 <!-- Google / Search Engine Tags -->
                 <meta itemprop=\"name\" content=\"mirnesglamocic.com\">
-                <meta itemprop=\"description\" content=\"$this->description\">
+                <meta itemprop=\"description\" content=$this->description>
                 <meta itemprop=\"image\" content=\"Mirnes Glamočić\">
 
                 <!-- include google fonts -->
@@ -54,11 +54,20 @@
                 <link href=\"https://fonts.googleapis.com/css?family=Oswald:400,700%7CRoboto:400,400i,700,700i&display=swap&amp;subset=latin-ext\" rel=\"stylesheet\">
 
                 <!-- favicon -->
-                <link rel=\"icon\" type=\"image/png\" sizes=\"36x36\"  href=\"/android-icon-36x36.png\">
-                <link rel=\"icon\" type=\"image/png\" sizes=\"48x48\"  href=\"/android-icon-48x48.png\">
-                <link rel=\"icon\" type=\"image/png\" sizes=\"72x72\"  href=\"/android-icon-72x72.png\">
-                <link rel=\"icon\" type=\"image/png\" sizes=\"96x96\"  href=\"/android-icon-96x96.png\">
-                <link rel=\"icon\" type=\"image/png\" sizes=\"144x144\"  href=\"/android-icon-144x144.png\">
+                <link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/apple-icon-57x57.png\">
+                <link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/apple-icon-60x60.png\">
+                <link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/apple-icon-72x72.png\">
+                <link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/apple-icon-76x76.png\">
+                <link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/apple-icon-114x114.png\">
+                <link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/apple-icon-120x120.png\>
+                <link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/apple-icon-144x144.png\">
+                <link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/apple-icon-152x152.png\">
+                <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-icon-180x180.png\">
+                <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"/android-icon-36x36.png\">
+                <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"/android-icon-48x48.png\">
+                <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"/android-icon-72x72.png\">
+                <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"/android-icon-96x96.png\">
+                <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"/android-icon-144x144.png\">
                 <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"/android-icon-192x192.png\">
                 <link rel=\"icon\" type=\"image/png\" sizes=\"512x512\"  href=\"/android-icon-512x512.png\">
                 <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">
