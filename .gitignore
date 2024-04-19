@@ -1,8 +1,7 @@
 cert/
-
-classes/ConnectSlider.class.php
-classes/DB.class.php
+classes/
 core/
+DB-TABLES
 illustrations/
 images/
 JS/jquery-1.9.1.min.js
