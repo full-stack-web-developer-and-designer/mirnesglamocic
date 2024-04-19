@@ -15,7 +15,7 @@
 
 			<?php echo $page->render(); ?>
 			
-			<section class="slider-container">
+			<section class="slider-container" aria-label="Photoshop CC certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
