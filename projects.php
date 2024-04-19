@@ -14,7 +14,7 @@
         <div class="wrapper">
             <section id="projects" aria-label="Web design and web development projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <?php echo $page->render(); ?>
-                <div class="menu" aria-label="menu">
+                <div class="menu">
                     <a id="showall" href="./projects.html" aria-label="View all my projects"></a>
                     <a class="project" target="1" aria-label="Web sites"><h2>Web sites</h2></a>
                     <a class="project" target="2" aria-label="Projects of edited images by web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"><h2>Image editing</h2></a> 
@@ -25,14 +25,16 @@
                 <!-- websites -->
                 <div class="taget_box">
                     <div id="div1" class="target">
+                        <section id="websites" aria-label="Projects of web sites by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                         <?php
                             $Website = new Website();
                             $Website->renderSlider();
                         ?>
+                        </section> <!-- end web sites -->
                     </div>
                     <!-- image editing -->
                     <div id="div2" class="target">
-                        <section id="photoshops" class="photoshops">
+                        <section id="photoshops" class="photoshops"  aria-label="Photoshop projects of image editing by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                             <?php
                                 $Photoshops = new Photoshops();
                                 $Photoshops->renderSlider();
@@ -41,7 +43,7 @@
                     </div>
                     <!-- illustrations -->
                     <div id="div3" class="target">
-                        <section id="illustrations" class='illustrations'>
+                        <section id="illustrations" class='illustrations' aria-label="Projects of illustrations by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                             <?php
                                 $Illustrations = new Illustrations();
                                 $Illustrations->renderSlider();
@@ -50,7 +52,7 @@
                     </div><!-- end illustrations -->
                     <!-- Logos -->
                     <div id="div4" class="target">
-                        <section id="logos" class='logos'>
+                        <section id="logos" class='logos' aria-label="Projects of logos by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                             <?php
                                 $Logos = new Logos();
                                 $Logos->renderSlider();
