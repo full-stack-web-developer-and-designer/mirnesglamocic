@@ -1,5 +1,5 @@
 cert/
-classes/
+classes/ConnectSlider.class.php
 core/
 DB-TABLES
 illustrations/
@@ -17,6 +17,8 @@ photoshops/
 PHPMailer/
 services/
 websites/
+android-chrome-192x192.png
+android-chrome-256x256.png
 android-icon-36x36.png
 android-icon-48x48.png
 android-icon-72x72.png
@@ -35,6 +37,7 @@ apple-icon-152x152.png
 apple-icon-180x180.png
 apple-icon-precomposed.png
 apple-icon.png
+apple-touch-icon.png
 browserconfig.xml
 favicon-16x16.png
 favicon-32x32.png
