@@ -57,8 +57,8 @@
                 <header>
                     <h2>Certificates</h2>  
                         <?php
-                            $ITA = new ITA();
-                            $ITA->renderSlider();
+                            $ita = new ITA();
+                            $ita->renderSlider();
                         ?>
                     <div id='mycert'>
                         <p>So, finally, in 2016, I decided to enroll in ITAcademy, a school for a profitable IT career in department of PHP WEB DEVELOPMENT.</p>
@@ -78,8 +78,8 @@
         <section id="LinkedIn" aria-label="Certificates of LinkedIn, SoloLearn and Pluralsight by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
             <div class="wrapper">
                 <?php
-                    $CertDesc = new CertDesc();
-                    $CertDesc->renderSlider();
+                    $certDesc = new CertDesc();
+                    $certDesc->renderSlider();
                 ?>
             </div><!--end .wrapper-->
         </section><!--end #LinkedIn-->
@@ -88,8 +88,8 @@
             <div class="wrapper">
                 <h2>Skills</h2> 
                     <?php
-                        $Skills = new Skills();
-                        $Skills->renderSlider();
+                        $skills = new Skills();
+                        $skills->renderSlider();
                     ?>
             </div><!--end .wrapper-->
         </section><!--end #skills-->
@@ -101,8 +101,8 @@
                     <h3 id="service">Best solutions for your business</h3>
                         <!-- slider box -->
                         <?php
-                            $ServicesSlide = new ServicesSlide();
-                            $ServicesSlide->renderSlider();
+                            $servicesSlide = new ServicesSlide();
+                            $servicesSlide->renderSlider();
                         ?>
             </div><!-- end .wrapper-->
         </section><!-- end #services-->
@@ -118,8 +118,8 @@
                     <p>Feel free to connect with me...</p>
                     <div id="icon_box">
                         <?php
-                            $Icons = new Icons();
-                            $Icons->renderSlider();
+                            $icons = new Icons();
+                            $icons->renderSlider();
                         ?>
                     </div><!--end #icon_box-->
                 </div><!--end #icons-->
