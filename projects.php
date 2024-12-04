@@ -6,9 +6,7 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-    <?php
-		echo $head->render();
-	?>
+    <?php echo $head->render(); ?>
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
@@ -22,43 +20,48 @@
                     <a class="project" target="4" aria-label="Logo projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"><h2>Logo design</h2></a> 
                 </div><!-- end .menu -->
 
-                <!-- websites -->
                 <div class="taget_box">
+
                     <div id="div1" class="target">
+                        <!-- websites -->
                         <section id="websites" aria-label="Projects of web sites by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
-                        <?php
-                            $Website = new Website();
-                            $Website->renderSlider();
-                        ?>
+                            <?php
+                                $website = new Website();
+                                $website->renderSlider();
+                            ?>
                         </section> <!-- end web sites -->
                     </div>
+
                     <!-- image editing -->
                     <div id="div2" class="target">
                         <section id="photoshops" class="photoshops"  aria-label="Photoshop projects of image editing by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                             <?php
-                                $Photoshops = new Photoshops();
-                                $Photoshops->renderSlider();
+                                $photoshops = new Photoshops();
+                                $photoshops->renderSlider();
                             ?>
-                        </section> <!-- end photoshops -->
+                        </section> <!-- end image editing -->
                     </div>
+
                     <!-- illustrations -->
                     <div id="div3" class="target">
                         <section id="illustrations" class='illustrations' aria-label="Projects of illustrations by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                             <?php
-                                $Illustrations = new Illustrations();
-                                $Illustrations->renderSlider();
+                                $illustrations = new Illustrations();
+                                $illustrations->renderSlider();
                             ?>
                         </section>
                     </div><!-- end illustrations -->
+
                     <!-- Logos -->
                     <div id="div4" class="target">
                         <section id="logos" class='logos' aria-label="Projects of logos by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                             <?php
-                                $Logos = new Logos();
-                                $Logos->renderSlider();
+                                $logos = new Logos();
+                                $logos->renderSlider();
                             ?>
                         </section><!-- end logos -->
                     </div><!--end .target -->
+
                 </div><!-- end .target-box -->
 
             </section><!--end #projects-->
