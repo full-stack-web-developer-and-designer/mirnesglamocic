@@ -6,9 +6,7 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-	<?php
-		echo $head->render();
-	?>
+	<?php echo $head->render(); ?>
 	<body>
 		<?php include 'inc/header.php';?>
 		<div class="wrapper">
@@ -19,10 +17,10 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$UxPath = new UxPathSlide();
-						$UxPath->renderSlider();
-						$UxIntro = new UxIntroSlide();
-						$UxIntro->renderSlider();
+						$uxPath = new UxPathSlide();
+						$uxPath->renderSlider();
+						$uxIntro = new UxIntroSlide();
+						$uxIntro->renderSlider();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -31,8 +29,8 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$InteractionDesign = new InteractionDesignSlide();
-						$InteractionDesign->renderSlider();
+						$interactionDesign = new InteractionDesignSlide();
+						$interactionDesign->renderSlider();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -41,8 +39,8 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$Ux = new UxSlide();
-						$Ux->renderSlider();
+						$ux = new UxSlide();
+						$ux->renderSlider();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -51,8 +49,8 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$UxParts = new UxPartsSlide();
-						$UxParts->renderSlider();
+						$uxParts = new UxPartsSlide();
+						$uxParts->renderSlider();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -61,8 +59,8 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$UxFoundation = new UxFoundationSlide();
-						$UxFoundation->renderSlider();
+						$uxFoundation = new UxFoundationSlide();
+						$uxFoundation->renderSlider();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
