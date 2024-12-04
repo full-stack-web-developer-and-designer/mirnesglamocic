@@ -13,29 +13,37 @@
             <?php echo $page->render(); ?>
             <section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
-                    <?php $webDesignPath = new WebDesignPathSlide();
-                    $webDesignPath->renderSlider(); ?>
+                    <?php
+                        $webDesignPath = new WebDesignPathSlide();
+                        $webDesignPath->renderSlider();
+                    ?>
                 </ul>
             </section>
 
             <section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
-                    <?php $webDesigners = new WebDesignersSlide();
-                    $webDesigners->renderSlider(); ?>
+                    <?php
+                        $webDesigners = new WebDesignersSlide();
+                        $webDesigners->renderSlider();
+                    ?>
                 </ul>
             </section>
 
             <section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
-                    <?php $webDesign = new WebDesignSlide();
-                    $webDesign->renderSlider(); ?>
+                    <?php
+                        $webDesign = new WebDesignSlide();
+                        $webDesign->renderSlider();
+                    ?>
                 </ul>
             </section>
 
             <section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
-                    <?php $svg = new SvgSlide();
-                    $svg->renderSlider(); ?>
+                    <?php
+                        $svg = new SvgSlide();
+                        $svg->renderSlider();
+                    ?>
                 </ul>
             </section>
         </div>
