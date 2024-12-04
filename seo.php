@@ -6,9 +6,7 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-	<?php
-		echo $head->render();
-	?>
+	<?php echo $head->render(); ?>
 	<body>
 		<?php include 'inc/header.php';?>
 		<div class="wrapper">
@@ -19,8 +17,8 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$Seo = new SeoSlide();
-						$Seo->renderSlider();
+						$seo = new SeoSlide();
+						$seo->renderSlider();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
