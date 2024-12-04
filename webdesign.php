@@ -1,8 +1,8 @@
 <?php
-require_once 'core/init.php';
-$head = Head::get(7);
-$page_id = 7;
-$page = Pages::get(7);
+    require_once 'core/init.php';
+    $head = Head::get(7);
+    $page_id = 7;
+    $page = Pages::get(7);
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
