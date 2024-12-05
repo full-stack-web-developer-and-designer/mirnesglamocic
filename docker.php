@@ -6,9 +6,7 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-	<?php
-		echo $head->render();
-	?>
+	<?php echo $head->render(); ?>
 	<body>
 		<?php include 'inc/header.php';?>
 		<div class="wrapper">
