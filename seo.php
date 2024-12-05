@@ -1,6 +1,6 @@
 <?php
-	require_once 'core/init.php';
-	$head = Head::get(9);
+    require_once 'core/init.php';
+    $head = Head::get(9);
     $page_id=9;
     $page = Pages::get(9);
 ?>
@@ -17,8 +17,8 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$seo = new SeoSlide();
-						$seo->renderSlider();
+					    $seo = new SeoSlide();
+					    $seo->renderSlider();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
