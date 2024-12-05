@@ -1,16 +1,17 @@
 <?php
-     class Head extends Entity{
-        public static $tableName = 'meta';
-	    public static $keyColumn = 'meta_id';
-        // Remove Warning Deprecated
-        public $og_url;
-        public $og_image;
-        public $twitter_image;
-        public $css;
-        // Fetch data from MySQL using PDO - PHP Data Object	
-        public function render(){
-           
-            $render = "
+class Head extends Entity
+{
+    public static $tableName = "meta";
+    public static $keyColumn = "meta_id";
+    // Remove Warning Deprecated
+    public $og_url;
+    public $og_image;
+    public $twitter_image;
+    public $css;
+    // Fetch data from MySQL using PDO - PHP Data Object
+    public function render()
+    {
+        $render = "
               <head>
                 <!-- Wow! Welcome to my code. If you need a professional website don't hesitate to contact me: contact@mirnesglamocic.com -->
                 <meta charset=\"UTF-8\">
@@ -110,8 +111,7 @@
                     webpMachine.polyfillDocument();
                 </script>
             </head>";
-        
-        return $render;
 
-        }
+        return $render;
     }
+}

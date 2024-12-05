@@ -1,17 +1,19 @@
 <?php
-class Skills extends ConnectSlider{
-    // Fetch data from MySQL using PDO - PHP Data Object	
-	public function renderSlider(){
+class Skills extends ConnectSlider
+{
+    // Fetch data from MySQL using PDO - PHP Data Object
+    public function renderSlider()
+    {
         $sql = "SELECT * FROM mirnesgl_korea.skills;";
         $stmt = $this->__connect()->query($sql);
-       
-        while($row = $stmt->fetch()) {
-            $img_120=$row['img_120'];
-            $img_110=$row['img_110'];
-            $img_105=$row['img_105'];
-            $img_100=$row['img_100'];
-            $img=$row['img'];
-			$alt=$row['alt'];
+
+        while ($row = $stmt->fetch()) {
+            $img_120 = $row["img_120"];
+            $img_110 = $row["img_110"];
+            $img_105 = $row["img_105"];
+            $img_100 = $row["img_100"];
+            $img = $row["img"];
+            $alt = $row["alt"];
 
             echo "<picture class='skill'><!--[if IE 9]><video style='display: none;'><![endif]-->
             <source srcset=\"./images/$img_100\" type=\"image/webp\" width=\"100\" height=\"100\" media=\"(min-width: 1153px)\">
@@ -24,6 +26,6 @@ class Skills extends ConnectSlider{
             <source srcset=\"./images/$img_100\" type=\"image/webp\" width=\"100\" height=\"100\" media=\"(max-width: 652px)\">
             <!--[if IE 9]></video><![endif]-->
             <img decoding=\"async\" src=\"./images/$img\" width=\"165\" height=\"165\" loading=\"lazy\" alt='$alt' class='skill'></picture>";
-            }
         }
     }
+}

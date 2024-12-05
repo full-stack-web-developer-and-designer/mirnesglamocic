@@ -1,21 +1,23 @@
 <?php
-class ITA extends ConnectSlider{
-     // Fetch data from MySQL using PDO - PHP Data Object	
-	public function renderSlider(){
+class ITA extends ConnectSlider
+{
+    // Fetch data from MySQL using PDO - PHP Data Object
+    public function renderSlider()
+    {
         $sql = "SELECT * FROM mirnesgl_korea.ita_certificates;";
         $stmt = $this->__connect()->query($sql);
-       
-        while($row = $stmt->fetch()) {
-            $article = $row['article'];
-            $href = $row['href'];
-			$img_400 = $row['img_400'];
-            $img_300 = $row['img_300'];
-            $img_250 = $row['img_250'];
-            $img_200 = $row['img_200'];
-            $img_180 = $row['img_180'];
-            $img_170=$row['img_170'];
-            $img = $row['img'];
-            $alt = $row['alt'];
+
+        while ($row = $stmt->fetch()) {
+            $article = $row["article"];
+            $href = $row["href"];
+            $img_400 = $row["img_400"];
+            $img_300 = $row["img_300"];
+            $img_250 = $row["img_250"];
+            $img_200 = $row["img_200"];
+            $img_180 = $row["img_180"];
+            $img_170 = $row["img_170"];
+            $img = $row["img"];
+            $alt = $row["alt"];
 
             echo "<article id=\"$article\" aria-label=\"$alt\">
                     <a href=\"./images/BIG/$href\" data-lightbox=\"ita\">
