@@ -1,6 +1,6 @@
 <?php
-	require_once 'core/init.php';
-	$head = Head::get(12);
+    require_once 'core/init.php';
+    $head = Head::get(12);
     $page_id=12;
     $page = Pages::get(12);
 ?>
