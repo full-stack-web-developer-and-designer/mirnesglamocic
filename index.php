@@ -1,5 +1,5 @@
 <?php
-	require_once 'core/init.php';
+    require_once 'core/init.php';
     $head = Head::get(1);
     $page_id=1;
     $page = Pages::get(1);
