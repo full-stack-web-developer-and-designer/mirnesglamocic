@@ -6,24 +6,21 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-	<?php
-		echo $head->render();
-	?>
+	<?php echo $head->render(); ?>
 	<body>
-		<?php include 'inc/header.php';?>
+		<?php include 'inc/header.php'; ?>
 		<div class="wrapper">
 
 			<?php echo $page->render(); ?>
 
 			<section class="slider-container" aria-label="Docker certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
-				<!-- slider box -->
 					<?php
 						$docker = new DockerSlide();
 						$docker->renderSlider();
 					?>
 				</ul>
-			</section><!--end .slider-container-->
+			</section>
 			
 		</div><!--end .wrapper-->
 		<?php include_once './inc/footer.php';//end #footer?>
