@@ -1,24 +1,27 @@
 <?php
-class Website extends ConnectSlider{
-    // Fetch data from MySQL using PDO - PHP Data Object	
-	public function renderSlider(){
-        $sql = "SELECT * FROM mirnesgl_korea.projects_website ORDER BY projects_website_id DESC";
+class Website extends ConnectSlider
+{
+    // Fetch data from MySQL using PDO - PHP Data Object
+    public function renderSlider()
+    {
+        $sql =
+            "SELECT * FROM mirnesgl_korea.projects_website ORDER BY projects_website_id DESC";
         $stmt = $this->__connect()->query($sql);
-       
-        while($row = $stmt->fetch()) {
-            $img_600     = $row['img_600'];
-            $img_550     = $row['img_550'];
-            $img_500     = $row['img_500'];
-            $img_408     = $row['img_408'];
-            $img_300     = $row['img_300'];
-            $img         = $row['img'];
-            $skills      = $row['skills'];
-            $skills_class= $row['skills_class'];
-            $title       = $row['title'];
-            $description = $row['description'];
-            $href        = $row['href'];
 
-                echo "<section class='project_complete clearfix' aria-label=\"Project $title by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\">
+        while ($row = $stmt->fetch()) {
+            $img_600 = $row["img_600"];
+            $img_550 = $row["img_550"];
+            $img_500 = $row["img_500"];
+            $img_408 = $row["img_408"];
+            $img_300 = $row["img_300"];
+            $img = $row["img"];
+            $skills = $row["skills"];
+            $skills_class = $row["skills_class"];
+            $title = $row["title"];
+            $description = $row["description"];
+            $href = $row["href"];
+
+            echo "<section class='project_complete clearfix' aria-label=\"Project $title by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\">
                         <div class='main-outer'>
                             <article class='project_mockup clearfix' aria-label=\"Project $title by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\">
                                 <picture class='mockup'><!--[if IE 9]><video style='display: none;'><![endif]-->
@@ -48,6 +51,6 @@ class Website extends ConnectSlider{
                             </article><!-- end .project_desc -->
                         </div><!-- end .main-outer -->
                     </section>";
-            }
         }
     }
+}
