@@ -8,15 +8,16 @@ class Navigations extends ConnectSlider
 
         while ($row = $stmt->fetch()) {
             $href = $row["href"];
-            $target = $row["target"];
             $title = strtoupper($row["title"]);
             $aria_label = ucfirst($row["title"]);
+            //public static $keyColumn = 'id';
 
-            echo "<li><a href=\"/$href\" target=\"$target\" title=\"View $aria_label\" 
+            //public function render(){
+
+            echo "<li><a href=\"/$href\" title=\"View $aria_label\" 
 		aria-label=\"View $aria_label\">
 		$title</a>
 		<li>";
         }
     }
 }
-
