@@ -32,7 +32,7 @@
                 </picture>
         
                 <p>Hello there!</p>
-                <p>I&apos;m Mirnes and I was born in a small town in Bosnia and Herzegovina (Jajce), while I currently lives in South Korea, although I&apos;ve moved over 30 times over 6 countries in the last 15 years (if you can&apos;t tell, I love to travel!).</p>
+                <p>I&apos;m Mirnes and I was born in a small town in Bosnia and Herzegovina (Jajce), where I currently lives, although I&apos;ve moved over 30 times over 6 countries in the last 15 years (if you can&apos;t tell, I love to travel!).</p>
                 <p>I&apos;m a passionate, dedicated, effective and creative Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry and with a passion for clean design, standards-based code and open-source software.</p>
                 <p>I'm lifelong learner and I'm happiest when I'm creating, learning, exploring and thinking about how to make things better.</p>
                 <p>I have skills to convert any idea into a real working app. So let me know your idea, and I would come up with a great plan to make it live.</p>
