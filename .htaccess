@@ -65,6 +65,8 @@ RewriteRule ^sql-quizzer/process.html$ ./projects/SQL-quizzer/process.php?n= [NC
 RewriteRule ^sql-quizzer/question ./projects/SQL-quizzer/question.php [NC,L]
 RewriteRule ^sql-quizzer/final.html$ ./projects/SQL-quizzer/final.php [NC,L]
 #
+RewriteRule ^shoutbox/index.html$ ./projects/shoutbox/index.php [NC,L]
+RewriteRule ^shoutbox/process.html$ ./projects/shoutbox/process.php?n= [NC,L]
 #
 Options -Indexes
 # Save cache
