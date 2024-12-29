@@ -17,6 +17,7 @@ projects/SQL-quizzer/d*
 services/
 websites/
 *.jpg
+*.webp
 *.png
 *.svg
 *.json
