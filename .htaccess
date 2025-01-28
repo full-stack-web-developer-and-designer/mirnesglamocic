@@ -66,8 +66,11 @@ RewriteRule ^sql-quizzer/question ./projects/SQL-quizzer/question.php [NC,L]
 RewriteRule ^sql-quizzer/final.html$ ./projects/SQL-quizzer/final.php [NC,L]
 #
 RewriteRule ^shoutbox/index.html$ ./projects/shoutbox/index.php [NC,L]
-RewriteRule ^shoutbox/process.html$ ./projects/shoutbox/process.php?n= [NC,L]
+RewriteRule ^shoutbox/process.html$ ./projects/shoutbox/process.php [NC,L]
 #
+#RewriteRule ^terradium$ ./projects/terradium/ [NC,L]
+#RewriteRule ^/terradium/wp-admin/$ ./projects/terradium/wp-admin.php [NC,L]
+#RewriteRule ^terradium/wp-login.php$ ./projects/terradium/wp-login.php [NC,L]
 Options -Indexes
 # Save cache
 <IfModule mod_expires.c>
