@@ -12,6 +12,7 @@
         <div class="wrapper">
             <section id="projects" aria-label="Web design and web development projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <?php echo $page->render(); ?>
+                <article id="intro"><p>Here are a few things I'm working on presently and some from the past. To learn more about my work history, check out my <a href="https://www.linkedin.com/in/mirnesglamocic" aria-label="visit my LinkedIn profile" target="_blank">LinkedIn</a> profile.</p></article>
                 <div class="menu">
                     <a id="showall" href="./projects.html" aria-label="View all my projects"></a>
                     <a class="project" target="1" aria-label="Web sites"><h2>Web sites</h2></a>
