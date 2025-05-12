@@ -11,6 +11,16 @@
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
             <?php echo $page->render(); ?>
+            
+            <section class="slider-container" aria-label="GIT certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+                <ul class="content-slider cs-hidden">
+                    <?php
+                        $gitNew = new GitNewSlide();
+                        $gitNew->renderSlider();
+                    ?>
+                </ul>
+            </section>
+
             <section class="slider-container" aria-label="GIT certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
