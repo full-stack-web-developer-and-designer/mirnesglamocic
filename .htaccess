@@ -58,15 +58,6 @@ RewriteRule ^Error403.html$ /403.php [NC,L]
 ErrorDocument 404 /error404.html
 RewriteRule ^error404.html$ /404.php [NC,L]
 # Website Projects
-RewriteRule ^sql-quizzer/index.html$ ./projects/SQL-quizzer/index.php [NC,L]
-RewriteRule ^sql-quizzer/start-quiz$ ./projects/SQL-quizzer/question.php?n=1 [NC,L]
-RewriteRule ^sql-quizzer/add-question$ ./projects/SQL-quizzer/add.php [NC,L]
-RewriteRule ^sql-quizzer/process.html$ ./projects/SQL-quizzer/process.php?n= [NC,L]
-RewriteRule ^sql-quizzer/question ./projects/SQL-quizzer/question.php [NC,L]
-RewriteRule ^sql-quizzer/final.html$ ./projects/SQL-quizzer/final.php [NC,L]
-#
-RewriteRule ^shoutbox/index.html$ ./projects/shoutbox/index.php [NC,L]
-RewriteRule ^shoutbox/process.html$ ./projects/shoutbox/process.php [NC,L]
 #
 #RewriteRule ^terradium$ ./projects/terradium/ [NC,L]
 #RewriteRule ^/terradium/wp-admin/$ ./projects/terradium/wp-admin.php [NC,L]
