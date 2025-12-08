@@ -22,8 +22,8 @@ The website is built using:
 - **JavaScript**
 - **jQuery**
 - **PHP**
-- **Hosting:** (Your hosting provider)
-- **Deployment:** (Manual / GitHub Actions / cPanel deploy, etc.)
+- **MySQL**
+- **Hosting:** Globalhost
 
 ## 📂 Features
 
