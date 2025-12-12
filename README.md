@@ -51,6 +51,12 @@ GitHub
 - SEO-friendly structure  
 - Fast loading performance  
 
+## 🚀 Live Demo
+
+🔗 Website: https://mirnesglamocic.com
+
+🔗 GitHub Repository: https://github.com/full-stack-web-developer-and-designer/mirnesglamocic
+
 ## 📸 Preview
 
 [![mockup of personal website mirnesglamocic.com by web developer, UI/UX and web designer Mirnes Glamočić, Jajce, BiH](/mockup.webp)](https://mirnesglamocic.com)
@@ -72,9 +78,8 @@ This project is licensed under the **MIT License**.
 
 ## 🙏 Thank You
 
-Thank you for taking the time to review my personal website.
-I truly appreciate your consideration, and I hope this project provides a clear and accurate representation of my skills, experience, and dedication to professional web development.
-I look forward to the opportunity to contribute my knowledge and value to your team.
+Thank you for taking the time to explore my portfolio.
+I appreciate your interest, and I look forward to the opportunity to discuss how my skills and experience can contribute to your team.
 
 ---
 
