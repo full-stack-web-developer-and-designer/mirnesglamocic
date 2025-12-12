@@ -31,12 +31,10 @@
                     <img decoding="async" src="./images/webdev.jpg" width="310" height="310" loading="lazy" alt='Expert Web Developer and Web Designer from Jajce, Bosnia and Herzegovina'>
                 </picture>
         
-                <p>Hello there!</p>
-                <p>I&apos;m Mirnes and I was born in a small town in Bosnia and Herzegovina (Jajce), where I currently live, although I&apos;ve moved over 30 times over 6 countries in the last 15 years (if you can&apos;t tell, I love to travel!).</p>
-                <p>I&apos;m a passionate, dedicated, effective and creative Web Developer, UI/UX and Web Designer with several years of experience in the web development and design industry and with a passion for clean design, standards-based code and open-source software.</p>
-                <p>I'm lifelong learner and I'm happiest when I'm creating, learning, exploring and thinking about how to make things better.</p>
-                <p>I have skills to convert any idea into a real working app. So let me know your idea, and I would come up with a great plan to make it live.</p>
-                <p>In addition to my love of technology and design, I am also interested in education.</p>
+                <p>I&apos;m Mirnes Glamočić and I was born in a small town in Bosnia and Herzegovina (Jajce), where I currently live, although I&apos;ve moved over 30 times over 6 countries in the last 15 years (if you can&apos;t tell, I love to travel!).</p>
+                <p>I&apos;m a dedicated full-stack web developer and designer with a strong focus on creating clean, modern, and performance-driven websites. I build intuitive user interfaces, stable backend solutions, and highly functional digital tools using best practices, responsive design, and optimized workflows. With a passion for problem-solving and continuous learning, I enjoy transforming ideas into polished, real-world solutions.</p>
+                <p>Combining strong frontend skills with solid backend logic, I deliver projects that are visually appealing, secure, and technically reliable.</p>
+                <p>I take pride in writing clean, maintainable code, optimizing performance, and ensuring every project is built with structure, scalability, and user experience in mind. I’m always exploring new technologies, improving my workflow, and expanding my skill set to stay ahead in the constantly evolving world of web development.</p>
             </div>
         </article>
 
@@ -61,7 +59,7 @@
                             $ita->renderSlider();
                         ?>
                     <div id='mycert'>
-                        <p>So, finally, in 2016, I decided to enroll in ITAcademy, a school for a profitable IT career in department of PHP WEB DEVELOPMENT.</p>
+                        <p>However, in 2016, I decided to enroll in ITAcademy, a school for a profitable IT career in department of PHP WEB DEVELOPMENT.</p>
                         <br>
                         <p>After successfully completing that program, I was very satisfied with the education provided, and I decided to continue my education in the department of WEB DESIGN.</p>
                         <br>
@@ -115,7 +113,7 @@
                 </article>
                 
                 <div id="icons">
-                    <p>Feel free to connect with me...</p>
+                    <p>Feel free to contact me...</p>
                     <div id="icon_box">
                         <?php
                             $icons = new Icons();
