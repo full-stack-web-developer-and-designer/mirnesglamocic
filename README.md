@@ -13,18 +13,36 @@ This website serves as an online portfolio showcasing my work, skills, certifica
 
 The goal of the website is to provide a clean and professional space where potential clients or employers can easily browse my projects and contact me.
 
-## 🛠️ Tech Stack
+## 🧪 Technology Stack
 
-The website is built using:
+### ✔️ Frontend
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **jQuery**
-- **PHP**
-- **MySQL**
-- **Hosting:** Globalhost
+- HTML5 – Structure and content of the website
 
+- CSS3 – Styling and responsive layout
+
+- JavaScript – Interactive behavior and dynamic UI
+
+- jQuery – Simplified DOM manipulation and effects
+
+### ✔️ Backend
+
+- PHP – Server-side processing and dynamic content
+
+- MySQL – Database for storing dynamic data (used with backend/PHP)
+
+### ✔️ Additional Tools & Concepts
+
+- AJAX / JSON – Asynchronous requests and data handling
+
+- SEO-Friendly Structure – Search engine optimization best practices
+
+- Responsive Design – Works on mobile and desktop devices
+
+- Contact Form / Backend Form Handling – Form submissions via PHP
+
+- Hosting: Globalhost (deployment environment) 
+GitHub
 ## 📂 Features
 
 - Responsive design optimized for all devices  
@@ -49,3 +67,15 @@ If you want to get in touch, collaborate, or discuss a project:
 ## 📄 License
 
 This project is licensed under the **MIT License**.
+
+---
+
+## 🙏 Thank You
+
+Thank you for taking the time to review my personal website.
+I truly appreciate your consideration, and I hope this project provides a clear and accurate representation of my skills, experience, and dedication to professional web development.
+I look forward to the opportunity to contribute my knowledge and value to your team.
+
+---
+
+### ⭐ If you find this project helpful, please give it a star!
