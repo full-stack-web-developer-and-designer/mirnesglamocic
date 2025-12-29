@@ -5,7 +5,7 @@ class FeaturedApp extends ConnectSlider
     public function renderSlider()
     {
         $sql =
-            "SELECT * FROM mirnesgl_korea.projects_website WHERE category='featured' ORDER BY projects_website_id DESC;";
+            "SELECT * FROM mirnesgl_korea.projects_website WHERE category='featured' OR category='featured frontend' OR category='featured fullstack' OR category='featured wordpress' ORDER BY projects_website_id DESC;";
         $stmt = $this->__connect()->query($sql);
 
         while ($row = $stmt->fetch()) {
