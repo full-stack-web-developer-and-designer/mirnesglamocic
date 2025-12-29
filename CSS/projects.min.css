@@ -32,6 +32,18 @@ button {
     pointer-events: all;
     border-radius: 5px;
 }
+.target,
+.nested-target {
+    display: none;
+}
+
+#div1 {
+    display: block;
+}
+
+[role="tabpanel"][hidden] {
+  display: none;
+}
 
 #intro,
 .menu,
@@ -70,11 +82,6 @@ h2 {
 h1 {
     padding: 5px 0;
 }
-.target,
-.nested-target {
-    display: none;
-}
-
 #div1 {
     display: block;
 }
