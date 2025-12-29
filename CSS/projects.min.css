@@ -62,9 +62,6 @@ h1 {
     overflow: hidden;
     box-sizing: border-box;
 }
-.mockup {
-    box-sizing: border-box;
-}
 .content,
 img > .content.fade {
     opacity: 0;
@@ -114,21 +111,6 @@ button.project:active {
   margin-bottom: 10px;
   background-color: #FFF;
   color: #0f4c75;
-}
-.project_desc,
-.project_mockup {
-    width: 600px;
-    display: block;
-    box-sizing: border-box;
-    float: left;
-}
-.mockup {
-    display: inline-block;
-}
-.mockup {
-    width: 596px;
-    height: 395px;
-    border: 2px solid #717171;
 }
 .illustration,
 .image,
@@ -316,18 +298,9 @@ img > .content.fade:hover {
     }
 }
 @media screen and (min-width: 1192px) and (max-width: 1260px) {
-    button {
-        width: 220px;
-    }
     .project_desc,
     .project_mockup {
         width: 550px;
-    }
-    .mockup {
-        width: 546px;
-    }
-    .mockup {
-        height: 362px;
     }
 }
 @media screen and (min-width: 1014px) and (max-width: 1260px) {
@@ -361,29 +334,7 @@ img > .content.fade:hover {
         height: 333px;
     }
 }
-@media screen and (min-width: 1148px) and (max-width: 1191px) {
-    button {
-        width: 210px;
-    }
-    .project_desc,
-    .project_mockup {
-        width: 530px;
-    }
-    .mockup {
-        width: 504px;
-        height: 330px;
-    }
-    a.button.view_project {
-        margin: 30px auto 0;
-    }
-}
 @media screen and (max-width: 1147px) {
-    div.main-outer {
-        display: flex;
-        -webkit-flex-direction: column-reverse;
-        -moz-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-    }
     .project_desc,
     .project_mockup {
         float: none;
@@ -400,14 +351,6 @@ img > .content.fade:hover {
     }
     .project_desc h3 {
         margin: 0 auto 40px;
-    }
-}
-@media screen and (min-width: 904px) and (max-width: 1147px) {
-    .mockup {
-        margin-right: 40px;
-    }
-    a.button.view_project {
-        width: 600px;
     }
 }
 @media screen and (min-width: 1040px) and (max-width: 1139px) {
@@ -448,33 +391,6 @@ img > .content.fade:hover {
         margin-bottom: 36px;
     }
 }
-@media screen and (min-width: 956px) and (max-width: 1147px) {
-    button {
-        width: 185px;
-    }
-}
-@media screen and (min-width: 836px) and (max-width: 955px) {
-    button {
-        width: 155px;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 835px) {
-    button {
-        width: 140px;
-    }
-}
-@media screen and (min-width: 949px) and (max-width: 1006px) {
-    .mockup {
-        width: 554px;
-        height: 362px;
-    }
-}
-@media screen and (min-width: 904px) and (max-width: 948px) {
-    .mockup {
-        width: 500px;
-        height: 330px;
-    }
-}
 @media screen and (min-width: 840px) and (max-width: 953px) {
     .photoshop {
         width: 354px;
@@ -483,11 +399,6 @@ img > .content.fade:hover {
     .image {
         width: 350px;
         height: 233px;
-    }
-}
-@media screen and (min-width: 625px) and (max-width: 903px) {
-    a.button.view_project {
-        width: 535px;
     }
 }
 @media screen and (min-width: 640px) and (max-width: 839px) {
@@ -578,10 +489,6 @@ img > .content.fade:hover {
     h1 {
         margin: 26px auto 20px;
     }
-    button {
-        padding: 5px 10px;
-        margin: 0 20px 40px 0;
-    }
     #projects a.project:nth-of-type(3n) h2 {
         margin-right: 0;
     }
@@ -617,13 +524,6 @@ img > .content.fade:hover {
     }
 }
 @media screen and (min-width: 580px) and (max-width: 639px) {
-    .mockup {
-        width: 554px;
-        height: 362px;
-    }
-    a.button.view_project {
-        width: 492px;
-    }
     .photoshop {
         width: 504px;
         height: 337px;
@@ -634,13 +534,6 @@ img > .content.fade:hover {
     }
 }
 @media screen and (min-width: 557px) and (max-width: 579px) {
-    .mockup {
-        width: 504px;
-        height: 330px;
-    }
-    a.button.view_project {
-        width: 444px;
-    }
     .photoshop {
         width: 504px;
         height: 337px;
@@ -661,13 +554,6 @@ img > .content.fade:hover {
     }
 }
 @media screen and (min-width: 457px) and (max-width: 556px) {
-    .mockup {
-        width: 412px;
-        height: 270px;
-    }
-    a.button.view_project {
-        width: 351px;
-    }
     .photoshop {
         width: 412px;
         height: 276px;
@@ -687,38 +573,7 @@ img > .content.fade:hover {
         padding: 5px 15px;
     }
 }
-@media screen and (min-width: 482px) and (max-width: 491px) {
-    button {
-        padding: 5px 15px;
-    }
-}
-@media screen and (min-width: 461px) and (max-width: 491px) {
-    button {
-        margin: 0 40px 40px 0;
-    }
-}
-@media screen and (min-width: 461px) and (max-width: 481px) {
-    button {
-        padding: 5px 10px;
-    }
-}
-@media screen and (min-width: 450px) and (max-width: 460px) {
-    #projects button {
-        margin-bottom: 30px;
-    }
-    button {
-        margin: 0 30px 30px 0;
-        padding: 5px 10px;
-    }
-}
 @media screen and (min-width: 333px) and (max-width: 456px) {
-    .mockup {
-        width: 304px;
-        height: 200px;
-    }
-    a.button.view_project {
-        width: 243px;
-    }
     .photoshop {
         width: 286px;
         height: 192px;
@@ -726,23 +581,6 @@ img > .content.fade:hover {
     .image {
         width: 282px;
         height: 188px;
-    }
-}
-@media screen and (min-width: 429px) and (max-width: 449px) {
-    button {
-        margin: 0 30px 30px 0;
-        padding: 5px;
-    }
-}
-@media screen and (min-width: 424px) and (max-width: 428px) {
-    button {
-        margin: 0 25px 25px 0;
-        padding: 5px;
-    }
-}
-@media screen and (min-width: 419px) and (max-width: 423px) {
-    button {
-        padding: 5px;
     }
 }
 @media screen and (min-width: 409px) and (max-width: 423px) {
@@ -766,9 +604,6 @@ img > .content.fade:hover {
     }
     h2 {
         width: 140px;
-    }
-    a.button.view_project {
-        margin: 15px auto 35px;
     }
 }
 @media screen and (min-width: 382px) and (max-width: 408px) {
@@ -826,33 +661,9 @@ img > .content.fade:hover {
     .illustration,
     .image,
     .logo,
-    .mockup,
     .photoshop {
         width: auto;
         height: auto;
         border: none;
-    }
-    a.button.view_project {
-        width: 70%;
-    }
-}
-@media screen and (max-width: 209px) {
-    #projects h2 {
-        font-size: 1.5em;
-    }
-}
-@media screen and (max-width: 201px) {
-    .button:active,
-    .button:hover,
-    .button:link,
-    .button:visited {
-        padding: 17px 3px;
-    }
-    h2 {
-        padding: 5px 0;
-        width: auto;
-    }
-    #projects {
-        display: none;
     }
 }
