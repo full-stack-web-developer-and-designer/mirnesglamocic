@@ -1,76 +1,82 @@
 <?php
-    require_once 'core/init.php';
-    $head = Head::get(14);
-    $page_id=14;
-    $page = Pages::get(14);
+require_once 'core/init.php';
+$head = Head::get(14);
+$page_id = 14;
+$page = Pages::get(14);
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
     <?php echo $head->render(); ?>
     <body>
         <?php include 'inc/header.php'; ?>
+
         <div class="wrapper">
-            <section id="projects" aria-label="Web design and web development projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section id="projects" aria-label="Web design and web development projects by Mirnes Glamočić">
                 <?php echo $page->render(); ?>
-                <article id="intro"><p>Here are a few things I'm working on presently and some from the past. To learn more about my work history, check out my <a href="https://www.linkedin.com/in/mirnesglamocic" aria-label="visit my LinkedIn profile" target="_blank">LinkedIn</a> profile.</p></article>
-                <div class="menu">
-                    <a id="showall" href="./projects.html" aria-label="View all my projects"></a>
-                    <a class="project" target="1" aria-label="Web sites"><h2>Web sites</h2></a>
-                    <a class="project" target="2" aria-label="Projects of edited images by web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"><h2>Image editing</h2></a> 
-                    <a class="project" target="3" aria-label="Illustration projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"><h2>Illustrations</h2></a> 
-                    <a class="project" target="4" aria-label="Logo projects by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"><h2>Logo design</h2></a> 
-                </div><!-- end .menu -->
 
-                <div class="taget_box">
+                <article id="intro">
+                    <p>
+                        Here are a few things I'm working on presently and some from the past. 
+                        To learn more, check out my 
+                        <a href="https://www.linkedin.com/in/mirnesglamocic" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile.
+                    </p>
+                </article>
 
-                    <div id="div1" class="target">
-                        <!-- websites -->
-                        <section id="websites" aria-label="Projects of web sites by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+                <!-- Main Menu -->
+                <div class="menu" role="tablist" aria-label="Project categories">
+                    <button id="tab-div1" class="project" role="tab" aria-selected="true" aria-controls="div1" tabindex="0" data-target="div1">Web sites</button>
+                    <button id="tab-div2" class="project" role="tab" aria-selected="false" aria-controls="div2" tabindex="-1" data-target="div2">Image editing</button>
+                    <button id="tab-div3" class="project" role="tab" aria-selected="false" aria-controls="div3" tabindex="-1" data-target="div3">Illustrations</button>
+                    <button id="tab-div4" class="project" role="tab" aria-selected="false" aria-controls="div4" tabindex="-1" data-target="div4">Logo design</button>
+                </div>
+
+
+                <!-- Main Targets -->
+                <div class="target-box">
+                    <section id="div1" class="target" role="tabpanel" aria-labelledby="tab-div1">
+                        <!-- Nested Menu -->
+                        <div class="menu nested-menu" role="tablist" aria-label="Website project types">
+                            <button id="tab-div5" class="project nested" role="tab" aria-selected="true" aria-controls="div5" tabindex="0" data-target="div5">Featured App</button>
+                            <button id="tab-div6" class="project nested" role="tab" aria-selected="false" aria-controls="div6" tabindex="-1" data-target="div6">Frontend App</button>
+                            <button id="tab-div7" class="project nested" role="tab" aria-selected="false" aria-controls="div7" tabindex="-1" data-target="div7">Fullstack App</button>
+                            <button id="tab-div8" class="project nested" role="tab" aria-selected="false" aria-controls="div8"  tabindex="-1" data-target="div8">WordPress App</button>
+                        </div>
+
+                        <section id="websites" class="nested-target" role="tabpanel" aria-labelledby="tab-div1">
                             <?php
                                 $website = new Website();
                                 $website->renderSlider();
                             ?>
-                        </section> <!-- end web sites -->
-                    </div>
-
-                    <!-- image editing -->
-                    <div id="div2" class="target">
-                        <section id="photoshops" class="photoshops"  aria-label="Photoshop projects of image editing by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
-                            <?php
-                                $photoshops = new Photoshops();
-                                $photoshops->renderSlider();
-                            ?>
-                        </section> <!-- end image editing -->
-                    </div>
-
-                    <!-- illustrations -->
-                    <div id="div3" class="target">
-                        <section id="illustrations" class='illustrations' aria-label="Projects of illustrations by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
-                            <?php
-                                $illustrations = new Illustrations();
-                                $illustrations->renderSlider();
-                            ?>
                         </section>
-                    </div><!-- end illustrations -->
 
-                    <!-- Logos -->
-                    <div id="div4" class="target">
-                        <section id="logos" class='logos' aria-label="Projects of logos by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
-                            <?php
-                                $logos = new Logos();
-                                $logos->renderSlider();
-                            ?>
-                        </section><!-- end logos -->
-                    </div><!--end .target -->
+                        <section id="div5" class="nested-target" role="tabpanel" aria-labelledby="tab-div5">
+                            <?php (new FeaturedApp())->renderSlider(); ?>
+                        </section>
+                        <section id="div6" class="nested-target" role="tabpanel" aria-labelledby="tab-div6">
+                            <?php (new FrontendApp())->renderSlider(); ?>
+                        </section>
+                        <section id="div7" class="nested-target" role="tabpanel" aria-labelledby="tab-div7">
+                            <?php (new FullstackApp())->renderSlider(); ?>
+                        </section>
+                        <section id="div8" class="nested-target" role="tabpanel" aria-labelledby="tab-div8">
+                            <?php (new WordpressApp())->renderSlider(); ?>
+                        </section>
+                    </section>
 
-                </div><!-- end .target-box -->
+                    <section id="div2" class="target" role="tabpanel" aria-labelledby="tab-div2">
+                        <section id="photoshops"><?php (new Photoshops())->renderSlider(); ?></section>
+                    </section>
 
-            </section><!--end #projects-->
-        </div><!--end .wrapper-->
-        <?php include_once './inc/footer.php';//end #footer ?>
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script>
-            jQuery("#div1").css("display","block"),jQuery(document).ready(function(){jQuery(function(){jQuery("#showall").click(function(){jQuery(".target").show()}),jQuery(".project").click(function(){jQuery(".target").hide(),jQuery("#div"+jQuery(this).attr("target")).show()})})});
-        </script>
+                    <section id="div3" class="target" role="tabpanel" aria-labelledby="tab-div3">
+                        <section id="illustrations"><?php (new Illustrations())->renderSlider(); ?></section>
+                    </section>
+
+                    <section id="div4" class="target" role="tabpanel" aria-labelledby="tab-div4">
+                        <section id="logos"><?php (new Logos())->renderSlider(); ?></section>
+                    </section>
+                </div>
+            
+        </div><!-- .wrapper -->
+        <?php include_once './inc/footer.php'; ?>
     </body>
 </html>
