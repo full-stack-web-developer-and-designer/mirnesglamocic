@@ -48,8 +48,7 @@ button {
 #intro,
 .menu,
 .project_desc h3,
-.project_desc p a,
-ul.skills li {
+.project_desc p a {
     text-align: center;
 }
 .project_desc p:last-of-type,
@@ -86,13 +85,7 @@ h1 {
     display: block;
 }
 .illustration:nth-of-type(4n),
-.logo:nth-of-type(4n),
-.project:last-child,
-ul.elementor li:nth-of-type(5),
-ul.elementor li:nth-of-type(9),
-ul.skills li:last-of-type,
-ul.skills li:nth-of-type(13),
-ul.skills li:nth-of-type(7) {
+.logo:nth-of-type(4n) {
     margin-right: 0;
 }
 button.project:hover {
@@ -100,11 +93,6 @@ button.project:hover {
 }
 button.project:active {
     background: #402e0e;
-}
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 /* MAIN WRAPPER */
 .case-study {
@@ -134,8 +122,7 @@ button.project:active {
     box-sizing: border-box;
     float: left;
 }
-.mockup,
-ul.skills li {
+.mockup {
     display: inline-block;
 }
 .mockup {
@@ -336,36 +323,11 @@ img > .content.fade:hover {
     .project_mockup {
         width: 550px;
     }
-    .mockup,
-    ul.skills {
+    .mockup {
         width: 546px;
     }
     .mockup {
         height: 362px;
-    }
-    ul.skills.essential li {
-        padding: 10px 8px;
-    }
-    ul.verysimple {
-        width: 365px;
-    }
-    ul.wp.elementor li {
-        width: 112px;
-    }
-    ul.wp.elementor li:nth-of-type(4),
-    ul.wp.elementor li:nth-of-type(5),
-    ul.wp.elementor li:nth-of-type(8),
-    ul.wp.elementor li:nth-of-type(9) {
-        width: 95px;
-    }
-    ul.skills li.title {
-        width: 516px;
-    }
-    ul.skills.elementor li.title {
-        width: 520px;
-    }
-    ul.skills a.button.view_project {
-        margin: 50px auto 0;
     }
 }
 @media screen and (min-width: 1014px) and (max-width: 1260px) {
@@ -411,64 +373,6 @@ img > .content.fade:hover {
         width: 504px;
         height: 330px;
     }
-    ul.skills li.title {
-        padding: 10px;
-        width: 406px;
-    }
-    ul.skills {
-        width: 425px;
-    }
-    ul.simple,
-    ul.wp,
-    ul.wp.elementor {
-        width: 504px;
-    }
-    ul.skills li,
-    ul.verysimple li {
-        padding: 10px 5px;
-        width: 85px;
-    }
-    ul.simple li {
-        width: 60px;
-    }
-    ul.simple li:nth-of-type(5),
-    ul.simple li:nth-of-type(6),
-    ul.skills li:nth-of-type(7),
-    ul.wp li:nth-of-type(5),
-    ul.wp.elementor li:nth-of-type(5) {
-        margin-right: 15px;
-    }
-    ul.simple li:nth-of-type(7),
-    ul.skills li:nth-of-type(5),
-    ul.skills li:nth-of-type(9),
-    ul.wp.elementor li:nth-of-type(4),
-    ul.wp.elementor li:nth-of-type(7) {
-        margin-right: 0;
-    }
-    ul.simple li.title,
-    ul.skills li.project_wp,
-    ul.wp.elementor li:first-of-type {
-        width: 476px;
-    }
-    ul.skills li.project_wp {
-        width: 486px;
-    }
-    ul.wp li:nth-of-type(3),
-    ul.wp li:nth-of-type(4),
-    ul.wp li:nth-of-type(5) {
-        margin-right: 15px;
-        width: 72px;
-    }
-    ul.wp.elementor li {
-        width: 145px;
-    }
-    ul.wp.elementor li:nth-of-type(8),
-    ul.wp.elementor li:nth-of-type(9) {
-        display: none;
-    }
-    ul li.project_simple {
-        width: 415px;
-    }
     a.button.view_project {
         margin: 30px auto 0;
     }
@@ -502,64 +406,8 @@ img > .content.fade:hover {
     .mockup {
         margin-right: 40px;
     }
-    ul.skills {
-        display: inline-block;
-        margin-left: -4px;
-        width: 270px;
-    }
     a.button.view_project {
         width: 600px;
-    }
-    ul.skills li.title {
-        width: 250px;
-    }
-    ul li.project_simple,
-    ul.simple li.title {
-        width: 155px;
-    }
-    ul.simple li:nth-of-type(3),
-    ul.simple li:nth-of-type(5),
-    ul.skills li:first-of-type,
-    ul.skills li:nth-of-type(10),
-    ul.skills li:nth-of-type(4),
-    ul.verysimple li:nth-of-type(3),
-    ul.wp.elementor li:nth-of-type(3),
-    ul.wp.elementor li:nth-of-type(5),
-    ul.wp.elementor li:nth-of-type(7),
-    ul.wp.elementor li:nth-of-type(9) {
-        margin-right: 0;
-    }
-    ul.simple li:nth-of-type(4),
-    ul.verysimple li:nth-of-type(4),
-    ul.wp li:nth-of-type(5) {
-        margin-right: 15px;
-    }
-    ul.wp.elementor {
-        width: 275px;
-    }
-    ul.simple,
-    ul.verysimple {
-        width: 176px;
-    }
-    ul.wp li {
-        width: 107px;
-    }
-    ul.skills li.project_wp,
-    ul.wp li.project_wp + li {
-        width: 249px;
-        margin-right: 0;
-    }
-    ul.wp.elementor li:first-of-type {
-        width: 258px;
-    }
-    ul.elementor li,
-    ul.elementor li:nth-of-type(5),
-    ul.elementor li:nth-of-type(9) {
-        width: 111px;
-    }
-    ul.wp.elementor li,
-    ul.wp.elementor li:nth-of-type(4) {
-        margin-right: 13px;
     }
 }
 @media screen and (min-width: 1040px) and (max-width: 1139px) {
@@ -688,9 +536,6 @@ img > .content.fade:hover {
         color: #000;
         background: #fff;
         pointer-events: none;
-    }
-    ul.skills li:first-of-type {
-        margin-top: 15px;
     }
     .project_desc p {
         text-align: left;
