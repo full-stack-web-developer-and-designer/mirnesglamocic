@@ -30,9 +30,10 @@ $page = Pages::get(14);
                     <button id="tab-div4" class="project" role="tab" aria-selected="false" aria-controls="div4" tabindex="-1" data-target="div4">Logo design</button>
                 </div>
 
-
                 <!-- Main Targets -->
                 <div class="target-box">
+
+                    <!-- Websites Main Target -->
                     <section id="div1" class="target" role="tabpanel" aria-labelledby="tab-div1">
                         <!-- Nested Menu -->
                         <div class="menu nested-menu" role="tablist" aria-label="Website project types">
@@ -42,13 +43,15 @@ $page = Pages::get(14);
                             <button id="tab-div8" class="project nested" role="tab" aria-selected="false" aria-controls="div8"  tabindex="-1" data-target="div8">WordPress App</button>
                         </div>
 
-                        <section id="websites" class="nested-target" role="tabpanel" aria-labelledby="tab-div1">
+                        <!-- Main Websites Section (visible on page load) -->
+                        <section id="websites" class="nested-target" style="display:block;">
                             <?php
                                 $website = new Website();
                                 $website->renderSlider();
                             ?>
                         </section>
 
+                        <!-- Nested Targets -->
                         <section id="div5" class="nested-target" role="tabpanel" aria-labelledby="tab-div5">
                             <?php (new FeaturedApp())->renderSlider(); ?>
                         </section>
@@ -63,15 +66,16 @@ $page = Pages::get(14);
                         </section>
                     </section>
 
-                    <section id="div2" class="target" role="tabpanel" aria-labelledby="tab-div2">
+                    <!-- Other Main Targets -->
+                    <section id="div2" class="target" role="tabpanel" aria-labelledby="tab-div2" style="display:none;">
                         <section id="photoshops"><?php (new Photoshops())->renderSlider(); ?></section>
                     </section>
 
-                    <section id="div3" class="target" role="tabpanel" aria-labelledby="tab-div3">
+                    <section id="div3" class="target" role="tabpanel" aria-labelledby="tab-div3" style="display:none;">
                         <section id="illustrations"><?php (new Illustrations())->renderSlider(); ?></section>
                     </section>
 
-                    <section id="div4" class="target" role="tabpanel" aria-labelledby="tab-div4">
+                    <section id="div4" class="target" role="tabpanel" aria-labelledby="tab-div4" style="display:none;">
                         <section id="logos"><?php (new Logos())->renderSlider(); ?></section>
                     </section>
                 </div>
