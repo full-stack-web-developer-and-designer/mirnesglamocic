@@ -5,11 +5,11 @@ class WordpressApp extends ConnectSlider
     public function renderSlider()
     {
         $sql =
-            "SELECT * FROM mirnesgl_korea.projects_website WHERE category='wordpress' ORDER BY projects_website_id DESC;";
+            "SELECT * FROM mirnesgl_korea.projects_website WHERE category='wordpress' OR category='featured wordpress' ORDER BY projects_website_id DESC;";
         $stmt = $this->__connect()->query($sql);
 
         while ($row = $stmt->fetch()) {
-             $category = $row["category"];
+            $category = $row["category"];
             $img_600 = $row["img_600"];
             $img_550 = $row["img_550"];
             $img_500 = $row["img_500"];
