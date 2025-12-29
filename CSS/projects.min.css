@@ -249,11 +249,12 @@ a.secondary {
 a.secondary:hover {
   background: #333;
 }
-.illustrations,
-.logos,
-.photoshops {
+#illustrations,
+#logos,
+#photoshops {
     text-align: center;
-    padding-bottom: 36px;
+    margin-top: 40px;
+    padding-bottom: 22px;
 }
 .photoshop {
     width: 580px;
@@ -741,9 +742,9 @@ img > .content.fade:hover {
     }
 }
 @media screen and (max-width: 639px) {
-    .illustrations,
-    .logos,
-    .photoshops {
+    #illustrations,
+    #logos,
+    #photoshops {
         padding-bottom: 30px;
     }
     .illustration,
