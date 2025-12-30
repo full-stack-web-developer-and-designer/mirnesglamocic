@@ -137,39 +137,50 @@ a.button:hover {
 }
 #headerTopLeft {
     float: left;
-    padding: 19px 0;
+    height: 52px;
+    line-height: 52px;
+    padding: 0 10px;
+}
+#headerTopLeft a {
+    padding: 20px 0;
+}
+#headerTopLeft .icon,
+#headerCenter .icon {
+    width: 12px;
+    height: 12px;
 }
 #nav,
 #nav ul.menu {
     float: right;
 }
 #headerTopLeft span {
-    margin-right: 40px;
-    padding: 19px 0;
+    
+    padding: 20px 0;
 }
+#headerTopLeft a:link,
+#headerTopLeft a:visited,
 #headerCenter a:link,
 #headerCenter a:visited,
 #headerTopLeft span a {
-    color: #fff;
+    color: #93c5fd;
 }
+
 #headerCenter {
     width: 74%;
     height: 14px;
     text-align: center;
     padding: 19px 0;
 }
-#headerTopLeft span:nth-of-type(3n),
-#headerTopRight span:nth-of-type(2n) {
-    margin-right: 0;
-}
 #headerTopRight {
     float: right;
     color: #fff;
     height: 52px;
 }
+/* icons */
 div.icons {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 /* ICON BASE */
 div.icons a {
@@ -207,13 +218,8 @@ img.icons {
     height: 30px;
     margin: 15px auto;
 }
-a.social-icons {
-    display: inline-block;
-    width: 48px;
-    height: 52px;
-    margin-right: -4px;
-    margin-bottom: -4px;
-}
+
+
 .social-icon {
     height: 32px;
     display: inline-block;
@@ -231,22 +237,74 @@ a.social-icons {
   border-radius: 50%;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
+#headerTopLeft a,
 #headerCenter a {
-    padding: 20px 10px 18px;
+    padding: 19px 10px;
 }
+#number a:hover,
 a#resume:hover,
 .contact-icon:hover,
 .social-icon:hover {
     color: #363636;
     background: #fff;
 }
+#number a:hover .icon,
 a#resume:hover #download,
 .contact-icon:hover #download,
 .social-icon:hover .linkedin-icon,
-.social-icon:hover .github-icon,
-.social-icon:hover .codepen-icon {
+.social-icon:hover .icon {
     fill: currentColor;
     transition: transform 0.2s ease;
+}
+/* ICON SYSTEM */
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+  transition: transform .2s ease;
+}
+
+/* ICON CONTAINER */
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+/* ICON LINK */
+.icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #93c5fd;
+  border-radius: 50%;
+  transition: color .2s ease, background-color .2s ease;
+}
+
+/* HOVER */
+.icons a:hover {
+  color: #fff;
+  background-color: rgba(147, 197, 253, .08);
+}
+.icons a:hover .icon {
+  transform: translateY(-2px);
+  background-color: #363636;
+}
+
+/* KEYBOARD FOCUS */
+.icons a:focus-visible {
+  outline: none;
+  color: #fff;
+  background-color: rgba(147, 197, 253, .15);
+  box-shadow: 0 0 0 2px rgba(147, 197, 253, .6);
+}
+a.social-icons {
+    display: inline-block;
+    width: 48px;
+    height: 52px;
+    margin-right: -4px;
+    margin-bottom: -4px;
 }
 #headerBottom {
     background: #fff;
@@ -381,7 +439,7 @@ p.barcode {
     gap: 24px;
 }
 #footer .social-icon:hover .linkedin-icon,
-#footer .social-icon:hover .github-icon,
+#footer .social-icon:hover .icon-github,
 #footer .social-icon:hover .codepen-icon {
     fill: #635336;
 }
