@@ -81,6 +81,7 @@ h1 {
 #div1 {
     display: block;
 }
+.project:last-child,
 .illustration:nth-of-type(4n),
 .logo:nth-of-type(4n) {
     margin-right: 0;
