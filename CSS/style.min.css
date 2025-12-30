@@ -306,6 +306,15 @@ a.social-icons {
     margin-right: -4px;
     margin-bottom: -4px;
 }
+.icon-scroll {
+    width: 20px;
+    height: 40px;
+    transform: scale(1.15);
+    transform-origin: center;
+    fill: #93c5fd;
+    display: inline-block;
+    margin-right: -8px;
+}
 #headerBottom {
     background: #fff;
 }
@@ -363,14 +372,14 @@ p.barcode {
 }
 .scroll-top {
     box-shadow: 0 0 2px #000;
-    bottom: 15px;
+    right: 20px;
+    bottom: 20px;
     display: none;
     height: 40px;
     width: 40px;
     opacity: 1;
     position: fixed;
     border-radius: 50%;
-    right: 20px;
     z-index: 9999;
 }
 .scroll-top:before {
@@ -422,10 +431,11 @@ p.barcode {
 #footer p {
     margin: 0;
     line-height: 50px;
+    color: #93c5fd;
 }
 #footer p a:link,
 #footer p a:visited {
-    color: #faf7eb;
+    color: #93c5fd;
     text-decoration: none;
 }
 #footer p a:hover {
@@ -438,10 +448,8 @@ p.barcode {
     margin: 20px auto;
     gap: 24px;
 }
-#footer .social-icon:hover .linkedin-icon,
-#footer .social-icon:hover .icon-github,
-#footer .social-icon:hover .codepen-icon {
-    fill: #635336;
+#footer .icons a:hover .icon {
+    background-color: #635336;
 }
 * {
     scrollbar-color: #635336 #eee;
