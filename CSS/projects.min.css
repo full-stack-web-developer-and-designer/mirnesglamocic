@@ -194,6 +194,10 @@ h2.projects {
   gap: 20px;
   justify-content: center;
 }
+.actions .icon {
+    width: 12px;
+    height: 12px;
+}
 .btn {
   padding: 14px 26px;
   border-radius: 8px;
