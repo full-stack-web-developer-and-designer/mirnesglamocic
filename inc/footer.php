@@ -73,3 +73,5 @@ jQuery(function($) {
 <script src="/JS/projects-menu.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js" async></script>
 <script src="/JS/lazyloading.min.js"></script>
+<!-- SVG icons -->
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/icons.html'; ?>
