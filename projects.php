@@ -37,10 +37,10 @@ $page = Pages::get(14);
                     <section id="div1" class="target" role="tabpanel" aria-labelledby="tab-div1">
                         <!-- Nested Menu -->
                         <div class="menu nested-menu" role="tablist" aria-label="Website project types">
-                            <button id="tab-div5" class="project nested" role="tab" aria-selected="true" aria-controls="div5" tabindex="0" data-target="div5">Featured App</button>
-                            <button id="tab-div6" class="project nested" role="tab" aria-selected="false" aria-controls="div6" tabindex="-1" data-target="div6">Frontend App</button>
-                            <button id="tab-div7" class="project nested" role="tab" aria-selected="false" aria-controls="div7" tabindex="-1" data-target="div7">Fullstack App</button>
-                            <button id="tab-div8" class="project nested" role="tab" aria-selected="false" aria-controls="div8"  tabindex="-1" data-target="div8">WordPress App</button>
+                            <button id="tab-div5" class="project nested" role="tab" aria-selected="true" aria-controls="div5" tabindex="0" data-target="div5">Featured Apps</button>
+                            <button id="tab-div6" class="project nested" role="tab" aria-selected="false" aria-controls="div6" tabindex="-1" data-target="div6">Fullstack Apps</button>
+                            <button id="tab-div7" class="project nested" role="tab" aria-selected="false" aria-controls="div7" tabindex="-1" data-target="div7">Mini Apps</button>
+                            <button id="tab-div8" class="project nested" role="tab" aria-selected="false" aria-controls="div8"  tabindex="-1" data-target="div8">WordPress Apps</button>
                         </div>
 
                         <!-- Main Websites Section (visible on page load) -->
@@ -56,10 +56,10 @@ $page = Pages::get(14);
                             <?php (new FeaturedApp())->renderSlider(); ?>
                         </section>
                         <section id="div6" class="nested-target" role="tabpanel" aria-labelledby="tab-div6">
-                            <?php (new FrontendApp())->renderSlider(); ?>
+                            <?php (new FullstackApp())->renderSlider(); ?>
                         </section>
                         <section id="div7" class="nested-target" role="tabpanel" aria-labelledby="tab-div7">
-                            <?php (new FullstackApp())->renderSlider(); ?>
+                            <?php (new MiniApp())->renderSlider(); ?>
                         </section>
                         <section id="div8" class="nested-target" role="tabpanel" aria-labelledby="tab-div8">
                             <?php (new WordpressApp())->renderSlider(); ?>
