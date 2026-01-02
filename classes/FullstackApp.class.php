@@ -5,7 +5,7 @@ class FullstackApp extends ConnectSlider
     public function renderSlider()
     {
         $sql =
-            "SELECT * FROM mirnesgl_korea.projects_website WHERE category='fullstack' ORDER BY projects_website_id DESC;";
+            "SELECT * FROM mirnesgl_korea.projects_website WHERE category='fullstack' OR category='featured fullstack' OR category='mini fullstack' ORDER BY projects_website_id DESC;";
         $stmt = $this->__connect()->query($sql);
 
          while ($row = $stmt->fetch()) {

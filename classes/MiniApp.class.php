@@ -5,7 +5,7 @@ class MiniApp extends ConnectSlider
     public function renderSlider()
     {
         $sql =
-            "SELECT * FROM mirnesgl_korea.projects_website WHERE category='mini' ORDER BY projects_website_id DESC;";
+            "SELECT * FROM mirnesgl_korea.projects_website WHERE category='mini' OR category='mini fullstack' OR category='featured mini' ORDER BY projects_website_id DESC;";
         $stmt = $this->__connect()->query($sql);
 
         while ($row = $stmt->fetch()) {
