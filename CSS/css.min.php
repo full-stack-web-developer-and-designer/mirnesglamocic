@@ -72,10 +72,11 @@
 
 .cert-images {
   display: grid;
-  grid-template-columns:     minmax(0, 400px)
+  grid-template-columns:
+    minmax(0, 400px)
     minmax(320px, 1fr)
     minmax(0, 400px);
-  align-items: center;
+  align-items: start;
   column-gap: 20px;
 }
 .cert-images > * {
