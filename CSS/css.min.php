@@ -89,6 +89,8 @@
 
 .cert-text {
   grid-column: 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .cert-images article:last-child {
@@ -97,25 +99,17 @@
 /* Individual certificate */
 .cert-item {
  flex: 0 0 auto;
+ justify-self: center;
 }
-
-/* CENTER COLUMN */
-.cert-text {
-  flex: 1 1 40%;
-}
-
 /* HEADING */
 #certificates h2 {
     width: 352px;
-    margin: 0;
-    text-align: center;
+    padding-top: 2px; /* aligns with image border */
 }
-
 .cert-item picture {
   display: inline-block;  /* shrink-wrap */
   border: 2px solid #ccc;
 }
-
 .cert-item img {
   display: block;         /* remove inline gap */
   max-width: 100%;
@@ -139,13 +133,6 @@
 }
 #mycert p:last-child {
     margin-bottom: 0;
-}
-#PHP img,
-#WD img {
-  display: block;
-  width: auto;
-  max-width: 400px;
-  height: auto;
 }
 /* Center text */
 #mycert {
