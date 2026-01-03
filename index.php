@@ -53,24 +53,34 @@
         <section id="certificates" aria-label="Certificates of ITAcademy by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
             <div class="wrapper">
                 <header>
-                    <h2>Certificates</h2>  
+                    
+                    <div class="cert-images">
                         <?php
                             $ita = new ITA();
-                            $ita->renderSlider();
+                            $ita->renderCertificates();
                         ?>
-                    <div id='mycert'>
-                        <p>However, in 2016, I decided to enroll in ITAcademy, a school for a profitable IT career in department of PHP WEB DEVELOPMENT.</p>
-                        <br>
-                        <p>After successfully completing that program, I was very satisfied with the education provided, and I decided to continue my education in the department of WEB DESIGN.</p>
-                        <br>
-                        <p>I enjoy coding and the challenge of learning something new everyday, so over time, I wanted to learn a lot more about the complete web development and design, and continued to educate myself through various web platforms, such as w3Schools, Pluralsight, Eduonix, Udemy, Educba, Shawn Academy, Cybrary and LinkedIn.</p>
-                        <br>
-                        <p>Through the mentioned web platforms, I received over 1000 certificates and their number is continuously growing.</p>
-                        <br>
-                        <p class='no_print'>Below you can find and see some of these certificates.</p>
-                    </div>
+                    
+                        <!-- CENTER TEXT -->
+                        <div class="cert-text">
+                            <h2>Certificates</h2>
+                    
+                            <div id='mycert'>
+
+                                <p>However, in 2016, I decided to enroll in ITAcademy, a school for a profitable IT career in department of PHP WEB DEVELOPMENT.</p>
+                                <p>After successfully completing that program, I was very satisfied with the education provided, and I decided to continue my education in the department of WEB DESIGN.</p>
+                                <p>I enjoy coding and the challenge of learning something new everyday, so over time, I wanted to learn a lot more about the complete web development and design, and continued to educate myself through various web platforms, such as w3Schools, Pluralsight, Eduonix, Udemy, Educba, Shawn Academy, Cybrary and LinkedIn.</p>
+                                <p>Through the mentioned web platforms, I received over 1000 certificates and their number is continuously growing.</p>
+                                <p class='no_print'>Below you can find and see some of these certificates.</p>
+
+                            </div><!-- end #mycert -->
+
+                        </div><!-- end .cert-text -->
+
+                    </div><!-- end .cert-images -->
+
                 </header>
-            </div>
+
+            </div><!-- end .wrapper -->
         </section><!--end #certificates-->
 
         <section id="LinkedIn" aria-label="Certificates of LinkedIn, SoloLearn and Pluralsight by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
@@ -87,7 +97,7 @@
                 <h2>Skills</h2> 
                     <?php
                         $skills = new Skills();
-                        $skills->renderSlider();
+                        $skills->renderSkills();
                     ?>
             </div><!--end .wrapper-->
         </section><!--end #skills-->
