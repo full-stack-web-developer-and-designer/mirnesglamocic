@@ -1,73 +1,64 @@
 <?php header("Content-type: text/css; charset: UTF-8"); ?>
 <style>
-#hero.lazy,
-#about.lazy {
-    background-image: none;
-    background-color: #f1f1fa;
-}
-#hero,
-#about {
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-<?php $rnd = rand(1,2); ?>
-#home h1,
-.white {
-    color: #fff;
-    background: rgba(0, 0, 0, 0.4);
-}
-#hero {
-    background-image:url("../images/bg<?php echo $rnd ?>.webp");
-    background-attachment:fixed;
-    padding:215px 0
+    #hero.lazy, #about.lazy {
+        background-image: none;
+        background-color: #f1f1fa;
     }
-#about {
-    background-image:url(../images/developmentMirnes.webp);
-    padding:200px 0
+    #hero,
+    #about {
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
-#aboutme,
-#mycert,
-#LinkedIn,
-#services,
-#contact {
-    background:#fff;
-    color:#363636;
-    padding-top:40px;
-    text-align:left
+    <?php $rnd = rand(1,2); ?>
+    #home h1, .white {
+        color: #fff;
+        background: rgba(0, 0, 0, 0.4);
     }
+    #hero {
+        background-image:url("../images/bg<?php echo $rnd ?>.webp");
+        background-attachment:fixed;
+        padding:215px 0
+        }
+    #about {
+        background-image:url(../images/developmentMirnes.webp);
+        padding:200px 0
+        }
     #aboutme,
-#services,
-#contact {
-    padding-bottom: 40px;
-}
-#LinkedIn,
-#skills,
-#services {
-    margin-bottom: 40px;
-}
-#LinkedIn,
-#projects,
-#services {
-    text-align: center;
-}
-#aboutme h2 {
-    width: 850px;
-    margin: 0 auto 30px;
-}
-#aboutme p:last-of-type {
-    margin-bottom: 0;
-}
-#skills h2 {
-    margin: 0 auto 40px;
-}
-.imgLeft {
-    float: left;
-    padding-right: 40px;
-}
+    #LinkedIn,
+    #services,
+    #contact {
+        background:#fff;
+        color:#363636;
+        padding-top:40px;
+        text-align:left
+        }
+    #aboutme, #services, #contact {
+        padding-bottom: 40px;
+    }
+    #LinkedIn, #skills, #services {
+        margin-bottom: 40px;
+    }
+    #LinkedIn, #projects, #services {
+        text-align: center;
+    }
+    #aboutme h2 {
+        width: 850px;
+        margin: 0 auto 30px;
+    }
+    #aboutme p:last-of-type {
+        margin-bottom: 0;
+    }
+    #skills h2 {
+        margin: 0 auto 40px;
+    }
+    .imgLeft {
+        float: left;
+        padding-right: 40px;
+    }
 #quotes {
     background: rgba(0, 0, 0, 0.6);
     padding: 40px;
@@ -76,21 +67,18 @@
 }
 #certificates {
     background: #fff;
-    text-align: center;
     padding-top: 40px;
 }
 #certificates h2 {
     width: 352px;
+    margin: 0 20px;
 }
 .ita {
-    width: 400px;
-    height: 565px;
+    max-width: 100%;
+    height: auto;
     display: block;
 }
-#PHP,
-#WD {
-    width: 400px;
-    height: 565px;
+#PHP, #WD {
     border: 2px solid #ccc;
 }
 #PHP {
@@ -101,7 +89,7 @@
 }
 #mycert {
     display: inline-block;
-    width: 352px;
+    width: auto;
     padding: 40px 20px 0;
 }
 .certificate {
@@ -266,8 +254,7 @@ textarea {
 .form-control #textarea {
     padding: 99.5px 22px;
 }
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     border: 2px solid #0b60d4 !important;
     box-shadow: 0 0 8px 0 #0b60d4;
     outline: none !important;
@@ -407,16 +394,6 @@ a.social-icon {
         background-image: url(../images/developmentMirnes_@2x.webp);
     }
 }
-@media screen and (-webkit-min-device-pixel-ratio: 3) {
-    #about {
-        background-image: url(../images/developmentMirnes_@3x.webp);
-    }
-}
-@media screen and (-webkit-min-device-pixel-ratio: 4) {
-    #about {
-        background-image: url(../images/developmentMirnes_@4x.webp);
-    }
-}
 @media screen and (min-width: 1249px) and (max-width: 1260px) {
     .certificate {
         padding: 25px 25px 5px;
@@ -435,26 +412,22 @@ a.social-icon {
 }
 @media screen and (min-width: 1024px) and (max-width: 1260px) {
     #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_1260.webp");
+        background-image: image-set(
+            url("../images/bg<?php echo $rnd ?>_1260.webp") 1x,
+            url("../images/bg<?php echo $rnd ?>_1260@2x.webp") 2x
+        );
     }
     #about {
-        background-image: url(../images/developmentMirnes_1260.webp);
+        background-image: image-set(
+            url("../images/developmentMirnes_1260.webp") 1x,
+            url("../images/developmentMirnes_1260@2x.webp") 2x
+        );
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: 1260px 787px;
     }
-    #PHP,
-    #WD,
-    .ita {
-        width: 300px;
-        height: 424px;
-    }
-    #WD {
-        margin-left: 12px;
-    }
     #mycert {
-        display: inline;
         padding: 0;
     }
     #form {
@@ -465,14 +438,12 @@ a.social-icon {
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1260px) {
-    #aboutme h2 {
+    #aboutme h2, #certificates h2 {
         width: 100%;
         margin: 0 auto 40px;
     }
     #certificates h2 {
-        width: 100%;
         display: block;
-        margin-bottom: 40px;
     }
     #WD {
         margin-left: 12px;
@@ -590,13 +561,10 @@ a.social-icon {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_1023.webp");
-    }
-    #PHP,
-    #WD,
-    .ita {
-        width: 250px;
-        height: 353px;
+        background-image: image-set(
+            url("../images/bg<?php echo $rnd ?>_1023.webp") 1x,
+            url("../images/bg<?php echo $rnd ?>_1023@2x.webp") 2x
+        );
     }
     #WD {
         margin-left: 12px;
@@ -608,7 +576,10 @@ a.social-icon {
         background-position: top right;
     }
     #about {
-        background-image: url(../images/developmentMirnes_1023.webp);
+        background-image: image-set(
+            url("../images/developmentMirnes_1023.webp") 1x,
+            url("../images/developmentMirnes_1023@2x.webp") 2x
+        );
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -797,8 +768,7 @@ a.social-icon {
     .certificate:nth-of-type(2n) {
         margin-right: 0;
     }
-    #PHP,
-    #WD {
+    #PHP, #WD {
         float: none;
     }
     #form {
@@ -836,19 +806,16 @@ a.social-icon {
     }
 }
 @media screen and (min-width: 521px) and (max-width: 767px) {
-    #PHP,
-    #WD,
-    .ita {
-        width: 200px;
-        height: 283px;
-    }
     #icon_box {
         width: 75%;
     }
 }
 @media screen and (min-width: 409px) and (max-width: 767px) {
     #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_767.webp");
+        background-image: image-set(
+            url("../images/bg<?php echo $rnd ?>_767.webp") 1x,
+            url("../images/bg<?php echo $rnd ?>_767@2x.webp") 2x
+        );
         background-size: 767px 900px;
         padding: 35px;
     }
@@ -856,7 +823,10 @@ a.social-icon {
         margin: 150px auto;
     }
     #about {
-        background-image: url(../images/developmentMirnes_767.webp);
+        background-image: image-set(
+            url("../images/developmentMirnes_767.webp") 1x,
+            url("../images/developmentMirnes_767@2x.webp") 2x
+        );
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -1036,22 +1006,6 @@ a.social-icon {
         left: 9px;
     }
 }
-@media screen and (min-width: 430px) and (max-width: 520px) {
-    #PHP,
-    #WD,
-    .ita {
-        width: 180px;
-        height: 254px;
-    }
-}
-@media screen and (min-width: 360px) and (max-width: 429px) {
-    #PHP,
-    #WD,
-    .ita {
-        width: 170px;
-        height: 240px;
-    }
-}
 @media screen and (min-width: 485px) and (max-width: 515px) {
     picture.skill {
         margin-right: 20px;
@@ -1145,11 +1099,17 @@ a.social-icon {
         padding: 20px;
     }
     #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_408.webp");
+        background-image: image-set(
+            url("../images/bg<?php echo $rnd ?>_408.webp") 1x,
+            url("../images/bg<?php echo $rnd ?>_408@2x.webp") 2x
+        );
         padding: 20px;
     }
     #about {
-        background-image: url(../images/developmentMirnes_408.webp);
+        background-image: image-set(
+            url("../images/developmentMirnes_408.webp") 1x,
+            url("../images/developmentMirnes_408@2x.webp") 2x
+        );
         padding: 0;
     }
     p#response,
@@ -1392,79 +1352,6 @@ a.social-icon {
     .services:nth-of-type(4) {
         width: 90%;
         padding: 5%;
-    }
-}
-@media screen and (max-width: 1260px) and (min-device-pixel-ratio: 2), screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 2) {
-    #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_1260@2x.webp");
-    }
-    #about {
-        background-image: url(../images/developmentMirnes_1260_@2x.webp);
-    }
-}
-@media screen and (max-width: 1023px) and (min-device-pixel-ratio: 2), screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2) {
-    #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_1023@2x.webp");
-    }
-    #about {
-        background-image: url(../images/developmentMirnes_1023_@2x.webp);
-    }
-}
-@media screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2),
-    screen and (max-width: 767px) and (o-min-device-pixel-ratio: 2),
-    screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (max-width: 767px) and (min-device-pixel-ratio: 2) {
-    #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_767@2x.webp");
-    }
-    #about {
-        background-image: url(../images/developmentMirnes_767_@2x.webp);
-    }
-}
-@media screen and (max-width: 408px) and (min--moz-device-pixel-ratio: 2),
-    screen and (max-width: 408px) and (o-min-device-pixel-ratio: 2),
-    screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (max-width: 408px) and (min-device-pixel-ratio: 2) {
-    #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_408@2x.webp");
-    }
-    #about {
-        background-image: url(../images/developmentMirnes_408_@2x.webp);
-    }
-}
-@media screen and (max-width: 1260px) and (min-device-pixel-ratio: 3), screen and (max-width: 1260px) and (-webkit-min-device-pixel-ratio: 3) {
-    #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_1260@3x.webp");
-    }
-    #about {
-        background-image: url(../images/developmentMirnes_1260_@3x.webp);
-    }
-}
-@media screen and (max-width: 1023px) and (min-device-pixel-ratio: 3), screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 3) {
-    #about {
-        background-image: url(../images/developmentMirnes_1023_@3x.webp);
-    }
-}
-@media screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 3),
-    screen and (max-width: 767px) and (o-min-device-pixel-ratio: 3),
-    screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3),
-    screen and (max-width: 767px) and (min-device-pixel-ratio: 3) {
-    #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_767@3x.webp");
-    }
-    #about {
-        background-image: url(../images/developmentMirnes_767_@3x.webp);
-    }
-}
-@media screen and (max-width: 408px) and (min--moz-device-pixel-ratio: 3),
-    screen and (max-width: 408px) and (o-min-device-pixel-ratio: 3),
-    screen and (max-width: 408px) and (-webkit-min-device-pixel-ratio: 3),
-    screen and (max-width: 408px) and (min-device-pixel-ratio: 3) {
-    #hero {
-        background-image: url("../images/bg<?php echo $rnd ?>_408@3x.webp");
-    }
-    #about {
-        background-image: url(../images/developmentMirnes_408_@3x.webp);
     }
 }
 @media print {
