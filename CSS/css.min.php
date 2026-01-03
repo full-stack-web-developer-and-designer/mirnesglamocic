@@ -67,11 +67,45 @@
 }
 #certificates {
     background: #fff;
-    padding-top: 40px;
+    padding: 40px 0 0;
+    }
+
+#certificates header {
+  display: grid;
+  grid-template-columns: auto minmax(320px, 1fr) auto;
+  align-items: center;
+  column-gap: 20px;
 }
+.cert-images {
+    display: flex;
+  gap: 20px;
+}
+.cert-images article:first-child {
+  grid-column: 1;
+}
+
+.cert-text {
+  grid-column: 2;
+}
+
+.cert-images article:last-child {
+  grid-column: 3;
+}
+/* Individual certificate */
+.cert-item {
+ flex: 0 0 auto;
+}
+
+/* CENTER COLUMN */
+.cert-text {
+  flex: 1 1 40%;
+}
+
+/* HEADING */
 #certificates h2 {
     width: 352px;
-    margin: 0 20px;
+    margin: 0;
+    text-align: center;
 }
 .ita {
     max-width: 100%;
@@ -79,18 +113,36 @@
     display: block;
 }
 #PHP, #WD {
+
     border: 2px solid #ccc;
 }
-#PHP {
-    float: left;
-}
+
 #WD {
-    float: right;
+    order: 3; /* floated right effect */
 }
+
 #mycert {
-    display: inline-block;
-    width: auto;
-    padding: 40px 20px 0;
+    order: 2; /* centered between the two */
+    flex: 1; /* take remaining space */
+}
+#mycert p {
+    margin-bottom: 1.2rem; /* 19.2px */
+}
+#mycert p:last-child {
+    margin-bottom: 0;
+}
+#PHP img,
+#WD img {
+  display: block;
+  width: auto;
+  max-width: 400px;
+  height: auto;
+}
+/* Center text */
+#mycert {
+    padding: 40px 0 0;
+    max-width: 400px;
+    margin: 0 auto;
 }
 .certificate {
     width: 200px;
@@ -445,12 +497,8 @@ a.social-icon {
     #certificates h2 {
         display: block;
     }
-    #WD {
-        margin-left: 12px;
-    }
     #PHP {
         margin-left: 40px;
-        float: right;
     }
     #icons p {
         padding: 100px 20px 50px;
