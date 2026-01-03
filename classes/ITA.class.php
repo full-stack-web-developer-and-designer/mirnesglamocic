@@ -5,7 +5,9 @@ class ITA extends ConnectSlider
     public function renderSlider()
     {
         $sql = "SELECT * FROM mirnesgl_korea.ita_certificates;";
-        $stmt = $this->__connect()->query($sql);
+        $stmt = $this->__connect()->prepare($sql);
+        $stmt->execute();
+
 
         while ($row = $stmt->fetch()) {
             $article = $row["article"];
