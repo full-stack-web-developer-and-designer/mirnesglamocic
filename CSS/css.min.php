@@ -511,6 +511,89 @@ cert-item picture {
   height: auto;
 }
 }
+
+@media screen and (min-width: 832px) and (max-width: 961px) {
+.cert-images { 
+        grid-template-columns: auto auto; /* columns = image width */
+        justify-content: center;          /* center the whole pair */
+        gap: 40px;                 /* EXACT space between images */
+        width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        justify-items: start;
+    }
+
+
+#certificates h2 {
+     width: 100%;
+}
+   .cert-text {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+  /* PHP image top-right */
+  #PHP {
+    grid-row: 2;
+    justify-self: end;
+}
+
+#WD {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+}
+cert-item picture {
+  width: 400px;
+  align-items: center;
+}
+
+.cert-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 831px) {
+.cert-images { 
+        grid-template-columns: auto auto; /* columns = image width */
+        justify-content: center;          /* center the whole pair */
+        gap: 40px;                 /* EXACT space between images */
+        width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        justify-items: start;
+    }
+
+
+#certificates h2 {
+     width: 100%;
+}
+   .cert-text {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+  /* PHP image top-right */
+  #PHP {
+    grid-row: 2;
+    justify-self: end;
+}
+
+#WD {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+}
+cert-item picture {
+  width: 400px;
+  align-items: center;
+}
+
+.cert-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+}
 @media screen and (min-width: 768px) and (max-width: 1260px) {
     #aboutme h2 {
         width: 100%;
