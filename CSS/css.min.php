@@ -74,7 +74,7 @@
   display: grid;
   grid-template-columns:
     minmax(0, 400px)
-    minmax(320px, 1fr)
+    minmax(400px, 1fr)
     minmax(0, 400px);
   align-items: start;
   column-gap: 20px;
@@ -83,41 +83,34 @@
   min-width: 0;
 }
 
-.cert-images article:first-child {
+#PHP {
   grid-column: 1;
 }
-
 .cert-text {
   grid-column: 2;
   display: flex;
   flex-direction: column;
 }
 
-.cert-images article:last-child {
+#WD {
   grid-column: 3;
 }
 /* Individual certificate */
 .cert-item {
- flex: 0 0 auto;
- justify-self: center;
+    justify-self: center;
 }
 /* HEADING */
 #certificates h2 {
-    width: 352px;
-    padding-top: 2px; /* aligns with image border */
+    width: 360px;
 }
 .cert-item picture {
   display: inline-block;  /* shrink-wrap */
   border: 2px solid #ccc;
 }
 .cert-item img {
-  display: block;         /* remove inline gap */
+  display: block;
   max-width: 100%;
   height: auto;
-}
-
-.cert-item img {
-  display: block;
 }
 
 #WD {
@@ -136,8 +129,7 @@
 }
 /* Center text */
 #mycert {
-    padding: 40px 0 0;
-    max-width: 400px;
+    padding: 40px 20px 0;
     margin: 0 auto;
 }
 .certificate {
@@ -437,11 +429,6 @@ a.social-icon {
 .contact_icon:hover #codepen-contact {
     fill: #04102d;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 2) {
-    #about {
-        background-image: url(../images/developmentMirnes_@2x.webp);
-    }
-}
 @media screen and (min-width: 1249px) and (max-width: 1260px) {
     .certificate {
         padding: 25px 25px 5px;
@@ -475,9 +462,7 @@ a.social-icon {
         -o-background-size: cover;
         background-size: 1260px 787px;
     }
-    #mycert {
-        padding: 0;
-    }
+    
     #form {
         width: 75%;
     }
@@ -485,16 +470,51 @@ a.social-icon {
         width: 25%;
     }
 }
+@media screen and (min-width: 962px) and (max-width: 1260px) {
+.cert-images { 
+        grid-template-columns: auto auto; /* columns = image width */
+        justify-content: center;          /* center the whole pair */
+        gap: 40px;                 /* EXACT space between images */
+        width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        justify-items: start;
+    }
+
+
+#certificates h2 {
+     width: 100%;
+}
+   .cert-text {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+  /* PHP image top-right */
+  #PHP {
+    grid-row: 2;
+    justify-self: end;
+}
+
+#WD {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+}
+cert-item picture {
+  width: 400px;
+  align-items: center;
+}
+
+.cert-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+}
 @media screen and (min-width: 768px) and (max-width: 1260px) {
     #aboutme h2 {
         width: 100%;
         margin: 0 auto 40px;
-    }
-    #certificates h2 {
-        display: block;
-    }
-    #PHP {
-        margin-left: 40px;
     }
     #icons p {
         padding: 100px 20px 50px;
@@ -502,19 +522,6 @@ a.social-icon {
     #contact h2 {
         width: 95%;
     }
-}
-@media (max-width: 1260px) {
-  .cert-images {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "img1 img2"
-      "text text";
-  }
-
-  .cert-item#PHP { grid-area: img1; }
-  .cert-item#WD  { grid-area: img2; }
-  .cert-text     { grid-area: text; }
 }
 
 @media screen and (min-width: 1206px) and (max-width: 1248px) {
