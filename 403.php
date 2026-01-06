@@ -7,13 +7,13 @@
 <!DOCTYPE html>
 <html itemscope lang="en">
 	<?php
-		echo $head->render();
+		echo $head->renderHead();
 	?>
 	<body>
 		<?php include 'inc/header.php';?>
 		<div class="wrapper">
 
-			<?php echo $page->render(); ?>
+			<?php echo $page->renderPage(); ?>
 
 			<div id="main">
 				<p id="error"><b><i>&#34;You don't have permission to access this resource.&#34;</i></b></p>
