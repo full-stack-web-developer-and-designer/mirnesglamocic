@@ -6,13 +6,13 @@ $page = Pages::get(14);
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-    <?php echo $head->render(); ?>
+    <?php echo $head->renderHead(); ?>
     <body>
         <?php include 'inc/header.php'; ?>
 
         <div class="wrapper">
             <section id="projects" aria-label="Web design and web development projects by Mirnes Glamočić">
-                <?php echo $page->render(); ?>
+                <?php echo $page->renderPage(); ?>
 
                 <article id="intro">
                     <p>
