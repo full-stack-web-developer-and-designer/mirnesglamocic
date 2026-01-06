@@ -8,9 +8,9 @@ class Slider extends ConnectSlider
         $stmt = $this->__connect()->query($sql);
 
         while ($row = $stmt->fetch()) {
-            $picture = $row["picture"];
-            $alt = $row["alt"];
-            $class = $row["class"];
+            $picture = htmlspecialchars($row['picture'], ENT_QUOTES, 'UTF-8');
+            $alt     = htmlspecialchars($row['alt'], ENT_QUOTES, 'UTF-8');
+            $class   = htmlspecialchars($row['class'], ENT_QUOTES, 'UTF-8');
             echo <<<HTML
             <li class="item-a slide">
                 <article class="cert">
