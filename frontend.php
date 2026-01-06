@@ -6,17 +6,17 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-    <?php echo $head->render(); ?>
+    <?php echo $head->renderHead(); ?>
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
-            <?php echo $page->render(); ?>
+            <?php echo $page->renderPage(); ?>
 
             <section class="slider-container" aria-label="Front-end certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $frontendSoloLearn = new FrontendSoloLearnSlide();
-                        $frontendSoloLearn->renderSlider(); 
+                        $frontendSoloLearn->renderCertificates(); 
                     ?>
                 </ul>
             </section>
@@ -25,9 +25,9 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $frontend = new FrontendSlide();
-                        $frontend->renderSlider();
+                        $frontend->renderCertificates();
                         $frontendIntro = new FrontendIntroSlide();
-                        $frontendIntro->renderSlider();
+                        $frontendIntro->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -36,7 +36,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $html = new HtmlSlide();
-                        $html->renderSlider();
+                        $html->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -45,7 +45,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $htmlCss = new HtmlCssSlide();
-                        $htmlCss->renderSlider();
+                        $htmlCss->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -54,7 +54,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $cssNew = new CssNewSlide();
-                        $cssNew->renderSlider(); 
+                        $cssNew->renderCertificates(); 
                     ?>
                 </ul>
             </section>
@@ -63,11 +63,11 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $css = new CssSlide();
-                        $css->renderSlider();
+                        $css->renderCertificates();
                         $sass = new SassSlide();
-                        $sass->renderSlider();
+                        $sass->renderCertificates();
                         $tailwind = new TailwindSlide();
-                        $tailwind->renderSlider(); ?>
+                        $tailwind->renderCertificates(); ?>
                 </ul>
             </section>
             
@@ -75,7 +75,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $bootstrap = new BootstrapSlide();
-                        $bootstrap->renderSlider();
+                        $bootstrap->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -84,9 +84,9 @@
                 <ul class="content-slider cs-hidden">
                     <?php 
                         $webDevelopment = new WebDevelopmentSlide();
-                        $webDevelopment->renderSlider();
+                        $webDevelopment->renderCertificates();
                         $viewSource = new ViewSourceSlide();
-                        $viewSource->renderSlider();
+                        $viewSource->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -95,9 +95,9 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $javaScript = new JavaScriptSlide();
-                        $javaScript->renderSlider();
+                        $javaScript->renderCertificates();
                         $typeScript = new TypeScriptSlide();
-                        $typeScript->renderSlider();
+                        $typeScript->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -106,7 +106,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php 
                         $javaScriptPluralsight = new JavaScriptPluralsightSlide();
-                        $javaScriptPluralsight->renderSlider();
+                        $javaScriptPluralsight->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -115,7 +115,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php 
                         $jQuery = new JquerySlide();
-                        $jQuery->renderSlider();
+                        $jQuery->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -124,7 +124,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $jQueryPluralsight = new JqueryPluralsightSlide();
-                        $jQueryPluralsight->renderSlider();
+                        $jQueryPluralsight->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -133,7 +133,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $angular = new AngularSlide();
-                        $angular->renderSlider();
+                        $angular->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -142,7 +142,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $react = new ReactSlide();
-                        $react->renderSlider();
+                        $react->renderCertificates();
                     ?>
                 </ul>
             </section>

@@ -6,17 +6,17 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-    <?php echo $head->render(); ?>
+    <?php echo $head->renderHead(); ?>
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
-            <?php echo $page->render(); ?>
+            <?php echo $page->renderPage(); ?>
             
             <section class="slider-container" aria-label="GIT certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $gitNew = new GitNewSlide();
-                        $gitNew->renderSlider();
+                        $gitNew->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -25,9 +25,9 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $git = new GitSlide();
-                        $git->renderSlider();
+                        $git->renderCertificates();
                         $vcs = new VcsSlide();
-                        $vcs->renderSlider();
+                        $vcs->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -36,7 +36,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $gitHubNew = new GitHubNewSlide();
-                        $gitHubNew->renderSlider();
+                        $gitHubNew->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -45,7 +45,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $gitHub = new GitHubSlide();
-                        $gitHub->renderSlider();
+                        $gitHub->renderCertificates();
                     ?>
                 </ul>
             </section>

@@ -6,17 +6,17 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-    <?php echo $head->render(); ?>
+    <?php echo $head->renderHead(); ?>
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
-            <?php echo $page->render(); ?>
+            <?php echo $page->renderPage(); ?>
             
             <section class="slider-container" aria-label="Photoshop CC certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $photoshop = new PhotoshopSlide();
-                        $photoshop->renderSlider();
+                        $photoshop->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -25,7 +25,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $photoshopDesign = new PhotoshopDesignSlide();
-                        $photoshopDesign->renderSlider();
+                        $photoshopDesign->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -34,7 +34,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $lightroom = new LightroomSlide();
-                        $lightroom->renderSlider();
+                        $lightroom->renderCertificates();
                     ?>
                 </ul>
             </section>
