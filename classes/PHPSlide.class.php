@@ -2,7 +2,7 @@
 class PHPSlide extends Slider
 {
     // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderSlider()
+    public function renderCertificates()
     {
         $sql =
             "SELECT * FROM mirnesgl_korea.certifications WHERE skill='PHP' AND class='LinkedIn preview' OR skill='PHP MySQL' OR skill='PHP WebDesigners' OR skill='Linux PHP' OR skill='WordPress PHP' OR skill='PHP SEO' ORDER BY rand();";

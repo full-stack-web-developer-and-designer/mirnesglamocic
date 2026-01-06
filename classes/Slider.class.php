@@ -2,7 +2,7 @@
 class Slider extends ConnectSlider
 {
     // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderSlider()
+    public function renderCertificates()
     {
         $sql = "SELECT * FROM mirnesgl_korea.certifications ORDER BY rand();";
         $stmt = $this->__connect()->query($sql);
