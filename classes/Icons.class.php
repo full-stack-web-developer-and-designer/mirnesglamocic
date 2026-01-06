@@ -2,7 +2,7 @@
 class Icons extends ConnectSlider
 {
     // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderSlider()
+    public function renderIcons()
     {
         $sql = "SELECT * FROM mirnesgl_korea.contact_icon";
         $stmt = $this->__connect()->query($sql);
