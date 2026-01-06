@@ -6,16 +6,16 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-    <?php echo $head->render(); ?>
+    <?php echo $head->renderHead(); ?>
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
-            <?php echo $page->render(); ?>
+            <?php echo $page->renderPage(); ?>
             <section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $webDesignPath = new WebDesignPathSlide();
-                        $webDesignPath->renderSlider();
+                        $webDesignPath->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -24,7 +24,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $webDesigners = new WebDesignersSlide();
-                        $webDesigners->renderSlider();
+                        $webDesigners->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -33,7 +33,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $webDesign = new WebDesignSlide();
-                        $webDesign->renderSlider();
+                        $webDesign->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -42,7 +42,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $svg = new SvgSlide();
-                        $svg->renderSlider();
+                        $svg->renderCertificates();
                     ?>
                 </ul>
             </section>

@@ -6,19 +6,19 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-	<?php echo $head->render(); ?>
+	<?php echo $head->renderHead(); ?>
 	<body>
 		<?php include 'inc/header.php';?>
 		<div class="wrapper">
 
-			<?php echo $page->render(); ?>
+			<?php echo $page->renderPage(); ?>
 			
 			<section class="slider-container" aria-label="SEO certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
 					    $seo = new SeoSlide();
-					    $seo->renderSlider();
+					    $seo->renderCertificates();
 					?>
 				</ul>
 			</section><!--end .slider-container-->

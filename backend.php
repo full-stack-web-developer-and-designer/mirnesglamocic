@@ -5,20 +5,20 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-    <?php echo $head->render(); ?>
+    <?php echo $head->renderHead(); ?>
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
-            <?php echo $page->render(); ?>
+            <?php echo $page->renderPage(); ?>
             <section aria-label="Back-end certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $backendPHP=new BackendPHPSlide();
-                        $backendPHP->renderSlider();
+                        $backendPHP->renderCertificates();
                         $backendPython=new BackendPythonSlide();
-                        $backendPython->renderSlider();
+                        $backendPython->renderCertificates();
                         $backendIntro=new BackendIntroSlide();
-                        $backendIntro->renderSlider();
+                        $backendIntro->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -27,9 +27,9 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $php=new PHPSlide();
-                        $php->renderSlider();
+                        $php->renderCertificates();
                         $phpFrameworks=new PHPFrameworksSlide();
-                        $phpFrameworks->renderSlider();
+                        $phpFrameworks->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -38,7 +38,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $phpluralsight=new PHPluralsightSlide();
-                        $phpluralsight->renderSlider();
+                        $phpluralsight->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -47,7 +47,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $python=new PythonSlide();
-                        $python->renderSlider();
+                        $python->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -56,7 +56,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $node=new NodeSlide();
-                        $node->renderSlider();
+                        $node->renderCertificates();
                     ?>
                 </ul>
             </section>

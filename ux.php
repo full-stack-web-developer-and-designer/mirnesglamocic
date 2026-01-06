@@ -6,21 +6,21 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-	<?php echo $head->render(); ?>
+	<?php echo $head->renderHead(); ?>
 	<body>
 		<?php include 'inc/header.php';?>
 		<div class="wrapper">
 
-			<?php echo $page->render(); ?>
+			<?php echo $page->renderPage(); ?>
 
 			<section class="slider-container" aria-label="UI/UX certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
 						$uxPath = new UxPathSlide();
-						$uxPath->renderSlider();
+						$uxPath->renderCertificates();
 						$uxIntro = new UxIntroSlide();
-						$uxIntro->renderSlider();
+						$uxIntro->renderCertificates();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -30,7 +30,7 @@
 				<!-- slider box -->
 					<?php
 						$interactionDesign = new InteractionDesignSlide();
-						$interactionDesign->renderSlider();
+						$interactionDesign->renderCertificates();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -40,7 +40,7 @@
 				<!-- slider box -->
 					<?php
 						$ux = new UxSlide();
-						$ux->renderSlider();
+						$ux->renderCertificates();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -50,7 +50,7 @@
 				<!-- slider box -->
 					<?php
 						$uxParts = new UxPartsSlide();
-						$uxParts->renderSlider();
+						$uxParts->renderCertificates();
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -60,7 +60,7 @@
 				<!-- slider box -->
 					<?php
 						$uxFoundation = new UxFoundationSlide();
-						$uxFoundation->renderSlider();
+						$uxFoundation->renderCertificates();
 					?>
 				</ul>
 			</section><!--end .slider-container-->

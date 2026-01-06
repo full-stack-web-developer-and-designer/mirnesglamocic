@@ -6,17 +6,17 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-    <?php echo $head->render(); ?>
+    <?php echo $head->renderHead(); ?>
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
-            <?php echo $page->render(); ?>
+            <?php echo $page->renderPage(); ?>
             
             <section class="slider-container" aria-label="WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $wordpress = new WordPressSlide();
-                        $wordpress->renderSlider();
+                        $wordpress->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -25,7 +25,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $wordpressPlugin = new WordPressPluginSlide();
-                        $wordpressPlugin->renderSlider();
+                        $wordpressPlugin->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -34,7 +34,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $wordpressTheme = new WordPressThemeSlide();
-                        $wordpressTheme->renderSlider();
+                        $wordpressTheme->renderCertificates();
                     ?>
                 </ul>
             </section>
@@ -43,7 +43,7 @@
                 <ul class="content-slider cs-hidden">
                     <?php
                         $wordpressEcommerce = new WordPressEcommerceSlide();
-                        $wordpressEcommerce->renderSlider();
+                        $wordpressEcommerce->renderCertificates();
                     ?>
                 </ul>
             </section>
