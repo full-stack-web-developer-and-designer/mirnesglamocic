@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html itemscope lang="en">
 	<?php
-		echo $head->render();
+		echo $head->renderHead();
 	?>
 	<body>
 		<div id="wrapper">
@@ -17,7 +17,7 @@
 		?>
 		<div class="wrapper">
 			
-			<?php echo $page->render(); ?>
+			<?php echo $page->renderPage(); ?>
 
 			<div id="main">
 				<p id="error"><b><i>&#34;The requested URL was not found on this server.&#34;</i></b></p>
