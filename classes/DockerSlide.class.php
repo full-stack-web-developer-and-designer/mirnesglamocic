@@ -2,7 +2,7 @@
 class DockerSlide extends Slider
 {
     // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderCertificates()
+    public function renderCertificates(): void
     {
         $sql =
             "SELECT * FROM mirnesgl_korea.certifications WHERE skill='Docker' ORDER BY rand();";

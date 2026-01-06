@@ -2,7 +2,7 @@
 class MongoDbSlide extends Slider
 {
     // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderSlider()
+    public function renderCertificates()
     {
         $sql =
             "SELECT * FROM mirnesgl_korea.certifications WHERE skill='MongoDB' OR skill='NoSQL' ORDER BY rand();";

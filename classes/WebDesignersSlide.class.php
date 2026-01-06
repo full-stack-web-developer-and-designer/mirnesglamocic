@@ -2,7 +2,7 @@
 class WebDesignersSlide extends Slider
 {
     // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderSlider()
+    public function renderCertificates()
     {
         $sql =
             "SELECT * FROM mirnesgl_korea.certifications WHERE skill='React WebDesigners' OR skill='JavaScript WebDesigners' OR skill='jQuery WebDesigners' OR skill='PHP WebDesigners' ORDER BY rand();";
