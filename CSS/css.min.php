@@ -500,8 +500,9 @@ a.social-icon {
   grid-row: 2;
   justify-self: start;
 }
-cert-item picture {
+.cert-item picture {
   width: 400px;
+  height: 565px;
   align-items: center;
 }
 
@@ -542,8 +543,9 @@ cert-item picture {
   grid-row: 2;
   justify-self: start;
 }
-cert-item picture {
-  width: 400px;
+.cert-item picture {
+  width: 300px;
+  height: 464px;
   align-items: center;
 }
 
@@ -583,8 +585,8 @@ cert-item picture {
   grid-row: 2;
   justify-self: start;
 }
-cert-item picture {
-  width: 400px;
+.cert-item picture {
+  width: 250px;
   align-items: center;
 }
 
@@ -702,10 +704,6 @@ cert-item picture {
     #hero {
         background-attachment: inherit;
     }
-    #mycert {
-        display: inline;
-        padding: 0;
-    }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #hero {
@@ -713,9 +711,6 @@ cert-item picture {
             url("../images/bg<?php echo $rnd ?>_1023.webp") 1x,
             url("../images/bg<?php echo $rnd ?>_1023@2x.webp") 2x
         );
-    }
-    #WD {
-        margin-left: 12px;
     }
     #skills {
         display: inline-block;
