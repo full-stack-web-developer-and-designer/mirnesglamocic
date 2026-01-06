@@ -12,10 +12,19 @@ class BackendIntroSlide extends Slider
             $picture = $row["picture"];
             $alt = $row["alt"];
             $class = $row["class"];
-            echo "<li class='item-a slide'>
-            <article class='cert' aria-label='Back-end certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina'>
-            <a href='./cert/BIG/$picture.webp' data-lightbox='image-group'><img src='./cert/SMALL/$picture.webp' alt=\"$alt by Web Designer and Developer Mirnes Glamočić from Bosnia and Herzegovina\" class=\"$class\" loading=\"lazy\"></a>
-            </article></li>";
+            echo <<<HTML
+            <li class="item-a slide">
+                <article class="cert">
+                    <a href="./cert/BIG/{$picture}.webp" data-lightbox="image-group">
+                        <img 
+                            src="./cert/SMALL/{$picture}.webp" 
+                            alt="{$alt}" 
+                            class="{$class}" 
+                            loading="lazy">
+                    </a>
+                </article>
+            </li>
+            HTML;
         }
     }
 }
