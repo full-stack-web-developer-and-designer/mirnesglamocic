@@ -9,7 +9,7 @@ class Head extends Entity
     public $twitter_image;
     public $css;
     // Fetch data from MySQL using PDO - PHP Data Object
-    public function render()
+    public function renderHead()
     {
         $render = "
               <head>
