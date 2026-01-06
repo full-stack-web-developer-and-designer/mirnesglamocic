@@ -2,7 +2,7 @@
 class ServicesSlide extends Slider
 {
     // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderSlider()
+    public function renderServices()
     {
         $sql = "SELECT * FROM mirnesgl_korea.services";
         $stmt = $this->__connect()->query($sql);
