@@ -107,8 +107,8 @@
                     <h3 id="service">Best solutions for your business</h3>
                         <!-- slider box -->
                         <?php
-                            $servicesSlide = new ServicesSlide();
-                            $servicesSlide->renderServices();
+                            $services = new Services();
+                            $services->renderServices();
                         ?>
             </div><!-- end .wrapper-->
         </section><!-- end #services-->
