@@ -7,18 +7,19 @@
 <html itemscope lang="en">
     <?php echo $head->renderHead(); ?>
     <body>
+
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
             <?php echo $page->renderPage(); ?>
+
+            <?php $slider = new Slider(); ?>
+
             <section aria-label="Back-end certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $backendPHP=new BackendPHPSlide();
-                        $backendPHP->renderCertificates();
-                        $backendPython=new BackendPythonSlide();
-                        $backendPython->renderCertificates();
-                        $backendIntro=new BackendIntroSlide();
-                        $backendIntro->renderCertificates();
+                        $slider->render('backend_php');
+                        $slider->render('backend_python');
+                        $slider->render('backend_intro');
                     ?>
                 </ul>
             </section>
@@ -26,10 +27,8 @@
             <section aria-label="PHP certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $php=new PHPSlide();
-                        $php->renderCertificates();
-                        $phpFrameworks=new PHPFrameworksSlide();
-                        $phpFrameworks->renderCertificates();
+                        $slider->render('php_linkedin');
+                        $slider->render('php_frameworks');
                     ?>
                 </ul>
             </section>
@@ -37,8 +36,7 @@
             <section aria-label="PHP certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $phpluralsight=new PHPluralsightSlide();
-                        $phpluralsight->renderCertificates();
+                        $slider->render('php_pluralsight');
                     ?>
                 </ul>
             </section>
@@ -46,8 +44,7 @@
             <section aria-label="Python certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $python=new PythonSlide();
-                        $python->renderCertificates();
+                        $slider->render('python');
                     ?>
                 </ul>
             </section>
@@ -55,8 +52,7 @@
             <section aria-label="Node certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $node=new NodeSlide();
-                        $node->renderCertificates();
+                        $slider->render('node');
                     ?>
                 </ul>
             </section>

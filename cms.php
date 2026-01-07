@@ -12,11 +12,11 @@
         <div class="wrapper">
             <?php echo $page->renderPage(); ?>
             
-            <section class="slider-container" aria-label="WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="WordPress certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $wordpress = new WordPressSlide();
-                        $wordpress->renderCertificates();
+                        $slider = new Slider();
+					    $slider->render('wordpress');
                     ?>
                 </ul>
             </section>
@@ -24,8 +24,8 @@
             <section class="slider-container" aria-label="WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $wordpressPlugin = new WordPressPluginSlide();
-                        $wordpressPlugin->renderCertificates();
+                        $slider = new Slider();
+					    $slider->render('wordpress_plugin');
                     ?>
                 </ul>
             </section>
@@ -33,8 +33,8 @@
             <section class="slider-container" aria-label="WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $wordpressTheme = new WordPressThemeSlide();
-                        $wordpressTheme->renderCertificates();
+                        $slider = new Slider();
+					    $slider->render('wordpress_theme');
                     ?>
                 </ul>
             </section>
@@ -42,8 +42,8 @@
             <section class="slider-container" aria-label="WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $wordpressEcommerce = new WordPressEcommerceSlide();
-                        $wordpressEcommerce->renderCertificates();
+                        $slider = new Slider();
+					    $slider->render('wordpress_ecommerce');
                     ?>
                 </ul>
             </section>

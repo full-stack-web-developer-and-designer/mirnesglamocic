@@ -10,34 +10,35 @@
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
+
             <?php echo $page->renderPage(); ?>
-            
-            <section class="slider-container" aria-label="Photoshop CC certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+
+            <?php $slider = new Slider(); ?>
+
+            <section class="slider-container" aria-label="LinkedIn Photoshop CC certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $photoshop = new PhotoshopSlide();
-                        $photoshop->renderCertificates();
+                        $slider->render('photoshop');
                     ?>
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="Photoshop CC certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn Photoshop CC certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $photoshopDesign = new PhotoshopDesignSlide();
-                        $photoshopDesign->renderCertificates();
+                        $slider->render('photoshop_design');
                     ?>
                 </ul>
             </section>
 
-            <section class="slider-container" aria-label="Lightroom CC certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn Lightroom CC certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $lightroom = new LightroomSlide();
-                        $lightroom->renderCertificates();
+                        $slider->render('lightroom');
                     ?>
                 </ul>
             </section>
+
         </div>
         <?php include_once './inc/footer.php'; //end #footer ?>
     </body>

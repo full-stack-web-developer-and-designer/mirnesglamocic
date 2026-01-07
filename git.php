@@ -10,13 +10,15 @@
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
+
             <?php echo $page->renderPage(); ?>
+
+            <?php $slider = new Slider(); ?>
             
             <section class="slider-container" aria-label="GIT certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $gitNew = new GitNewSlide();
-                        $gitNew->renderCertificates();
+                        $slider->render('git_new');
                     ?>
                 </ul>
             </section>
@@ -24,10 +26,8 @@
             <section class="slider-container" aria-label="GIT certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $git = new GitSlide();
-                        $git->renderCertificates();
-                        $vcs = new VcsSlide();
-                        $vcs->renderCertificates();
+                        $slider->render('git');
+                        $slider->render('vcs');
                     ?>
                 </ul>
             </section>
@@ -35,8 +35,7 @@
             <section class="slider-container" aria-label="GitHub certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $gitHubNew = new GitHubNewSlide();
-                        $gitHubNew->renderCertificates();
+                        $slider->render('github_new');
                     ?>
                 </ul>
             </section>
@@ -44,8 +43,7 @@
             <section class="slider-container" aria-label="GitHub certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $gitHub = new GitHubSlide();
-                        $gitHub->renderCertificates();
+                        $slider->render('github');
                     ?>
                 </ul>
             </section>
