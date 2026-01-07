@@ -14,7 +14,7 @@
 
             <?php $slider = new Slider(); ?>
 
-            <section class="slider-container" aria-label="Web service certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn Web service certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('web_services');
@@ -22,7 +22,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="JSON certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn JSON certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('json');

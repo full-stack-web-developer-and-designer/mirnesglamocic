@@ -15,7 +15,7 @@
 			
 			<?php $slider = new Slider(); ?>
 
-			<section class="slider-container" aria-label="UI/UX certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+			<section class="slider-container" aria-label="LinkedIn UI and UX learning path certificates">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
@@ -25,7 +25,7 @@
 				</ul>
 			</section><!--end .slider-container-->
 			
-			<section class="slider-container" aria-label="Interaction Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+			<section class="slider-container" aria-label="LinkedIn Interaction Design certificates">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
@@ -34,7 +34,7 @@
 				</ul>
 			</section><!--end .slider-container-->
 
-			<section class="slider-container" aria-label="UI/UX certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+			<section class="slider-container" aria-label="LinkedIn UI and UX core certificates">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
@@ -43,7 +43,7 @@
 				</ul>
 			</section><!--end .slider-container-->
 
-			<section class="slider-container" aria-label="UI/UX certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+			<section class="slider-container" aria-label="LinkedIn UI and UX topic-based certificates">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
@@ -52,7 +52,7 @@
 				</ul>
 			</section><!--end .slider-container-->
 
-			<section class="slider-container" aria-label="UI/UX certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+			<section class="slider-container" aria-label="LinkedIn UI and UX foundations certificates">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
