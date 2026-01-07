@@ -1,9 +1,5 @@
 <?php
-<<<<<<<< HEAD:classes/Services.php
 class Services extends Slider
-========
-class ServicesSlide extends Slider
->>>>>>>> b866a1546f695f7360d6afcb252e9b2270930e56:classes/ServicesSlide.class.php
 {
     // Fetch data from MySQL using PDO - PHP Data Object
     public function renderServices()
