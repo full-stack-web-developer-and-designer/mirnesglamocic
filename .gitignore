@@ -1,5 +1,5 @@
 cert/
-classes/Conn*.class.php
+classes/Con*.php
 core/
 DB-TABLES
 illustrations/
