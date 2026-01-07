@@ -15,7 +15,7 @@
 
             <?php $slider = new Slider(); ?>
 
-            <section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn Web Design learning path certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('web_design_path');
@@ -23,7 +23,7 @@
                 </ul>
             </section>
 
-            <section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn Web Designers certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('web_designers');
@@ -31,7 +31,7 @@
                 </ul>
             </section>
 
-            <section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn Web Design certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('web_design');
@@ -39,7 +39,7 @@
                 </ul>
             </section>
 
-            <section class="slider-container" aria-label="Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn SVG certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('svg');
