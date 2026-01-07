@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+?>
+<?php
     require_once 'core/init.php';
     $head = Head::get(1);
     $page = Pages::get(1);
@@ -9,7 +12,8 @@
         echo $head->renderHead();
     ?>
     <body id="home">
-        <?php include 'inc/header.php';?>
+
+        <?php include_once './inc/header.php';?>
 
         <article id='hero' class='lazy'>
             <div class='wrapper'>
@@ -21,15 +25,12 @@
             <div class='wrapper'>
                 <h2>About me</h2>
                 <picture class="imgLeft">
-                
                     <source srcset="./images/webdev.webp, ./images/webdev@2x.webp 2x" type="image/webp" media="(min-width: 1261px)">
                     <source srcset="./images/webdev_1023.webp, ./images/webdev_1023@2x.webp 2x" type="image/webp" media="(min-width: 1023px)">
                     <source srcset="./images/webdev_861.webp, ./images/webdev_861@2x.webp 2x" type="image/webp" media="(min-width: 861px)">
                     <source srcset="./images/webdev_768.webp, ./images/webdev_768@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-                    
                     <img decoding="async" src="./images/webdev.jpg" width="310" height="310" loading="lazy" alt='Expert Web Developer and Web Designer from Jajce, Bosnia and Herzegovina'>
                 </picture>
-        
                 <p>I&apos;m Mirnes Glamočić and I was born in a small town in Bosnia and Herzegovina (Jajce), where I currently live, although I&apos;ve moved over 30 times over 6 countries in the last 15 years (if you can&apos;t tell, I love to travel!).</p>
                 <p>I&apos;m a dedicated full-stack web developer and designer with a strong focus on creating clean, modern, and performance-driven websites. I build intuitive user interfaces, stable backend solutions, and highly functional digital tools using best practices, responsive design, and optimized workflows. With a passion for problem-solving and continuous learning, I enjoy transforming ideas into polished, real-world solutions.</p>
                 <p>Combining strong frontend skills with solid backend logic, I deliver projects that are visually appealing, secure, and technically reliable.</p>

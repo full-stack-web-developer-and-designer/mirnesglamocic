@@ -5,11 +5,17 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
+
 	<?php echo $head->renderHead(); ?>
+
 	<body>
-		<?php include 'inc/header.php'; ?>
+
+		<?php include_once './inc/header.php'; ?>
+
 		<div class="wrapper">
+
             <?php echo $page->renderPage(); ?>
+
             <section aria-label="LinkedIn Docker certificates" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
@@ -18,7 +24,11 @@
                     ?>
                 </ul>
             </section>
+
         </div>
+
         <?php include_once './inc/footer.php'; ?>
+
     </body>
+
 </html>

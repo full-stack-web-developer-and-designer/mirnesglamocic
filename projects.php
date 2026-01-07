@@ -6,17 +6,21 @@ $page = Pages::get(14);
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
+
     <?php echo $head->renderHead(); ?>
+
     <body>
-        <?php include 'inc/header.php'; ?>
+
+        <?php include_once './inc/header.php'; ?>
 
         <div class="wrapper">
+
             <section id="projects" aria-label="Web design and web development projects by Mirnes Glamočić">
+
                 <?php echo $page->renderPage(); ?>
 
                 <article id="intro">
-                    <p>
-                        Here are a few things I'm working on presently and some from the past. 
+                    <p> Here are a few things I'm working on presently and some from the past. 
                         To learn more, check out my 
                         <a href="https://www.linkedin.com/in/mirnesglamocic" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile.
                     </p>
@@ -81,6 +85,9 @@ $page = Pages::get(14);
                 </div>
             
         </div><!-- .wrapper -->
+
         <?php include_once './inc/footer.php'; ?>
+
     </body>
+
 </html>

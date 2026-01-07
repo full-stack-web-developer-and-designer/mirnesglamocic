@@ -6,16 +6,20 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
+
     <?php echo $head->renderHead(); ?>
+
     <body>
-        <?php include 'inc/header.php'; ?>
+
+        <?php include_once './inc/header.php'; ?>
+
         <div class="wrapper">
 
             <?php echo $page->renderPage(); ?>
 
             <?php $slider = new Slider(); ?>
 
-            <section class="slider-container" aria-label="LinkedIN Linux engineers certificates">
+            <section class="slider-container" aria-label="LinkedIn Linux engineers certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('linux_engineer');
@@ -23,7 +27,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIN Linux topic-based certificates">
+            <section class="slider-container" aria-label="LinkedIn Linux topic-based certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('linux');
@@ -31,7 +35,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIN Linux distro certificates">
+            <section class="slider-container" aria-label="LinkedIn Linux distro certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('linux_distro');
@@ -39,7 +43,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIN CentOS certificates">
+            <section class="slider-container" aria-label="LinkedIn CentOS certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('centos');
@@ -47,7 +51,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIN Bash certificates">
+            <section class="slider-container" aria-label="LinkedIn Bash certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('bash');
@@ -55,7 +59,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIN Linux text editors certificates">
+            <section class="slider-container" aria-label="LinkedIn Linux text editors certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('editors');
@@ -63,14 +67,18 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIN Linux foundations certificates">
+            <section class="slider-container" aria-label="LinkedIn Linux foundations certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('linux_foundation');
                     ?>
                 </ul>
             </section>
+
         </div>
+
         <?php include_once './inc/footer.php'; ?>
+
     </body>
+
 </html>

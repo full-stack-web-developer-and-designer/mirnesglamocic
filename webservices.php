@@ -6,8 +6,13 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
+
     <?php echo $head->renderHead(); ?>
-    <body><?php include 'inc/header.php'; ?>
+
+    <body>
+        
+        <?php include_once './inc/header.php'; ?>
+
         <div class="wrapper">
             
             <?php echo $page->renderPage(); ?>
@@ -29,7 +34,11 @@
                     ?>
                 </ul>
             </section>
+
         </div>
+
         <?php include_once './inc/footer.php'; ?>
+
     </body>
+
 </html>
