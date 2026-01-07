@@ -11,14 +11,14 @@
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
             <?php echo $page->renderPage(); ?>
+
+            <?php $slider = new Slider(); ?>
             
             <section class="slider-container" aria-label="SQL certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $sql = new SqlSlide();
-                        $sql->renderCertificates();
-                        $postgre = new PostgreSlide();
-                        $postgre->renderCertificates();
+                        $slider->render('sql');
+                        $slider->render('postgresql');
                     ?>
                 </ul>
             </section>
@@ -26,8 +26,7 @@
             <section class="slider-container" aria-label="MySQL certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $mySQL = new MySqlSlide();
-                        $mySQL->renderCertificates();
+                        $slider->render('mysql');
                     ?>
                 </ul>
             </section>
@@ -35,8 +34,7 @@
             <section class="slider-container" aria-label="MongoDB certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $mongoDb = new MongoDbSlide();
-                        $mongoDb->renderCertificates();
+                        $slider->render('mongodb');
                     ?>
                 </ul>
             </section>

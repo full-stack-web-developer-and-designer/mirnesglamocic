@@ -13,8 +13,8 @@
             <section aria-label="Docker certificates" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $docker=new DockerSlide();
-                        $docker->renderCertificates();
+                        $slider = new Slider();
+					    $slider->render('docker');
                     ?>
                 </ul>
             </section>

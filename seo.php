@@ -13,12 +13,12 @@
 
 			<?php echo $page->renderPage(); ?>
 			
-			<section class="slider-container" aria-label="SEO certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+			<section class="slider-container" aria-label="SEO certificates">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-					    $seo = new SeoSlide();
-					    $seo->renderCertificates();
+					    $slider = new Slider();
+					    $slider->render('seo');
 					?>
 				</ul>
 			</section><!--end .slider-container-->

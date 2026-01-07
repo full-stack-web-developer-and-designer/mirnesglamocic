@@ -12,15 +12,15 @@
 		<div class="wrapper">
 
 			<?php echo $page->renderPage(); ?>
+			
+			<?php $slider = new Slider(); ?>
 
 			<section class="slider-container" aria-label="UI/UX certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$uxPath = new UxPathSlide();
-						$uxPath->renderCertificates();
-						$uxIntro = new UxIntroSlide();
-						$uxIntro->renderCertificates();
+						$slider->render('ux_path');
+						$slider->render('ux_intro');
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -29,8 +29,7 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$interactionDesign = new InteractionDesignSlide();
-						$interactionDesign->renderCertificates();
+						$slider->render('interaction_design');
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -39,8 +38,7 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$ux = new UxSlide();
-						$ux->renderCertificates();
+						$slider->render('ux');
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -49,8 +47,7 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$uxParts = new UxPartsSlide();
-						$uxParts->renderCertificates();
+						$slider->render('ux_parts');
 					?>
 				</ul>
 			</section><!--end .slider-container-->
@@ -59,8 +56,7 @@
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
-						$uxFoundation = new UxFoundationSlide();
-						$uxFoundation->renderCertificates();
+						$slider->render('ux_foundations');
 					?>
 				</ul>
 			</section><!--end .slider-container-->

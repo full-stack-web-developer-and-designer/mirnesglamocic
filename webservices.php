@@ -9,12 +9,15 @@
     <?php echo $head->renderHead(); ?>
     <body><?php include 'inc/header.php'; ?>
         <div class="wrapper">
+            
             <?php echo $page->renderPage(); ?>
+
+            <?php $slider = new Slider(); ?>
+
             <section class="slider-container" aria-label="Web service certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $webServices = new WebServicesSlide();
-                        $webServices->renderCertificates();
+                        $slider->render('web_services');
                     ?>
                 </ul>
             </section>
@@ -22,8 +25,7 @@
             <section class="slider-container" aria-label="JSON certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $json = new JsonSlide();
-                        $json->renderCertificates();
+                        $slider->render('json');
                     ?>
                 </ul>
             </section>

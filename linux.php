@@ -10,12 +10,15 @@
     <body>
         <?php include 'inc/header.php'; ?>
         <div class="wrapper">
+
             <?php echo $page->renderPage(); ?>
+
+            <?php $slider = new Slider(); ?>
+
             <section class="slider-container" aria-label="Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $linuxEngineer = new LinuxEngineerSlide();
-                        $linuxEngineer->renderCertificates();
+                        $slider->render('linux_engineer');
                     ?>
                 </ul>
             </section>
@@ -23,8 +26,7 @@
             <section class="slider-container" aria-label="Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $linux = new LinuxSlide();
-                        $linux->renderCertificates();
+                        $slider->render('linux');
                     ?>
                 </ul>
             </section>
@@ -32,8 +34,7 @@
             <section class="slider-container" aria-label="Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $linuxDistro = new LinuxDistroSlide();
-                        $linuxDistro->renderCertificates();
+                        $slider->render('linux_distro');
                     ?>
                 </ul>
             </section>
@@ -41,8 +42,7 @@
             <section class="slider-container" aria-label="CentOS certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $centOS = new CentOSSlide();
-                        $centOS->renderCertificates();
+                        $slider->render('centos');
                     ?>
                 </ul>
             </section>
@@ -50,8 +50,7 @@
             <section class="slider-container" aria-label="Bash certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $bash = new BashSlide();
-                        $bash->renderCertificates();
+                        $slider->render('bash');
                     ?>
                 </ul>
             </section>
@@ -59,8 +58,7 @@
             <section class="slider-container" aria-label="Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $editors = new EditorsSlide();
-                        $editors->renderCertificates();
+                        $slider->render('editors');
                     ?>
                 </ul>
             </section>
@@ -68,8 +66,7 @@
             <section class="slider-container" aria-label="Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
                 <ul class="content-slider cs-hidden">
                     <?php
-                        $linuxFoundation = new LinuxFoundationSlide();
-                        $linuxFoundation->renderCertificates();
+                        $slider->render('linux_foundation');
                     ?>
                 </ul>
             </section>
