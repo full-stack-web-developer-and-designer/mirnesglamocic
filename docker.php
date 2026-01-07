@@ -10,7 +10,7 @@
 		<?php include 'inc/header.php'; ?>
 		<div class="wrapper">
             <?php echo $page->renderPage(); ?>
-            <section aria-label="Docker certificates" class="slider-container">
+            <section aria-label="LinkedIn Docker certificates" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();

@@ -14,7 +14,7 @@
 
             <?php $slider = new Slider(); ?>
             
-            <section class="slider-container" aria-label="SQL certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn SQL certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('sql');
@@ -23,7 +23,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="MySQL certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn MySQL certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('mysql');
@@ -31,7 +31,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="MongoDB certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn MongoDB certificate">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('mongodb');

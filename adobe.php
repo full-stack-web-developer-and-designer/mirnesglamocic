@@ -23,7 +23,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIn Photoshop CC certificates">
+            <section class="slider-container" aria-label="LinkedIn Photoshop design certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('photoshop_design');

@@ -14,7 +14,7 @@
 
             <?php $slider = new Slider(); ?>
 
-            <section aria-label="Back-end certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
+            <section aria-label="LinkedIn Back-end certificates" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('backend_php');
@@ -24,7 +24,7 @@
                 </ul>
             </section>
             
-            <section aria-label="PHP certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
+            <section aria-label="LinkedIn PHP and PHP frameworks certificates" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('php_linkedin');
@@ -33,7 +33,7 @@
                 </ul>
             </section>
             
-            <section aria-label="PHP certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
+            <section aria-label="Pluralsight PHP certificates" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('php_pluralsight');
@@ -41,7 +41,7 @@
                 </ul>
             </section>
             
-            <section aria-label="Python certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
+            <section aria-label="LinkedIn Python certificates" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('python');
@@ -49,7 +49,7 @@
                 </ul>
             </section>
             
-            <section aria-label="Node certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina"class="slider-container">
+            <section aria-label="LinkedIn Node certificates" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('node');

@@ -13,7 +13,7 @@
             
         <?php echo $page->renderPage(); ?>
 
-            <section class="slider-container" aria-label="Front-end certificates by SoloLearn">
+            <section class="slider-container" aria-label="SoloLearn Front-end certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -22,7 +22,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="Front-end certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn Front-end certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -33,7 +33,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="HTML certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn HTML certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -42,7 +42,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="HTML and CSS certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn HTML and CSS certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -51,7 +51,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="New CSS certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn new CSS certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -60,7 +60,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="CSS, SASS and Tailwind certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn CSS, SASS and Tailwind certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -73,7 +73,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="Bootstrap certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn Bootstrap certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -82,7 +82,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="Web Development certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn Web Development certificates">
                 <ul class="content-slider cs-hidden">
                     <?php 
                         
@@ -94,7 +94,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="JavaScript certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn JavaScript certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -105,7 +105,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="JavaScript certificates by Pluralsight">
+            <section class="slider-container" aria-label="Pluralsight JavaScript certificates">
                 <ul class="content-slider cs-hidden">
                     <?php 
                         $slider = new Slider();
@@ -114,7 +114,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="jQuery certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn jQuery certificates">
                 <ul class="content-slider cs-hidden">
                     <?php 
                         $slider = new Slider();
@@ -123,7 +123,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="jQuery certificates by Pluralsight">
+            <section class="slider-container" aria-label="Pluralsight jQuery certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -132,7 +132,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="Angular certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn Angular certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -141,7 +141,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="React certificates by LinkedIn">
+            <section class="slider-container" aria-label="LinkedIn React certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();

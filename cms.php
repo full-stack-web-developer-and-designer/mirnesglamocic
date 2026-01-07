@@ -12,7 +12,7 @@
         <div class="wrapper">
             <?php echo $page->renderPage(); ?>
             
-            <section class="slider-container" aria-label="WordPress certificates">
+            <section class="slider-container" aria-label="LinkedIn WordPress core certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -21,7 +21,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn WordPress Plugin certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -30,7 +30,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn WordPress Theme certificate">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();
@@ -39,7 +39,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn WordPress Ecommerce certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider = new Slider();

@@ -15,7 +15,7 @@
 
             <?php $slider = new Slider(); ?>
             
-            <section class="slider-container" aria-label="GIT certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn topic-based GIT certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('git_new');
@@ -23,7 +23,7 @@
                 </ul>
             </section>
 
-            <section class="slider-container" aria-label="GIT certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn core GIT core certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('git');
@@ -32,7 +32,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="GitHub certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn  topic-based GitHub certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('github_new');
@@ -40,7 +40,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="GitHub certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina">
+            <section class="slider-container" aria-label="LinkedIn core GitHub certificates">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('github');

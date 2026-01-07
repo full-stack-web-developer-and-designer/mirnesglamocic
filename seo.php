@@ -13,7 +13,7 @@
 
 			<?php echo $page->renderPage(); ?>
 			
-			<section class="slider-container" aria-label="SEO certificates">
+			<section class="slider-container" aria-label="LinkedIn SEO certificates">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
