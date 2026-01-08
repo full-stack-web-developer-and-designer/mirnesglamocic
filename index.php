@@ -8,9 +8,9 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-    <?php
-        echo $head->renderHead();
-    ?>
+    
+    <?php echo $head->renderHead(); ?>
+
     <body id="home">
 
         <?php include_once './inc/header.php';?>
@@ -118,12 +118,12 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
             <div class="wrapper">
                 <?php include_once './form_process.php';?>
                 <article id="form">
-                        <?php include './inc/form.php';?>
+                        <?php include_once './inc/form.php';?>
                 </article>
                 
                 <div id="icons">
 
-                    <p>Open to full-time, remote, or contract opportunities. Let’s discuss how I can contribute to your team.</p>
+                    <p>Feel free to support me</p>
                     
                     <div id="icon_box">
                         <?php
@@ -140,4 +140,5 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
         <?php include_once './inc/footer.php';//end #footer?>
 
     </body>
+
 </html>
