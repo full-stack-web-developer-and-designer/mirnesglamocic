@@ -60,7 +60,7 @@ class Slider extends ConnectSlider
             echo <<<HTML
             <li class="item-a slide">
                 <article class="cert">
-                    <a href="./cert/BIG/{$picture}.webp" data-href="./cert/SMALL/{$picture}.webp" data-lightbox="image-group">
+                    <a href="./cert/BIG/{$picture}.webp" class="progressive replace" data-href="./cert/SMALL/{$picture}.webp" data-lightbox="image-group">
                         <img
                             src="./cert/SMALL/{$picture}.webp"
                             alt="{$alt}"
