@@ -3,6 +3,7 @@
     $head = Head::get(9);
     $page_id=9;
     $page = Pages::get(9);
+	$slider = new Slider();
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
@@ -17,19 +18,16 @@
 
 			<?php echo $page->renderPage(); ?>
 			
-			<section class="slider-container" aria-label="LinkedIn SEO certificates">
+			<section class="slider-container" aria-label="LinkedIn SEO Certificates Slider">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
-					<?php
-					    $slider = new Slider();
-					    $slider->render('seo');
-					?>
+					<?php $slider->render('seo'); ?>
 				</ul>
 			</section><!--end .slider-container-->
 			
 		</div><!--end .wrapper-->
 
-		<?php include_once './inc/footer.php';//end #footer ?>
+		<?php include_once './inc/footer.php'; //end #footer ?>
 
 	</body>
 

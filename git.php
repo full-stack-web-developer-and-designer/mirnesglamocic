@@ -3,6 +3,7 @@
     $head = Head::get(11);
     $page_id = 11;
     $page = Pages::get(11);
+    $slider = new Slider();
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
@@ -16,18 +17,14 @@
         <div class="wrapper">
 
             <?php echo $page->renderPage(); ?>
-
-            <?php $slider = new Slider(); ?>
             
-            <section class="slider-container" aria-label="LinkedIn topic-based GIT certificates">
+            <section class="slider-container" aria-label="LinkedIn topic-based GIT Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('git_new');
-                    ?>
+                    <?php $slider->render('git_new'); ?>
                 </ul>
             </section>
 
-            <section class="slider-container" aria-label="LinkedIn core GIT core certificates">
+            <section class="slider-container" aria-label="LinkedIn core GIT core Certificates Slider">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('git');
@@ -36,26 +33,21 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIn  topic-based GitHub certificates">
+            <section class="slider-container" aria-label="LinkedIn  topic-based GitHub Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('github_new');
-                    ?>
+                    <?php $slider->render('github_new'); ?>
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIn core GitHub certificates">
+            <section class="slider-container" aria-label="LinkedIn core GitHub Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('github');
-                    ?>
+                    <?php $slider->render('github'); ?>
                 </ul>
             </section>
 
         </div>
 
-        <?php include_once './inc/footer.php';//end #footer ?>
+        <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
-
 </html>

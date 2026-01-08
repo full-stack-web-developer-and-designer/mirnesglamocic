@@ -1,7 +1,9 @@
 <?php
     require_once 'core/init.php';
     $head=Head::get(3);
-    $page_id=3;$page=Pages::get(3);
+    $page_id=3;
+    $page=Pages::get(3);
+    $slider = new Slider();
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
@@ -16,8 +18,6 @@
 
             <?php echo $page->renderPage(); ?>
 
-            <?php $slider = new Slider(); ?>
-
             <section aria-label="LinkedIn Back-end certificates" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
@@ -28,7 +28,7 @@
                 </ul>
             </section>
             
-            <section aria-label="LinkedIn PHP and PHP frameworks certificates" class="slider-container">
+            <section aria-label="LinkedIn PHP and PHP Frameworks Certificates Slider" class="slider-container">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('php_linkedin');
@@ -37,34 +37,27 @@
                 </ul>
             </section>
             
-            <section aria-label="Pluralsight PHP certificates" class="slider-container">
+            <section aria-label="Pluralsight PHP Certificates Slider" class="slider-container">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('php_pluralsight');
-                    ?>
+                    <?php $slider->render('php_pluralsight'); ?>
                 </ul>
             </section>
             
-            <section aria-label="LinkedIn Python certificates" class="slider-container">
+            <section aria-label="LinkedIn Python Certificates Slider" class="slider-container">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('python');
-                    ?>
+                    <?php $slider->render('python'); ?>
                 </ul>
             </section>
             
-            <section aria-label="LinkedIn Node certificates" class="slider-container">
+            <section aria-label="LinkedIn Node Certificates Slider" class="slider-container">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('node');
-                    ?>
+                    <?php $slider->render('node'); ?>
                 </ul>
             </section>
 
         </div>
 
-        <?php include_once './inc/footer.php'; ?>
+        <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
-
 </html>

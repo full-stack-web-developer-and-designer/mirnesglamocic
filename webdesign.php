@@ -3,8 +3,10 @@
     $head = Head::get(7);
     $page_id = 7;
     $page = Pages::get(7);
+    $slider = new Slider();
 ?>
 <!DOCTYPE html>
+
 <html itemscope lang="en">
 
     <?php echo $head->renderHead(); ?>
@@ -17,43 +19,33 @@
 
             <?php echo $page->renderPage(); ?>
 
-            <?php $slider = new Slider(); ?>
-
-            <section class="slider-container" aria-label="LinkedIn Web Design learning path certificates">
+            <section class="slider-container" aria-label="LinkedIn Web Design Learning Path Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('web_design_path');
-                    ?>
+                    <?php $slider->render('web_design_path'); ?>
                 </ul>
             </section>
 
-            <section class="slider-container" aria-label="LinkedIn Web Designers certificates">
+            <section class="slider-container" aria-label="LinkedIn Web Designers Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('web_designers');
-                    ?>
+                    <?php $slider->render('web_designers'); ?>
                 </ul>
             </section>
 
-            <section class="slider-container" aria-label="LinkedIn Web Design certificates">
+            <section class="slider-container" aria-label="LinkedIn Web Design Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('web_design');
-                    ?>
+                    <?php $slider->render('web_design'); ?>
                 </ul>
             </section>
 
-            <section class="slider-container" aria-label="LinkedIn SVG certificates">
+            <section class="slider-container" aria-label="LinkedIn SVG Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('svg');
-                    ?>
+                    <?php $slider->render('svg'); ?>
                 </ul>
             </section>
             
         </div>
 
-        <?php include_once './inc/footer.php';//end #footer ?>
+        <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
 

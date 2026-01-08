@@ -3,6 +3,7 @@
     $head = Head::get(4);
     $page_id = 4;
     $page = Pages::get(4);
+    $slider = new Slider();
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
@@ -16,10 +17,8 @@
         <div class="wrapper">
 
             <?php echo $page->renderPage(); ?>
-
-            <?php $slider = new Slider(); ?>
             
-            <section class="slider-container" aria-label="LinkedIn SQL certificates">
+            <section class="slider-container" aria-label="LinkedIn SQL Certificates Slider">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('sql');
@@ -28,26 +27,21 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIn MySQL certificates">
+            <section class="slider-container" aria-label="LinkedIn MySQL Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('mysql');
-                    ?>
+                    <?php $slider->render('mysql'); ?>
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIn MongoDB certificate">
+            <section class="slider-container" aria-label="LinkedIn MongoDB Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('mongodb');
-                    ?>
+                    <?php $slider->render('mongodb'); ?>
                 </ul>
             </section>
 
         </div>
 
-        <?php include_once './inc/footer.php';//end #footer ?>
+        <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
-
 </html>

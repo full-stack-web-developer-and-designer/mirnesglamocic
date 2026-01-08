@@ -3,6 +3,7 @@
     $head = Head::get(10);
     $page_id = 10;
     $page = Pages::get(10);
+    $slider = new Slider();
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
@@ -17,33 +18,27 @@
 
             <?php echo $page->renderPage(); ?>
 
-            <?php $slider = new Slider(); ?>
-
-            <section class="slider-container" aria-label="LinkedIn Photoshop CC certificates">
+            <section class="slider-container" aria-label="LinkedIn Photoshop CC Certificates Slider">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('photoshop');
-                    ?>
+                    <?php $slider->render('photoshop'); ?>
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIn Photoshop design certificates">
-                <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('photoshop_design');
-                    ?>
+            <section class="slider-container" aria-label="LinkedIn Photoshop Design Certificates Slider>
+                <ul class="content-slider cs-hidden">         
+                               <?php $slider->render('photoshop_design'); ?>
                 </ul>
             </section>
 
             <section class="slider-container" aria-label="LinkedIn Lightroom CC certificates">
                 <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('lightroom');
-                    ?>
+                    <?php $slider->render('lightroom'); ?>
                 </ul>
             </section>
 
         </div>
+
         <?php include_once './inc/footer.php'; //end #footer ?>
+        
     </body>
 </html>

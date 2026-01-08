@@ -3,6 +3,7 @@
     $head = Head::get(6);
     $page_id = 6;
     $page = Pages::get(6);
+    $slider = new Slider();
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
@@ -17,9 +18,7 @@
             
             <?php echo $page->renderPage(); ?>
 
-            <?php $slider = new Slider(); ?>
-
-            <section class="slider-container" aria-label="LinkedIn Web service certificates">
+            <section class="slider-container" aria-label="LinkedIn Web Services Certificates Slider">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('web_services');
@@ -27,7 +26,7 @@
                 </ul>
             </section>
             
-            <section class="slider-container" aria-label="LinkedIn JSON certificates">
+            <section class="slider-container" aria-label="LinkedIn JSON Certificates Slider">
                 <ul class="content-slider cs-hidden">
                     <?php
                         $slider->render('json');
@@ -37,7 +36,7 @@
 
         </div>
 
-        <?php include_once './inc/footer.php'; ?>
+        <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
 

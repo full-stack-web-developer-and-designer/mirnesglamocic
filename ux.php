@@ -3,6 +3,7 @@
     $head = Head::get(8);
     $page_id=8;
     $page = Pages::get(8);
+	$slider = new Slider();
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
@@ -16,10 +17,8 @@
 		<div class="wrapper">
 
 			<?php echo $page->renderPage(); ?>
-			
-			<?php $slider = new Slider(); ?>
 
-			<section class="slider-container" aria-label="LinkedIn UI and UX learning path certificates">
+			<section class="slider-container" aria-label="LinkedIn UI and UX Learning Path Certificates Slider">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
 					<?php
@@ -29,45 +28,37 @@
 				</ul>
 			</section><!--end .slider-container-->
 			
-			<section class="slider-container" aria-label="LinkedIn Interaction Design certificates">
+			<section class="slider-container" aria-label="LinkedIn Interaction Design Certificates Slider">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
-					<?php
-						$slider->render('interaction_design');
-					?>
+					<?php $slider->render('interaction_design'); ?>
 				</ul>
 			</section><!--end .slider-container-->
 
-			<section class="slider-container" aria-label="LinkedIn UI and UX core certificates">
+			<section class="slider-container" aria-label="LinkedIn UI and UX Core Certificates Slider">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
-					<?php
-						$slider->render('ux');
-					?>
+					<?php $slider->render('ux'); ?>
 				</ul>
 			</section><!--end .slider-container-->
 
-			<section class="slider-container" aria-label="LinkedIn UI and UX topic-based certificates">
+			<section class="slider-container" aria-label="LinkedIn UI and UX Topic-based Certificates Slider">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
-					<?php
-						$slider->render('ux_parts');
-					?>
+					<?php $slider->render('ux_parts'); ?>
 				</ul>
 			</section><!--end .slider-container-->
 
-			<section class="slider-container" aria-label="LinkedIn UI and UX foundations certificates">
+			<section class="slider-container" aria-label="LinkedIn UI and UX Foundations Certificates Slider">
 				<ul class="content-slider cs-hidden">
 				<!-- slider box -->
-					<?php
-						$slider->render('ux_foundations');
-					?>
+					<?php $slider->render('ux_foundations'); ?>
 				</ul>
 			</section><!--end .slider-container-->
 			
 		</div><!--end .wrapper-->
 
-		<?php include_once './inc/footer.php';//end #footer ?>
+		<?php include_once './inc/footer.php'; //end #footer ?>
 
 	</body>
 
