@@ -1,5 +1,5 @@
 <h2>Contact</h2>
-    <p id="contact_offer">Let's work together! I'm ready for new projects.</p>
+    <p id="contact_offer">Open to full-time, remote, or contract opportunities. Let’s discuss how I can contribute to your team.</p>
 <form  spellcheck="false" autocomplete="on" id='contact_me' class='form ajax' name='contact_me' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>' method='POST'> 
 <p id="response" class="success"><!-- This will hold response from the server --></p>
             <div class="form-control InputIconBg">
