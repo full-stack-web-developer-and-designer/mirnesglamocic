@@ -60,7 +60,7 @@ class Slider extends ConnectSlider
             echo <<<HTML
             <li class="item-a slide">
                 <article class="cert">
-                    <a href="./cert/BIG/{$picture}.webp" data-lightbox="image-group">
+                    <a href="./cert/BIG/{$picture}.webp" data-href="./cert/SMALL/{$picture}.webp" data-lightbox="image-group">
                         <img
                             src="./cert/SMALL/{$picture}.webp"
                             alt="{$alt}"
@@ -72,4 +72,26 @@ class Slider extends ConnectSlider
             HTML;
         }
     }
+    public function renderSection(string $label, string|array $sliders): void
+    {
+        // Normalize input: always work with an array
+        $sliders = is_array($sliders) ? $sliders : [$sliders];
+        ?>
+        <section class="slider-container" aria-label="<?php echo htmlspecialchars($label); ?> Slider">
+
+            <h2 class="visually-hidden">
+                <?php echo htmlspecialchars($label); ?>
+            </h2>
+
+            <ul class="content-slider cs-hidden" tabindex="0">
+                <?php
+                foreach ($sliders as $sliderKey) {
+                    $this->render($sliderKey);
+                }
+                ?>
+            </ul>
+        </section>
+        <?php
+    }
+
 }
