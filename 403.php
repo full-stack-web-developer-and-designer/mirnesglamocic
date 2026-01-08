@@ -5,7 +5,7 @@
     $page = Pages::get(15);
 ?>
 <!DOCTYPE html>
-<html itemscope lang="en">
+<html itemscope itemtype="https://schema.org/WebPage" lang="en">
 	<?php
 		echo $head->renderHead();
 	?>
@@ -20,7 +20,7 @@
 			</div><!-- end #main -->
 
 		</div><!-- end .wrapper -->
-		
+
 		<?php include_once './inc/footer.php';//end #footer?>
 	
 	</body>

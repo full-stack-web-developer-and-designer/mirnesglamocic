@@ -7,7 +7,7 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
     $page = Pages::get(1);
 ?>
 <!DOCTYPE html>
-<html itemscope lang="en">
+<html itemscope itemtype="https://schema.org/WebPage" lang="en">
     
     <?php echo $head->renderHead(); ?>
 

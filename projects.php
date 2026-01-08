@@ -5,7 +5,7 @@ $page_id = 14;
 $page = Pages::get(14);
 ?>
 <!DOCTYPE html>
-<html itemscope lang="en">
+<html itemscope itemtype="https://schema.org/WebPage" lang="en">
 
     <?php echo $head->renderHead(); ?>
 
@@ -89,5 +89,5 @@ $page = Pages::get(14);
         <?php include_once './inc/footer.php'; ?>
 
     </body>
-
+    
 </html>

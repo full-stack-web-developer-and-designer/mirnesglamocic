@@ -5,7 +5,7 @@
     $slider = new Slider();
 ?>
 <!DOCTYPE html>
-<html itemscope lang="en">
+<html itemscope itemtype="https://schema.org/WebPage" lang="en">
 
 	<?php echo $head->renderHead(); ?>
 
@@ -29,5 +29,5 @@
         <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
-    
+
 </html>
