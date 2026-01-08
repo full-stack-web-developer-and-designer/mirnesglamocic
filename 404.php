@@ -6,15 +6,12 @@
 ?>
 <!DOCTYPE html>
 <html itemscope lang="en">
-	<?php
-		echo $head->renderHead();
-	?>
+
+	<?php echo $head->renderHead(); ?>
 	<body>
-		<div id="wrapper">
-		<?php 
-		// echo $postArr->render(); 	
-		include './inc/header.php'; 
-		?>
+		
+		<?php include_once './inc/header.php'; ?>
+		
 		<div class="wrapper">
 			
 			<?php echo $page->renderPage(); ?>
@@ -24,6 +21,9 @@
 			</div><!-- end #main -->
 
 		</div><!-- end .wrapper -->
-		<?php include_once './inc/footer.php';//end #footer?>
+
+		<?php include_once './inc/footer.php'; //end #footer?>
+
 	</body>
+	
 </html>
