@@ -23,5 +23,7 @@ websites/
 *.json
 *.xml
 *.ico
+*.sql
+*.zip
 *.webmanifest
-form_process.php
+form*.php
