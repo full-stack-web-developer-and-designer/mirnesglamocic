@@ -18,49 +18,45 @@
 
             <?php echo $page->renderPage(); ?>
 
-            <section class="slider-container" aria-label="LinkedIn Linux Engineers Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('linux_engineer'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Linux Topic-based Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('linux'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Linux Distro Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('linux_distro'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn CentOS Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('centos'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Bash Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('bash'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Linux text Editors Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('editors'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Linux Foundations Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('linux_foundation'); ?>
-                </ul>
-            </section>
+            <?php
 
-        </div>
+                $slider->renderSection(
+                        'LinkedIn Linux Engineers Certificates',
+                        'linux_engineer',
+                    );
+
+                $slider->renderSection(
+                    'LinkedIn Linux Topic-Based Certificates',
+                    'linux',
+                );
+
+                $slider->renderSection(
+                    'LinkedIn Linux Distro Certificates',
+                    'linux_distro',
+                    );
+
+                $slider->renderSection(
+                    'LinkedIn CentOS Certificates',
+                    'centos',
+                );
+
+                $slider->renderSection(
+                    'LinkedIn Bash Certificates',
+                    'bash',
+                );
+
+                $slider->renderSection(
+                    'LinkedIn Linux Text Editors Certificates',
+                    'editors',
+                    );
+
+                $slider->renderSection(
+                    'LinkedIn Linux Foundations',
+                    'linux_foundation',
+                );
+            ?>
+
+        </div><!-- end .wrapper -->
 
         <?php include_once './inc/footer.php'; //end #footer ?>
 

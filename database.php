@@ -17,31 +17,33 @@
         <div class="wrapper">
 
             <?php echo $page->renderPage(); ?>
-            
-            <section class="slider-container" aria-label="LinkedIn SQL Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('sql');
-                        $slider->render('postgresql');
-                    ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn MySQL Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('mysql'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn MongoDB Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('mongodb'); ?>
-                </ul>
-            </section>
 
-        </div>
+            <?php
+                $slider->renderSection(
+                    'LinkedIn SQL Certificates',
+                    [
+                        'sql',
+                        'postgresql',
+                    ]
+                );
+
+                $slider->renderSection(
+                    'LinkedIn MySQL Certificates',
+                    [
+                        'mysql',
+                    ]
+                );
+
+                $slider->renderSection(
+                    'LinkedIn MongoDB Certificates',
+                    'mongodb',
+                );
+            ?>
+            
+        </div><!-- end .wrapper -->
 
         <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
+    
 </html>

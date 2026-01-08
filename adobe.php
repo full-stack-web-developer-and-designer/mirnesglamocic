@@ -18,27 +18,27 @@
 
             <?php echo $page->renderPage(); ?>
 
-            <section class="slider-container" aria-label="LinkedIn Photoshop CC Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('photoshop'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Photoshop Design Certificates Slider>
-                <ul class="content-slider cs-hidden">         
-                               <?php $slider->render('photoshop_design'); ?>
-                </ul>
-            </section>
+            <?php
+                $slider->renderSection(
+                    'LinkedIn Photoshop CC Certificates',
+                    'photoshop'
+                );
 
-            <section class="slider-container" aria-label="LinkedIn Lightroom CC certificates">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('lightroom'); ?>
-                </ul>
-            </section>
+                $slider->renderSection(
+                    'LinkedIn Photoshop Design Certificates',
+                    'photoshop_design'
+                );
 
-        </div>
+                $slider->renderSection(
+                    'LinkedIn Lightroom CC Certificates',
+                    'lightroom'
+                );
+            ?>
+
+        </div><!-- end .wrapper -->
 
         <?php include_once './inc/footer.php'; //end #footer ?>
         
     </body>
+    
 </html>

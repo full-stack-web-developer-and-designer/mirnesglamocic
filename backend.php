@@ -18,46 +18,44 @@
 
             <?php echo $page->renderPage(); ?>
 
-            <section aria-label="LinkedIn Back-end certificates" class="slider-container">
-                <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('backend_php');
-                        $slider->render('backend_python');
-                        $slider->render('backend_intro');
-                    ?>
-                </ul>
-            </section>
-            
-            <section aria-label="LinkedIn PHP and PHP Frameworks Certificates Slider" class="slider-container">
-                <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('php_linkedin');
-                        $slider->render('php_frameworks');
-                    ?>
-                </ul>
-            </section>
-            
-            <section aria-label="Pluralsight PHP Certificates Slider" class="slider-container">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('php_pluralsight'); ?>
-                </ul>
-            </section>
-            
-            <section aria-label="LinkedIn Python Certificates Slider" class="slider-container">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('python'); ?>
-                </ul>
-            </section>
-            
-            <section aria-label="LinkedIn Node Certificates Slider" class="slider-container">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('node'); ?>
-                </ul>
-            </section>
+            <?php
+                $slider->renderSection(
+                    'LinkedIn Back-end Certificates',
+                    [
+                        'backend_php',
+                        'backend_python',
+                        'backend_intro',
+                    ]
+                );
 
-        </div>
+                $slider->renderSection(
+                    'LinkedIn PHP and PHP Frameworks Certificates',
+                    [
+                        'php_linkedin',
+                        'php_frameworks',
+                    ]
+                );
+
+                $slider->renderSection(
+                    'Pluralsight PHP Certificates',
+                    'php_pluralsight',
+                );
+
+                $slider->renderSection(
+                    'LinkedIn Python Certificates',
+                    'python',
+                );
+
+                $slider->renderSection(
+                    'LinkedIn Node Certificates',
+                    'node',
+                );
+            ?>
+
+        </div><!-- end .wrapper -->
 
         <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
+
 </html>

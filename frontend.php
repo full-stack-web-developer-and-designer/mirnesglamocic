@@ -18,106 +18,95 @@
             
         <?php echo $page->renderPage(); ?>
 
-            <section class="slider-container" aria-label="SoloLearn Front-end Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('frontend_sololearn'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Front-end Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php
-					    $slider->render('frontend_linkedin');
-					    $slider->render('frontend_intro');
-                    ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn HTML Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('html'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn HTML and CSS Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('html_and_css'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn new CSS Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('css_new'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn CSS, SASS and Tailwind Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php
-					    $slider->render('css');
-					    $slider->render('sass');
-					    $slider->render('tailwind');
-                    ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Bootstrap Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('bootstrap'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Web Development Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php 
-					    $slider->render('web_development');
-					    $slider->render('view_source');
-                    ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn JavaScript Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php
-					    $slider->render('javascript_linkedin');
-					    $slider->render('typescript');
-                    ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="Pluralsight JavaScript Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('javascript_pluralsight'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn jQuery Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('jquery'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="Pluralsight jQuery Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('jquery_pluralsight'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn Angular Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('angular'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn React Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('react'); ?>
-                </ul>
-            </section>
+        <?php
+            $slider->renderSection(
+                'SoloLearn Front-end Certificates',
+                'frontend_sololearn'
+            );
 
-        </div>
+            $slider->renderSection(
+                    'LinkedIn Front-end Certificates',
+                    [
+                        'frontend_linkedin',
+                        'frontend_intro',
+                    ]
+                );
+
+            $slider->renderSection(
+                'LinkedIn HTML Certificates',
+                'html'
+            );
+
+            $slider->renderSection(
+                'LinkedIn HTML and CSS Certificates',
+                'html_and_css'
+            );
+
+            $slider->renderSection(
+                'LinkedIn Newest CSS Certificates',
+                'css_new'
+            );
+
+            $slider->renderSection(
+                'LinkedIn CSS, SASS and Tailwind Certificates',
+                [
+                    'css',
+                    'sass',
+                    'tailwind',
+                ]
+            );
+
+            $slider->renderSection(
+                'LinkedIn Bootstrap Certificates',
+                'bootstrap'
+            );
+
+            $slider->renderSection(
+                'LinkedIn Web Development Certificates',
+                [
+                    'web_development',
+                    'view_source',
+                ]
+            );
+
+            $slider->renderSection(
+                'LinkedIn JavaScript Certificates',
+                [
+                    'javascript_linkedin',
+                    'typescript',
+                ]
+            );
+
+            $slider->renderSection(
+                'Pluralsight JavaScript Certificates',
+                'javascript_pluralsight'
+            );
+
+            $slider->renderSection(
+                'LinkedIn jQuery Certificates',
+                'jquery'
+            );
+
+            $slider->renderSection(
+                'Pluralsight jQuery Certificates',
+                'jquery_pluralsight'
+            );
+
+            $slider->renderSection(
+                'LinkedIn Angular Certificates',
+                'angular'
+            );
+
+            $slider->renderSection(
+                'LinkedIn React Certificates',
+                'react'
+            );
+        ?>
+
+        </div><!-- end .wrapper -->
 
         <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
+
 </html>

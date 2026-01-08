@@ -18,43 +18,35 @@
 
 			<?php echo $page->renderPage(); ?>
 
-			<section class="slider-container" aria-label="LinkedIn UI and UX Learning Path Certificates Slider">
-				<ul class="content-slider cs-hidden">
-				<!-- slider box -->
-					<?php
-						$slider->render('ux_path');
-						$slider->render('ux_intro');
-					?>
-				</ul>
-			</section><!--end .slider-container-->
-			
-			<section class="slider-container" aria-label="LinkedIn Interaction Design Certificates Slider">
-				<ul class="content-slider cs-hidden">
-				<!-- slider box -->
-					<?php $slider->render('interaction_design'); ?>
-				</ul>
-			</section><!--end .slider-container-->
+			<?php
+				$slider->renderSection(
+					'LinkedIn UI and UX Learning Path Certificates',
+					[
+						'ux_path',
+						'ux_intro',
+					]
+				);
 
-			<section class="slider-container" aria-label="LinkedIn UI and UX Core Certificates Slider">
-				<ul class="content-slider cs-hidden">
-				<!-- slider box -->
-					<?php $slider->render('ux'); ?>
-				</ul>
-			</section><!--end .slider-container-->
+				$slider->renderSection(
+					'LinkedIn Interaction Design Certificates',
+					'interaction_design',
+				);
 
-			<section class="slider-container" aria-label="LinkedIn UI and UX Topic-based Certificates Slider">
-				<ul class="content-slider cs-hidden">
-				<!-- slider box -->
-					<?php $slider->render('ux_parts'); ?>
-				</ul>
-			</section><!--end .slider-container-->
+				$slider->renderSection(
+					'LinkedIn UI and UX Core Certificates',
+					'ux',
+				);
 
-			<section class="slider-container" aria-label="LinkedIn UI and UX Foundations Certificates Slider">
-				<ul class="content-slider cs-hidden">
-				<!-- slider box -->
-					<?php $slider->render('ux_foundations'); ?>
-				</ul>
-			</section><!--end .slider-container-->
+				$slider->renderSection(
+					'LinkedIn UI and UX Topic-Based Certificates',
+					'ux_parts',
+				);
+				
+				$slider->renderSection(
+					'LinkedIn UI and UX Foundations Certificates',
+					'ux_foundations',
+				);
+            ?>
 			
 		</div><!--end .wrapper-->
 

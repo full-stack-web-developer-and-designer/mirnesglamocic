@@ -19,29 +19,28 @@
 
             <?php echo $page->renderPage(); ?>
 
-            <section class="slider-container" aria-label="LinkedIn Web Design Learning Path Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('web_design_path'); ?>
-                </ul>
-            </section>
+            <?php
 
-            <section class="slider-container" aria-label="LinkedIn Web Designers Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('web_designers'); ?>
-                </ul>
-            </section>
+                $slider->renderSection(
+                    'LinkedIn Web Design Learning Path Certificates',
+                    'web_design_path',
+                );
 
-            <section class="slider-container" aria-label="LinkedIn Web Design Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('web_design'); ?>
-                </ul>
-            </section>
+                $slider->renderSection(
+                    'LinkedIn Web Designers Certificates',
+                    'web_designers',
+                );
 
-            <section class="slider-container" aria-label="LinkedIn SVG Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('svg'); ?>
-                </ul>
-            </section>
+                $slider->renderSection(
+                    'LinkedIn Web Design Certificates',
+                    'web_design',
+                );
+
+                $slider->renderSection(
+                    'LinkedIn SVG Certificates',
+                    'svg',
+                );
+            ?>
             
         </div>
 

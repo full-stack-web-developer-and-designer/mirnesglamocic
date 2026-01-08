@@ -17,35 +17,33 @@
         <div class="wrapper">
 
             <?php echo $page->renderPage(); ?>
-            
-            <section class="slider-container" aria-label="LinkedIn WordPress Core Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('wordpress'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn WordPress Plugin Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('wordpress_plugin'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn WordPress Theme Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('wordpress_theme'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn WordPress Ecommerce Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('wordpress_ecommerce');
-                    ?>
-                </ul>
-            </section>
 
-        </div>
+            <?php
+                $slider->renderSection(
+                'LinkedIn WordPress Core Certificates',
+                'wordpress'
+                );
+
+                $slider->renderSection(
+                    'LinkedIn WordPress Plugin Certificates',
+                    'wordpress_plugin'
+                );
+
+                $slider->renderSection(
+                    'LinkedIn WordPress Theme Certificates',
+                    'wordpress_theme'
+                );
+
+                $slider->renderSection(
+                    'LinkedIn WordPress Ecommerce Certificates',
+                    'wordpress_ecommerce'
+                );
+            ?>
+
+        </div><!-- end .wrapper -->
 
         <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
+    
 </html>

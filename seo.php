@@ -17,13 +17,14 @@
 		<div class="wrapper">
 
 			<?php echo $page->renderPage(); ?>
-			
-			<section class="slider-container" aria-label="LinkedIn SEO Certificates Slider">
-				<ul class="content-slider cs-hidden">
-				<!-- slider box -->
-					<?php $slider->render('seo'); ?>
-				</ul>
-			</section><!--end .slider-container-->
+
+			<?php
+
+			$slider->renderSection(
+				'LinkedIn SEO Certificates',
+				'seo',
+                );
+            ?>
 			
 		</div><!--end .wrapper-->
 

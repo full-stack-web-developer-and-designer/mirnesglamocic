@@ -17,15 +17,17 @@
 
             <?php echo $page->renderPage(); ?>
 
-            <section aria-label="LinkedIn Docker Certificates Slider" class="slider-container">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('docker'); ?>
-                </ul>
-            </section>
+            <?php
+                $slider->renderSection(
+                    'LinkedIn Docker Certificates',
+                    'docker',
+                );
+            ?>
 
-        </div>
+        </div><!-- end .wrapper -->
 
         <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
+    
 </html>

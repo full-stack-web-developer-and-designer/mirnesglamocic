@@ -18,21 +18,17 @@
             
             <?php echo $page->renderPage(); ?>
 
-            <section class="slider-container" aria-label="LinkedIn Web Services Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('web_services');
-                    ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn JSON Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('json');
-                    ?>
-                </ul>
-            </section>
+            <?php
+                $slider->renderSection(
+                    'LinkedIn Web Services Certificates',
+                    'web_services',
+                );
+
+                $slider->renderSection(
+                    'LinkedIn JSON Certificates',
+                    'json',
+                );
+            ?>
 
         </div>
 

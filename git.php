@@ -17,37 +17,36 @@
         <div class="wrapper">
 
             <?php echo $page->renderPage(); ?>
-            
-            <section class="slider-container" aria-label="LinkedIn topic-based GIT Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('git_new'); ?>
-                </ul>
-            </section>
 
-            <section class="slider-container" aria-label="LinkedIn core GIT core Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php
-                        $slider->render('git');
-                        $slider->render('vcs');
-                    ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn  topic-based GitHub Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('github_new'); ?>
-                </ul>
-            </section>
-            
-            <section class="slider-container" aria-label="LinkedIn core GitHub Certificates Slider">
-                <ul class="content-slider cs-hidden">
-                    <?php $slider->render('github'); ?>
-                </ul>
-            </section>
+            <?php
+                $slider->renderSection(
+                    'LinkedIn Topic-Based GIT Certificates',
+                    'git_new',
+                );
 
-        </div>
+                $slider->renderSection(
+                    'LinkedIn Core GIT Certificates',
+                    [
+                        'git',
+                        'vcs',
+                    ]
+                );
+
+                $slider->renderSection(
+                    'LinkedIn Topic-Based GitHub Certificates',
+                    'github_new',
+                );
+
+                $slider->renderSection(
+                    'LinkedIn Core GitHub Certificates',
+                    'github',
+                );
+            ?>
+
+        </div><!-- end .wrapper -->
 
         <?php include_once './inc/footer.php'; //end #footer ?>
 
     </body>
+    
 </html>
