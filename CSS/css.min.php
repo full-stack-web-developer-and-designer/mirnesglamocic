@@ -393,21 +393,26 @@ label.error {
     display: inline;
 }
 #icons {
+    color: #FFF;
     background: #032b62;
     width: 400px;
     float: right;
     height: 674px;
     border-radius: 5px;
 }
-#icons p {
+#icons h3, #icons p {
     color: #fff;
     text-align: center;
-    padding: 100px 0 50px;
+    padding: 0 15px;
 }
 .icon_box {
     display: block;
     text-align: center;
     margin-top: 50px;
+}
+.icon_box svg.icon {
+    width: 65px;
+    height: 65px;
 }
 a.social-icon {
     width: 65px;
