@@ -1,9 +1,17 @@
 <?php
+
 class Head extends Entity
 {
-    public static $tableName = "meta";
-    public static $keyColumn = "meta_id";
-    // Remove Warning Deprecated
+    protected static string $tableName = 'meta';
+    protected static string $keyColumn = 'meta_id';
+
+
+    public int $meta_id;
+    public int $page_id;
+    public string $title;
+    public string $description;
+    public string $created_at;
+    public string $updated_at;
     public $og_url;
     public $og_image;
     public $twitter_image;
