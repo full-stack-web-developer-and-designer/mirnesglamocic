@@ -119,20 +119,20 @@
                         <?php include_once './inc/form.php';?>
                 </article>
                 
-                <div id="icons">
+                <div id="support">
 
                     <h3>Feel free to support me</h3>
                     <p>If my projects have been helpful or inspiring, consider supporting my work. Every contribution means a lot and helps me keep creating.</p>                    
                     <div id="icon_box">
                         <?php
-                            $icons = Icons::getAll();
-                            foreach ($icons as $icon) {
-                                echo $icon->render();
+                            $supports = Support::getAll();
+                            foreach ($supports as $support) {
+                                echo $support->render();
                             }
                         ?>
                     </div><!--end #icon_box-->
 
-                </div><!--end #icons-->
+                </div><!--end #support-->
 
             </div><!--end .wrapper-->
         </section> <!--contact-->
