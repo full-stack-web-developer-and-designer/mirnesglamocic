@@ -18,7 +18,7 @@ class Icons extends Entity
        href="' . htmlspecialchars($this->href, ENT_QUOTES, 'UTF-8') . '"
        title="' . htmlspecialchars($this->aria_label, ENT_QUOTES, 'UTF-8') . '"
        aria-label="' . htmlspecialchars($this->aria_label, ENT_QUOTES, 'UTF-8') . '"
-       target="_blank" rel="noopener">
+       target="_blank" rel="noopener noreferrer">
         <svg class="icon social-icon" aria-hidden="true">
             <use href="#icon-' . htmlspecialchars($this->icon_name, ENT_QUOTES, 'UTF-8') . '"></use>
         </svg>
