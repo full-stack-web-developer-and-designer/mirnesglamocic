@@ -1,6 +1,5 @@
 <?php
-    define('BASE_PATH', __DIR__);
-    require_once BASE_PATH . '/core/init.php';
+    require_once __DIR__ . '/core/init.php';
     $head = Head::get(1);
     $page = Pages::get(1);
 ?>
