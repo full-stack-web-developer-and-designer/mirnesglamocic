@@ -1,8 +1,6 @@
 <?php
-ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-?>
-<?php
-    require_once __DIR__ . '/core/init.php';
+    define('BASE_PATH', __DIR__);
+    require_once BASE_PATH . '/core/init.php';
     $head = Head::get(1);
     $page = Pages::get(1);
 ?>
@@ -13,7 +11,7 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
 
     <body id="home">
 
-        <?php include_once './inc/header.php';?>
+        <?php require_once BASE_PATH . '/inc/header.php'; ?>
 
         <article id='hero' class='lazy'>
             <div class='wrapper'>
@@ -139,7 +137,7 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
             </div><!--end .wrapper-->
         </section> <!--contact-->
 
-        <?php include_once './inc/footer.php';//end #footer?>
+        <?php require_once BASE_PATH . '/inc/footer.php'; //end #footer?>
 
     </body>
 
