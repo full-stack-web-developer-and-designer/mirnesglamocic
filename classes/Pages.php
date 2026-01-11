@@ -1,8 +1,14 @@
 <?php
 class Pages extends Entity
 {
-    public static $tableName = "pages";
-    public static $keyColumn = "page_id";
+    protected static string $tableName = "pages";
+    protected static string $keyColumn = "page_id";
+
+    public int $page_id;
+    public string $slug;
+    public string $title;
+    public string $created_at;
+    public string $updated_at;
 
     public function renderPage()
     {
