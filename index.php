@@ -2,7 +2,7 @@
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 ?>
 <?php
-    require_once 'core/init.php';
+require_once 'core/init.php';
     $head = Head::get(1);
     $page = Pages::get(1);
 ?>
@@ -127,8 +127,10 @@ ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_report
                     
                     <div id="icon_box">
                         <?php
-                            $icons = new Icons();
-                            $icons->renderIcons();
+                            $icons = Icons::getAll();
+                            foreach ($icons as $icon) {
+                                echo $icon->render();
+                            }
                         ?>
                     </div><!--end #icon_box-->
 
