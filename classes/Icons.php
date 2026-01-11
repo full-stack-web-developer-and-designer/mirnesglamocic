@@ -1,20 +1,29 @@
 <?php
-class Icons extends ConnectSlider
+class Icons extends Entity
 {
-    // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderIcons()
+    protected static string $tableName = 'contact_icon';
+    protected static string $keyColumn = 'contact_icon_id';
+
+    public int $contact_icon_id;
+    public int $page_id;
+    public string $href = '';
+    public string $aria_label = '';
+    public string $icon_name = '';
+
+    public function render(): string
     {
-        $sql = "SELECT * FROM mirnesgl_korea.contact_icon";
-        $stmt = $this->__connect()->query($sql);
+       return '
+<span class="icon_box">
+    <a class="social-icon"
+       href="' . htmlspecialchars($this->href, ENT_QUOTES, 'UTF-8') . '"
+       title="' . htmlspecialchars($this->aria_label, ENT_QUOTES, 'UTF-8') . '"
+       aria-label="' . htmlspecialchars($this->aria_label, ENT_QUOTES, 'UTF-8') . '"
+       target="_blank" rel="noopener">
+        <svg class="icon social-icon" aria-hidden="true">
+            <use href="#icon-' . htmlspecialchars($this->icon_name, ENT_QUOTES, 'UTF-8') . '"></use>
+        </svg>
+    </a>
+</span>';
 
-        while ($row = $stmt->fetch()) {
-            $href = $row["href"];
-            $aria_label = $row["aria_label"];
-            $svg = $row["svg"];
-
-            echo "<span class='icon_box'>
-            <a class='social-icon' href=\"$href\" aria-label=\"$aria_label\" target='_blank'>$svg</a>   
-            </span>";
-        }
     }
 }
