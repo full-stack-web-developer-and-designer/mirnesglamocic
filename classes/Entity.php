@@ -1,33 +1,41 @@
 <?php
 // Active record pattern
-class Entity
+
+Entity::init();
+/**
+ * @method static static|null get(int $id)
+ * @method static static[] getAll()
+ */
+abstract class Entity
 {
-    private static $db;
-    // Remove Warning Deprecated
-    public $page_id;
-    public $meta_id;
-    public $title;
-    public $description;
-    public static function get($id)
-    {
-        $tableName = static::$tableName;
-        $keyColumn = static::$keyColumn;
-        $className = get_called_class();
-        $q = "SELECT * FROM {$tableName} WHERE {$keyColumn} = {$id}";
-        $q = self::$db->query($q);
-        $result = $q->fetchObject($className);
-        return $result;
-    }
-    public static function getAll()
-    {
-        $tableName = static::$tableName;
-        $q = self::$db->query("SELECT * FROM {$tableName}");
-        $postArr = $q->fetchAll();
-        return $postArr;
-    }
-    public static function init()
+    protected static string $tableName;
+    protected static string $keyColumn = 'id';
+    protected static PDO $db;
+
+    public static function init(): void
     {
         self::$db = DB::getInstance();
     }
+
+    public static function get(int $id): ?object
+    {
+        $table = static::$tableName;
+        $key   = static::$keyColumn;
+        $class = static::class;
+
+        $stmt = self::$db->prepare(
+            "SELECT * FROM {$table} WHERE {$key} = :id LIMIT 1"
+        );
+        $stmt->execute(['id' => $id]);
+
+        return $stmt->fetchObject($class) ?: null;
+    }
+
+    public static function getAll(): array
+    {
+        $table = static::$tableName;
+        return self::$db
+            ->query("SELECT * FROM {$table}")
+            ->fetchAll(PDO::FETCH_CLASS, static::class);
+    }
 }
-Entity::init();
