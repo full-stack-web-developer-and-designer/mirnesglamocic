@@ -2,7 +2,7 @@
 
 class ITA extends Entity
 {
-    protected static string $tableName = 'ita_certificates';
+    protected static string $tableName = 'ita_certificate';
     protected static string $keyColumn = 'id';
 
     // DB columns (untyped on purpose)
