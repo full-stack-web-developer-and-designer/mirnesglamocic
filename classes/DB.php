@@ -1,47 +1,32 @@
 <?php
-// singletton pattern
+
 class DB
 {
-    public static $_instance = null;
-    public $pdo;
-    public function __construct()
+    private static ?PDO $instance = null;
+
+    private function __construct() {}
+    private function __clone() {}
+
+    public static function getInstance(): PDO
     {
-        // open a connection to the database
-        try {
-            $this->pdo = new PDO(
-                "mysql:host=" .
-                    Config::get("mysql/host") .
-                    ";dbname=" .
-                    Config::get("mysql/db") .
-                    ";charset=" .
-                    Config::get("mysql/charset"),
+        if (self::$instance === null) {
+            $dsn =
+                "mysql:host=" . Config::get("mysql/host") .
+                ";dbname=" . Config::get("mysql/db") .
+                ";charset=" . Config::get("mysql/charset");
+
+            self::$instance = new PDO(
+                $dsn,
                 Config::get("mysql/user"),
-                Config::get("mysql/password")
-            );
-        } catch (PDOException $e) {
-            die($e->getMessage());
-        }
-    }
-    public static function getInstance()
-    {
-        if (!isset(self::$_instance)) {
-            self::$_instance = new PDO(
-                "mysql:host=" .
-                    Config::get("mysql/host") .
-                    ";dbname=" .
-                    Config::get("mysql/db") .
-                    ";charset=" .
-                    Config::get("mysql/charset"),
-                Config::get("mysql/user"),
-                Config::get("mysql/password")
+                Config::get("mysql/password"),
+                [
+                    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                    PDO::ATTR_EMULATE_PREPARES   => false,
+                ]
             );
         }
-        return self::$_instance;
-    }
-    public function getmyDB()
-    {
-        if ($this->pdo instanceof PDO) {
-            return $this->pdo;
-        }
+
+        return self::$instance;
     }
 }
