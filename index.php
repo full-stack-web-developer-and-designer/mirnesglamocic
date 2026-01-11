@@ -121,8 +121,8 @@
                 
                 <div id="icons">
 
-                    <p>Feel free to support me</p>
-                    
+                    <h3>Feel free to support me</h3>
+                    <p>If my projects have been helpful or inspiring, consider supporting my work. Every contribution means a lot and helps me keep creating.</p>                    
                     <div id="icon_box">
                         <?php
                             $icons = Icons::getAll();
