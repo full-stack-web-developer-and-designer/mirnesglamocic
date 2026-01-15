@@ -1,7 +1,6 @@
 cert/
 classes/Con*.php
 core/
-DB-TABLES
 illustrations/
 images/
 JS/jquery*.min.js
@@ -23,7 +22,6 @@ websites/
 *.json
 *.xml
 *.ico
-*.sql
 *.zip
 *.webmanifest
 form*.php
