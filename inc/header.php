@@ -12,7 +12,7 @@
             </div><!--end #headerTopLeft-->
             
             <div id="headerCenter">
-                <span id="cv"><a id="resume" href="https://mirnesglamocic.com/images/MirnesGlamocic-Resume.pdf" aria-label="Download my resume" target="_blank">
+                <span id="cv"><a id="resume" href="https://mirnesglamocic.com/images/MirnesGlamocic-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my resume">
                     <svg class="icon contact-icon" aria-hidden="true">
                         <use href="#icon-download"></use>
                     </svg>&nbsp;&nbsp;Download my resume</a></span>
