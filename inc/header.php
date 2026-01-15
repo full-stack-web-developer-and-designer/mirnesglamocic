@@ -4,7 +4,7 @@
     <div id="headerTop">
         <div class="wrapper">
             <div id="headerTopLeft">
-                <span id="number"><a href="tel:+38763734327">
+                <span id="number"><a href="tel:+38763734327" aria-label="Call phone number">
                     <svg class="icon" aria-hidden="true">
                         <use href="#icon-phone"></use>
                     </svg>&nbsp;&nbsp;+387 63 734 327</a>
