@@ -1,3 +1,5 @@
+<!-- SVG icons -->
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/icons.html'; ?>
 <div id="header">
     <div id="headerTop">
         <div class="wrapper">

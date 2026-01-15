@@ -59,11 +59,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js"></script>
-<script src="/lightbox2/src/js/lightbox.min.js"></script>
-<script src="/JS/slider.min.js"></script>
-<script src="/JS/lazyloading.min.js"></script>
+<script src="./lightbox2/src/js/lightbox.min.js"></script>
+<script src="./JS/slider.min.js"></script>
+<script src="./JS/lazyloading.min.js"></script>
 <!-- PROJECT MENU SCRIPT -->
-<script src="/JS/projects-menu.js"></script>
+<script src="./JS/projects-menu.js"></script>
 <!-- Responsive Navigation -->
 <script>
 jQuery(function($) {
@@ -76,5 +76,3 @@ jQuery(function($) {
     });
 });
 </script>
-<!-- SVG icons -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/icons.html'; ?>
