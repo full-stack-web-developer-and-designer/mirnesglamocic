@@ -20,7 +20,7 @@
             
             <div id="headerTopRight">
                 <div class="icons">
-                    <a class="social-icons" href="https://www.linkedin.com/in/mirnesglamocic" aria-label="LinkedIn" title="Visit My LinkedIn Profile" target="_blank">
+                    <a class="social-icons" href="https://www.linkedin.com/in/mirnesglamocic" aria-label="LinkedIn" title="Visit My LinkedIn Profile" target="_blank" rel="noopener noreferrer">
                         <svg class="icon social-icon" aria-hidden="true">
                             <use href="#icon-linkedin"></use>
                         </svg>
