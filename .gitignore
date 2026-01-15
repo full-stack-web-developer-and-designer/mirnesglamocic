@@ -1,6 +1,7 @@
 cert/
 classes/Con*.php
 core/
+db/
 illustrations/
 images/
 JS/jquery*.min.js
