@@ -29,6 +29,7 @@
         }
     #aboutme,
     #LinkedIn,
+    #skills,
     #services,
     #contact {
         background:#fff;
@@ -36,7 +37,7 @@
         padding-top:40px;
         text-align:left
         }
-    #aboutme, #services, #contact {
+    #aboutme, #skills, #services, #contact {
         padding-bottom: 40px;
     }
     #LinkedIn, #skills, #services {
@@ -51,9 +52,6 @@
     }
     #aboutme p:last-of-type {
         margin-bottom: 0;
-    }
-    #skills h2 {
-        margin: 0 auto 40px;
     }
     .imgLeft {
         float: left;
@@ -160,59 +158,154 @@
 .certificate p.intro {
     text-align: left;
 }
-#skills {
-    background: #fff;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
+
+/* ICON LIST */
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile portrait: 1 icon per row */
+  gap: 1rem;
+  justify-items: center;
 }
-picture.skill {
-    display: inline-block;
-    margin-right: 37.5px;
-    margin-bottom: 37.5px;
+
+/* Mobile landscape: 2 icons per row */
+@media (min-width: 480px) {
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-picture.skill:nth-of-type(9n) {
-    margin-right: 0;
+
+/* Tablet: 4 icons per row */
+@media (min-width: 768px) {
+  .skills-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-picture.skill:nth-of-type(28),
-picture.skill:nth-of-type(29),
-picture.skill:nth-of-type(30),
-picture.skill:nth-of-type(31),
-picture.skill:nth-of-type(32),
-picture.skill:nth-of-type(33),
-picture.skill:nth-of-type(34),
-picture.skill:nth-of-type(35),
-picture.skill:nth-of-type(36) {
-    margin-bottom: 0;
+
+/* Desktop: 8 icons per row */
+@media (min-width: 1200px) {
+  .skills-list {
+    grid-template-columns: repeat(8, 1fr);
+  }
 }
+
+/* ICON CARD */
+.skill {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.skill svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Footer layout */
+.skills-footer-columns {
+  display: flex;
+  justify-content: center; /* center the grid */
+  width: 100%;             /* ensure full width like other columns */
+}
+
+.skills-footer-columns .skills-list {
+  width: 100%;             /* make grid span full width */
+  max-width: 1200px;       /* optional: match desktop width of other grids */
+}
+/* services */
+/* Section heading */
 h3#service {
     color: #635336;
     margin: 40px auto 0;
     letter-spacing: normal;
 }
+
+/* Articles styling */
 .services {
-    width: 196px;
+    display: flex;
+    flex-direction: column; /* stack icon, heading, text vertically */
+    align-items: center;    /* center horizontally */
+    text-align: center;     /* center heading and paragraph */
+    width: 100%;            /* full width in grid column */
+    max-width: 220px;       /* optional: limit width */
     padding: 35px 35px 15px;
-    margin: 40px 40px 0 0;
     background: #faf7eb;
     border: 2px solid #d5cfb9;
-    display: inline-block;
-    letter-spacing: 0;
-    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.services:nth-of-type(4) {
-    margin-right: 0;
+
+/* Hover effect */
+.services:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
+
+/* Icon styling */
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    fill: #635336;
+}
+
+/* Article heading */
 .services h4 {
     color: #635336;
-    margin: 1em 0.3em;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
 }
-img.usluge {
-    display: block;
-    margin: 0 auto;
-    width: 50px;
-    height: 50px;
+
+/* Article paragraph */
+.services p {
+    max-width: 300px; /* optional: text width for readability */
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
+
+/* GRID CONTAINER FOR ARTICLES */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;  /* mobile portrait: 1 column */
+    gap: 2rem;                   /* space between articles */
+    justify-items: center;       /* center each article horizontally */
+    padding: 2rem 1rem 0;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large desktop: 4 columns */
+@media (min-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 p#contact_offer {
     text-align: center;
 }
@@ -392,7 +485,7 @@ label.error {
     margin-left: 2%;
     display: inline;
 }
-#icons {
+#support {
     color: #FFF;
     background: #032b62;
     width: 400px;
@@ -400,7 +493,7 @@ label.error {
     height: 674px;
     border-radius: 5px;
 }
-#icons h3, #icons p {
+#support h3, #support p {
     color: #fff;
     text-align: center;
     padding: 0 15px;
@@ -439,12 +532,6 @@ a.social-icon {
         padding: 25px 25px 5px;
     }
 }
-@media screen and (min-width: 1240px) and (max-width: 1260px) {
-    picture.skill {
-        margin-right: 25px;
-        margin-bottom: 25px;
-    }
-}
 @media screen and (min-width: 1232px) and (max-width: 1260px) {
     .services {
         padding: 25px 25px 15px;
@@ -471,7 +558,7 @@ a.social-icon {
     #form {
         width: 75%;
     }
-    #icons {
+    #support {
         width: 25%;
     }
 }
@@ -606,7 +693,7 @@ a.social-icon {
         width: 100%;
         margin: 0 auto 40px;
     }
-    #icons p {
+    #support p {
         padding: 100px 20px 50px;
     }
     #contact h2 {
@@ -619,12 +706,6 @@ a.social-icon {
         padding: 20px 20px 5px;
     }
 }
-@media screen and (min-width: 1196px) and (max-width: 1239px) {
-    picture.skill {
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-}
 @media screen and (min-width: 1188px) and (max-width: 1231px) {
     .services {
         padding: 20px 20px 15px;
@@ -633,12 +714,6 @@ a.social-icon {
 @media screen and (min-width: 1162px) and (max-width: 1205px) {
     .certificate {
         padding: 15px 15px 5px;
-    }
-}
-@media screen and (min-width: 1153px) and (max-width: 1195px) {
-    picture.skill {
-        margin-right: 15px;
-        margin-bottom: 15px;
     }
 }
 @media screen and (min-width: 849px) and (max-width: 1187px) {
@@ -654,23 +729,6 @@ a.social-icon {
 @media screen and (min-width: 1124px) and (max-width: 1161px) {
     .certificate {
         padding: 10px 10px 5px;
-    }
-}
-@media screen and (min-width: 1020px) and (max-width: 1152px) {
-    picture.skill {
-        margin-right: 40px;
-        margin-bottom: 40px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 40px;
-    }
-    picture.skill:nth-of-type(6n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30) {
-        margin-bottom: 40px;
     }
 }
 @media screen and (min-width: 1028px) and (max-width: 1123px) {
@@ -717,9 +775,7 @@ a.social-icon {
             url("../images/bg<?php echo $rnd ?>_1023@2x.webp") 2x
         );
     }
-    #skills {
-        display: inline-block;
-    }
+
     #hero {
         background-position: top right;
     }
@@ -740,26 +796,9 @@ a.social-icon {
     #form {
         width: 75%;
     }
-    #icons {
+    #support {
         width: 25%;
         height: 658px;
-    }
-}
-@media screen and (min-width: 932px) and (max-width: 1019px) {
-    picture.skill {
-        margin-right: 30px;
-        margin-bottom: 30px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 30px;
-    }
-    picture.skill:nth-of-type(6n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30) {
-        margin-bottom: 30px;
     }
 }
 @media screen and (min-width: 977px) and (max-width: 980px) {
@@ -810,43 +849,9 @@ a.social-icon {
         margin-right: 0;
     }
 }
-@media screen and (min-width: 881px) and (max-width: 931px) {
-    picture.skill {
-        margin-right: 25px;
-        margin-bottom: 25px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 25px;
-    }
-    picture.skill:nth-of-type(6n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30) {
-        margin-bottom: 25px;
-    }
-}
 @media screen and (min-width: 768px) and (max-width: 886px) {
     .form-control svg {
         left: 13px;
-    }
-}
-@media screen and (min-width: 789px) and (max-width: 880px) {
-    picture.skill {
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 20px;
-    }
-    picture.skill:nth-of-type(6n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30) {
-        margin-bottom: 20px;
     }
 }
 @media screen and (min-width: 832px) and (max-width: 863px) {
@@ -868,23 +873,6 @@ a.social-icon {
 @media screen and (min-width: 768px) and (max-width: 831px) {
     .certificate:nth-of-type(2n) {
         margin-right: 0;
-    }
-}
-@media screen and (min-width: 737px) and (max-width: 788px) {
-    picture.skill {
-        margin-right: 15px;
-        margin-bottom: 15px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 15px;
-    }
-    picture.skill:nth-of-type(6n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30) {
-        margin-bottom: 15px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -937,14 +925,14 @@ a.social-icon {
         width: 96%;
         margin: 0 2%;
     }
-    #icons {
+    #support {
         width: 100%;
         height: auto;
         display: block;
         margin: 40px auto 0;
         text-align: center;
     }
-    #icons p {
+    #support p {
         padding: 50px 0;
     }
 }
@@ -1015,43 +1003,6 @@ a.social-icon {
         margin: 0;
     }
 }
-@media screen and (min-width: 711px) and (max-width: 736px) {
-    picture.skill {
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 10px;
-    }
-    picture.skill:nth-of-type(6n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30) {
-        margin-bottom: 10px;
-    }
-}
-@media screen and (min-width: 611px) and (max-width: 710px) {
-    picture.skill {
-        margin-right: 15px;
-        margin-bottom: 15px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 15px;
-    }
-    picture.skill:nth-of-type(5n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30) {
-        margin-bottom: 15px;
-    }
-    picture.skill:last-of-type {
-        display: none;
-    }
-}
 @media screen and (min-width: 674px) and (max-width: 690px) {
     .form-control svg {
         left: 14px;
@@ -1083,26 +1034,7 @@ a.social-icon {
         padding: 30px 25px 15px;
     }
 }
-@media screen and (min-width: 590px) and (max-width: 610px) {
-    picture.skill {
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 10px;
-    }
-    picture.skill:nth-of-type(5n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30) {
-        margin-bottom: 10px;
-    }
-    picture.skill:last-of-type {
-        display: none;
-    }
-}
+
 @media screen and (min-width: 583px) and (max-width: 603px) {
     .services {
         margin: 40px 40px 0 0;
@@ -1112,25 +1044,6 @@ a.social-icon {
 @media screen and (min-width: 570px) and (max-width: 590px) {
     .certificate {
         padding: 30px 20px 15px;
-    }
-}
-@media screen and (min-width: 516px) and (max-width: 589px) {
-    picture.skill {
-        margin-right: 30px;
-        margin-bottom: 30px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 30px;
-    }
-    picture.skill:nth-of-type(4n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32) {
-        margin-bottom: 30px;
     }
 }
 @media screen and (min-width: 409px) and (max-width: 582px) {
@@ -1154,89 +1067,15 @@ a.social-icon {
         left: 9px;
     }
 }
-@media screen and (min-width: 485px) and (max-width: 515px) {
-    picture.skill {
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 20px;
-    }
-    picture.skill:nth-of-type(4n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32) {
-        margin-bottom: 20px;
-    }
-}
-@media screen and (min-width: 485px) and (max-width: 499px) {
-    picture.skill {
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 20px;
-    }
-    picture.skill:nth-of-type(4n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32) {
-        margin-bottom: 20px;
-    }
-}
-@media screen and (min-width: 469px) and (max-width: 484px) {
-    picture.skill {
-        margin-right: 15px;
-        margin-bottom: 15px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 15px;
-    }
-    picture.skill:nth-of-type(4n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32) {
-        margin-bottom: 15px;
-    }
-}
-@media screen and (min-width: 379px) and (max-width: 468px) {
-    picture.skill {
-        margin-right: 30px;
-        margin-bottom: 30px;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32),
-    picture.skill:nth-of-type(33) {
-        margin-bottom: 30px;
-    }
-}
-@media screen and (min-width: 358px) and (max-width: 468px) {
-    picture.skill:nth-of-type(3n) {
-        margin-right: 0;
-    }
-}
+
+
+
 @media screen and (min-width: 354px) and (max-width: 450px) {
     #icon_box {
         width: 90%;
     }
 }
 @media screen and (min-width: 429px) and (max-width: 460px) {
-    #skills h2,
     #services h2 {
         margin-bottom: 30px;
     }
@@ -1282,11 +1121,9 @@ a.social-icon {
     .certificate:nth-of-type(2n) {
         margin-right: auto;
     }
-    #skills h2,
     #services h2 {
         margin-bottom: 30px;
     }
-    #skills h2,
     #contact h2 {
         margin: 0 auto 30px;
         width: 96%;
@@ -1348,34 +1185,6 @@ a.social-icon {
         left: 5rem;
     }
 }
-@media screen and (min-width: 369px) and (max-width: 378px) {
-    picture.skill {
-        margin-right: 25px;
-        margin-bottom: 25px;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32),
-    picture.skill:nth-of-type(33) {
-        margin-bottom: 25px;
-    }
-}
-@media screen and (min-width: 358px) and (max-width: 368px) {
-    picture.skill {
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32),
-    picture.skill:nth-of-type(33) {
-        margin-bottom: 20px;
-    }
-}
 @media screen and (max-width: 388px) {
     #PHP,
     #WD,
@@ -1402,70 +1211,16 @@ a.social-icon {
         display: none;
     }
 }
-@media screen and (min-width: 237px) and (max-width: 357px) {
-    picture.skill {
-        margin-right: 25px;
-        margin-bottom: 25px;
-    }
-    picture.skill:nth-of-type(9n) {
-        margin-right: 25px;
-    }
-    picture.skill:nth-of-type(2n) {
-        margin-right: 0;
-    }
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32),
-    picture.skill:nth-of-type(33),
-    picture.skill:nth-of-type(34) {
-        margin-bottom: 25px;
-    }
-}
 @media screen and (max-width: 342px) {
     p#response,
     h4 {
         font-size: 1.3em;
     }
 }
-@media screen and (min-width: 232px) and (max-width: 236px) {
-    picture.skill,
-    picture.skill:nth-of-type(9n) {
-        margin-right: 20px;
-    }
-    picture.skill,
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32),
-    picture.skill:nth-of-type(33),
-    picture.skill:nth-of-type(34) {
-        margin-bottom: 20px;
-    }
-    picture.skill:nth-of-type(2n) {
-        margin-right: 0;
-    }
-}
-@media screen and (max-width: 231px) {
-    picture.skill,
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32),
-    picture.skill:nth-of-type(33),
-    picture.skill:nth-of-type(34),
-    picture.skill:nth-of-type(35) {
-        display: block;
-        margin: 0 auto 20px;
-    }
-}
+
 @media screen and (max-width: 209px) {
     #aboutme h2,
     #certificates h2,
-    #skills h2,
     #services h2,
     #contact h2 {
         font-size: 1.5em;
@@ -1503,7 +1258,6 @@ a.social-icon {
     }
 }
 @media print {
-    picture.skill,
     #hero,
     #about,
     #quotes,
@@ -1511,9 +1265,8 @@ a.social-icon {
     #PHP,
     #WD,
     #LinkedIn,
-    #skills,
     #contact_me,
-    #icons p {
+    #support p {
         display: none;
     }
     #aboutme p,
@@ -1525,13 +1278,12 @@ a.social-icon {
     }
     #aboutme h2,
     #certificates h2,
-    #skills h2,
     #services h2,
     .services,
     .services h4,
     h2,
     section#contact p#contact_offer,
-    #icons {
+    #support {
         background: #fff;
         color: #000;
     }
@@ -1547,7 +1299,7 @@ a.social-icon {
     #certificates h2,
     #mycert,
     #contact,
-    #icons {
+    #support {
         width: 100%;
         display: block;
         margin: 0 auto;
@@ -1562,7 +1314,7 @@ a.social-icon {
         padding-left: 140px;
     }
     #contact,
-    #icons {
+    #support {
         height: 300px;
     }
 }
