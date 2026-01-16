@@ -1,29 +1,38 @@
 <?php
-class CertDesc extends ConnectSlider
+
+class CertDesc extends Entity
 {
-    // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderCertDesc()
+    protected static string $tableName = 'cert_desc'; // optional but useful for Entity methods
+
+    /**
+     * Render all certificate descriptions
+     */
+    public function renderCertDesc(): void
     {
-        $sql = "SELECT * FROM mirnesgl_korea.cert_desc;";
-        $stmt = $this->__connect()->query($sql);
+        // Use Entity's DB connection
+        $sql = "SELECT * FROM " . self::$tableName . ";";
+        $stmt = self::$db->query($sql);
 
-        while ($row = $stmt->fetch()) {
-            $icon_id = $row["icon_id"];
-            $title = $row["title"];
-            $first_part = $row["first_part"];
-            $second_part = $row["second_part"];
-            $slug = $row["slug"];
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $icon_id     = htmlspecialchars($row["icon_id"], ENT_QUOTES);
+            $title       = htmlspecialchars($row["title"], ENT_QUOTES);
+            $first_part  = htmlspecialchars($row["first_part"], ENT_QUOTES);
+            $second_part = htmlspecialchars($row["second_part"], ENT_QUOTES);
+            $slug        = htmlspecialchars($row["slug"], ENT_QUOTES);
 
-            echo "<article class='certificate'>
-            <span>
-                <svg class='icons-cert' width='30' height='30' aria-hidden='true'>
-                    <title>{$title}</title>
-                        <use xlink:href='#icon-{$icon_id}'></use>
-                </svg></span>
-            <h3>$title</h3>
-            <p class='intro'>$first_part<br><br>$second_part</p>
-            <p><a href='" . htmlspecialchars($slug) . "' class='button'>VIEW CERTIFICATES &raquo;</a></p>
-        </article>";
+            echo <<<HTML
+<article class='certificate'>
+    <span>
+        <svg class='icons-cert' width='30' height='30' aria-hidden='true'>
+            <title>{$title}</title>
+            <use xlink:href='#icon-{$icon_id}'></use>
+        </svg>
+    </span>
+    <h3>{$title}</h3>
+    <p class='intro'>{$first_part}<br><br>{$second_part}</p>
+    <p><a href="{$slug}" class='button'>VIEW CERTIFICATES &raquo;</a></p>
+</article>
+HTML;
         }
     }
 }
