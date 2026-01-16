@@ -212,7 +212,7 @@ div.icons a:focus-visible {
   background-color: rgba(147, 197, 253, 0.15);
   box-shadow: 0 0 0 2px rgba(147, 197, 253, 0.6);
 }
-img.icons {
+svg.icons-cert {
     width: 30px;
     height: 30px;
     margin: 15px auto;
@@ -725,39 +725,7 @@ html::-webkit-scrollbar-track:hover {
         display: inline-block;
     }
 }
-@media screen and (min-width: 232px) and (max-width: 236px) {
-    picture.skill,
-    picture.skill:nth-of-type(9n) {
-        margin-right: 20px;
-    }
-    picture.skill,
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32),
-    picture.skill:nth-of-type(33),
-    picture.skill:nth-of-type(34) {
-        margin-bottom: 20px;
-    }
-    picture.skill:nth-of-type(2n) {
-        margin-right: 0;
-    }
-}
-@media screen and (max-width: 231px) {
-    picture.skill,
-    picture.skill:nth-of-type(28),
-    picture.skill:nth-of-type(29),
-    picture.skill:nth-of-type(30),
-    picture.skill:nth-of-type(31),
-    picture.skill:nth-of-type(32),
-    picture.skill:nth-of-type(33),
-    picture.skill:nth-of-type(34),
-    picture.skill:nth-of-type(35) {
-        display: block;
-        margin: 0 auto 20px;
-    }
-}
+
 @media screen and (max-width: 230px) {
     .button:link,
     .button:visited {
