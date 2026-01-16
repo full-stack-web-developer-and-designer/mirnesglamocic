@@ -3,52 +3,74 @@
 class ITA extends Entity
 {
     protected static string $tableName = 'ita_certificate';
-    protected static string $keyColumn = 'id';
-
-    // DB columns (untyped on purpose)
-    public $id;
-    public $href;
-    public $img_400;
-    public $img_300;
-    public $img_250;
-    public $img_200;
-    public $img_180;
-    public $img_170;
-    public $img;
-    public $alt;
+    protected static string $keyColumn = 'ita_id';
 
     public function renderCertificates(): void
     {
-        foreach (self::getAll() as $row) {
-
-            $id   = preg_replace('/[^a-z0-9_-]/i', '', (string) $row->id);
-            $href = htmlspecialchars($row->href, ENT_QUOTES, 'UTF-8');
-
-            $img_400 = htmlspecialchars($row->img_400, ENT_QUOTES, 'UTF-8');
-            $img_300 = htmlspecialchars($row->img_300, ENT_QUOTES, 'UTF-8');
-            $img_250 = htmlspecialchars($row->img_250, ENT_QUOTES, 'UTF-8');
-            $img_200 = htmlspecialchars($row->img_200, ENT_QUOTES, 'UTF-8');
-            $img_180 = htmlspecialchars($row->img_180, ENT_QUOTES, 'UTF-8');
-            $img_170 = htmlspecialchars($row->img_170, ENT_QUOTES, 'UTF-8');
-            $img     = htmlspecialchars($row->img, ENT_QUOTES, 'UTF-8');
-            $alt     = htmlspecialchars($row->alt, ENT_QUOTES, 'UTF-8');
+        foreach (self::getAllCertificatesWithImages() as $cert) {
+            $code = htmlspecialchars($cert->code, ENT_QUOTES, 'UTF-8');
+            $alt  = htmlspecialchars($cert->alt, ENT_QUOTES, 'UTF-8');
 
             echo <<<HTML
-<article id="$id" class="cert-item">
-    <a href="./images/BIG/$href" data-lightbox="ita">
+<article id="{$code}" class="cert-item">
+    <a href="{$this->imgUrl($cert->img)}" data-lightbox="ita">
         <picture class="ita">
-            <source srcset="$img_400" type="image/webp" media="(min-width: 962px)">
-            <source srcset="$img_300" type="image/webp" media="(min-width: 832px)">
-            <source srcset="$img_250" type="image/webp" media="(min-width: 621px)">
-            <source srcset="$img_200" type="image/webp" media="(min-width: 521px)">
-            <source srcset="$img_180" type="image/webp" media="(min-width: 430px)">
-            <source srcset="$img_170" type="image/webp" media="(min-width: 389px)">
-            <source srcset="$img_300" type="image/webp" media="(max-width: 388px)">
-            <img decoding="async" src="$img" width="400" height="565" loading="lazy" alt="$alt">
+            <source srcset="{$this->imgUrl($cert->img_400)}" type="image/webp" media="(min-width: 962px)">
+            <source srcset="{$this->imgUrl($cert->img_300)}" type="image/webp" media="(min-width: 832px)">
+            <source srcset="{$this->imgUrl($cert->img_250)}" type="image/webp" media="(min-width: 621px)">
+            <source srcset="{$this->imgUrl($cert->img_200)}" type="image/webp" media="(min-width: 521px)">
+            <source srcset="{$this->imgUrl($cert->img_180)}" type="image/webp" media="(min-width: 430px)">
+            <source srcset="{$this->imgUrl($cert->img_170)}" type="image/webp" media="(min-width: 389px)">
+            <source srcset="{$this->imgUrl($cert->img_300)}" type="image/webp" media="(max-width: 388px)">
+            <img src="{$this->imgUrl($cert->img)}"
+                 width="400"
+                 height="565"
+                 loading="lazy"
+                 decoding="async"
+                 alt="{$alt}">
         </picture>
+        
     </a>
 </article>
 HTML;
         }
     }
+
+   private function imgUrl(?string $file): string
+{
+    if (empty($file)) {
+        return '';
+    }
+
+    // Remove leading './images/' or 'images/' if present
+    $file = preg_replace('#^\.?/images/#', '', $file);
+
+    return BASE_URL . 'images/' . ltrim($file, '/');
+}
+
+
+public static function getAllCertificatesWithImages(): array
+{
+    $sql = "
+        SELECT 
+            c.ita_id,
+            c.code,
+            c.alt,
+            MAX(CASE WHEN i.size_label = 'img_400' THEN i.file_path END) AS img_400,
+            MAX(CASE WHEN i.size_label = 'img_300' THEN i.file_path END) AS img_300,
+            MAX(CASE WHEN i.size_label = 'img_250' THEN i.file_path END) AS img_250,
+            MAX(CASE WHEN i.size_label = 'img_200' THEN i.file_path END) AS img_200,
+            MAX(CASE WHEN i.size_label = 'img_180' THEN i.file_path END) AS img_180,
+            MAX(CASE WHEN i.size_label = 'img_170' THEN i.file_path END) AS img_170,
+            MAX(CASE WHEN i.size_label = 'img' THEN i.file_path END) AS img
+        FROM ita_certificate c
+        LEFT JOIN ita_certificate_images i ON i.ita_id = c.ita_id
+        GROUP BY c.ita_id
+    ";
+    return self::$db
+        ->query($sql)
+        ->fetchAll(PDO::FETCH_OBJ);
+}
+
+
 }
