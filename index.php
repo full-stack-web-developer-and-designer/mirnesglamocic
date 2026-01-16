@@ -103,11 +103,12 @@
             <div class="wrapper">
                 <h2>Services</h2>
                     <h3 id="service">Best solutions for your business</h3>
-                        <!-- slider box -->
-                        <?php
-                            $services = new Services();
-                            $services->renderServices();
-                        ?>
+                        <div class="services-grid">
+                            <?php
+                                $services = new Services();
+                                $services->renderServices();
+                            ?>
+                        </div>
             </div><!-- end .wrapper-->
         </section><!-- end #services-->
 
