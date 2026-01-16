@@ -1,8 +1,8 @@
 <?php
-require_once 'core/init.php';
-$head = Head::get(14);
-$page_id = 14;
-$page = Pages::get(14);
+    require_once __DIR__ . '/core/init.php';
+    $head = Head::get(14);
+    $page_id = 14;
+    $page = Pages::get(14);
 ?>
 <!DOCTYPE html>
 <html itemscope itemtype="https://schema.org/WebPage" lang="en">
@@ -11,7 +11,7 @@ $page = Pages::get(14);
 
     <body>
 
-        <?php include_once './inc/header.php'; ?>
+        <?php require_once BASE_PATH . '/inc/header.php'; ?>
 
         <div class="wrapper">
 
@@ -86,7 +86,7 @@ $page = Pages::get(14);
             
         </div><!-- .wrapper -->
 
-        <?php include_once './inc/footer.php'; ?>
+        <?php require_once BASE_PATH . '/inc/footer.php'; //end #footer?>
 
     </body>
     
