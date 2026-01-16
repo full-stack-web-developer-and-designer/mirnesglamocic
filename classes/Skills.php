@@ -88,7 +88,7 @@ class Skills extends Entity
 
                 echo "
                 <div class='skill' aria-label='{$name}' title='{$name}' role='img'>
-                    <svg width='100' height='100'>
+                    <svg>
                         <title>{$name}</title>
                         <use xlink:href='#icon-{$icon_id}'></use>
                     </svg>
