@@ -8,17 +8,21 @@ class CertDesc extends ConnectSlider
         $stmt = $this->__connect()->query($sql);
 
         while ($row = $stmt->fetch()) {
-            $icon = $row["icon"];
+            $icon_id = $row["icon_id"];
             $title = $row["title"];
             $first_part = $row["first_part"];
             $second_part = $row["second_part"];
-            $href = $row["href"];
+            $slug = $row["slug"];
 
             echo "<article class='certificate'>
-            <span><img class='icons' src='./images/$icon' alt='$title icon' loading='lazy'></span>
+            <span>
+                <svg class='icons-cert' width='30' height='30' aria-hidden='true'>
+                    <title>{$title}</title>
+                        <use xlink:href='#icon-{$icon_id}'></use>
+                </svg></span>
             <h3>$title</h3>
             <p class='intro'>$first_part<br><br>$second_part</p>
-            <p><a href='./$href' class='button'>VIEW CERTIFICATES &raquo;</a></p>
+            <p><a href='" . htmlspecialchars($slug) . "' class='button'>VIEW CERTIFICATES &raquo;</a></p>
         </article>";
         }
     }
