@@ -35,9 +35,9 @@ class Head extends Entity
                 <meta name=\"title\" property=\"og:title\" content=\"$this->title\">
 
                 <!-- Facebook, Viber, LinkedIn, Whatsapp & KakaoTalk(meta tags) -->
-                <meta property=\"og:url\" content=\"https://$this->og_url\">
+                <meta property=\"og:url\" content=\"$this->og_url\">
                 <meta property=\"og:type\" content=\"website\">
-                <meta property=\"og:image\" content=\"https://$this->og_image\">
+                <meta property=\"og:image\" content=\"$this->og_image\">
                 <meta property=\"og:image:type\" content=\"image/jpg\">
                 <meta property=\"og:image:width\" content=\"1200\">
                 <meta property=\"og:image:height\" content=\"630\">
@@ -62,9 +62,9 @@ class Head extends Entity
                 <meta itemprop=\"image\" content=\"Mirnes Glamočić\">
 
                 <!-- include google fonts -->
-                <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
-                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
-                <link rel=\"dns-prefetch\" href=\"https://fonts.gstatic.com\">
+                <link rel=\"preconnect\" href=\"fonts.googleapis.com\">
+                <link rel=\"preconnect\" href=\"fonts.gstatic.com\" crossorigin>
+                <link rel=\"dns-prefetch\" href=\"fonts.gstatic.com\">
                 <link href=\"https://fonts.googleapis.com/css?family=Oswald:400,700%7CRoboto:400,400i,700,700i&display=swap&amp;subset=latin-ext\" rel=\"stylesheet\">
 
                 <!-- favicon -->
@@ -82,7 +82,7 @@ class Head extends Entity
                 <link rel=\"mask-icon\" href=\"/safari-pinned-tab.svg\" color=\"#5bbad5\">
                 <meta name=\"msapplication-TileColor\" content=\"#ffffff\">
                 <meta name=\"msapplication-TileImage\" content=\"/ms-icon-144x144.png\">  
-                <link rel=\"canonical\" href=\"https://$this->og_url\">
+                <link rel=\"canonical\" href=\"$this->og_url\">
                 <!-- Custom CSS -->
                 <link rel=\"stylesheet\" href=\"/CSS/style.min.css\" media=\"all\">
                 <link rel=\"stylesheet\" href=\"/CSS/$this->css\" media=\"all\">
