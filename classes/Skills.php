@@ -1,31 +1,138 @@
 <?php
-class Skills extends ConnectSlider
+class Skills extends Entity
 {
-    // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderSkills()
+    protected static string $tableName = 'skills';
+    protected static string $keyColumn = 'skills_id';
+
+    /**
+     * Render all skills as SVG icons grouped by category
+     */
+    public function renderSkills(): void
     {
-        $sql = "SELECT * FROM mirnesgl_korea.skills;";
-        $stmt = $this->__connect()->prepare($sql);
-        $stmt->execute();
+        $stmt = self::$db->query(
+            "SELECT *
+             FROM " . static::$tableName . "
+             WHERE page_id = 1
+             ORDER BY category_order, sort_order"
+        );
 
-        while ($row = $stmt->fetch()) {
-            $img_120 = $row["img_120"];
-            $img_110 = $row["img_110"];
-            $img_105 = $row["img_105"];
-            $img_100 = $row["img_100"];
-            $img = $row["img"];
-            $alt = $row["alt"];
+        /* =========================
+           GROUP SKILLS BY CATEGORY
+           ========================= */
+        $groups = [];
 
-            echo "<picture class='skill'>
-            <source srcset=\"./images/$img_100\" type=\"image/webp\" width=\"100\" height=\"100\" media=\"(min-width: 1153px)\">
-            <source srcset=\"./images/$img_120\" type=\"image/webp\" width=\"120\" height=\"120\" media=\"(min-width: 1020px)\">
-            <source srcset=\"./images/$img_110\" type=\"image/webp\" width=\"110\" height=\"110\" media=\"(min-width: 859px)\">
-            <source srcset=\"./images/$img_105\" type=\"image/webp\" width=\"105\" height=\"105\" media=\"(min-width: 821px)\">
-            <source srcset=\"./images/$img_100\" type=\"image/webp\" width=\"100\" height=\"100\" media=\"(min-width: 680px)\">
-            <source srcset=\"./images/$img_110\" type=\"image/webp\" width=\"110\" height=\"110\" media=\"(min-width: 679px)\">
-            <source srcset=\"./images/$img_105\" type=\"image/webp\" width=\"105\" height=\"105\" media=\"(min-width: 653px)\">
-            <source srcset=\"./images/$img_100\" type=\"image/webp\" width=\"100\" height=\"100\" media=\"(max-width: 652px)\">
-            <img decoding=\"async\" src=\"./images/$img\" width=\"165\" height=\"165\" loading=\"lazy\" alt='$alt' class='skill'></picture>";
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $groups[$row['category']][] = $row;
         }
+
+        /* =========================
+           SPLIT LAST 3 CATEGORIES
+           ========================= */
+        $firstCategories = array_slice($groups, 0, count($groups) - 3, true);
+        $lastCategories  = array_slice($groups, -3, null, true);
+
+        /* =========================
+           HELPER: Proper capitalization with exceptions
+           ========================= */
+        $capitalize = function(string $s): string {
+            $exceptions = [
+                'seo' => 'SEO',
+                'php' => 'PHP',
+                'html' => 'HTML',
+                'css' => 'CSS',
+                'js' => 'JavaScript',
+                'mysql' => 'MySQL',
+                'git' => 'Git',
+                'vs code' => 'VSCode',
+                'xampp' => 'XAMPP',
+                'wamp' => 'WAMP',
+                'ubuntu' => 'Ubuntu',
+                'fedora' => 'Fedora',
+                'debian' => 'Debian',
+                'windows' => 'Windows',
+            ];
+
+            $key = strtolower(trim($s));
+            if (isset($exceptions[$key])) {
+                return $exceptions[$key];
+            }
+
+            // Default title case
+            return mb_convert_case($s, MB_CASE_TITLE, 'UTF-8');
+        };
+
+        /* =========================
+           HELPER: human readable list for last 3 categories
+           ========================= */
+        $humanList = function (array $items): string {
+            if (count($items) === 1) return $items[0];
+            if (count($items) === 2) return "{$items[0]} and {$items[1]}";
+            $last = array_pop($items);
+            return implode(', ', $items) . " and {$last}";
+        };
+
+        echo "<div class='skills'>";
+
+        /* =========================
+           NORMAL CATEGORIES
+           ========================= */
+        foreach ($firstCategories as $category => $skills) {
+
+            echo "<div class='skills-column'>";
+            echo "<h3>" . $capitalize($category) . "</h3>";
+            echo "<div class='skills-list'>"; // 🔑 REQUIRED WRAPPER
+
+            foreach ($skills as $skill) {
+                $icon_id = htmlspecialchars($skill['icon_id'], ENT_QUOTES);
+                $name    = htmlspecialchars($skill['name'], ENT_QUOTES);
+
+                echo "
+                <div class='skill' aria-label='{$name}' title='{$name}' role='img'>
+                    <svg width='100' height='100'>
+                        <title>{$name}</title>
+                        <use xlink:href='#icon-{$icon_id}'></use>
+                    </svg>
+                </div>";
+            }
+
+            echo "</div>"; // skills-list
+            echo "</div>"; // skills-column
+        }
+
+        /* =========================
+           LAST THREE CATEGORIES
+           ========================= */
+        $lastTitles    = array_map($capitalize, array_keys($lastCategories));
+        $combinedTitle = $humanList($lastTitles);
+
+        echo "<div class='skills-footer'>";
+        echo "<h3>{$combinedTitle}</h3>";
+        echo "<div class='skills-footer-columns'>";
+
+        foreach ($lastCategories as $skills) {
+
+            echo "<div class='skills-column'>";
+            echo "<div class='skills-list'>"; // 🔑 REQUIRED WRAPPER
+
+            foreach ($skills as $skill) {
+                $icon_id = htmlspecialchars($skill['icon_id'], ENT_QUOTES);
+                $name    = htmlspecialchars($skill['name'], ENT_QUOTES);
+
+                echo "
+                <div class='skill' aria-label='{$name}' title='{$name}' role='img'>
+                    <svg width='100' height='100'>
+                        <title>{$name}</title>
+                        <use xlink:href='#icon-{$icon_id}'></use>
+                    </svg>
+                </div>";
+            }
+
+            echo "</div>"; // skills-list
+            echo "</div>"; // skills-column
+        }
+
+        echo "</div>"; // skills-footer-columns
+        echo "</div>"; // skills-footer
+        echo "</div>"; // skills
     }
 }
