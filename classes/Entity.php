@@ -1,11 +1,5 @@
 <?php
-// Active record pattern
 
-Entity::init();
-/**
- * @method static static|null get(int $id)
- * @method static static[] getAll()
- */
 abstract class Entity
 {
     protected static string $tableName;
@@ -33,9 +27,10 @@ abstract class Entity
 
     public static function getAll(): array
     {
-        $table = static::$tableName;
         return self::$db
-            ->query("SELECT * FROM {$table}")
+            ->query("SELECT * FROM " . static::$tableName)
             ->fetchAll(PDO::FETCH_CLASS, static::class);
     }
 }
+
+Entity::init();
