@@ -24,12 +24,9 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Extensionless PHP URLs
 # ----------------------------------------
 # Example: /projects → /projects.php
-
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?slug=$1 [L,QSA]
-
-
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L]
 
 # ----------------------------------------
 # Custom error pages
