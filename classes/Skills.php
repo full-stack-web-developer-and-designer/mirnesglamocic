@@ -107,31 +107,28 @@ class Skills extends Entity
 
         echo "<div class='skills-footer'>";
         echo "<h3>{$combinedTitle}</h3>";
-        echo "<div class='skills-footer-columns'>";
+       echo "<div class='skills-footer-columns'>";
+echo "<div class='skills-list'>"; // single grid for all last three categories
 
-        foreach ($lastCategories as $skills) {
+foreach ($lastCategories as $skills) {
+    foreach ($skills as $skill) {
+        $icon_id = htmlspecialchars($skill['icon_id'], ENT_QUOTES);
+        $name    = htmlspecialchars($skill['name'], ENT_QUOTES);
 
-            echo "<div class='skills-column'>";
-            echo "<div class='skills-list'>"; // 🔑 REQUIRED WRAPPER
+        echo "
+        <div class='skill' aria-label='{$name}' title='{$name}' role='img'>
+            <svg width='100' height='100'>
+                <title>{$name}</title>
+                <use xlink:href='#icon-{$icon_id}'></use>
+            </svg>
+        </div>";
+    }
+}
 
-            foreach ($skills as $skill) {
-                $icon_id = htmlspecialchars($skill['icon_id'], ENT_QUOTES);
-                $name    = htmlspecialchars($skill['name'], ENT_QUOTES);
+echo "</div>"; // skills-list
+echo "</div>"; // skills-footer-columns
 
-                echo "
-                <div class='skill' aria-label='{$name}' title='{$name}' role='img'>
-                    <svg width='100' height='100'>
-                        <title>{$name}</title>
-                        <use xlink:href='#icon-{$icon_id}'></use>
-                    </svg>
-                </div>";
-            }
 
-            echo "</div>"; // skills-list
-            echo "</div>"; // skills-column
-        }
-
-        echo "</div>"; // skills-footer-columns
         echo "</div>"; // skills-footer
         echo "</div>"; // skills
     }
