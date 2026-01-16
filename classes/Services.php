@@ -1,20 +1,35 @@
 <?php
-class Services extends Slider
+class Services extends Entity
 {
-    // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderServices()
-    {
-        $sql = "SELECT * FROM mirnesgl_korea.services";
-        $stmt = $this->__connect()->query($sql);
+    protected static string $tableName = 'services';
+    protected static string $keyColumn = 'service_id';
 
-        while ($row = $stmt->fetch()) {
-            $service_img = $row["service_img"];
-            $service_alt = $row["service_alt"];
-            $title = $row["title"];
-            $description = $row["description"];
-            echo "<article class='services' aria-label='Web services certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina'>
-                    <img src=\"./services/$service_img\" alt=\"$service_alt\" loading=\"lazy\" class='usluge'><h4>$title</h4><p>$description</p>
-                  </article>";
+    public function renderServices(): void
+    {
+        $stmt = self::$db->query(
+            "SELECT * FROM " . static::$tableName
+        );
+
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+            $icon_id     = htmlspecialchars($row['icon_id'], ENT_QUOTES);
+            $aria        = htmlspecialchars($row['aria'], ENT_QUOTES);
+            $description = $row['description'];
+
+            // --- TITLE WITH <br> ---
+            $titleRaw = htmlspecialchars($row['title'], ENT_QUOTES);
+            $words = explode(' ', $titleRaw);
+            $title = $words[0] . '<br>' . implode(' ', array_slice($words, 1));
+
+            echo "
+            <article class='services' aria-label='{$aria}'>
+                <svg class='service-icon' width='100' height='100' aria-hidden='true'>
+                    <title>{$titleRaw}</title>
+                    <use xlink:href='#icon-{$icon_id}'></use>
+                </svg>
+                <h4>{$title}</h4>
+                <p>{$description}</p>
+            </article>";
         }
     }
 }
