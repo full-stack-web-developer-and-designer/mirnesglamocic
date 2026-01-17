@@ -15,9 +15,9 @@ class CertDesc extends Entity
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $icon_id     = htmlspecialchars($row["icon_id"], ENT_QUOTES);
-            $title       = htmlspecialchars($row["title"], ENT_QUOTES);
-            $first_part  = htmlspecialchars($row["first_part"], ENT_QUOTES);
-            $second_part = htmlspecialchars($row["second_part"], ENT_QUOTES);
+            $title = renderMultilineTitle($row['title']);
+            $description = nl2br(htmlspecialchars($row['description'], ENT_QUOTES));
+
             $slug        = htmlspecialchars($row["slug"], ENT_QUOTES);
 
             echo <<<HTML
@@ -29,7 +29,7 @@ class CertDesc extends Entity
         </svg>
     </span>
     <h3>{$title}</h3>
-    <p class='intro'>{$first_part}<br><br>{$second_part}</p>
+    <p class='intro'>{$description}</p>
     <p><a href="{$slug}" class='button'>VIEW CERTIFICATES &raquo;</a></p>
 </article>
 HTML;
