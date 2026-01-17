@@ -1,29 +1,28 @@
 <?php
-    require_once __DIR__ . '/core/init.php';
-    $head = Head::get(1);
-    $page = Pages::get(1);
-?>
-<?php
 
-require __DIR__ . '/inc/routes.php';
+require_once __DIR__ . '/core/init.php';
+require_once __DIR__ . '/inc/helpers.php';
+require_once __DIR__ . '/inc/routes.php';
+
+$head = Head::get(1);
+$page = Pages::get(1);
 
 // Get slug from URL, e.g. example.com/frontendcertifikates
 $slug = $_GET['slug'] ?? null;
 
 if ($slug === null) {
     // No slug provided → show index page content
-    // You can include the rest of index.php code below
+    // include 'index.php'; or just continue rendering index
 } elseif (!isset($map[$slug])) {
     // Slug not found → show 404
     http_response_code(404);
-    require '404.php';
+    require __DIR__ . '/404.php';
     exit;
 } else {
     // Slug found → load corresponding page
     require $map[$slug];
     exit;
 }
-
 ?>
 <!DOCTYPE html>
 <html itemscope itemtype="https://schema.org/WebPage" lang="en">
