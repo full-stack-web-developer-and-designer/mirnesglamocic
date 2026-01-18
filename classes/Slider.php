@@ -56,8 +56,8 @@ class Slider extends Entity
             $picture = htmlspecialchars($row['picture'], ENT_QUOTES, 'UTF-8');
             $alt     = htmlspecialchars($row['alt'], ENT_QUOTES, 'UTF-8');
 
-            $small = "./cert/SMALL/{$picture}.webp";
-            $big   = "./cert/BIG/{$picture}.webp";
+            $small = "/cert/SMALL/{$picture}.webp";
+            $big   = "/cert/BIG/{$picture}.webp";
 
             echo <<<HTML
 <li class="item-a slide">
