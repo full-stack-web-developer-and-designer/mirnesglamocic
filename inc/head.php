@@ -55,31 +55,7 @@ Wow! Welcome to my code. If you need a professional website don't hesitate to co
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet">
 <!-- lightbox css -->
 <link rel="stylesheet" type="text/css" href="/lightbox2/src/css/lightbox.min.css">
-<!-- page reload if the user changes mobile orientation -->
-<script>
-    window.onorientationchange=function(){var a=window.orientation;switch(a){case 0:case 90:case -90:window.location.reload()}};
-</script>
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<!-- include jQuery if cdn fails-->
-<script>
-	window.jQuery || document.write("<script src='./JS/jquery-1.7.2.min.js'><\/script>");
-</script>
-<!-- picturefill -->
-<script>
-    // Picture element HTML5 shiv
-    document.createElement( "picture" );
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js" integrity="sha512-Nh/FthCqOFq56kGp1DsNb6GKK29iIv2ZJc7Fylln1WRrWpeE5LjSBWeAp61dkBASDxZT12aL9mZyIrhsAqgRpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- include picturefill if cdn fails-->
-<script>
-	window.jQuery || document.write("<script src='./JS/picturefill.min.js'><\/script>");
-</script>
-<!-- lazy loading images -->
+<!-- progressive-image CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
-<script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/polyfills.js"></script>
-<script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/webp-hero.bundle.js"></script>
-<script>
-    var webpMachine = new webpHero.WebpMachine();
-    webpMachine.polyfillDocument();
-</script></head>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/partials/schema.php'; ?>
+</head>
