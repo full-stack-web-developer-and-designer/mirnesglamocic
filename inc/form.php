@@ -1,4 +1,4 @@
-<h2>Contact</h2>
+<h2 id="contact-heading">Contact</h2>
     <p id="contact_offer">Open to full-time, remote, or contract opportunities. Let’s discuss how I can contribute to your team.</p>
 <form  spellcheck="false" autocomplete="on" id='contact_me' class='form ajax' name='contact_me' method='POST'> 
 <p id="response" class="success" role="status" aria-live="polite"></p>
