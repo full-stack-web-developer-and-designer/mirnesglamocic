@@ -1,7 +1,8 @@
 <h2>Contact</h2>
     <p id="contact_offer">Open to full-time, remote, or contract opportunities. Let’s discuss how I can contribute to your team.</p>
-<form  spellcheck="false" autocomplete="on" id='contact_me' class='form ajax' name='contact_me' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>' method='POST'> 
-<p id="response" class="success"><!-- This will hold response from the server --></p>
+<form  spellcheck="false" autocomplete="on" id='contact_me' class='form ajax' name='contact_me' method='POST'> 
+<p id="response" class="success" role="status" aria-live="polite"></p>
+<!-- This will hold response from the server --></p>
             <div class="form-control InputIconBg">
                 <input type='text' value="<?php echo Input::get('name'); ?>" class='input username' name='name' id='name' placeholder="name" aria-label="Your name"><label class="valid" for="name">Name</label><svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px" viewBox="0 0 448 512"><path id="user" fill="#FFF" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
                 <span class="error"><?=$name_error; ?></span>
