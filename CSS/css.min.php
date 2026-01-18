@@ -485,47 +485,72 @@ label.error {
     margin-left: 2%;
     display: inline;
 }
-#support {
-    color: #FFF;
-    background: #032b62;
-    width: 400px;
-    float: right;
-    height: 674px;
-    border-radius: 5px;
-}
-#support h3, #support p {
-    color: #fff;
-    text-align: center;
-    padding: 0 15px;
-}
-.icon_box {
-    display: block;
-    text-align: center;
-    margin-top: 50px;
-}
-.icon_box svg.icon {
-    width: 65px;
-    height: 65px;
-}
 a.social-icon {
     width: 65px;
     height: 65px;
     display: inline-block;
     margin-right: -4px;
 }
-.contact_icon {
-    width: 65px;
+#support {
+    background: #032b62;
+    width: 400px;
+    height: auto;
+    float: right;
+    border-radius: 5px;
+    padding: 30px 0;
+
+}
+
+#support h3,
+#support p {
     color: #fff;
+    text-align: center;
+    padding: 0 15px;
 }
-.contact_icon:hover {
-    color: #04102d;
-    background: #fff;
-    padding: 0 5px;
+
+.support {
+    display: block;
+    text-align: center;
+    margin-top: 32px;
 }
-.contact_icon:hover #linkedin-contact,
-.contact_icon:hover #github-contact,
-.contact_icon:hover #codepen-contact {
-    fill: #04102d;
+
+.support-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    width: 120px;       /* fixed width for all icons */
+    height: 120px;      /* fixed height for all icons + label */
+    justify-content: center;
+    color: #fff;
+    background-color: #032b62; /* match container initially */
+    border-radius: 8px;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+.support svg.icon {
+    width: 65px;
+    height: 65px;
+    color: #FFF;
+    transition: fill 0.25s ease;
+}
+
+.support-label {
+    font-size: 0.8rem;
+    color: #fff; /* normal state */
+    transition: color 0.25s ease;
+}
+.support-link:hover {
+    color: #032b62;        /* icon + label change together */
+    background-color: #fff; /* hover background */
+    transform: translateY(-2px);
+}
+.support-link:hover svg {
+   background-color: #fff;
+    color: #032b62;
+}
+.support-link:hover .support-label {
+    color: #032b62; /* label matches icon on hover */
 }
 @media screen and (min-width: 1249px) and (max-width: 1260px) {
     .certificate {
@@ -942,7 +967,7 @@ a.social-icon {
     }
 }
 @media screen and (min-width: 521px) and (max-width: 767px) {
-    #icon_box {
+    #support {
         width: 75%;
     }
 }
@@ -986,11 +1011,11 @@ a.social-icon {
     }
 }
 @media screen and (min-width: 354px) and (max-width: 767px) {
-    #icon_box {
+    #support {
         display: block;
         margin: 0 auto;
     }
-    .icon_box {
+    .support {
         width: 100px;
         margin: 0 5px 0 0;
         padding: 0 0 50px;
@@ -999,7 +1024,7 @@ a.social-icon {
         text-align: center;
         width: 30%;
     }
-    .icon_box:last-of-type {
+    .support:last-of-type {
         margin: 0;
     }
 }
@@ -1071,7 +1096,7 @@ a.social-icon {
 
 
 @media screen and (min-width: 354px) and (max-width: 450px) {
-    #icon_box {
+    #support {
         width: 90%;
     }
 }
@@ -1144,10 +1169,11 @@ a.social-icon {
     #contact {
         padding-top: 40px;
     }
-    .icon_box {
+    .support {
         margin-top: 0;
         margin-bottom: 50px;
     }
+    
 }
 @media screen and (min-width: 389px) and (max-width: 408px) {
     #PHP,
