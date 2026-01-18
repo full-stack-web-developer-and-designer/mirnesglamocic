@@ -1,6 +1,13 @@
 <?php
 // inc/helpers.php
 
+// ========================================
+// Utility: sanitize output
+// ========================================
+function e(string $str): string {
+    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+}
+
 /**
  * Splits a title into two lines by the last space.
  * Falls back to single-line if no space exists.
