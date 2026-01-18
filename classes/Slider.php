@@ -63,7 +63,7 @@ class Slider extends Entity
 <li class="item-a slide">
     <article class="cert">
         <a href="{$big}" class="progressive replace" data-href="{$small}" data-lightbox="image-group">
-            <img src="{$small}" alt="{$alt}" loading="lazy">
+            <img src="{$small}" class="preview" alt="{$alt}" loading="lazy">
         </a>
     </article>
 </li>
