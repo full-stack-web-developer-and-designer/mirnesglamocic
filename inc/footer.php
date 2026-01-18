@@ -54,25 +54,47 @@
 <?php echo "<p class=\"barcode\">This page was printed from: ".$url;?></p>
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-<!-- Plugins -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js"></script>
-<script src="./lightbox2/src/js/lightbox.min.js"></script>
-<script src="./JS/slider.min.js"></script>
-<script src="./JS/lazyloading.min.js"></script>
-<!-- PROJECT MENU SCRIPT -->
-<script src="./JS/projects-menu.js"></script>
-<!-- Responsive Navigation -->
 <script>
-jQuery(function($) {
-    const e = $("#respmenu"),
-          i = $("#nav>ul");
+  window.jQuery || document.write('<script src="./JS/jquery-3.6.4.min.js"><\/script>');
+</script>
 
-    e.on("click", function(event) {
-        event.preventDefault();
-        i.toggleClass("open");
-    });
+<!-- Lightbox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+<!-- Lightslider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+
+<!-- jQuery Validate -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+<!-- Picturefill -->
+<script>
+    document.createElement("picture");
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js"></script>
+
+<!-- WebP Hero -->
+<script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/polyfills.js"></script>
+<script src="https://unpkg.com/webp-hero@0.0.0-dev.21/dist-cjs/webp-hero.bundle.js"></script>
+<script>
+    var webpMachine = new webpHero.WebpMachine();
+    webpMachine.polyfillDocument();
+</script>
+
+<!-- Progressive.js -->
+<script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.Progressive) {
+        Progressive.init();
+        console.log('Progressive.js loaded ✅');
+    } else {
+        console.error('Progressive.js NOT loaded ❌');
+    }
 });
 </script>
+
+<!-- Your custom scripts -->
+<script src="./JS/slider.min.js"></script>
+<script src="./JS/lazyloading.min.js"></script>
+<script src="./JS/projects-menu.js"></script>
