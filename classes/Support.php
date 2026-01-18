@@ -7,23 +7,39 @@ class Support extends Entity
     public int $support_id;
     public int $page_id;
     public string $href = '';
-    public string $aria_label = '';
-    public string $icon_name = '';
+    public string $aria = '';
+    public string $icon_id = '';
 
     public function render(): string
-    {
-       return '
-<span class="icon_box">
-    <a class="social-icon"
-       href="' . htmlspecialchars($this->href, ENT_QUOTES, 'UTF-8') . '"
-       title="' . htmlspecialchars($this->aria_label, ENT_QUOTES, 'UTF-8') . '"
-       aria-label="' . htmlspecialchars($this->aria_label, ENT_QUOTES, 'UTF-8') . '"
-       target="_blank" rel="noopener noreferrer">
-        <svg class="icon social-icon" aria-hidden="true">
-            <use href="#icon-' . htmlspecialchars($this->icon_name, ENT_QUOTES, 'UTF-8') . '"></use>
+     {
+        $href       = htmlspecialchars($this->href, ENT_QUOTES, 'UTF-8');
+        $aria       = htmlspecialchars($this->aria, ENT_QUOTES, 'UTF-8');
+        $icon_id       = htmlspecialchars($this->icon_id, ENT_QUOTES, 'UTF-8');
+        $labelText  = htmlspecialchars(
+            str_replace(['Support me on ', 'Support me'], '', $this->aria),
+            ENT_QUOTES,
+            'UTF-8'
+        );
+   
+
+       return <<<HTML
+        <span class="support">
+            <a class="support-link"
+            href="{$href}"
+            aria-label="{$aria}"
+            target="_blank"
+            rel="noopener noreferrer">
+                <svg class="icon social-icon support-icon" role="img">
+            <title>{$aria}</title>
+            <use href="#icon-{$icon_id}"></use>
         </svg>
+
+        <span class="support-label">{$labelText}</span>
+
     </a>
-</span>';
+</span>     
+HTML;
+
 
     }
 }
