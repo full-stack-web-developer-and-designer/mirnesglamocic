@@ -1,9 +1,14 @@
 <?php
-    require_once 'core/init.php';
+    declare(strict_types=1);
+
+    require_once __DIR__ . '/core/init.php';
+    require_once __DIR__ . '/inc/helpers.php';
+
     $head = Head::get(5);
     $page_id = 5;
     $page = Pages::get(5);
     $slider = new Slider();
+    
 ?>
 <!DOCTYPE html>
 <html itemscope itemtype="https://schema.org/WebPage" lang="en">
@@ -12,7 +17,7 @@
 
     <body>
 
-        <?php include_once './inc/header.php'; ?>
+        <?php require_once BASE_PATH . '/inc/header.php'; ?>
 
         <div class="wrapper">
 
@@ -42,7 +47,7 @@
 
         </div><!-- end .wrapper -->
 
-        <?php include_once './inc/footer.php'; //end #footer ?>
+        <?php require_once BASE_PATH . '/inc/footer.php'; ?>
 
     </body>
 

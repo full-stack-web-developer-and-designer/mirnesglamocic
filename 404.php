@@ -10,7 +10,7 @@
 	<?php echo $head->renderHead(); ?>
 	<body>
 		
-		<?php include_once './inc/header.php'; ?>
+		<?php require_once BASE_PATH . '/inc/header.php'; ?>
 		
 		<div class="wrapper">
 			

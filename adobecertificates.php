@@ -37,7 +37,7 @@
 
         </div><!-- end .wrapper -->
 
-        <?php include_once './inc/footer.php'; //end #footer ?>
+        <?php require_once BASE_PATH . '/inc/footer.php'; ?>
         
     </body>
     
