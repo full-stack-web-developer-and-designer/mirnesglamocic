@@ -1,20 +1,55 @@
 <?php
-class Illustrations extends ConnectSlider
+
+class Illustrations extends Entity
 {
-    // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderSlider()
+    /**
+     * Fetch illustration projects from database
+     *
+     * @return array of objects
+     */
+    public static function fetch(): array
     {
-        $sql =
-            "SELECT * FROM mirnesgl_korea.projects WHERE category='illustration' ORDER BY projects_id DESC;";
-        $stmt = $this->__connect()->query($sql);
+        $sql = "
+            SELECT 
+                p.project_id,
+                p.title,
+                p.summary,
+                pi.image
+            FROM projects p
+            INNER JOIN project_images pi 
+                ON pi.project_id = p.project_id
+            WHERE p.category_id = 4   -- 4 = illustration
+            ORDER BY p.project_id DESC
+        ";
 
-        while ($row = $stmt->fetch()) {
-            $category = $row["category"];
-            $image = $row["image"];
-            $alt = $row["alt"];
-            $content = $row["content"];
+        $stmt = self::$db->query($sql);
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 
-            echo "<article class=\"$category\" aria-label='Projects of illustrations by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina'><a href=\"./illustrations/BIG/$image.jpg\" data-lightbox='illustrations'><img src=\"./illustrations/SMALL/$image.jpg\" alt=\"$alt by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\" class='blur' loading='lazy'><div class='content fade'><p>$content</p></div></a></article>";
+    /**
+     * Render slider HTML
+     */
+    public static function renderSlider(): void
+    {
+        $projects = self::fetch();
+
+        foreach ($projects as $project) {
+            $image = htmlspecialchars($project->image);
+            $title = htmlspecialchars($project->title);
+            $summary = htmlspecialchars($project->summary);
+
+            echo "
+            <article class='illustration' aria-label='Project: $title by professional web designer Mirnes Glamočić'>
+                <a href='/illustrations/BIG/{$image}' data-lightbox='illustrations'>
+                    <img src='/illustrations/SMALL/{$image}' 
+                         alt='$title by professional web designer and programmer Mirnes Glamočić' 
+                         class='blur' loading='lazy'>
+                    <div class='content fade'>
+                        <p>$summary</p>
+                    </div>
+                </a>
+            </article>
+            ";
         }
     }
 }

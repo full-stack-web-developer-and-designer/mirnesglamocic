@@ -1,20 +1,44 @@
 <?php
-class Logos extends ConnectSlider
+class Logos extends Entity
 {
-    // Fetch data from MySQL using PDO - PHP Data Object
-    public function renderSlider()
+    public static function fetch(): array
     {
-        $sql =
-            "SELECT * FROM mirnesgl_korea.projects WHERE category='logo' ORDER BY projects_id DESC;";
-        $stmt = $this->__connect()->query($sql);
+        $sql = "
+            SELECT 
+                p.project_id,
+                p.title,
+                p.summary,
+                pi.image
+            FROM projects p
+            INNER JOIN project_images pi
+                ON pi.project_id = p.project_id
+            WHERE p.category_id = 3  -- logos
+            ORDER BY p.project_id DESC
+        ";
+        $stmt = self::$db->query($sql);
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 
-        while ($row = $stmt->fetch()) {
-            $category = $row["category"];
-            $image = $row["image"];
-            $alt = $row["alt"];
-            $content = $row["content"];
+    public static function renderSlider(): void
+    {
+        $projects = self::fetch();
+        foreach ($projects as $project) {
+            $image = htmlspecialchars($project->image);
+            $title = htmlspecialchars($project->title);
+            $summary = htmlspecialchars($project->summary);
 
-            echo "<article class=\"$category\"  aria-label='Projects of logos by professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina'><a href=\"./logos/BIG/$image.jpg\" data-lightbox='logos'><img src=\"./logos/SMALL/$image.jpg\" alt=\"$alt by professional web designer and programmer Mirnes Glamočić from Bosnia and Herzegovina\" class='blur' loading='lazy'><div class='content fade'><p>$content</p></div></a></article>";
+            echo "
+            <article class='logo' aria-label='Project: $title by professional web designer Mirnes Glamočić'>
+                <a href='/logos/BIG/{$image}' data-lightbox='logos'>
+                    <img src='/logos/SMALL/{$image}' 
+                         alt='$title by professional web designer and programmer Mirnes Glamočić'
+                         class='blur' loading='lazy'>
+                    <div class='content fade'>
+                        <p>$summary</p>
+                    </div>
+                </a>
+            </article>
+            ";
         }
     }
 }
