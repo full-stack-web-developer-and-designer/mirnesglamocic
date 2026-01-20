@@ -17,7 +17,7 @@ TRUNCATE TABLE `project_websites`;
 INSERT INTO `project_websites` (
     project_id, role, skills, features, link, github, img_1100, img_1100_2x, img_768, img_768_2x, img_375, img_375_2x, img) VALUES 
 (1, 'Full-stack Developer', 
-'HTML • CSS • PHP • SEO • Git & GitHub', 
+'HTML, CSS, PHP, SEO, Git & GitHub', 
 '<li>Dynamic content generated with PHP on each page load</li><li>Randomized background colors, fonts, and text styles</li><li>Simple logic to maintain readable color combinations</li><li>Lightweight, SEO-friendly one-page structure</li>', 
 'php-one-page-site.mirnesglamocic.com', 
 'php-one-page-site', 
@@ -27,7 +27,7 @@ INSERT INTO `project_websites` (
 'php-one-page-site.jpg'
 ),
 (2, 'Full-stack Developer', 
-'HTML • CSS • PHP • SEO • Git & GitHub',
+'HTML, CSS, PHP, SEO, Git & GitHub',
 '<li>Object-Oriented PHP structure</li><li>Payment option simulation</li><li>Logical use of PHP functions and user input handling</li>',
 'thebestautos.mirnesglamocic.com', 
 'thebestautos',
@@ -36,7 +36,7 @@ INSERT INTO `project_websites` (
 'the-best-autos_375.webp', 'the-best-autos_375@2x.webp',
 'the-best-autos.jpg'),
 (3, 'Full-stack Developer', 
-'HTML • CSS • PHP • MySQL • Git & GitHub',
+'HTML, CSS, PHP, MySQL, Git & GitHub',
 '<li>Dynamic questions stored in database</li><li>Uses SQL queries with PHP</li><li>Frontend display with CSS styling</li>',
 'sql-quizzer.mirnesglamocic.com', 
 'sql-quizzer',
@@ -45,7 +45,7 @@ INSERT INTO `project_websites` (
 'SQLquizzer_375.webp', 'SQLquizzer_375@2x.webp',
 'SQLquizzer.jpg'),
 (4, 'Backend Developer', 
-'HTML • CSS • JavaScript • PHP • MySQL • Git & GitHub',
+'HTML, CSS, JavaScript, PHP, MySQL, Git & GitHub',
   '<li>User can submit feedback via form</li><li>Uses PHP + MySQL</li><li>Client-side validation</li>',
   'https://feedback.mirnesglamocic.com',
   'feedback-app',
@@ -57,7 +57,7 @@ INSERT INTO `project_websites` (
 (
   5,
   'Full-stack Developer',
-  'HTML • CSS • jQuery • AJAX • PHP • MySQL • Git & GitHub',
+  'HTML, CSS, jQuery, AJAX, PHP, MySQL, Git & GitHub',
   '<li>Real-time messages</li><li>AJAX posting</li><li>No login required</li>',
   'https://shoutbox.mirnesglamocic.com',
   'shoutbox-app',
@@ -69,7 +69,7 @@ INSERT INTO `project_websites` (
 (
   6,
   'WordPress Developer',
-  'WordPress • Elementor • HTML • CSS • JavaScript',
+  'WordPress, Elementor, HTML, CSS, JavaScript',
   '<li>Responsive design</li><li>Custom UI</li><li>SEO friendly</li>',
   'https://terradium.mirnesglamocic.com',
   'terradium',
@@ -81,7 +81,7 @@ INSERT INTO `project_websites` (
 (
   7,
   'WordPress Developer',
-  'WordPress • Elementor • Polylang • SEO',
+  'WordPress, Elementor, Polylang, SEO',
   '<li>Multilingual</li><li>Optimized performance</li>',
   'https://oliveoilmatic.com', 
   'oliveoilmatic',
@@ -93,7 +93,7 @@ INSERT INTO `project_websites` (
 (
   8,
   'Full-stack Developer',
-  'HTML • CSS • JS • PHP • MySQL • SEO',
+  'HTML, CSS, JS, PHP, MySQL, SEO',
   '<li>Booking system</li><li>Interactive map</li>',
   'https://visit-neum.com',
   'visit-neum',
@@ -105,7 +105,7 @@ INSERT INTO `project_websites` (
 (
   9,
   'Frontend JavaScript Developer',
-  'HTML • CSS • JavaScript • Git & GitHub',
+  'HTML, CSS, JavaScript, Git & GitHub',
   '<li>Game logic</li><li>Two-player mode</li>',
   'https://full-stack-web-developer-and-designer.github.io/tictactoe',
   'tictactoe',
@@ -120,7 +120,7 @@ INSERT INTO `project_websites` (
 (
   10,
   'Frontend Developer',
-  'HTML • CSS • jQuery',
+  'HTML, CSS, jQuery',
   '<li>Thumbnail navigation</li><li>Responsive</li>',
   'full-stack-web-developer-and-designer.github.io/jquery-thumbslider/',
   'jquery-thumbslider',
@@ -135,7 +135,7 @@ INSERT INTO `project_websites` (
 (
   11,
   'Frontend Developer',
-  'HTML • CSS • JavaScript • jQuery',
+  'HTML, CSS, JavaScript, jQuery',
   '<li>Smooth transitions</li><li>Reusable</li>',
   'full-stack-web-developer-and-designer.github.io/content-slider',
   'content-slider',
@@ -150,7 +150,7 @@ INSERT INTO `project_websites` (
 (
   12,
   'Frontend JavaScript Developer',
-  'HTML • CSS • JavaScript',
+  'HTML, CSS, JavaScript',
   '<li>Dynamic questions</li><li>Score tracking</li>',
   'full-stack-web-developer-and-designer.github.io/javascript-quiz',
   'javascript-quiz',
@@ -165,7 +165,7 @@ INSERT INTO `project_websites` (
 (
   13,
   'Frontend Developer',
-  'HTML • CSS • JavaScript',
+  'HTML, CSS, JavaScript',
   '<li>Accordion UI</li><li>Lightweight</li>',
   'full-stack-web-developer-and-designer.github.io/faq-slider',
   'faq-slider',
@@ -180,7 +180,7 @@ INSERT INTO `project_websites` (
 (
   14,
   'Frontend Developer',
-  'HTML • CSS • Responsive design',
+  'HTML, CSS, Responsive design',
   '<li>Clean layout</li><li>Professional</li>',
   'full-stack-web-developer-and-designer.github.io/resume',
   'resume',
@@ -195,7 +195,7 @@ INSERT INTO `project_websites` (
 (
   15,
   'Frontend Developer',
-  'HTML • CSS • JavaScript • API',
+  'HTML, CSS, JavaScript, API',
   '<li>YouTube API</li><li>Live search</li>',
   'full-stack-web-developer-and-designer.github.io/yt-search-videos',
   'yt-search-videos',
@@ -208,7 +208,7 @@ INSERT INTO `project_websites` (
   'yt-search-videos.jpg'
 ),
 (16, 'Full-stack web developer & designer', 
-'HTML5 • CSS3 • JavaScript(Vanilla) • jQuery • AJAX • JSON • PHP (OOP) • MySQL • Responsive web design • SEO best practices • Git & GitHub • UI/UX design principles • Adobe Bridge • Adobe Photoshop • Adobe Illustrator',
+'HTML5, CSS3, JavaScript(Vanilla), jQuery, AJAX, JSON, PHP (OOP), MySQL, Responsive web design, SEO best practices, Git & GitHub, UI/UX design principles, Adobe Bridge, Adobe Photoshop, Adobe Illustrator',
 '<li>Fully custom design and codebase</li><li>Responsive layout for desktop, tablet, and mobile</li><li>Project showcase with live demos and descriptions</li><li>Clean, modern UI focused on readability and clarity</li><li>Optimized structure for performance and SEO</li><li>Designed and branded using Photoshop & Illustrator</li>',
 'mirnesglamocic.com', 'mirnesglamocic',
 'mirnesglamocic_1100.webp', 'mirnesglamocic_1100@2x.webp',
