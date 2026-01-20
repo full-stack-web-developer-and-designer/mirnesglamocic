@@ -83,18 +83,8 @@
 
 <!-- Progressive.js -->
 <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.Progressive) {
-        Progressive.init();
-        console.log('Progressive.js loaded ✅');
-    } else {
-        console.error('Progressive.js NOT loaded ❌');
-    }
-});
-</script>
 
-<!-- Your custom scripts -->
-<script src="./JS/slider.min.js"></script>
-<script src="./JS/lazyloading.min.js"></script>
-<script src="./JS/projects-menu.js"></script>
+<!-- Custom scripts -->
+<script src="/JS/slider.min.js"></script>
+<script src="/JS/lazyloading.min.js"></script>
+<script src="/JS/projects-menu.js"></script>
