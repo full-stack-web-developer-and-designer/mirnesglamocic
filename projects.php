@@ -50,37 +50,60 @@
                         <!-- Main Websites Section (visible on page load) -->
                         <section id="websites" class="nested-target" style="display:block;">
                             <?php
-                                $website = new Website();
-                                $website->renderSlider();
+                           // All websites
+WebsiteRenderer::render(WebsiteProject::fetch());
+
                             ?>
                         </section>
 
+
+
+
+
+
+
+
+
+
                         <!-- Nested Targets -->
                         <section id="div5" class="nested-target" role="tabpanel" aria-labelledby="tab-div5">
-                            <?php (new FeaturedApp())->renderSlider(); ?>
+                            <?php 
+                                // Featured apps
+                                WebsiteRenderer::render(WebsiteProject::fetch(['featured']));
+                            ?>
                         </section>
                         <section id="div6" class="nested-target" role="tabpanel" aria-labelledby="tab-div6">
-                            <?php (new FullstackApp())->renderSlider(); ?>
+                            <?php 
+                               // Fullstack apps
+                                WebsiteRenderer::render(WebsiteProject::fetch(['fullstack']));
+                            ?>
                         </section>
                         <section id="div7" class="nested-target" role="tabpanel" aria-labelledby="tab-div7">
-                            <?php (new MiniApp())->renderSlider(); ?>
+                            <?php 
+                               // Mini apps
+                                WebsiteRenderer::render(WebsiteProject::fetch(['mini']));
+                            ?>
                         </section>
                         <section id="div8" class="nested-target" role="tabpanel" aria-labelledby="tab-div8">
-                            <?php (new WordpressApp())->renderSlider(); ?>
+                            <?php 
+                            // WordPress apps
+                                WebsiteRenderer::render(WebsiteProject::fetch(['wordpress']));
+ ?>
                         </section>
                     </section>
 
                     <!-- Other Main Targets -->
                     <section id="div2" class="target" role="tabpanel" aria-labelledby="tab-div2" style="display:none;">
-                        <section id="photoshops"><?php (new Photoshops())->renderSlider(); ?></section>
+                        <section id="photoshops"><?php Photoshop::render();
+ ?></section>
                     </section>
 
                     <section id="div3" class="target" role="tabpanel" aria-labelledby="tab-div3" style="display:none;">
-                        <section id="illustrations"><?php (new Illustrations())->renderSlider(); ?></section>
+                        <section id="illustrations"><?php Illustrations::renderSlider(); ?></section>
                     </section>
 
                     <section id="div4" class="target" role="tabpanel" aria-labelledby="tab-div4" style="display:none;">
-                        <section id="logos"><?php (new Logos())->renderSlider(); ?></section>
+                        <section id="logos"><?php Logos::renderSlider(); ?></section>
                     </section>
                 </div>
             
