@@ -1,5 +1,4 @@
 <?php
-
 class WebsiteRenderer
 {
     public static function render(array $projects): void
@@ -24,30 +23,29 @@ class WebsiteRenderer
             echo "<div class='view'>";
             echo "<h2>{$project->title}</h2>";
 
-            // Convert skills commas to •
-            $formattedSkills = str_replace(',', ' •', $project->skills);
-
             echo "<div class=\"block\">
-                    <h2>Project overview</h2>
-                  </div>
-                  <div class='overview'>  
-                      <div class='overview-box'>    
-                          <strong>Role:</strong>
-                          <span>{$project->role}</span>
-                      </div>
-                      <div class='overview-box'>
-                          <strong>Tech:</strong>
-                          <span>{$formattedSkills}</span>
-                      </div> 
-                  </div>";
+                                    <h2>Project overview</h2>
+                                    </div>
+            <div class='overview'>  
+                <div class='overview-box'>    
+                    <strong>Role:</strong>
+                    <span>{$project->role}</span>
+                </div>
+                <div class='overview-box'>
+                    <strong>Tech:</strong>
+                    <span>{$project->skills}</span>
+                </div> 
+            </div>";
 
-            echo "<div class='block'>
-                    <h2>Summary</h2>
-                    <p>{$project->summary}</p>
-                  </div>";
+            // Features: Render as <li> items
+            $features = explode(',', $project->features); // Assuming features are separated by commas
             echo "<div class='block'>
                     <h2>Key Features</h2>
-                    <ul class='features'>{$project->features}</ul>
+                    <ul class='features'>";
+            foreach ($features as $feature) {
+                echo "<li>" . htmlspecialchars($feature) . "</li>";
+            }
+            echo "</ul>
                   </div>";
 
             echo "<div class='actions'>";
@@ -55,7 +53,7 @@ class WebsiteRenderer
             echo "
                 <a href='https://{$project->link}' target='_blank' class='btn primary' rel='noopener noreferrer'>
                     <svg class=\"icon\" viewBox=\"0 0 32 32\"><path d=\"M0 22.944q0 2.464 1.76 4.224l3.072 3.104q1.76 1.728 4.224 1.728t4.256-1.728l2.688-2.976q1.376-1.344 1.664-3.232t-0.512-3.552l-6.784 6.784q-0.576 0.576-1.408 0.576t-1.44-0.576l-2.816-2.816q-0.576-0.608-0.576-1.408t0.576-1.408l6.784-6.816q-1.632-0.8-3.52-0.512t-3.264 1.664l-2.944 2.72q-1.76 1.76-1.76 4.224zM9.792 20.256q0 0.832 0.576 1.408t1.408 0.576 1.408-0.576l8.48-8.48q0.576-0.576 0.576-1.408t-0.576-1.408q-0.608-0.576-1.44-0.576t-1.408 0.576l-8.448 8.48q-0.576 0.576-0.576 1.408zM14.336 7.968q-0.288 1.888 0.512 3.552l6.816-6.816q0.576-0.576 1.408-0.576t1.408 0.576l2.816 2.848q0.576 0.576 0.576 1.408t-0.576 1.408l-6.784 6.784q1.632 0.832 3.52 0.512t3.264-1.664l2.944-2.944q1.76-1.76 1.76-4.224t-1.76-4.256l-2.816-2.816q-1.76-1.76-4.224-1.76t-4.256 1.76l-2.944 2.944q-1.344 1.376-1.664 3.264z\"></path>
-                    </svg> Live Site &raquo;
+                                            </svg> Live Site &raquo;
                 </a>";
 
             if (!empty($project->github)) {
@@ -68,8 +66,9 @@ class WebsiteRenderer
                 </a>";
             }
 
-            echo "</div>"; // actions
-            echo "</div></article>"; // view + article
+            echo "</div>";
+
+            echo "</div></article>";
         }
     }
 }
