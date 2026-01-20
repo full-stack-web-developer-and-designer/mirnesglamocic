@@ -318,6 +318,7 @@ p#response {
     height: 50px;
     margin: 1em 1.9em 1em 0.7em;
     color: #a2d838;
+    text-align: center;
 }
 #form {
     width: 800px;
