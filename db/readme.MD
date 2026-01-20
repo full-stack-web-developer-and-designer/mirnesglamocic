@@ -67,17 +67,17 @@ erDiagram
         VARCHAR title
         TEXT description
     }
+    CERTIFICATE_CATEGORIES {
+        INT category_id PK
+        VARCHAR name
+        INT page_id FK
+    }
     CERTIFICATES {
         INT certificate_id PK
         INT cert_desc_id FK
         VARCHAR title
         VARCHAR issuer
         DATE issued_date
-    }
-    CERTIFICATE_CATEGORIES {
-        INT category_id PK
-        VARCHAR name
-        INT page_id FK
     }
     CERTIFICATE_CATEGORY_MAP {
         INT certificate_id PK
@@ -96,16 +96,19 @@ erDiagram
     }
     SKILLS {
         INT skill_id PK
+        INT page_id FK
         VARCHAR name
         VARCHAR type
     }
     SERVICES {
         INT service_id PK
+        INT page_id FK
         VARCHAR title
         TEXT description
     }
     CONTACT {
         INT contact_id PK
+        INT page_id FK
         VARCHAR name
         VARCHAR email
         TEXT message
@@ -113,6 +116,7 @@ erDiagram
     }
     SUPPORT {
         INT support_id PK
+        INT page_id FK
         VARCHAR name
         VARCHAR link
     }
@@ -171,6 +175,10 @@ erDiagram
     PAGES ||--o{ META : "has"
     PAGES ||--o{ NAVIGATION : "has"
     PAGES ||--o{ PROJECTS : "displays"
+    PAGES ||--o{ SKILLS : "has"
+    PAGES ||--o{ SERVICES : "has"
+    PAGES ||--o{ CONTACT : "has"
+    PAGES ||--o{ SUPPORT : "has"
     CERT_DESC ||--o{ CERTIFICATES : "defines"
     CERTIFICATES ||--o{ ITA_CERTIFICATE : "linked to"
     ITA_CERTIFICATE ||--o{ ITA_CERTIFICATE_IMAGES : "has images"
