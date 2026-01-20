@@ -7,6 +7,11 @@
 -- - img: default image
 -- ----------------------------
 
+-- ----------------------------
+-- Clear existing website types
+-- ----------------------------
+TRUNCATE TABLE `project_photoshop`;
+
 INSERT INTO project_photoshop (
     project_id,
     big_img,
