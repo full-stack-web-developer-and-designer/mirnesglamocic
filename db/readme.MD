@@ -67,11 +67,6 @@ erDiagram
         VARCHAR title
         TEXT description
     }
-    CERTIFICATE_CATEGORIES {
-        INT category_id PK
-        VARCHAR name
-        INT page_id FK
-    }
     CERTIFICATES {
         INT certificate_id PK
         INT cert_desc_id FK
@@ -79,10 +74,14 @@ erDiagram
         VARCHAR issuer
         DATE issued_date
     }
+    CERTIFICATE_CATEGORIES {
+        INT category_id PK
+        VARCHAR name
+        INT page_id FK
+    }
     CERTIFICATE_CATEGORY_MAP {
-        INT certificate_id FK
-        INT category_id FK
-        PK(certificate_id, category_id)
+        INT certificate_id PK
+        INT category_id PK
     }
     ITA_CERTIFICATE {
         INT ita_cert_id PK
@@ -129,7 +128,7 @@ erDiagram
         INT page_id FK
     }
     PROJECT_WEBSITES {
-        INT project_id PK, FK
+        INT project_id PK
         VARCHAR role
         VARCHAR skills
         VARCHAR features
@@ -149,12 +148,11 @@ erDiagram
         VARCHAR slug
     }
     PROJECT_WEBSITE_TYPES {
-        INT project_id FK
-        INT website_type_id FK
-        PK(project_id, website_type_id)
+        INT project_id PK
+        INT website_type_id PK
     }
     PROJECT_PHOTOSHOP {
-        INT project_id PK, FK
+        INT project_id PK
         VARCHAR big_img
         VARCHAR img_576
         VARCHAR img_530
@@ -166,7 +164,7 @@ erDiagram
         VARCHAR img
     }
     PROJECT_IMAGES {
-        INT project_id PK, FK
+        INT project_id PK
         VARCHAR image
     }
 
