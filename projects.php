@@ -50,21 +50,10 @@
                         <!-- Main Websites Section (visible on page load) -->
                         <section id="websites" class="nested-target" style="display:block;">
                             <?php
-                           // All websites
-WebsiteRenderer::render(WebsiteProject::fetch());
-
+                                // All websites
+                                WebsiteRenderer::render(WebsiteProject::fetch());
                             ?>
                         </section>
-
-
-
-
-
-
-
-
-
-
                         <!-- Nested Targets -->
                         <section id="div5" class="nested-target" role="tabpanel" aria-labelledby="tab-div5">
                             <?php 
