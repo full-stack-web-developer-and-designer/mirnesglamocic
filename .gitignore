@@ -1,7 +1,5 @@
 cert/
-classes/Con*.php
 core/
-illustrations/
 images/
 JS/jquery*.min.js
 JS/lightslider.min.js
@@ -9,12 +7,7 @@ JS/picturefill.min.js
 JS/lazyloading.min.js
 lightbox2/
 lightslider/
-logos/
-photoshops/
 PHPMailer/
-projects/
-services/
-websites/
 *.jpg
 *.webp
 *.png
