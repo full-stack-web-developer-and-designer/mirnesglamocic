@@ -19,7 +19,11 @@
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# ----------------------------------------
+# Redirect old html pages
+# ----------------------------------------
 
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 # ----------------------------------------
 # Extensionless PHP URLs
 # ----------------------------------------
