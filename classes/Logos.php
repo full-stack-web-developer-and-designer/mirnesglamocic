@@ -29,8 +29,8 @@ class Logos extends Entity
 
             echo "
             <article class='logo' aria-label='Project: $title by professional web designer Mirnes Glamočić'>
-                <a href='/logos/BIG/{$image}' data-lightbox='logos'>
-                    <img src='/logos/SMALL/{$image}' 
+                <a href='/images/logos/BIG/{$image}' data-lightbox='logos'>
+                    <img src='/images/logos/SMALL/{$image}' 
                          alt='$title by professional web designer and programmer Mirnes Glamočić'
                          class='blur' loading='lazy'>
                     <div class='content fade'>

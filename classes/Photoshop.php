@@ -46,18 +46,18 @@ class Photoshop extends Entity
         foreach ($projects as $row) {
             echo "
             <article class='project photoshop' data-category='photoshop'>
-                <a href='/photoshops/BIG/{$row->big_img}' data-lightbox='photoshops'>
+                <a href='/images/photoshops/BIG/{$row->big_img}' data-lightbox='photoshops'>
                     <picture class='image'>
-                        <source srcset='/photoshops/SMALL/{$row->img_576}' media='(min-width: 1261px)'>
-                        <source srcset='/photoshops/SMALL/{$row->img_530}' media='(min-width: 1209px)'>
-                        <source srcset='/photoshops/SMALL/{$row->img_500}' media='(min-width: 1140px)'>
-                        <source srcset='/photoshops/SMALL/{$row->img_450}' media='(min-width: 1040px)'>
-                        <source srcset='/photoshops/SMALL/{$row->img_408}' media='(min-width: 954px)'>
-                        <source srcset='/photoshops/SMALL/{$row->img_350}' media='(min-width: 840px)'>
-                        <source srcset='/photoshops/SMALL/{$row->img_282}' media='(max-width: 456px)'>
+                        <source srcset='/images/photoshops/SMALL/{$row->img_576}' media='(min-width: 1261px)'>
+                        <source srcset='/images/photoshops/SMALL/{$row->img_530}' media='(min-width: 1209px)'>
+                        <source srcset='/images/photoshops/SMALL/{$row->img_500}' media='(min-width: 1140px)'>
+                        <source srcset='/images/photoshops/SMALL/{$row->img_450}' media='(min-width: 1040px)'>
+                        <source srcset='/images/photoshops/SMALL/{$row->img_408}' media='(min-width: 954px)'>
+                        <source srcset='/images/photoshops/SMALL/{$row->img_350}' media='(min-width: 840px)'>
+                        <source srcset='/images/photoshops/SMALL/{$row->img_282}' media='(max-width: 456px)'>
 
                         <img
-                            src='/photoshops/SMALL/{$row->img}'
+                            src='/images/photoshops/SMALL/{$row->img}'
                             loading='lazy'
                             alt='" . htmlspecialchars($row->title) . "'>
                     </picture>

@@ -40,8 +40,8 @@ class Illustrations extends Entity
 
             echo "
             <article class='illustration' aria-label='Project: $title by professional web designer Mirnes Glamočić'>
-                <a href='/illustrations/BIG/{$image}' data-lightbox='illustrations'>
-                    <img src='/illustrations/SMALL/{$image}' 
+                <a href='/images/illustrations/BIG/{$image}' data-lightbox='illustrations'>
+                    <img src='/images/illustrations/SMALL/{$image}' 
                          alt='$title by professional web designer and programmer Mirnes Glamočić' 
                          class='blur' loading='lazy'>
                     <div class='content fade'>
