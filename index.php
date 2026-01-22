@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/core/init.php';
 require_once __DIR__ . '/inc/helpers.php';
-require_once __DIR__ . '/inc/routes.php';
 
 $head = Head::get(1);
 $page = Pages::get(1);
@@ -58,33 +57,31 @@ $page = Pages::get(1);
         <!-- Certificates Section -->
         <section id="certificates" aria-label="Certificates of ITAcademy">
             <div class="wrapper">
-                <header>
+                <header class="cert-container">
+                  <h2>Certificates</h2>
+                    <div class="text-before-images">
+                        <p class='text-before-images'><?= e("However, in 2016, I decided to enroll in ITAcademy, a school for a profitable IT career in department of PHP WEB DEVELOPMENT.") ?></p>
+                        <p class='text-before-images'><?= e("After successfully completing that program, I was very satisfied with the education provided, and I decided to continue my education in the department of WEB DESIGN.") ?></p>
+                    </div>
+                    
                     <div class="cert-images">
-                            <?php
-                                $ita = new ITA();
-                                $ita->renderCertificates();
-                            ?>
-                        
-                            <!-- CENTER TEXT -->
-                            <div class="cert-text">
-                                <h2>Certificates</h2>
-                        
-                                <div id='mycert'>
-                                    
-                                        <p><?= e("However, in 2016, I decided to enroll in ITAcademy, a school for a profitable IT career in department of PHP WEB DEVELOPMENT.") ?></p>
-                                        <p><?= e("After successfully completing that program, I was very satisfied with the education provided, and I decided to continue my education in the department of WEB DESIGN.") ?></p>
-                                        <p><?= e("I enjoy coding and the challenge of learning something new everyday, so over time, I wanted to learn a lot more about the complete web development and design, and continued to educate myself through various web platforms, such as w3Schools, Pluralsight, Eduonix, Udemy, Educba, Shawn Academy, Cybrary and LinkedIn.") ?></p>  <p><?= e("Through the mentioned web platforms, I received over 1000 certificates and their number is continuously growing.") ?></p>
-                                        <p class='no_print'><?= e("Below you can find and see some of these certificates.") ?></p>
-                                    
-                                </div>
 
-                            </div>
+                        <?php
+                            $ita = new ITA();
+                            $ita->renderCertificates();
+                        ?>
+                    
+                        <div class='text-after-images'>
+                            <p class='text-after-images'><?= e("I enjoy coding and the challenge of learning something new everyday, so over time, I wanted to learn a lot more about the complete web development and design, and continued to educate myself through various web platforms, such as w3Schools, Pluralsight, Eduonix, Udemy, Educba, Shawn Academy, Cybrary and LinkedIn.") ?></p>  <p class='text-after-images'><?= e("Through the mentioned web platforms, I received over 1000 certificates and their number is continuously growing.") ?></p>
+                            <p class='text-after-images no_print'><?= e("Below you can find and see some of these certificates.") ?></p>
                         </div>
+                        
+                    </div>
 
-                    </header>
+                </header>
 
-                </div>
-            </section>
+            </div>
+        </section>
 
             <!-- LinkedIn / Other Certificates -->
         <section id="LinkedIn" aria-label="Certificates of LinkedIn, SoloLearn and Pluralsight">
@@ -132,8 +129,8 @@ $page = Pages::get(1);
                 <div id="support">
 
                     <h3>Feel free to support me</h3>
-                    <p><?= e("If my projects have been helpful or inspiring, consider supporting my work. Every contribution means a lot and helps me keep creating.<") ?></p>                    
-                    <div id="icon_box">
+                    <p><?= e("If my projects have been helpful or inspiring, consider supporting my work. Every contribution means a lot and helps me keep creating.") ?></p>                    
+                    <div>
                         <?php
                             $supports = Support::getAll();
                             foreach ($supports as $support) {
@@ -147,7 +144,7 @@ $page = Pages::get(1);
             </div>
         </section>
 
-        <?php require_once BASE_PATH . '/inc/footer.php'; //end #footer?>
+        <?php require_once BASE_PATH . '/inc/footer.php'; ?>
 
     </body>
 
