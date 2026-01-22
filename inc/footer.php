@@ -85,6 +85,26 @@
 <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js"></script>
 
 <!-- Custom scripts -->
-<script src="/JS/slider.min.js"></script>
-<script src="/JS/lazyloading.min.js"></script>
-<script src="/JS/projects-menu.js"></script>
+<script src="/JS/slider.min.js" defer></script>
+<script src="/JS/lazyloading.min.js" defer></script>
+<script src="/JS/projects-menu.js" defer></script>
+<script>
+jQuery(function ($) {
+
+    var respmenu = $('#respmenu');
+    var menu = $('#nav .menu');
+
+    respmenu.on('click', function (e) {
+        e.preventDefault();
+        menu.toggleClass('is-open');
+    });
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) {
+            menu.removeClass('is-open');
+        }
+    });
+
+});
+</script>
+
