@@ -3,7 +3,9 @@
     <use xlink:href="#icon-arrow-up"></use>
   </svg>
 </a>
-<?php $url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>
+<?php $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$url = $scheme . '://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+?>
 <?php
 	$startYear = 2016;
 	$currentYear = date('Y');
@@ -28,21 +30,24 @@
 
   <div class="icons">
     <a class="social-icons" href="https://www.linkedin.com/in/mirnesglamocic"
-       aria-label="LinkedIn" target="_blank" rel="noopener">
+       aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"
+>
       <svg class="icon" aria-hidden="true">
         <use href="#icon-linkedin"></use>
       </svg>
     </a>
 
     <a class="social-icons" href="https://github.com/full-stack-web-developer-and-designer"
-       aria-label="GitHub" target="_blank" rel="noopener">
+       aria-label="GitHub" target="_blank" rel="noopener noreferrer"
+>
       <svg class="icon" aria-hidden="true">
         <use href="#icon-github"></use>
       </svg>
     </a>
 
     <a class="social-icons" href="https://codepen.io/full-stack-web-developer-and-designer"
-       aria-label="CodePen" target="_blank" rel="noopener">
+       aria-label="CodePen" target="_blank" rel="noopener noreferrer"
+>
       <svg class="icon" aria-hidden="true">
         <use href="#icon-codepen"></use>
       </svg>
