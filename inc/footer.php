@@ -1,6 +1,6 @@
 <a href="#headerTop" class="scroll-top" aria-label="Scroll to top">
   <svg class="icon icon-scroll" width="16" height="40" aria-hidden="true">
-    <use href="#icon-arrow-up"></use>
+    <use xlink:href="#icon-arrow-up"></use>
   </svg>
 </a>
 <?php $url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>
@@ -51,7 +51,8 @@
 
 </footer>
 <!-- print barcode -->
-<?php echo "<p class=\"barcode\">This page was printed from: ".$url;?></p>
+<?php echo '<p class="barcode">This page was printed from: ' . htmlspecialchars($url) . '</p>'; ?>
+
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
