@@ -1,4 +1,21 @@
 <?php
+/**
+ * Skills.php
+ * 
+ * Handles fetching and rendering skills grouped by category.
+ * Skills are displayed as SVG icons, with the last three categories combined
+ * into a human-readable list format.
+ * 
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2023
+ * Updated: 2026-01-27
+ * 
+ * Usage:
+ *   $skills = new Skills();
+ *   $skills->renderSkills();
+ */
+
 class Skills extends Entity
 {
     protected static string $tableName = 'skills';
@@ -57,7 +74,6 @@ class Skills extends Entity
                 return $exceptions[$key];
             }
 
-            // Default title case
             return mb_convert_case($s, MB_CASE_TITLE, 'UTF-8');
         };
 
@@ -77,7 +93,6 @@ class Skills extends Entity
            NORMAL CATEGORIES
            ========================= */
         foreach ($firstCategories as $category => $skills) {
-
             echo "<div class='skills-column'>";
             echo "<h3>" . $capitalize($category) . "</h3>";
             echo "<div class='skills-list'>"; // 🔑 REQUIRED WRAPPER
@@ -107,28 +122,26 @@ class Skills extends Entity
 
         echo "<div class='skills-footer'>";
         echo "<h3>{$combinedTitle}</h3>";
-       echo "<div class='skills-footer-columns'>";
-echo "<div class='skills-list'>"; // single grid for all last three categories
+        echo "<div class='skills-footer-columns'>";
+        echo "<div class='skills-list'>"; // single grid for all last three categories
 
-foreach ($lastCategories as $skills) {
-    foreach ($skills as $skill) {
-        $icon_id = htmlspecialchars($skill['icon_id'], ENT_QUOTES);
-        $name    = htmlspecialchars($skill['name'], ENT_QUOTES);
+        foreach ($lastCategories as $skills) {
+            foreach ($skills as $skill) {
+                $icon_id = htmlspecialchars($skill['icon_id'], ENT_QUOTES);
+                $name    = htmlspecialchars($skill['name'], ENT_QUOTES);
 
-        echo "
-        <div class='skill' aria-label='{$name}' title='{$name}' role='img'>
-            <svg width='100' height='100'>
-                <title>{$name}</title>
-                <use xlink:href='#icon-{$icon_id}'></use>
-            </svg>
-        </div>";
-    }
-}
+                echo "
+                <div class='skill' aria-label='{$name}' title='{$name}' role='img'>
+                    <svg width='100' height='100'>
+                        <title>{$name}</title>
+                        <use xlink:href='#icon-{$icon_id}'></use>
+                    </svg>
+                </div>";
+            }
+        }
 
-echo "</div>"; // skills-list
-echo "</div>"; // skills-footer-columns
-
-
+        echo "</div>"; // skills-list
+        echo "</div>"; // skills-footer-columns
         echo "</div>"; // skills-footer
         echo "</div>"; // skills
     }

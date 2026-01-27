@@ -1,6 +1,28 @@
 <?php
+/**
+ * Logos.php
+ * 
+ * Handles rendering of logo projects.
+ * Fetches logo projects from the database and generates slider HTML
+ * with lightbox support for display on the website.
+ * 
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2023
+ * Updated: 2026-01-27
+ * 
+ * Usage:
+ *   $logos = Logos::fetch();
+ *   Logos::renderSlider();
+ */
+
 class Logos extends Entity
 {
+    /**
+     * Fetch logo projects from the database
+     *
+     * @return array Array of objects with project data
+     */
     public static function fetch(): array
     {
         $sql = "
@@ -19,6 +41,9 @@ class Logos extends Entity
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+    /**
+     * Render logo slider HTML with lightbox support
+     */
     public static function renderSlider(): void
     {
         $projects = self::fetch();

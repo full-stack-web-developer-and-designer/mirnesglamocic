@@ -14,25 +14,25 @@
      *   $head = Head::get($pageId);
      *   echo $head->renderHead();
      */
+
+class Head extends Entity
+{
+    protected static string $tableName = 'meta';
+    protected static string $keyColumn = 'meta_id';
+    public int $meta_id;
+    public int $page_id;
+    public string $title;
+    public string $description;
+    public string $created_at;
+    public string $updated_at;
+    public $og_url;
+    public $og_image;
+    public $twitter_image;
+    public $css;
     
-    class Head extends Entity
+    // Fetch data from MySQL using PDO - PHP Data Object
+    public function renderHead(): string
     {
-        protected static string $tableName = 'meta';
-        protected static string $keyColumn = 'meta_id';
-        public int $meta_id;
-        public int $page_id;
-        public string $title;
-        public string $description;
-        public string $created_at;
-        public string $updated_at;
-        public $og_url;
-        public $og_image;
-        public $twitter_image;
-        public $css;
-        
-        // Fetch data from MySQL using PDO - PHP Data Object
-        public function renderHead(): string
-        {
         $mainCssFile = 'style.css';
         $localHosts = ['mirnesglamocic.ba'];
         $isLocal = in_array($_SERVER['HTTP_HOST'], $localHosts);

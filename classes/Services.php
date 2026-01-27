@@ -1,9 +1,32 @@
 <?php
+/**
+ * Services.php
+ * 
+ * Handles fetching and rendering services from the database.
+ * Each service includes an icon, title (with optional <br> for styling), 
+ * and description. Renders HTML for display on the website.
+ * 
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2023
+ * Updated: 2026-01-27
+ * 
+ * Usage:
+ *   $services = Services::getAll(); // optional if using Entity methods
+ *   $service = new Services();
+ *   $service->renderServices();
+ */
+
 class Services extends Entity
 {
     protected static string $tableName = 'services';
     protected static string $keyColumn = 'service_id';
 
+    /**
+     * Render all services as HTML
+     *
+     * Each service outputs an <article> with icon, formatted title, and description.
+     */
     public function renderServices(): void
     {
         $stmt = self::$db->query(

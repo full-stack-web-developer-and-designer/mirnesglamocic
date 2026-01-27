@@ -1,9 +1,31 @@
 <?php
+/**
+ * Navigation.php
+ * 
+ * Handles rendering of the website's navigation menu.
+ * Fetches navigation items from the database and generates HTML list items
+ * with proper links, targets, and accessibility attributes.
+ * 
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2023
+ * Updated: 2026-01-27
+ * 
+ * Usage:
+ *   Navigation::renderMenu();
+ */
+
 class Navigation extends Entity
 {
     protected static string $tableName = 'navigation';
     protected static string $keyColumn = 'nav_id';
 
+    /**
+     * Render navigation menu HTML
+     *
+     * Loops through all navigation items in the database and prints
+     * <li><a> elements with correct URLs, targets, and aria labels.
+     */
     public static function renderMenu(): void
     {
         $sql = "

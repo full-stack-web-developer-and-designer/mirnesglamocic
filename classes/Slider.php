@@ -1,6 +1,29 @@
 <?php
+/**
+ * Slider.php
+ * 
+ * Handles fetching and rendering certificate sliders.
+ * Supports filtering by skills and conditions defined in SliderConfig::MAP.
+ * Can render individual sliders or entire sections with multiple sliders.
+ * 
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2023
+ * Updated: 2026-01-27
+ * 
+ * Usage:
+ *   $slider = new Slider();
+ *   $slider->render('slider_key'); // render a single slider
+ *   $slider->renderSection('Certificates', ['slider1', 'slider2']); // render a section
+ */
+
 class Slider extends Entity
 {
+    /**
+     * Render a single slider by key
+     *
+     * @param string $key Slider key defined in SliderConfig::MAP
+     */
     public function render(string $key): void
     {
         if (!isset(SliderConfig::MAP[$key])) {
@@ -42,7 +65,6 @@ class Slider extends Entity
 
         $sql .= " ORDER BY RAND()";
 
-        // Use your Entity's PDO
         $stmt = Entity::$db->prepare($sql);
         $stmt->execute($params);
 
@@ -60,17 +82,23 @@ class Slider extends Entity
             $big   = "/cert/BIG/{$picture}.webp";
 
             echo <<<HTML
-<li class="item-a slide">
-    <article class="cert">
-        <a href="{$big}" class="progressive replace" data-href="{$small}" data-lightbox="image-group">
-            <img src="{$small}" class="preview" alt="{$alt}" loading="lazy">
-        </a>
-    </article>
-</li>
-HTML;
+            <li class="item-a slide">
+                <article class="cert">
+                    <a href="{$big}" class="progressive replace" data-href="{$small}" data-lightbox="image-group">
+                        <img src="{$small}" class="preview" alt="{$alt}" loading="lazy">
+                    </a>
+                </article>
+            </li>
+            HTML;
         }
     }
 
+    /**
+     * Render a slider section with a label and one or more sliders
+     *
+     * @param string $label Section label
+     * @param string|array $sliders Single slider key or array of keys
+     */
     public function renderSection(string $label, string|array $sliders): void
     {
         $sliders = is_array($sliders) ? $sliders : [$sliders];
@@ -80,7 +108,6 @@ HTML;
         foreach ($sliders as $sliderKey) {
             $config = SliderConfig::MAP[$sliderKey] ?? null;
             if ($config) {
-                // Quick check if there’s any matching certificate
                 $skills = $config['skills'] ?? [];
                 $conditions = $config['conditions'] ?? [];
                 if (!empty($skills) || !empty($conditions)) {

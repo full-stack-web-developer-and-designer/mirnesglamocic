@@ -1,12 +1,41 @@
 <?php
+/**
+ * DB.php
+ * 
+ * Singleton class to manage the PDO database connection.
+ * Ensures only one PDO instance is created and reused across the application.
+ * 
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2023
+ * Updated: 2026-01-27
+ * 
+ * Usage:
+ *   $pdo = DB::getInstance();
+ */
 
 class DB
 {
+    /**
+     * Holds the single PDO instance
+     */
     private static ?PDO $instance = null;
 
+    /**
+     * Private constructor to prevent direct instantiation
+     */
     private function __construct() {}
+
+    /**
+     * Prevent cloning of the instance
+     */
     private function __clone() {}
 
+    /**
+     * Returns the single PDO instance
+     *
+     * @return PDO
+     */
     public static function getInstance(): PDO
     {
         if (self::$instance === null) {

@@ -1,9 +1,27 @@
 <?php
+/**
+ * Photoshop.php
+ * 
+ * Handles fetching and rendering Photoshop projects from the database.
+ * Each project includes multiple image sizes for responsive design and
+ * renders HTML for a Lightbox gallery.
+ * 
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2023
+ * Updated: 2026-01-27
+ * 
+ * Usage:
+ *   $projects = Photoshop::fetch();
+ *   Photoshop::render();
+ */
 
 class Photoshop extends Entity
 {
     /**
-     * Fetch Photoshop projects
+     * Fetch Photoshop projects from the database
+     *
+     * @return array Array of project objects
      */
     public static function fetch(): array
     {
@@ -33,14 +51,16 @@ class Photoshop extends Entity
     }
 
     /**
-     * Render Photoshop items
+     * Render Photoshop projects as HTML
+     *
+     * Each project outputs a <article> with a responsive <picture> and Lightbox link.
      */
     public static function render(): void
     {
         $projects = self::fetch();
 
         if (empty($projects)) {
-            return; // important: no broken HTML
+            return; // Avoid broken HTML
         }
 
         foreach ($projects as $row) {

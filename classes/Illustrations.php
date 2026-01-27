@@ -1,11 +1,29 @@
 <?php
+/**
+ * Illustrations.php
+ * 
+ * Handles fetching and rendering of illustration projects.
+ * 
+ * Features:
+ *   - fetch(): retrieve all illustration projects from database
+ *   - renderSlider(): render HTML slider for illustration projects
+ * 
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2023
+ * Updated: 2026-01-27
+ * 
+ * Usage:
+ *   $illustrations = Illustrations::fetch();       // Get projects
+ *   Illustrations::renderSlider();                 // Render HTML slider
+ */
 
 class Illustrations extends Entity
 {
     /**
      * Fetch illustration projects from database
      *
-     * @return array of objects
+     * @return array of objects Each object has project_id, title, summary, image
      */
     public static function fetch(): array
     {
@@ -27,7 +45,9 @@ class Illustrations extends Entity
     }
 
     /**
-     * Render slider HTML
+     * Render slider HTML for illustration projects
+     *
+     * Output is directly echoed.
      */
     public static function renderSlider(): void
     {
