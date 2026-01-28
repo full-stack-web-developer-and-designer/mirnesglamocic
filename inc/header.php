@@ -13,7 +13,7 @@
             
             <div id="headerCenter">
                 <span id="cv"><a id="resume" href="https://mirnesglamocic.com/images/MirnesGlamocic-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my resume">
-                    <svg class="icon contact-icon" aria-hidden="true">
+                    <svg class="icon" aria-hidden="true">
                         <use href="#icon-download"></use>
                     </svg>&nbsp;&nbsp;Download my resume</a></span>
             </div><!--end #headerCenter-->
@@ -36,6 +36,10 @@
                         </svg>
                     </a>
                 </div><!-- end .icons -->
+                <p class="print-email">
+    <span>contact@mirnesglamocic.com</span>
+</p>
+
             </div><!--end #headerTopRight-->
         </div><!--end .wrapper-->
     </div><!--end #headerTop-->
