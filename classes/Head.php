@@ -33,9 +33,8 @@ class Head extends Entity
     // Fetch data from MySQL using PDO - PHP Data Object
     public function renderHead(): string
     {
+        $isLocal = (defined('ENV') && ENV === 'development');
         $mainCssFile = 'style.css';
-        $localHosts = ['mirnesglamocic.ba'];
-        $isLocal = in_array($_SERVER['HTTP_HOST'], $localHosts);
 
         if (!$isLocal) {
             $minFile = 'style.min.css';
