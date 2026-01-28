@@ -1,0 +1,72 @@
+"use strict";
+jQuery(document).ready(function () {
+    jQuery.validator.addMethod("validName", function (e, a) {
+        return !!/^[a-zšđčćžA-ZŠĐČĆŽ' ]+$/gi.test(e);
+    }),
+    jQuery.validator.addMethod("validEmail", function (e, a) {
+        return !!/^([a-zA-Z0-9_\-\.]+)\+?([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(
+            e
+        );
+    }),
+    jQuery.validator.addMethod("validMessage", function (e, a) {
+        return !!/^[a-zšđčćžA-ZŠĐČĆŽ 0-9 .,!?:;-]+$/gi.test(e);
+    }),
+
+    jQuery("#contact_me")
+        .submit(function (e) {
+            e.preventDefault();
+        })
+    .validate({
+        rules: {
+            name: { required: !0, validName: !0, minlength: 6 },
+            phone: { required: !0, validPhone: !0 },
+            email: { required: !0, email: !0, validEmail: !0 },
+            message: { required: !0, validMessage: !0, maxlength: 1e3 },
+        },
+        messages: {
+            name: {
+                required: "Please enter your name!",
+                validName: "The name can only contain letters!",
+                minlength: "The name must have at least 6 letters!",
+            },
+            email: {
+                required: "Please enter your email!",
+                validEmail: "The e-mail address is not valid!",
+                email: "Please enter <em>a valid</em> email address!",
+            },
+            message: {
+                required: "Please enter your message!",
+                validMessage: "Message content cannot be special characters or ENTER!",
+                maxlength: "The message can contain a maximum of 1000 characters!",
+            },
+        },
+        errorPlacement: function (e, a) {
+            $(a).each(function () {
+                $(this).parent("div").find("span.error").html(e);
+            });
+        },
+        submitHandler: function (e) {
+            var a = jQuery("#contact_me").serialize();
+            return (
+                console.log(a),
+                jQuery.ajax({
+                    url: "form_process.php",
+                    type: "post",
+                    data: a,
+                    dataType: "json",
+                    cache: !1,
+                    success: function (e) {
+                        jQuery("#response").text(e.message),
+                            console.log(e),
+                            console.log(e.hasOwnProperty("message"));
+                    },
+                    error: function (e, a, t) {
+                        console.log(JSON.stringify(e)), console.log("AJAX error: " + a + " : " + t);
+                    },
+                }),
+                document.getElementById("contact_me").reset(),
+                !1
+            );
+        },
+    });
+});
