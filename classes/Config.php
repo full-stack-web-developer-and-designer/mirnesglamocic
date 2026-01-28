@@ -14,6 +14,10 @@
  *   $dbHost = Config::get('database/host');
  *   $siteName = Config::get('site/name');
  */
+// ========================================
+// Environment
+// ========================================
+define('ENV', in_array($_SERVER['HTTP_HOST'], ['mirnesglamocic.ba', '127.0.0.1', 'localhost']) ? 'development' : 'production');
 
 class Config
 {
