@@ -49,7 +49,7 @@ class Illustration extends Entity
      *
      * Output is directly echoed.
      */
-    public static function render(): void
+    public static function renderIllustration(): void
     {
         $projects = self::fetch();
 

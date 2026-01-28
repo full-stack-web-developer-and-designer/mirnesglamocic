@@ -55,7 +55,7 @@ class Photoshop extends Entity
      *
      * Each project outputs a <article> with a responsive <picture> and Lightbox link.
      */
-    public static function render(): void
+    public static function renderPhotoshop(): void
     {
         $projects = self::fetch();
 

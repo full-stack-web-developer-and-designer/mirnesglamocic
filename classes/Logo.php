@@ -44,7 +44,7 @@ class Logo extends Entity
     /**
      * Render logo slider HTML with lightbox support
      */
-    public static function render(): void
+    public static function renderLogo(): void
     {
         $projects = self::fetch();
         foreach ($projects as $project) {

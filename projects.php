@@ -83,16 +83,15 @@
 
                     <!-- Other Main Targets -->
                     <section id="div2" class="target" role="tabpanel" aria-labelledby="tab-div2" style="display:none;">
-                        <section id="photoshops"><?php Photoshop::render();
- ?></section>
+                        <section id="photoshops"><?php Photoshop::renderPhotoshop(); ?></section>
                     </section>
 
                     <section id="div3" class="target" role="tabpanel" aria-labelledby="tab-div3" style="display:none;">
-                        <section id="illustrations"><?php Illustrations::renderSlider(); ?></section>
+                        <section id="illustrations"><?php Illustration::renderIllustration(); ?></section>
                     </section>
 
                     <section id="div4" class="target" role="tabpanel" aria-labelledby="tab-div4" style="display:none;">
-                        <section id="logos"><?php Logos::renderSlider(); ?></section>
+                        <section id="logos"><?php Logo::renderLogo(); ?></section>
                     </section>
                 </div>
             
