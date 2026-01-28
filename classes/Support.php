@@ -34,7 +34,7 @@ class Support extends Entity
      *
      * @return string HTML output
      */
-    public function render(): string
+    public function renderSupport(): string
     {
         $href      = htmlspecialchars($this->href, ENT_QUOTES, 'UTF-8');
         $aria      = htmlspecialchars($this->aria, ENT_QUOTES, 'UTF-8');
