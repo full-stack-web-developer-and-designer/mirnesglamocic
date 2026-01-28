@@ -16,7 +16,7 @@
  *   Logos::renderSlider();
  */
 
-class Logos extends Entity
+class Logo extends Entity
 {
     /**
      * Fetch logo projects from the database
@@ -44,7 +44,7 @@ class Logos extends Entity
     /**
      * Render logo slider HTML with lightbox support
      */
-    public static function renderSlider(): void
+    public static function render(): void
     {
         $projects = self::fetch();
         foreach ($projects as $project) {

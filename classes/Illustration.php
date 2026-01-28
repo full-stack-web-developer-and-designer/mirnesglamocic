@@ -18,7 +18,7 @@
  *   Illustrations::renderSlider();                 // Render HTML slider
  */
 
-class Illustrations extends Entity
+class Illustration extends Entity
 {
     /**
      * Fetch illustration projects from database
@@ -49,7 +49,7 @@ class Illustrations extends Entity
      *
      * Output is directly echoed.
      */
-    public static function renderSlider(): void
+    public static function render(): void
     {
         $projects = self::fetch();
 
