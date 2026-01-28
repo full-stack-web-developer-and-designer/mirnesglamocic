@@ -22,7 +22,7 @@ class CertDesc extends Entity
     /**
      * Render all certificate descriptions
      */
-    public function renderCertDesc(): void
+    public function renderDescription(): void
     {
         // Use Entity's DB connection
         $sql = "SELECT * FROM " . self::$tableName . ";";
