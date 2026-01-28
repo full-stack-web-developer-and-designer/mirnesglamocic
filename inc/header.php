@@ -51,7 +51,7 @@
                     <!-- navigation -->
                     <?php
                         $Navigation = new Navigation(); 
-                        $Navigation->renderMenu();
+                        $Navigation->renderNavigation();
                     ?>
                 </ul>
             </nav>

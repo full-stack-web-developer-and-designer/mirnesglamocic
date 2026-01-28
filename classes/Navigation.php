@@ -26,7 +26,7 @@ class Navigation extends Entity
      * Loops through all navigation items in the database and prints
      * <li><a> elements with correct URLs, targets, and aria labels.
      */
-    public static function renderMenu(): void
+    public static function renderNavigation(): void
     {
         $sql = "
             SELECT 
