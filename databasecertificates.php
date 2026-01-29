@@ -1,8 +1,24 @@
 <?php
-    require_once 'core/init.php';
-    $head = Head::get(4);
+   
+    declare(strict_types=1);
+    
+    /**
+     * databasecertificates.php
+     *
+     * Displays Database certificate sections with sliders.
+     * Uses the Slider class to render grouped certificate galleries.
+     *
+     * Author: Mirnes Glamočić
+     * Website: https://mirnesglamocic.com
+     */
+
+    require_once __DIR__ . '/core/init.php';
+    require_once __DIR__ . '/inc/helpers.php';
+
     $page_id = 4;
-    $page = Pages::get(4);
+    $head = Head::get($page_id);
+    $page = Pages::get($page_id);
+
     $slider = new Slider();
 ?>
 <!DOCTYPE html>
@@ -23,26 +39,33 @@
                     'LinkedIn SQL Certificates',
                     [
                         'sql',
-                        'postgresql',
+                        'postgresql'
                     ]
                 );
 
                 $slider->renderSection(
                     'LinkedIn MySQL Certificates',
                     [
-                        'mysql',
+                        'mysql'
                     ]
                 );
 
                 $slider->renderSection(
                     'LinkedIn MongoDB Certificates',
-                    'mongodb',
+                    'mongodb'
                 );
+
             ?>
             
         </div><!-- end .wrapper -->
 
         <?php require_once BASE_PATH . '/inc/footer.php'; ?>
+
+        <?php
+            // Custom JS
+            $js_files = ['cert-slider.js'];
+            load_js($js_files);
+        ?>
 
     </body>
 

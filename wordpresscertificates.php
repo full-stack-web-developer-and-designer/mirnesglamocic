@@ -1,12 +1,24 @@
 <?php
+    
     declare(strict_types=1);
+    
+    /**
+     * wordpresscertificates.php
+     *
+     * Displays WordPress certificate sections with sliders.
+     * Uses the Slider class to render grouped certificate galleries.
+     *
+     * Author: Mirnes Glamočić
+     * Website: https://mirnesglamocic.com
+     */
 
     require_once __DIR__ . '/core/init.php';
     require_once __DIR__ . '/inc/helpers.php';
 
-    $head = Head::get(5);
     $page_id = 5;
-    $page = Pages::get(5);
+    $head = Head::get($page_id);
+    $page = Pages::get($page_id);
+
     $slider = new Slider();
     
 ?>
@@ -24,6 +36,7 @@
             <?php echo $page->renderPage(); ?>
 
             <?php
+
                 $slider->renderSection(
                 'LinkedIn WordPress Core Certificates',
                 'wordpress'
@@ -43,11 +56,18 @@
                     'LinkedIn WordPress Ecommerce Certificates',
                     'wordpress_ecommerce'
                 );
+
             ?>
 
         </div><!-- end .wrapper -->
 
         <?php require_once BASE_PATH . '/inc/footer.php'; ?>
+
+        <?php
+            // Custom JS
+            $js_files = ['cert-slider.js'];
+            load_js($js_files);
+        ?>
 
     </body>
 

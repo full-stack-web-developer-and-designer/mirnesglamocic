@@ -1,8 +1,24 @@
 <?php
-    require_once 'core/init.php';
-    $head = Head::get(13);
+    
+    declare(strict_types=1);
+
+    /**
+     * linuxcertificates.php
+     *
+     * Displays Linux certificate sections with sliders.
+     * Uses the Slider class to render grouped certificate galleries.
+     *
+     * Author: Mirnes Glamočić
+     * Website: https://mirnesglamocic.com
+     */
+
+    require_once __DIR__ . '/core/init.php';
+    require_once __DIR__ . '/inc/helpers.php';
+    
     $page_id = 13;
-    $page = Pages::get(13);
+    $head = Head::get($page_id);
+    $page = Pages::get($page_id);
+
     $slider = new Slider();
 ?>
 <!DOCTYPE html>
@@ -22,43 +38,51 @@
 
                 $slider->renderSection(
                         'LinkedIn Linux Engineers Certificates',
-                        'linux_engineer',
+                        'linux_engineer'
                     );
 
                 $slider->renderSection(
                     'LinkedIn Linux Topic-Based Certificates',
-                    'linux',
+                    'linux'
                 );
 
                 $slider->renderSection(
                     'LinkedIn Linux Distro Certificates',
-                    'linux_distro',
+                    'linux_distro'
                     );
 
                 $slider->renderSection(
                     'LinkedIn CentOS Certificates',
-                    'centos',
+                    'centos'
                 );
 
                 $slider->renderSection(
                     'LinkedIn Bash Certificates',
-                    'bash',
+                    'bash'
                 );
 
                 $slider->renderSection(
                     'LinkedIn Linux Text Editors Certificates',
-                    'editors',
+                    'editors'
                     );
 
                 $slider->renderSection(
                     'LinkedIn Linux Foundations',
-                    'linux_foundation',
+                    'linux_foundation'
                 );
+
             ?>
 
         </div><!-- end .wrapper -->
 
         <?php require_once BASE_PATH . '/inc/footer.php'; ?>
+
+        <?php
+            // Custom JS
+            $js_files = ['cert-slider.js'];
+            load_js($js_files);
+        ?>
+        
     </body>
 
 </html>
