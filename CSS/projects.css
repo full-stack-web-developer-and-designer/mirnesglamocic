@@ -6,12 +6,12 @@
   Description: Styles for the Projects page, including layout, grid,
                project cards, typography, hover effects, and responsiveness.
 ------------------------------------------------------------------ */
-/* ========================= */
-/* Mobile (default) — full width stacking */
-/* ========================= */
 
+/* ==============================
+   Mobile-First Base Styles
+   ============================== */
 body {
-    background: #fff;
+    background: var(--white);
 }
 
 h1 {
@@ -55,8 +55,8 @@ button {
     justify-content: center;  /* center horizontally */
     align-items: center;      /* center vertically */
     text-align: center;       /* fallback for older layouts */
-    color: #FFF;
-    background-color: #1E6FFB;   /* default blue */
+    color: var(--white);
+    background-color: var(--button-blue);   /* default blue */
     font-size: 1rem;
     font-weight: 300;
     margin: 2.5rem 2.5rem 0; /* 40px 40px 0 */
@@ -76,12 +76,12 @@ button {
 
 /* Hover */
 .menu button:hover {
-    background-color: #0056D4;
+    background-color: var(--button-blue-hover);
 }
 
 /* Active / Pressed */
 .menu button:active {
-    background-color: #003E9E;
+    background-color: var(--button-blue-active);
 }
 
 .target,
@@ -89,16 +89,16 @@ button {
     display: none;
 }
 
-/* Visited links if using <a> instead of <button> */
-.menu a.project:visited {
-    color: #5A87FF;
+/* Visited links */
+button.project:visited {
+    color: var(--primary-blue);
 }
 
 /* MAIN WRAPPER */
 .case-study {
   max-width: 1100px;
   margin: 2.5rem auto; /* 40px auto */
-  background: #fff;
+  background: var(--white);
   border-radius: 0.875rem; /* 14px */
   overflow: hidden;
   box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,.08);
@@ -122,7 +122,7 @@ button {
 .overview {
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: var(--white);
   gap: 1.25rem; /* 20px */
 }
 
@@ -135,7 +135,7 @@ button {
 
 .overview-box strong {
   display: block;
-  color: #0f4c75;
+  color: var(--primary-blue);
   margin-bottom: 6px;
 }
 
@@ -146,15 +146,14 @@ button {
 
 .view h2 {
   font-size: clamp(1.5rem, 5vw, 2.25rem);
-  margin-bottom: 0.625rem; /* 10px */
-  background-color: #FFF;
-  color: #0f4c75;
+  background-color: var(--white);
+  color: var(--primary-blue);
 }
 
 .block h2 {
   font-size: 1.5em;
-  color: #0f4c75;
-  background: #FFF;
+  color: var(--primary-blue);
+  background: var(--white);
   text-align: left;
   border-bottom: 5px solid rgb(227, 235, 255);
 }
@@ -166,7 +165,8 @@ button {
 .block p {
   border-bottom: 5px solid rgb(227, 235, 255);
   margin-bottom: 0.625rem; /* 10px */
-  padding: 0.9375rem 0; /* 15px 0*/
+  padding: 0.9375rem 0 0.9375rem 0.9375rem;  /* 15px 0 15px 15px */
+  background: rgb(227, 235, 255);
 }
 
 .features {
@@ -191,7 +191,7 @@ button {
 
 /* ACTIONS */
 .actions .icon {
-    color: #FFF;
+    color: var(--white);
     width: 0.75rem;
     height: 0.75rem;
     margin-right: 0.5rem;
@@ -207,7 +207,7 @@ button {
 
 a.primary {
   background: #3282b8;
-  color: #fff;
+  color: var(--white);
 }
 
 a.primary:hover {
@@ -215,7 +215,7 @@ a.primary:hover {
 }
 a.secondary {
   background: #111;
-  color: #fff;
+  color: var(--white);
 }
 
 a.secondary:hover {
@@ -253,11 +253,9 @@ a.secondary:hover {
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.03em;
-    color: #fff;
     background: linear-gradient(135deg, #3b82f6, #2563eb);
     border: none;
     border-radius: 999px;
-    cursor: pointer;
     transition: 
         transform 0.2s ease,
         box-shadow 0.2s ease,
@@ -266,17 +264,19 @@ a.secondary:hover {
 
 .load-more:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--button-blue-hover);
 }
 
 .load-more:active {
     transform: translateY(0);
-    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+    box-shadow: var(--shadow-md);
+    background-color: var(--button-blue-active);
 }
 
 .load-more:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
+    box-shadow: var(--shadow-xl);
 }
 
 
@@ -285,7 +285,7 @@ a.secondary:hover {
     width: 16px;
     height: 16px;
     border: 2px solid rgba(255, 255, 255, 0.35);
-    border-top-color: #fff;
+    border-top-color: var(--white);
     border-radius: 50%;
     animation: spin 0.7s linear infinite;
     display: none;
@@ -331,7 +331,7 @@ a.secondary:hover {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
-    color: #fff;
+    color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -358,29 +358,19 @@ a.secondary:hover {
     display: block;
 }
 
-.photoshop {
-    width: 100%;
-    max-width: 282px;
-}
-
+.photoshop,
 .illustration,
 .logo {
     width: 100%;
-    max-width: 282px;     /* keeps them from getting too big */
-}
-
-.illustration,
-.logo,
-.photoshop {
+    max-width: 282px;
     position: relative;
     overflow: hidden;
-    box-sizing: border-box;
-    border: 2px solid #717171;
+    border: 2px solid var(--bg-light);
 }
 
 .content p,
 h2.projects {
-    color: #fff;
+    color: var(--white);
     text-align: center;
 }
 
@@ -413,6 +403,42 @@ h2.projects {
     -ms-transform: none;
     -o-transform: none;
     transform: none;
+}
+.projects-cta {
+    margin: 0 auto 2.5rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: var(--bg-light);
+    border-radius: 16px;
+}
+
+.projects-cta h2 {
+    font-size: 1.7rem;
+}
+
+.projects-cta p {
+    max-width: 800px;
+    margin: 2rem auto;
+    line-height: 1.6;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 8px;
+    background: var(--button-blue);
+    color: var(--white)!important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: var(--button-blue-hover);
+}
+
+.cta-btn:active {
+    background: var(--button-blue-active);
 }
 
 @media (min-width:480px){
@@ -459,7 +485,7 @@ h2.projects {
 
     .overview {
         display: flex;
-        background: #fff;
+        background: var(--white);
         gap: 1.25rem;
     }
 
@@ -483,7 +509,7 @@ h2.projects {
     .mockup picture,
     .mockup img {
         border-radius: 0.75rem;
-        box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,.25);
+        box-shadow: var(--shadow-xl);
         transition: box-shadow 0.25s ease, transform 0.25s ease;
     }
 
@@ -491,7 +517,7 @@ h2.projects {
     .mockup:hover picture,
     .mockup:hover img {
         transform: translateY(-4px);
-        box-shadow: 0 12px 25px rgba(0,0,0,.15);
+        box-shadow: var(--shadow-lg);
     }
 
 }
@@ -553,7 +579,7 @@ h2.projects {
     .illustration:hover,
     .photoshop:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 25px rgba(0,0,0,.15);
+        box-shadow: var(--shadow-lg);
     }
 
     .container {

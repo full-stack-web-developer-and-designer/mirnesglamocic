@@ -139,6 +139,15 @@ declare(strict_types=1);
 
                             </section>
 
+                            <section class="projects-cta">
+                                <h2>Need a modern website?</h2>
+                                <p>
+                                    I build responsive, fast and scalable web applications tailored
+                                    to your business needs.
+                                </p>
+                                <a href="/#contact" class="cta-btn">Start Your Website Project</a>
+                            </section>
+
                         </section>
 
                         <!-- Other Main Targets -->
@@ -148,6 +157,15 @@ declare(strict_types=1);
                                 <div class="photoshop-grid">
                                     <?php Photoshop::renderPhotoshop(); ?>
                                 </div>
+                            </section>
+
+                            <section class="projects-cta">
+                                <h2>Need professional image editing?</h2>
+                                <p>
+                                    From retouching and background removal to creative compositions,
+                                    I deliver clean, high-quality visuals tailored to your needs.
+                                </p>
+                                <a href="/#contact" class="cta-btn">Request Image Editing</a>
                             </section>
 
                         </section>
@@ -160,6 +178,16 @@ declare(strict_types=1);
                                 </div>
                             </section>
 
+                            <!-- CTA for Illustrations -->
+                            <section class="projects-cta">
+                                <h2>Need custom illustrations?</h2>
+                                <p>
+                                    Unique digital illustrations crafted to enhance
+                                    your website, brand or creative project.
+                                </p>
+                                <a href="/#contact" class="cta-btn">Discuss Your Idea</a>
+                            </section>
+
                         </section>
 
                         <section id="div4" class="target" role="tabpanel" aria-labelledby="tab-div4" style="display:none;">
@@ -168,6 +196,15 @@ declare(strict_types=1);
                                 <div class="logo-grid">
                                     <?php Logo::renderLogo(); ?>
                                 </div>
+                            </section>
+
+                            <section class="projects-cta">
+                                <h2>Looking for a professional logo?</h2>
+                                <p>
+                                    I design clean, memorable and brand-focused logos
+                                    that represent your business identity.
+                                </p>
+                                <a href="/#contact" class="cta-btn">Request a Logo Design</a>
                             </section>
 
                         </section>

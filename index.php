@@ -8,7 +8,6 @@ $page_id = 1;
 $head = Head::get($page_id);
 $page = Pages::get($page_id);
 
-
 // -------------------------------
 // Fetch Certificates section content
 // -------------------------------
@@ -27,8 +26,17 @@ $certContent = SectionContent::getSection($page_id, 'certificates');
             <!-- Hero -->
             <article id="hero" class="lazy">
                 <div class="wrapper">
+
                     <?= $page->renderPage() ?>
+
+                    <p>I build responsive, SEO-ready business websites that convert visitors into customers</p>
+                    <div class="cta-buttons">
+                        <a href="#contact">🚀 Contact Me</a>
+                        <a href="projects" target="_blank">📁 View My Projects</a>
+                    </div>
+                    
                 </div>
+                
             </article>
 
             <!-- About Me Section -->
@@ -68,7 +76,7 @@ $certContent = SectionContent::getSection($page_id, 'certificates');
 
                             <div class="cert-images">
                                 <?php
-                                    $ita = new ITA();
+                                    $ita = ITA::get($page_id);
                                     $ita->renderCertificates();
                                 ?>
                             </div>
@@ -136,9 +144,12 @@ $certContent = SectionContent::getSection($page_id, 'certificates');
 
                     <h2 id="contact-heading">Contact</h2>
                     <div class="contact-main">
-                        <p id="contact_offer">
-                            Open to full-time, remote, or contract opportunities.
-                            Let’s discuss how I can contribute to your team.
+                        <h3>Let’s Work on Your Project Together</h3>
+                    
+                        <p class="contact-intro">
+                            Have an idea or project you’d like to build? 
+                            Send me the details and I’ll respond within <strong>24 hours</strong> 
+                            to discuss the best solution for your needs.
                         </p>
 
                         <div id="contact-form">

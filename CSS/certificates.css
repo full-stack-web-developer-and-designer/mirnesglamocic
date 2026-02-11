@@ -1,20 +1,28 @@
+@charset "UTF-8";
 /* ------------------------------------------------------------------
   Author: Mirnes Glamočić
   File: certificates.css
   Pages: certificates pages
-  Description: Styles for the Certificates pages, including layout,
-               certificates cards, typography, hover effects,
-               responsive behavior, and overall page structure.
+  Description: Mobile-first styles for certificates slider
 ------------------------------------------------------------------ */
 
+/* -----------------------------
+   BASE STYLES (Mobile first)
+------------------------------ */
 body {
-    background: #fff;
-}
-h1 {
-    font-size: 2em;
+    background: var(--bg-white);
     margin: 0;
-    padding: 5px 0;
+    font-family: var(--font-main);
 }
+
+h1 {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0.75rem auto;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -22,252 +30,118 @@ h1 {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip: rect(0,0,0,0);
     white-space: nowrap;
     border: 0;
 }
+
+ul.content-slider.cs-hidden {
+    margin: 0;
+    padding: 0;
+}
+
 .cS-hidden {
     height: 1px;
     opacity: 0;
-    filter: alpha(opacity=0);
     overflow: hidden;
 }
+
 .lightSlider.lsGrab > * {
     cursor: pointer;
 }
-.lSSlideOuter .lSPager, .lSSlideOuter .lightSlider {
-    margin: 0.9375rem 0 0;
-}
+
 .slider-container {
     display: block;
-    position: relative;
     width: 100%;
-    overflow: hidden;
+    position: relative;
 }
+
 .slider-container:last-child {
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
+
 section.slider-container li.item-a.slide {
     list-style: none;
 }
+
 .lSAction > .lSPrev,
 .lSAction > .lSNext {
-    background-color: #c9cfcf;
+    background-color: var(--bg-light);
     z-index: 0;
 }
-.LinkedIn {
-    width: 288px;
-    float: left;
-    margin: 15px 15px 0 0;
+/* -----------------------------
+   CERTIFICATES CTA
+------------------------------ */
+.certificates-cta {
+    display: block;
+    width: 100%;
+    margin: 1rem auto 1.3rem;
+    padding: 1.3rem 1rem 0;
+    text-align: center;
+    background: var(--bg-light);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
 }
-.LinkedInNew {
-    width: 278px !important;
-    margin: 6px;
-    padding-block-start: 15px;
+
+.certificates-cta h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
 }
-.SoloLearn {
-    float: left;
-    margin: 22px 0 0 4px;
-    width: 281px;
+
+.certificates-cta p {
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
 }
-.Pluralsight {
-    width: 282px !important;
-    margin: 15px 0 0 4px;
+
+/* -----------------------------
+   SLIDER & CERTIFICATES IMAGES
+------------------------------ */
+.linkedin,
+.linkedin-new,
+.sololearn,
+.pluralsight {
+    width: 100%!important;        /* stacked images on mobile */
+    float: none;
+    display: block;
+    margin: 0 auto 12px;
 }
-.progressive img {
-    cursor: pointer;
+/* =============================================================================== */
+/* BREAKPOINT: 768px (small tablets / large phones)   */
+/* =============================================================================== */
+@media screen and (min-width: 540px) {
+    .slider-container { overflow: hidden; }
 }
-.LinkedIn.margin-top {
-    margin-top: 15px;
+
+/* =============================================================================== */
+/* BREAKPOINT: 768px (iPad portrait, Most tablets, Small laptops (old netbooks))   */
+/* =============================================================================== */
+@media screen and (min-width: 768px) {
+    h1 { margin: 0 auto; }
+    .linkedin { width: 288px; float: left; margin: 15px 15px 0 0; }
+    .linkedin-new { width: 278px; float: left; margin: 6px; }
+    .sololearn { width: 281px; float: left; margin: 22px 0 0 4px; }
+    .pluralsight { width: 282px; float: left; margin: 15px 0 0 4px; }
+    .certificates-cta h2 { font-size: 1.5rem; }
+    .certificates-cta p { max-width: 800px; font-size: 1.1rem; }
 }
-.development #headerBottom {
-    border-bottom: 4px solid #ececec;
+
+/* ============================================================= */
+/* BREAKPOINT: 1024px (Small desktop, laptops, iPad landscape)   */
+/* ============================================================= */
+@media screen and (min-width: 1024px) {
+    .linkedin-new { margin: 6px; }
 }
-@media screen and (min-width: 1250px) and (max-width: 1260px) {
-    .SoloLearn {
-        width: 269px;
-        height: 186px;
-    }
-    .Pluralsight {
-        width: 97% !important;
-    }
-}
-@media screen and (min-width: 1161px) and (max-width: 1260px) {
-    .LinkedIn {
-        width: 267.5px;
-    }
-    .LinkedInNew {
-        width: 250px !important;
-        margin: 5px;
-    }
-    .SoloLearn {
-        margin: 22px 15px 0 4px;
-    }
-    .Pluralsight {
-        height: 179px !important;
-        margin: 15px 0 0 4px;
-    }
-}
-@media screen and (min-width: 1239px) and (max-width: 1249px) {
-    .SoloLearn {
-        width: 267px;
-        height: 186px;
-    }
-    .Pluralsight {
-        width: 97% !important;
-    }
-}
-@media screen and (min-width: 1201px) and (max-width: 1238px) {
-    .SoloLearn {
-        width: 261px;
-        height: 186px;
-    }
-    .Pluralsight {
-        width: 97% !important;
-    }
-}
-@media screen and (min-width: 1188px) and (max-width: 1200px) {
-    .SoloLearn {
-        width: 97%;
-    }
-    .Pluralsight {
-        width: 97% !important;
-    }
-}
-@media screen and (min-width: 1024px) and (max-width: 1159px) {
-    .LinkedIn {
-        width: 100%;
-    }
-    .LinkedInNew {
-        width: 97% !important;
-    }
-    .SoloLearn {
-        width: 97.5%;
-    }
-    .Pluralsight {
-        width: 96.5% !important;
-    }
-}
-@media screen and (min-width: 1016px) and (max-width: 1118px) {
-    .LinkedIn {
-        width: 100%;
-    }
-    .LinkedInNew {
-        width: 96.5% !important;
-        margin-block-start: 15px;
-        margin-inline-start: 5px;
-        padding-block-start: 0;
-    }
-    .SoloLearn {
-        width: 97.5%;
-    }
-    .Pluralsight {
-        width: 97.5% !important;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 1015px) {
-    .LinkedIn {
-        width: 100%;
-    }
-    .LinkedInNew {
-        width: 97% !important;
-        margin: 6px;
-        padding-block-start: 10px;
-    }
-    .SoloLearn {
-        width: 98%;
-    }
-    .Pluralsight {
-        width: 98% !important;
-    }
-}
-@media screen and (min-width: 1160px) and (max-width: 1187px) {
-    .SoloLearn {
-        width: 97%;
-        margin: 22px 15px 0 4px;
-    }
-    .Pluralsight {
-        width: 97% !important;
-    }
-}
-@media screen and (max-width: 767px) {
-    h1 {
-        margin: 1rem 0 0;
-    }
-}
-@media screen and (min-width: 521px) and (max-width: 767px) {
-    .cert:nth-of-type(2n) {
-        margin-right: 0;
-    }
-    li.item-a.slide.lslide:nth-of-type(2n) {
-        margin-right: 0;
-    }
-    .LinkedIn {
-        width: 100%;
-        margin: 0 0 12px;
-    }
-    .LinkedInNew {
-        width: 96% !important;
-        margin: 0 0 12px;
-        padding-block-start: 1%;
-    }
-    .SoloLearn {
-        width: 99%;
-        margin: 0 auto 12px 0.5%;
-    }
-    .Pluralsight {
-        width: 99% !important;
-        margin: 0 auto 12px 0.6%;
-    }
-    .SoloLearn:nth-of-type(2n),
-    .LinkedIn:nth-of-type(2n),
-    .LinkedInNew:nth-of-type(2n),
-    .Pluralsight:nth-of-type(2n) {
-        margin-right: 0;
-    }
-    .slider-container:last-child {
-        padding-bottom: 5px;
-    }
-}
-@media screen and (min-width: 333px) and (max-width: 649px) {
-    h1 {
-        margin: 26px auto 10px;
-    }
-}
-@media screen and (max-width: 520px) {
-    .lSSlideOuter .lSPager,
-    .lSSlideOuter .lightSlider {
-        display: inline;
-    }
-    .lSAction > a {
-        display: none !important;
-    }
-    li.item-a.slide.lslide {
-        width: 100% !important;
-        margin: 0 auto 1% 0 !important;
-    }
-    .LinkedIn {
-        width: 100%;
-        margin: 3% auto 0;
-    }
-    .LinkedInNew {
-        width: 96% !important;
-        margin: 4% auto 1%;
-        padding-block-start: 1%;
-    }
-    .SoloLearn {
-        width: 99%;
-        margin: 3% auto 0 1%;
-    }
-    .Pluralsight {
-        width: 99% !important;
-        margin: 4% auto 0 0.6%;
-    }
-}
-@media screen and (max-width: 332px) {
-    h1 {
-        margin: 16px auto 40px;
-        font-size: 1.6em;
-        line-height: 1.6em;
-    }
+
+/* ============================================= */
+/*  BREAKPOINT: 1260px (Larger desktop monitors) */
+/* ============================================= */
+@media screen and (min-width: 1260px) {
+    .linkedin { width: 288px; margin: 15px 15px 0 0; }
+    .linkedin-new { width: 278px!important; margin: 18px 0 0 5px; }
+    .sololearn { width: 286px!important; margin: 22px 0 0 2px; }
+    .pluralsight { width: 286px!important; margin: 15px 0 0 2px; }
 }

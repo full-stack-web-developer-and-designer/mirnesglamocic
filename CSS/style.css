@@ -23,11 +23,40 @@
     --accent-blue: #1E60FF;                   /* accent/bright blue */
     --light-blue: #93c5fd;                    /* light blue for highlights */
     
-    /* Buttons */
-    --button-blue: #2563EB;                   /* main button color */
-    --button-blue-active: #1A2F8F;            /* active/clicked button */
-    
-    /* Borders & UI */
+    /* BUTTONS */
+    --button-blue: #2563EB;       /* #1E6FFB */
+    --button-blue-hover: #1E4FD8; /* #0056D4 */
+    --button-blue-active: #1B3FAF;/* #003E9E */
+
+     /* SHADOWS */
+
+    /* -----------------------------
+       SHADOW COLORS
+    ----------------------------- */
+
+    --shadow-color-default: rgba(30, 58, 138, 0.15);
+    --shadow-color-strong: rgba(30, 58, 138, 0.25);
+
+    /* -----------------------------
+       SHADOW SIZES
+    ----------------------------- */
+
+    /* subtle elevation */
+    --shadow-sm: 0 0.25rem 0.5rem var(--shadow-color-default); /* 0 4px 8px */
+
+    /* standard card shadow */
+    --shadow-md: 0 0.5rem 1rem var(--shadow-color-default);  /* 0 8px 16px */
+
+    /* larger shadow (bigger lift) */
+    --shadow-lg: 0 0.75rem 1.5625rem var(--shadow-color-default); /* 0 12px 25px */
+
+    /* extra large shadow (e.g., modals, overlays) */
+    --shadow-xl: 0 1.25rem 2.5rem var(--shadow-color-strong); /* 0 16px 38px */
+
+    /* hover shadow */
+    --shadow-hover: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.18);
+
+    /* BORDERS & UI */
     --border-light: #ececec;                  /* light gray border */
     --border-hover-blue: #1E60FF;             /* brighter blue for hover borders */
     --border-light-gray: #ccc;                /* lighter gray border */
@@ -35,7 +64,8 @@
     --form-focus-blue: #0b60d4;               /* input/textarea focus */
     --focus-bg-blue: rgba(147, 197, 253, 0.15); 
     --focus-shadow-blue: rgba(147, 197, 253, 0.6);
-    /* Inputs */
+
+    /* INPUTS */
     --input-border-default: #d1d5db;
     --input-bg-default: #fff;
     --input-border-hover: var(--border-hover-blue);
@@ -51,7 +81,7 @@
     --input-shadow-error: 0 0 0 3px rgba(231, 76, 60, 0.45);
 
 
-    /* Text */
+    /* TEXT */
     --white: #fff;                             /* main white */
     --white-30: rgba(255, 255, 255, 0.3);     /* semi-transparent white */
     --text-dark: #363636;                      /* main dark text */
@@ -59,8 +89,11 @@
     --menu-gray: #505050;                      /* menu background gray */
     --error-red: #e74c3c;                      /* error messages */
 
-    /* Backgrounds */
+    /* BACKGROUNDS */
     --bg-light: #e3ebff;                       /* page background */
+    --bg-white: #fff;                          /* white background */
+    --bg-lazy: #f1f1fa;                        /* lazy background */
+    --bg-overlay: rgba(0, 0, 0, 0.55);  /* semi-transparent overlay background */
     --scrollbar-track: #f5f7ff;                /* scrollbar track */
     --nav-hover-bg: #faf7eb;                   /* nav hover background */
     --nav-hover-border: #2a2a2a;               /* nav hover border */
@@ -73,6 +106,7 @@
     ----------------------------- */
     --font-main: 'Roboto', Arial, sans-serif; /* for screen */
     --font-print: Georgia, "Times New Roman", serif; /* for print */
+
 }
 
 * {
@@ -238,10 +272,6 @@ img {
     display: block;
 }
 
-#home h1 {
-    padding: 20px;
-}
-
 #headerTop {
     background: var(--text-dark);
     color: var(--white);
@@ -354,6 +384,7 @@ img {
     background: var(--menu-gray);
     margin: 0;
     padding: 0;
+    gap: 0;
 }
 
 #nav .menu.is-open {
@@ -580,7 +611,50 @@ p.barcode {
     font-weight: 700;
     display: inline;
 }
+#hero p {
+    padding: 10px 15px; /* smaller than h1 */
+    display: inline-block;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1.25rem; /* slightly smaller than h1 */
+    margin: 0 auto 20px; /* let h1 margin handle spacing */
+}
+/* CTA buttons mobile */
+.cta-buttons {
+    display: flex;
+    flex-direction: column;   /* stack buttons vertically */
+    width: 100%;              /* full width on mobile */
+    max-width: 400px;         /* optional: don’t get too wide on big phones */
+    gap: 2rem;                /* space between buttons */
+    align-items: center;      /* center buttons horizontally */
+    margin: 0 auto 0.5rem;
+    padding-bottom: 1.3rem;
+}
+.cta-buttons a {
+    width: 100%;              /* full width on mobile */
+    max-width: 400px;         /* optional: don’t get too wide on big phones */
+    padding: 12px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--button-blue);
+    color: var(--white);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+/* Hover */
+.cta-buttons a:hover {
+    background-color: var(--button-blue-hover);
+    transform: scale(1.02);
+}
 
+/* Active (pressed) */
+.cta-buttons a:active {
+    background-color: var(--button-blue-active);
+    transform: scale(0.97); /* slight press effect */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
 /* Footer */
 #footer {
     color: var(--white);
@@ -706,6 +780,20 @@ footer small {
         display: inline;
     }
 
+}
+/* ================================================ */
+/* BREAKPOINT: 540px (Large phones,  small tablets) */
+/* ================================================ */
+@media screen and (min-width: 540px) {
+    .cta-buttons {
+        flex-direction: row;  /* side by side */
+        gap: 20px;
+        margin: 0 auto;
+    }
+
+    .cta-buttons a {
+        width: 210px;         /* fixed width for equal buttons */
+    }
 }
 /* ================================================ */
 /* BREAKPOINT: 600px (Large phones,  small tablets) */

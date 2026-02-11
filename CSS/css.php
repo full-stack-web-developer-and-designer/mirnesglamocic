@@ -8,12 +8,12 @@
                typography, sections, and responsive adjustments.
 ------------------------------------------------------------------ */
 
-/* ======================================== */
-/* BASE / MOBILE FIRST (default styles)     */
-/* ======================================== */
+/* ==============================
+   Mobile-First Base Styles
+   ============================== */
 #hero.lazy, #about.lazy {
     background-image: none;
-    background-color: #f1f1fa;
+    background-color: var(--bg-lazy);
 }
 #hero, #about {
     background-repeat: no-repeat;
@@ -41,21 +41,23 @@
 }
 #hero .wrapper {
     position: absolute;
-    top: 30%;                 
+    top: 40%;                 
     left: 50%;                
     transform: translate(-50%, -50%);
     width: 90%;
     max-width: 1200px;
     padding: 0;
     height: auto;
-}
-#home h1 {
-    padding: 15px 20px;
-    background:rgba(0, 0, 0, 0.55);
-    word-wrap: break-word;
-    display: inline-block;
+    background: var(--bg-overlay);
     border-radius: 10px;
+    display: inline-block;
+}
+
+#hero h1 {
+    background: transparent;
+    word-wrap: break-word;
     color: var(--white);
+    padding: 20px;
 }
 
 .white {
@@ -130,7 +132,7 @@ h4 {
 }
 /* Quotes box */
 #quotes {
-    background: rgba(0, 0, 0, 0.55);
+    background: var(--bg-overlay);
     color: var(--white);
     padding: 24px;
     width: 90%;
@@ -207,17 +209,18 @@ p.text-after-images {
 }
 .certificate {
     padding: 35px 15px 15px;
-    background: #E3EBFF;
+    background: var(--bg-light);
     display: grid;
     position: relative;
     border: 2px solid var(--primary-blue-alpha);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-md); /* soft blue-tinted shadow */
 }
 /* Optional hover effect to match services cards */
 .certificate:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(30, 58, 138, 0.25); /* blue-tinted shadow */
+    box-shadow: var(--shadow-xl); /* blue-tinted shadow */
 }
 .certificate, .services {
     width: 100%;
@@ -328,7 +331,7 @@ svg.icons-cert {
     background: var(--bg-light);           /* very light blue background */
     border: 2px solid var(--primary-blue-alpha);   /* subtle blue border with transparency */
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.15); /* soft blue-tinted shadow */
+    box-shadow: var(--shadow-md); /* soft blue-tinted shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     justify-content: center;
 }
@@ -340,7 +343,7 @@ h3#service {
 }
 .services:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(30, 58, 138, 0.25); /* blue-tinted shadow */
+    box-shadow: var(--shadow-xl); /* blue-tinted shadow */
 }
 /* Services icons */
 .service-icon {
@@ -384,8 +387,14 @@ h3#service {
 #contact h2 {
     grid-column: 1 / -1;
 }
-p#contact_offer {
-    text-align: center;
+#contact h3 {
+    padding: 0 0 0.5rem;
+}
+/* Intro text */
+.contact-intro {
+    margin: 1rem 0 2rem;
+    color: var(--text-dark);
+    font-size: 1rem;
 }
 p#response {
     font-size: 1.6em;
@@ -407,6 +416,12 @@ p#response:not(:empty) {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+}
+/* Privacy text */
+.contact-privacy {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--menu-gray);
 }
 .form-control {
   position: relative;
@@ -629,7 +644,70 @@ label.error {
 .form-control textarea:focus ~ .textarea-icon {
     background-color: var(--form-focus-blue);
 }
+.contact-form .form-note {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 8px;
+}
+/* WhatsApp & Viber */
+.direct-contact {
+    text-align: center;
+}
 
+.direct-contact h3 {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 1.5rem auto 1rem;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.2s ease;
+    flex: 1;              /* makes both buttons equal width */
+    justify-content: center;  /* centers icon + text */
+}
+
+.contact-btn .icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Brand colors */
+#icon-whatsapp,
+#icon-viber {
+    color: var(--white);
+    width: 24px;
+    height: 24px;
+}
+.whatsapp {
+    background: #25D366;
+    color: var(--white)!important;
+    margin-bottom: 0.75rem;
+}
+.viber {
+    background: #665CAC;
+    color: var(--white)!important;
+}
+/* Hover effect */
+.contact-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
 /* Support */
 #support {
     width: 100%;
@@ -709,9 +787,6 @@ label.error {
 /* BREAKPOINT: 320px (old small phones)    */
 /* ======================================= */
 @media screen and (min-width: 320px){
-    #hero .wrapper {
-        top: 35%;
-    }
     /* skills */
     .skills-list {
         grid-template-columns: repeat(2, 1fr); /* 2 icons per row at 320px */
@@ -725,9 +800,6 @@ label.error {
     #home .h1, .white {            
         padding: 20px 30px;
         width: 100%; 
-    }
-    #hero .wrapper {
-        top: 40%;  
     }
     #hero {
         background-image: url("../images/bg<?php echo $rnd ?>_767.webp");
@@ -788,6 +860,13 @@ label.error {
     /* External Certificates | Services */
     .certificate, .services {
         width: 334px;
+    }
+    /* Contact */
+    .contact-buttons {
+        flex-direction: row;
+    }
+    .whatsapp {
+        margin-bottom: 0;
     }
     /* Support */
     #support > div {
@@ -855,6 +934,7 @@ label.error {
             url("../images/bg<?php echo $rnd ?>_1023@2x.webp") 2x
         );
     }
+
     /* AboutMe Section */ 
     #aboutme .wrapper {
         grid-template-columns: auto 1fr; /* image + text */
@@ -984,24 +1064,12 @@ label.error {
         width: 70px;
         height: 70px;
     }
-    #support > .support:nth-child(3) {
-        grid-column: 1 / -1; /* span both columns */
-        justify-content: center;   /* center content horizontally */
-        text-align: center;
-        justify-items: center;
-    }
     /* Ensure support-links is a grid */
     #support .support-links {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* two columns for the first row */
-        gap: 40px;
-        justify-items: center; /* center items in their column */
-    }
-
-    /* Make the third support span full width and center */
-    #support .support-links .support:nth-child(3) {
-        grid-column: 1 / -1;   
-        justify-self: center;
+        grid-template-columns: 1fr; /* one icon per row */
+        gap: 30px;
+        justify-items: center;
     }
     #contact .wrapper {
         display: grid;
@@ -1010,9 +1078,9 @@ label.error {
     }
     
 }
-/* ======================================== */
-/* BREAKPOINT: 1024px (Small desktop, laptops, iPad landscape)      */
-/* ======================================== */
+/* ============================================================= */
+/* BREAKPOINT: 1024px (Small desktop, laptops, iPad landscape)   */
+/* ============================================================= */
 @media screen and (min-width: 1024px) {
    .hero-title {
      font-size: 2.25rem;
@@ -1159,8 +1227,8 @@ label.error {
         background: var(--white) !important;
         color: var(--text-dark);
         width: 100% !important;
-        margin: 0 !important;           /* remove margin */
-        padding: 0 !important;          /* remove padding */
+        margin: 0 !important;
+        padding: 0 !important;
         box-shadow: none !important;
         page-break-inside: avoid;
     }
@@ -1240,10 +1308,6 @@ label.error {
         background: var(--white) !important;
         color: var(--text-dark);
         margin: 0 auto;
-    }
-    #contact p#contact_offer {
-        display: block;
-        margin-bottom: 0.5rem;
     }
     #headerTopRight {
         display: block !important;
