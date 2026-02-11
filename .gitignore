@@ -1,0 +1,25 @@
+form*.php
+cert/
+core/
+images/
+lightbox2/
+lightslider/
+PHPMailer/
+# Ignore minified CSS, PHP and JS files
+*.min.css
+*.min.php
+*.min.js
+# Ignore jpg, webp and png images
+*.jpg
+*.webp
+*.png
+# Ignore svg, json, xml, ico, zip and webmanifest files
+*.svg
+*.json
+*.xml
+*.ico
+*.zip
+*.webmanifesterror_log
+# Ignore server log and manifest
+error_log
+site.webmanifest

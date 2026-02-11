@@ -1,0 +1,86 @@
+# UTF-8 for JS files
+AddType application/javascript .js
+AddCharset UTF-8 .js
+
+# ----------------------------------------
+# Enable Gzip Compression
+# ----------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript text/xml text/plain
+    AddOutputFilterByType DEFLATE image/x-icon image/svg+xml application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/xml application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/x-font application/x-font-truetype application/x-font-ttf application/x-font-otf application/x-font-opentype application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE font/ttf font/otf font/opentype
+    # For older browsers that can't handle compression
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+# ----------------------------------------
+# Redirect HTTP → HTTPS
+# ----------------------------------------
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# ----------------------------------------
+# Redirect old html pages
+# ----------------------------------------
+
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+# ----------------------------------------
+# Extensionless PHP URLs
+# ----------------------------------------
+# Example: /projects → /projects.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L]
+
+# ----------------------------------------
+# Custom error pages
+# ----------------------------------------
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php
+
+# ----------------------------------------
+# Disable directory listing
+# ----------------------------------------
+Options -Indexes
+
+# ----------------------------------------
+# Browser cache / Expires headers
+# ----------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    # Video
+    ExpiresByType video/webm "access plus 1 year"
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/mpeg "access plus 1 year"
+    # Fonts
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    # CSS & JS
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    # PDF & icons
+    ExpiresByType application/pdf "access plus 1 year"
+    ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+</IfModule>
+
+# ----------------------------------------
+# PHP Handler (cPanel default)
+# ----------------------------------------
+<IfModule mime_module>
+    AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
