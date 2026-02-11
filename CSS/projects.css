@@ -1,0 +1,594 @@
+@charset "UTF-8";
+/* ------------------------------------------------------------------
+  Author: Mirnes Glamočić
+  File: projects.css
+  Page: projects
+  Description: Styles for the Projects page, including layout, grid,
+               project cards, typography, hover effects, and responsiveness.
+------------------------------------------------------------------ */
+/* ========================= */
+/* Mobile (default) — full width stacking */
+/* ========================= */
+
+body {
+    background: #fff;
+}
+
+h1 {
+    padding: 5px 0;
+    margin: 1rem 0 0;
+}
+
+#projects {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#div1 {
+    display: block;
+}
+
+[role="tabpanel"][hidden] {
+  display: none;
+}
+
+#intro {
+    padding-top: 2.5rem;
+    text-align: center;
+}
+
+/* Mobile first — buttons full width and block */
+.menu {
+    display: grid;
+    grid-template-columns: 200px;
+    gap: 0.75rem;
+    justify-items: center;
+    justify-content: center;
+}
+
+/* Button locking */
+.btn,
+button {
+    padding: 0.75rem 1rem; /* 12px 16px */
+    display: inline-flex;
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    text-align: center;       /* fallback for older layouts */
+    color: #FFF;
+    background-color: #1E6FFB;   /* default blue */
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2.5rem 2.5rem 0; /* 40px 40px 0 */
+    white-space: nowrap;       /* keep words on one line */
+    overflow: hidden;          /* nothing can escape */
+    text-overflow: ellipsis;   /* safety fallback */
+    height: 50px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    pointer-events: all;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 260px;
+    min-height: 44px;
+}
+
+/* Hover */
+.menu button:hover {
+    background-color: #0056D4;
+}
+
+/* Active / Pressed */
+.menu button:active {
+    background-color: #003E9E;
+}
+
+.target,
+.nested-target {
+    display: none;
+}
+
+/* Visited links if using <a> instead of <button> */
+.menu a.project:visited {
+    color: #5A87FF;
+}
+
+/* MAIN WRAPPER */
+.case-study {
+  max-width: 1100px;
+  margin: 2.5rem auto; /* 40px auto */
+  background: #fff;
+  border-radius: 0.875rem; /* 14px */
+  overflow: hidden;
+  box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,.08);
+}
+
+/* Make the overview boxes stack vertically */
+.case-study .overview {
+    flex-direction: column; /* override any horizontal flex */
+    gap: 1rem;
+}
+
+/* layout containers */
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+/* OVERVIEW */
+.overview {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  gap: 1.25rem; /* 20px */
+}
+
+.overview-box {
+  flex: 1;
+  background: rgb(227, 235, 255);
+  padding: 1.25rem; /* 20px */
+  border-radius: 0.625rem; /* 10px */
+}
+
+.overview-box strong {
+  display: block;
+  color: #0f4c75;
+  margin-bottom: 6px;
+}
+
+/* CONTENT */
+.view {
+  padding: 2.5rem 1.875rem;
+}
+
+.view h2 {
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  margin-bottom: 0.625rem; /* 10px */
+  background-color: #FFF;
+  color: #0f4c75;
+}
+
+.block h2 {
+  font-size: 1.5em;
+  color: #0f4c75;
+  background: #FFF;
+  text-align: left;
+  border-bottom: 5px solid rgb(227, 235, 255);
+}
+
+.block:first-of-type h2 {
+  border-bottom: none;
+}
+
+.block p {
+  border-bottom: 5px solid rgb(227, 235, 255);
+  margin-bottom: 0.625rem; /* 10px */
+  padding: 0.9375rem 0; /* 15px 0*/
+}
+
+.features {
+  margin: 0;
+  padding: 1.25rem;
+  list-style: none;
+  background:rgb(227, 235, 255);
+}
+
+.features li {
+  padding-left: 1.5rem; /* 24px */
+  margin-bottom: 0.625rem; /* 10px */
+  position: relative;
+}
+
+.features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2ecc71;
+}
+
+/* ACTIONS */
+.actions .icon {
+    color: #FFF;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+a.primary {
+  background: #3282b8;
+  color: #fff;
+}
+
+a.primary:hover {
+  background: #0f4c75;
+}
+a.secondary {
+  background: #111;
+  color: #fff;
+}
+
+a.secondary:hover {
+  background: #333;
+}
+/* Hidden state */
+.case-study.is-hidden {
+    display: none;
+}
+
+/* Fade-in animation */
+.case-study.fade-in {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Button layout */
+.load-more {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 2.5rem auto;
+    padding: 0.9rem 2.2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.load-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+.load-more:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+}
+
+.load-more:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
+}
+
+
+/* Spinner */
+.load-more .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: none;
+}
+
+/* Show spinner when loading */
+.load-more.is-loading .spinner {
+    display: inline-block;
+}
+
+.load-more.is-loading .btn-text {
+    opacity: 0.85;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mockup picture,
+.mockup img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;  /* small rounded corners */
+    box-shadow: none;       /* remove shadow on mobile */
+    max-width: 100%;
+}
+
+/* Overlay container */
+.project a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+/* Overlay content */
+.project .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 0.625rem;
+    box-sizing: border-box;
+}
+
+/* Show overlay on hover */
+.project a:hover .content,
+.project a:focus .content {
+    opacity: 1;
+}
+
+/* Make images responsive */
+.illustration-grid picture,
+.illustration-grid img,
+.logo-grid picture,
+.logo-grid img {
+    width: 100%;
+    height: auto; /* maintain aspect ratio */
+    display: block;
+}
+
+.photoshop {
+    width: 100%;
+    max-width: 282px;
+}
+
+.illustration,
+.logo {
+    width: 100%;
+    max-width: 282px;     /* keeps them from getting too big */
+}
+
+.illustration,
+.logo,
+.photoshop {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 2px solid #717171;
+}
+
+.content p,
+h2.projects {
+    color: #fff;
+    text-align: center;
+}
+
+#photoshops,
+#illustrations,
+#logos {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    justify-items: center;
+}
+
+.photoshop-grid,
+.logo-grid,
+.illustration-grid {
+    display: grid;
+    gap: 1.5rem;
+    justify-items: center; /* CENTER items */
+    grid-template-columns: 1fr; /* mobile default */
+}
+
+.illustration a:hover > img.blur,
+.logo a:hover > img.blur {
+    filter: blur(0);
+}
+
+.content:hover > *,
+.content > * {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+@media (min-width:480px){
+
+    .menu {
+        grid-template-columns: repeat(2, 200px);
+    }
+
+}
+
+/* 2 columns: small tablets / large phones */
+@media (min-width: 520px) {
+
+    .photoshop-grid,
+    .illustration-grid,
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 560px) {
+
+    .actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    h1 {
+    margin: 0 auto 0.9375rem;
+    }
+    .container {
+        max-width: 720px;
+    }
+
+    .case-study .overview {
+    flex-direction: row;
+    }
+
+    .overview {
+        display: flex;
+        background: #fff;
+        gap: 1.25rem;
+    }
+
+    .overview-box {
+        flex: 1;
+        padding: 1.25rem;
+        border-radius: 0.625rem;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .photoshop {
+        width: 350px;
+        max-width: none;
+    }
+
+    .mockup picture,
+    .mockup img {
+        border-radius: 0.75rem;
+        box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,.25);
+        transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    /* Optional hover effect for desktop */
+    .mockup:hover picture,
+    .mockup:hover img {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 25px rgba(0,0,0,.15);
+    }
+
+}
+
+/* 3 columns: tablets */
+@media (min-width: 832px) {
+    
+    .illustration-grid,
+    .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (min-width: 900px) {
+
+    .menu {
+        grid-template-columns: repeat(4, 200px);
+    }
+
+    .photoshop {
+        width: 408px;
+    }
+    
+}
+
+/* Desktop refinement */
+@media (min-width: 1024px) {
+
+    .container {
+        max-width: 960px;
+    }
+
+    .btn, 
+    button {
+            width: 200px;      /* fixed width */
+            min-width: 200px;  /* ensure uniformity */
+    }
+
+    .projects-grid {
+            grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .photoshop {
+            width: 450px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .logo,
+    .illustration,
+    .photoshop {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .logo:hover,
+    .illustration:hover,
+    .photoshop:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 25px rgba(0,0,0,.15);
+    }
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .photoshop {
+        width: 500px;
+    }
+
+}
+
+/* 4 columns: desktop */
+@media (min-width: 1260px) {
+
+    .illustration-grid,
+    .logo-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .photoshop-grid {
+        grid-template-columns: repeat(2, 1fr); /* still 2 per row */
+        gap: 1.25rem;
+    }
+
+    /* Keep images responsive */
+    .photoshop-grid picture,
+    .photoshop-grid img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .photoshop {
+        width: 576px;
+    }
+
+}
