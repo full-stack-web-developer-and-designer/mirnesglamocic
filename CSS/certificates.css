@@ -1,0 +1,273 @@
+/* ------------------------------------------------------------------
+  Author: Mirnes Glamočić
+  File: certificates.css
+  Pages: certificates pages
+  Description: Styles for the Certificates pages, including layout,
+               certificates cards, typography, hover effects,
+               responsive behavior, and overall page structure.
+------------------------------------------------------------------ */
+
+body {
+    background: #fff;
+}
+h1 {
+    font-size: 2em;
+    margin: 0;
+    padding: 5px 0;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.cS-hidden {
+    height: 1px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+}
+.lightSlider.lsGrab > * {
+    cursor: pointer;
+}
+.lSSlideOuter .lSPager, .lSSlideOuter .lightSlider {
+    margin: 0.9375rem 0 0;
+}
+.slider-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slider-container:last-child {
+    padding-bottom: 20px;
+}
+section.slider-container li.item-a.slide {
+    list-style: none;
+}
+.lSAction > .lSPrev,
+.lSAction > .lSNext {
+    background-color: #c9cfcf;
+    z-index: 0;
+}
+.LinkedIn {
+    width: 288px;
+    float: left;
+    margin: 15px 15px 0 0;
+}
+.LinkedInNew {
+    width: 278px !important;
+    margin: 6px;
+    padding-block-start: 15px;
+}
+.SoloLearn {
+    float: left;
+    margin: 22px 0 0 4px;
+    width: 281px;
+}
+.Pluralsight {
+    width: 282px !important;
+    margin: 15px 0 0 4px;
+}
+.progressive img {
+    cursor: pointer;
+}
+.LinkedIn.margin-top {
+    margin-top: 15px;
+}
+.development #headerBottom {
+    border-bottom: 4px solid #ececec;
+}
+@media screen and (min-width: 1250px) and (max-width: 1260px) {
+    .SoloLearn {
+        width: 269px;
+        height: 186px;
+    }
+    .Pluralsight {
+        width: 97% !important;
+    }
+}
+@media screen and (min-width: 1161px) and (max-width: 1260px) {
+    .LinkedIn {
+        width: 267.5px;
+    }
+    .LinkedInNew {
+        width: 250px !important;
+        margin: 5px;
+    }
+    .SoloLearn {
+        margin: 22px 15px 0 4px;
+    }
+    .Pluralsight {
+        height: 179px !important;
+        margin: 15px 0 0 4px;
+    }
+}
+@media screen and (min-width: 1239px) and (max-width: 1249px) {
+    .SoloLearn {
+        width: 267px;
+        height: 186px;
+    }
+    .Pluralsight {
+        width: 97% !important;
+    }
+}
+@media screen and (min-width: 1201px) and (max-width: 1238px) {
+    .SoloLearn {
+        width: 261px;
+        height: 186px;
+    }
+    .Pluralsight {
+        width: 97% !important;
+    }
+}
+@media screen and (min-width: 1188px) and (max-width: 1200px) {
+    .SoloLearn {
+        width: 97%;
+    }
+    .Pluralsight {
+        width: 97% !important;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1159px) {
+    .LinkedIn {
+        width: 100%;
+    }
+    .LinkedInNew {
+        width: 97% !important;
+    }
+    .SoloLearn {
+        width: 97.5%;
+    }
+    .Pluralsight {
+        width: 96.5% !important;
+    }
+}
+@media screen and (min-width: 1016px) and (max-width: 1118px) {
+    .LinkedIn {
+        width: 100%;
+    }
+    .LinkedInNew {
+        width: 96.5% !important;
+        margin-block-start: 15px;
+        margin-inline-start: 5px;
+        padding-block-start: 0;
+    }
+    .SoloLearn {
+        width: 97.5%;
+    }
+    .Pluralsight {
+        width: 97.5% !important;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1015px) {
+    .LinkedIn {
+        width: 100%;
+    }
+    .LinkedInNew {
+        width: 97% !important;
+        margin: 6px;
+        padding-block-start: 10px;
+    }
+    .SoloLearn {
+        width: 98%;
+    }
+    .Pluralsight {
+        width: 98% !important;
+    }
+}
+@media screen and (min-width: 1160px) and (max-width: 1187px) {
+    .SoloLearn {
+        width: 97%;
+        margin: 22px 15px 0 4px;
+    }
+    .Pluralsight {
+        width: 97% !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    h1 {
+        margin: 1rem 0 0;
+    }
+}
+@media screen and (min-width: 521px) and (max-width: 767px) {
+    .cert:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    li.item-a.slide.lslide:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .LinkedIn {
+        width: 100%;
+        margin: 0 0 12px;
+    }
+    .LinkedInNew {
+        width: 96% !important;
+        margin: 0 0 12px;
+        padding-block-start: 1%;
+    }
+    .SoloLearn {
+        width: 99%;
+        margin: 0 auto 12px 0.5%;
+    }
+    .Pluralsight {
+        width: 99% !important;
+        margin: 0 auto 12px 0.6%;
+    }
+    .SoloLearn:nth-of-type(2n),
+    .LinkedIn:nth-of-type(2n),
+    .LinkedInNew:nth-of-type(2n),
+    .Pluralsight:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .slider-container:last-child {
+        padding-bottom: 5px;
+    }
+}
+@media screen and (min-width: 333px) and (max-width: 649px) {
+    h1 {
+        margin: 26px auto 10px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .lSSlideOuter .lSPager,
+    .lSSlideOuter .lightSlider {
+        display: inline;
+    }
+    .lSAction > a {
+        display: none !important;
+    }
+    li.item-a.slide.lslide {
+        width: 100% !important;
+        margin: 0 auto 1% 0 !important;
+    }
+    .LinkedIn {
+        width: 100%;
+        margin: 3% auto 0;
+    }
+    .LinkedInNew {
+        width: 96% !important;
+        margin: 4% auto 1%;
+        padding-block-start: 1%;
+    }
+    .SoloLearn {
+        width: 99%;
+        margin: 3% auto 0 1%;
+    }
+    .Pluralsight {
+        width: 99% !important;
+        margin: 4% auto 0 0.6%;
+    }
+}
+@media screen and (max-width: 332px) {
+    h1 {
+        margin: 16px auto 40px;
+        font-size: 1.6em;
+        line-height: 1.6em;
+    }
+}

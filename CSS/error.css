@@ -1,0 +1,67 @@
+/* ------------------------------------------------------------------
+  Author: Mirnes Glamočić
+  File: error.css
+  Pages: 403, 404
+  Description: Styles for error pages (403 and 404), including layout,
+               typography, messages, buttons, and responsive design.
+------------------------------------------------------------------ */
+
+* {
+margin: 0;
+}
+html, body { 
+margin: 0;
+height:100%; 
+}  
+body { background: #fff;}
+h1 {
+    font-size: 2em;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+#error p {
+    text-align: center;
+    color: #B47814;
+}
+#main {
+    display: grid;
+    place-items: center;
+    min-height: 57vh;  
+}
+#main p{
+    color: #B47814;
+    text-align: center;
+    }
+    #footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    /* Responsive CSS */
+    @media only screen and (orientation: landscape){
+        #footer {
+            position: unset;
+        } 
+    }
+    @media screen and (max-width: 767px) {
+        h1 {
+            margin: 26px auto 0;
+        }
+    }
+    @media screen and (min-width: 343px) and (max-width: 449px) {
+        #main {
+            min-height: 35vh;
+    }
+}
+@media screen and (min-width: 266px) and (max-width: 342px) {
+    #main {
+        min-height: 30vh;
+}
+}
+@media screen and (max-width: 265px) {
+    #main {
+        min-height: 50vh;
+    }
+
+}

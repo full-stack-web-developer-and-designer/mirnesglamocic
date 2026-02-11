@@ -1,0 +1,944 @@
+@charset "UTF-8";
+/* ------------------------------------------------------------------
+  Author: Mirnes Glamočić
+  File: style.css
+  Pages: all pages
+  Description: Main styles for index page, global layout, typography, and components
+------------------------------------------------------------------ */
+
+/* ==============================
+   Mobile-First Base Styles
+   ============================== */
+
+:root {
+    /* -----------------------------
+       COLORS
+    ----------------------------- */
+
+    /* Primary blues */
+    --primary-blue: #1E3A8A;                  /* main blue */
+    --primary-blue-alpha: #1E3A8A20;          /* primary blue with transparency */
+    --primary-blue-45: rgba(30, 58, 138, 0.45); 
+    --secondary-blue: #1E40AF;                /* secondary blue, used for hover etc. */
+    --accent-blue: #1E60FF;                   /* accent/bright blue */
+    --light-blue: #93c5fd;                    /* light blue for highlights */
+    
+    /* Buttons */
+    --button-blue: #2563EB;                   /* main button color */
+    --button-blue-active: #1A2F8F;            /* active/clicked button */
+    
+    /* Borders & UI */
+    --border-light: #ececec;                  /* light gray border */
+    --border-hover-blue: #1E60FF;             /* brighter blue for hover borders */
+    --border-light-gray: #ccc;                /* lighter gray border */
+    /* Form focus */
+    --form-focus-blue: #0b60d4;               /* input/textarea focus */
+    --focus-bg-blue: rgba(147, 197, 253, 0.15); 
+    --focus-shadow-blue: rgba(147, 197, 253, 0.6);
+    /* Inputs */
+    --input-border-default: #d1d5db;
+    --input-bg-default: #fff;
+    --input-border-hover: var(--border-hover-blue);
+    --input-bg-hover: rgba(30, 96, 255, 0.04);
+    --input-border-focus: var(--form-focus-blue);
+    --input-bg-focus: var(--focus-bg-blue);
+    --input-shadow-focus: 0 0 0 3px var(--focus-shadow-blue);
+    --input-border-active: var(--primary-blue);
+    --input-bg-active: rgba(30, 58, 138, 0.08);
+    --input-shadow-active: 0 0 0 2px rgba(30, 58, 138, 0.4);
+    --input-border-error: #e5533d;
+    --input-bg-error: rgba(231, 76, 60, 0.06);
+    --input-shadow-error: 0 0 0 3px rgba(231, 76, 60, 0.45);
+
+
+    /* Text */
+    --white: #fff;                             /* main white */
+    --white-30: rgba(255, 255, 255, 0.3);     /* semi-transparent white */
+    --text-dark: #363636;                      /* main dark text */
+    --menu-text: #273142;                      /* menu text */
+    --menu-gray: #505050;                      /* menu background gray */
+    --error-red: #e74c3c;                      /* error messages */
+
+    /* Backgrounds */
+    --bg-light: #e3ebff;                       /* page background */
+    --scrollbar-track: #f5f7ff;                /* scrollbar track */
+    --nav-hover-bg: #faf7eb;                   /* nav hover background */
+    --nav-hover-border: #2a2a2a;               /* nav hover border */
+    --nav-hover-text: #3d3d3d;                 /* nav hover text */
+    --scroll-top-bg: var(--primary-blue);      /* scroll-top button background */
+    --scroll-top-shadow: rgba(30, 58, 138, 0.35); /* scroll-top button shadow */
+
+    /* -----------------------------
+       FONTS
+    ----------------------------- */
+    --font-main: 'Roboto', Arial, sans-serif; /* for screen */
+    --font-print: Georgia, "Times New Roman", serif; /* for print */
+}
+
+* {
+    /* Firefox scrollbar */
+    scrollbar-color: var(--primary-blue) var(--scrollbar-track); /* thumb / track */
+}
+
+/* Optional: for WebKit/Blink scrollbars (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary-blue);
+    border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light-blue);
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+    border-radius: 8px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Scrollbar */
+/* Firefox-only enhancement */
+html {
+    font-size: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-blue) var(--scrollbar-track); /* thumb / track */
+}
+
+html:hover {
+    scrollbar-color: var(--secondary-blue) var(--scrollbar-track); /* thumb slightly darker on hover */
+}
+
+/* WebKit / Blink browsers */
+html::-webkit-scrollbar {
+    width: min(1vw, 12px);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--light-blue); /* light blue thumb */
+    border: 3px solid var(--primary-blue); /* subtle blue border */
+    border-radius: 8px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary-blue); /* darker blue on hover */
+    border-color: var(--secondary-blue);
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+    box-shadow: inset 0 0 2px var(--primary-blue); /* blue-tinted shadow */
+    border-radius: 0.5em;
+}
+
+body {
+    color: var(--text-dark);
+    background: var(--bg-light);
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    justify-items: center;
+}
+
+/* GLOBAL STYLINGS */
+
+/* =======================
+   Global Headings
+   ======================= */
+h1, h2, h3, h4 {
+    text-align: center;
+    font-weight: 900;
+    word-break: break-word;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    width: 100%;
+    background: var(--primary-blue);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+h1 {
+    max-width: 1200px;
+    font-size: 2.2rem;
+    line-height: 2.3rem;
+    padding: 30px;
+}
+
+h2 {
+    padding: 5px 0;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.35rem; /* ~21.6px */
+    line-height: 1.3;
+    padding: 1.35rem 0;
+    color: var(--primary-blue);
+}
+
+h4 {
+    font-size: 1.6em;
+    margin: 1em 1.9em 1em 0.7em;
+}
+
+section {
+    justify-content: center;
+}
+
+.image-container img {
+    margin: 0 0 20px 0;
+}
+
+p {
+    margin: 0 0 0.5em;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: var(--primary-blue); /* primary blue */
+}
+
+a:hover {
+    color: var(--secondary-blue); /* slightly lighter blue on hover */
+}
+
+a:active {
+    color: var(--accent-blue); /* bright blue on click */
+}
+
+.button:hover,
+a:hover {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#home h1 {
+    padding: 20px;
+}
+
+#headerTop {
+    background: var(--text-dark);
+    color: var(--white);
+    font-size: 12px;
+    border-bottom: 4px solid var(--border-light);
+}
+
+#headerTop .wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 6px;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+#headerTopLeft,
+#headerCenter,
+#headerTopRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerTopLeft a,
+#headerCenter a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    color: var(--light-blue);
+}
+
+#headerTopLeft .icon,
+#headerCenter .icon {
+    width: 12px;
+    height: 12px;
+}
+
+/* Screen */
+.print-email {
+    display: none;
+    align-items: center;
+    font-size: 12px;
+}
+
+#headerBottom {
+    background: var(--white);
+}
+
+#headerBottom .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#number a:hover,
+#cv a:hover {
+    color: var(--text-dark);
+    background: var(--white);
+}
+
+.social-icon:hover {
+    color: var(--white);
+    background: var(--text-dark);
+}
+
+#number a:hover .icon,
+#cv a:hover .icon {
+    fill: var(--text-dark);
+}
+
+.social-icon:hover .icon,
+.social-icon:hover .icon {
+    fill: var(--text-dark);
+    transition: transform 0.2s ease;
+}
+
+#nav {
+    position: relative;
+    width: 100%;
+}
+/* Hamburger */
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+    color: var(--white);
+}
+
+#respmenu {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    background: var(--menu-gray);
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Mobile menu */ 
+#nav .menu {
+    display: none;
+    list-style: none;
+    background: var(--menu-gray);
+    margin: 0;
+    padding: 0;
+}
+
+#nav .menu.is-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#nav li a {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    min-height: 60px;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--menu-gray);
+    border-bottom: 1px solid var(--white-30);
+}
+
+/* Optional hover / active state */
+#nav li a:hover {
+    background: var(--nav-hover-bg);;
+    border-bottom-color: var(--nav-hover-border); /* even darker when pressed */
+    color:var(--nav-hover-text); /* darker on hover */
+}
+
+#nav li a:active {
+    background:var(--scrollbar-track);
+    border-bottom-color: var(--nav-hover-border); /* even darker when pressed */
+}
+
+.button {
+    display: inline-flex;
+    width: 100%;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Base button state */
+a.button:link,
+a.button:visited {
+    border-bottom: 4px solid var(--button-blue); /* primary blue */
+}
+
+/* Hover state */
+a.button:hover {
+    border-bottom: 4px solid var(--secondary-blue); /* darker blue for hover */
+}
+
+/* Active / pressed state */
+a.button:active {
+    border-bottom: 4px solid var(--button-blue-active); /* even darker for active */
+}
+/* Scroll Top */
+.scroll-top svg {
+    font-size: 1em;
+    cursor: pointer;
+    line-height: 2.5rem;
+    color: var(--white); /* icon color */
+}
+
+.scroll-top {
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    opacity: 1;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: var(--scroll-top-bg); /* main blue */
+    box-shadow: 0 4px 12px var(--scroll-top-shadow);
+}
+
+.scroll-top:before,
+.scroll-top:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 9999px;
+    background-color: var(--primary-blue-45); /* sonar blue */
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.scroll-top:before {
+    animation: 3s linear infinite sonarWave2;
+}
+
+.scroll-top:after {
+    animation: 2s linear infinite sonarWave;
+}
+
+@keyframes sonarWave {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+@keyframes sonarWave2 {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+#copyrighter{
+    display: block;
+    line-height: 2em;
+    padding-top: 5px;
+}
+
+#footer p {
+    line-height: normal;
+}
+
+#footerlink {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+#nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+#footer,
+.scroll-top {
+    text-align: center;
+    background: var(--primary-blue);
+}
+
+/* Header and footer icons */
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ICON LINK */
+.icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--light-blue);
+    border-radius: 50%;
+    transition: color .2s ease, background-color .2s ease;
+}
+
+.icons a svg {
+  stroke-width: 1.6;
+  transition: transform 0.2s ease;
+}
+
+.icons a:hover {
+  color: var(--white);
+}
+
+.icons a:hover svg {
+  fill: var(--white);
+  transform: translateY(-2px);
+}
+
+/* KEYBOARD FOCUS (accessibility) */
+.icons a:focus-visible {
+  outline: none;
+  color: var(--white);
+  background-color: var(--focus-bg-blue);;
+  box-shadow: 0 0 0 2px var(--focus-shadow-blue);
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    color: var(--light-blue);
+    /* transition: transform .2s ease;*/
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+a.social-icons {
+    display: flex;
+    width: 48px;
+    height: 52px;
+}
+
+.icon-scroll {
+    width: 20px;
+    height: 2.5rem;
+    transform: scale(1.15);
+    transform-origin: center;
+    fill: var(--light-blue);
+    display: inline-block;
+    margin-right: -8px;
+}
+
+.print,
+p.barcode {
+    display: none;
+}
+
+.error {
+    color: var(--error-red);
+    font-weight: 700;
+    display: inline;
+}
+
+/* Footer */
+#footer {
+    color: var(--white);
+    padding: 10px;
+}
+
+#footer p {
+    margin: 0;
+    line-height: 50px;
+    color: var(--light-blue);
+}
+
+#footer p a:link,
+#footer p a:visited {
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+#footer p a:hover {
+    text-decoration: underline;
+}
+
+#footer p a:active {
+    text-decoration: none;
+}
+
+#footer .icons {
+    margin: 20px auto;
+    gap: 24px;
+}
+
+#footer .icons a:hover .icon {
+    background-color: var(--primary-blue); /* blue background */
+    color: var(--white);               /* make the icon itself white for contrast */
+    transition: background-color 0.3s, color 0.3s;
+}
+    
+footer a {
+    font-size: 16px;
+}
+
+footer p,
+footer small {
+    font-size: 14px;
+}
+
+/* ======================================== */
+/* BREAKPOINT: 320px (small phones)        */
+/* ======================================== */
+@media (min-width: 320px){
+
+    h2 {
+        font-size: 1.7em;
+    }
+    
+}
+/* ======================================== */
+/* BREAKPOINT: 408px (phones)        */
+/* ======================================== */
+@media (min-width: 408px) {
+
+    a.button:link,
+    a.button:visited {
+        border: 2px solid var(--primary-blue); /* primary blue */
+    }
+
+    a.button:hover {
+        border: 2px solid var(--secondary-blue); /* slightly lighter blue on hover */
+    }
+
+    a.button:active {
+        border: 2px solid var(--button-blue-active); /* bright blue for active/clicked state */
+    }
+
+    h1 {
+        font-size: 2.5em;
+        padding: 25px;
+    }
+
+
+
+}
+/* ======================================== */
+/* BREAKPOINT: 480px (modern phones)        */
+/* ======================================== */
+@media screen and (min-width: 480px) {
+
+    #headerTop {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+    }
+
+    #headerTop .wrapper {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    #headerTopLeft {
+        justify-self: start;
+    }
+
+    #headerCenter {
+        justify-self: center;
+    }
+
+    #headerTopRight {
+        display: flex;
+        align-items: center;
+        justify-self: end;
+        justify-content: flex-end;
+        height: 52px;
+        line-height: normal; /* IMPORTANT */
+    }
+
+    #headerTopLeft,
+    #headerCenter,
+    #headerTopRight {
+        display: flex;
+        align-items: center;
+    }
+
+    #copyrighter{
+        display: inline;
+    }
+
+}
+/* ================================================ */
+/* BREAKPOINT: 600px (Large phones,  small tablets) */
+/* ================================================ */
+@media screen and (min-width: 600px) {
+
+    h1 {
+    width: 100%;
+    }
+
+    a.button:link,
+    a.button:visited {
+        border: 3px solid var(--primary-blue);
+    }
+
+    a.button:hover {
+        border: 3px solid var(--secondary-blue); /* slightly lighter blue on hover */
+    }
+
+    a.button:active {
+        border: 3px solid var(--button-blue-active); /* bright blue for active state */
+    }
+
+}
+/* =============================================================================== */
+/* BREAKPOINT: 768px (iPad portrait, Most tablets, Small laptops (old netbooks))   */
+/* =============================================================================== */
+@media screen and (min-width: 768px) {
+
+    .wrapper {
+        padding: 0 2rem;
+    }
+
+    h1, h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    #respmenu {
+        display: none;
+    }
+
+    #nav {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #nav .menu {
+        display: flex !important;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+    }
+
+    #nav .menu li {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    #nav .menu li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0 22px;
+        line-height: 1;
+        color: var(--menu-text);
+        background-color: var(--white);
+        border-bottom: 4px solid transparent;
+        transition: background 0.3s, border-color 0.3s;
+    }
+
+    #nav li a:hover {
+        background: var(--secondary-blue); /* slightly lighter blue */
+        border-bottom-color: var(--border-hover-blue); /* brighter blue for contrast */
+        color: var(--white); /* keep text white for readability */
+    }
+
+    #nav li a:active {
+        background: var(--primary-blue); /* base blue for active state */
+        border-bottom-color: var(--secondary-blue); /* slightly lighter blue */
+        color: var(--white); /* text stays white */
+    }
+
+}
+
+/* ======================================================================= */
+/* BREAKPOINT: 900px (iPad landscape, Small laptops, Tablets in landscape) */
+/* ======================================================================= */
+@media screen and (min-width: 900px) {
+
+    .wrapper {
+        padding: 0 2.5rem;
+    }
+
+    #headerTop .wrapper,
+    #headerBottom .wrapper {
+        padding: 0 1rem;
+    }
+
+    h3 {
+        font-size: 1.45rem; /* ~23px */
+    }
+
+}
+/* ====================================================================== */
+/* BREAKPOINT: 1200px (Most desktops, external monitors, large desktops)  */
+/* ====================================================================== */
+@media screen and (min-width: 1200px) {
+
+    .wrapper {
+        max-width: 1200px;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+}
+/* ============================================= */
+/*  BREAKPOINT: 1260px (Larger desktop monitors) */
+/* ============================================= */
+@media screen and (min-width: 1260px) {
+
+    .wrapper {
+        padding: 0;
+    }
+
+}
+
+@media print {
+
+    .wrapper,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body,
+    #headerTop,
+    #headerTop i,
+    #headerTopLeft,
+    #headerTopLeft span a,
+    #footer {
+        background: var(--white);
+        color: var(--text-dark);
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    body {
+        font-family: var(--font-print);
+        font-size: 16px;
+    }
+
+    #headerTop {
+        margin-bottom: 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: var(--text-dark);
+    }
+
+    a,
+    a:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:visited::after,
+    a[href^="https:"]::after {
+        content: " (" attr(href) ")";
+        font-style: italic;
+        word-wrap: break-word;
+        color: var(--text-dark);
+    }
+
+    #headerCenter,
+    #headerTopRight,
+    #nav,
+    .no_print,
+    .scroll-top svg {
+        display: none;
+    }
+
+    a.scroll-top {
+        display: none !important;
+    }
+
+    span#number a {
+        font-size: 1.2em;
+    }
+
+    #headerTopLeft {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #footer {
+        border-top: 10px solid var(--border-light-gray);
+        position: relative;
+        max-height: 200px;
+        padding: 20px 0 0 170px;
+    }
+
+    footer::after {
+        content: url("../images/qr-code.png");
+        position: absolute;
+        top: 20px;
+        left: 0;
+    }
+
+    footer p {
+        padding-left: 20px;
+    }
+
+    p.barcode {
+        display: block;
+        margin: 65px 0 0 220px;
+    }
+
+}
