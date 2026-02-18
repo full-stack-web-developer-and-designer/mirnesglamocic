@@ -63,6 +63,8 @@ class WebsiteRenderer
         </div>
 
         <div class="block">
+            <h2>Summary</h2>
+            <p>{$project->summary}</p>
             <h2>Key Features</h2>
             <ul class="features">
 HTML;
@@ -78,7 +80,6 @@ HTML;
 
         <div class="actions">
 HTML;
-
             // Live site link
             if (!empty($project->link)) {
                 $link = htmlspecialchars($project->link, ENT_QUOTES);
