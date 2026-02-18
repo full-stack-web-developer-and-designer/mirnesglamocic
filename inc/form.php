@@ -27,6 +27,7 @@ $name_error = $email_error = $message_error = '';
         <!-- This will hold response from the server -->
     </p>
 
+    <!-- Name -->
     <div class="form-control InputIconBg">
         <input type="text" placeholder=" " value="<?php echo Input::get('name'); ?>" class="input name" name="name" id="name" aria-label="Your name">
         <label class="valid" for="name">Name</label>
@@ -38,6 +39,7 @@ $name_error = $email_error = $message_error = '';
         <span class="error"><?= $name_error; ?></span>
     </div><!-- end .form-control .InputIconBg -->
 
+    <!-- Email -->
     <div class="form-control InputIconBg">
         <input type="text" placeholder=" " class="input mail" name="email" id="email" value="<?php echo Input::get('email'); ?>" autocomplete="off" aria-label="Your e-mail">
         <label class="valid" for="email">E-mail</label>
@@ -49,6 +51,7 @@ $name_error = $email_error = $message_error = '';
         <span class="error"><?= $email_error; ?></span>
     </div><!-- end .form-control .InputIconBg -->
 
+    <!-- Message -->
     <div class="form-control InputIconBg textarea-icon-wrapper">
         <textarea maxlength="1000" name="message" class="textinput message" id="message" aria-label="Your message" placeholder=" "></textarea>
         <label id="floated_textarea" for="message">Message</label>
@@ -60,6 +63,22 @@ $name_error = $email_error = $message_error = '';
         <span class="error"><?= $message_error; ?></span>
     </div><!-- end .form-control .InputIconBg .textarea-icon-wrapper -->
 
-    <input type="submit" id="submit" class="btn_submit" name="submit" aria-label="send email" value="SUBMIT QUERY">
-
+    <input type="submit" id="submit" class="btn_submit" name="submit" aria-label="send email" value="🚀 Send Project Details">
 </form>
+
+<!-- Direct Contact Buttons -->
+<div class="direct-contact">
+    <h3>Or contact me directly:</h3>
+    <div class="contact-buttons">
+        <a href="https://wa.me/38763734327" target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp" aria-label="Contact me on WhatsApp">
+            <svg class="icon"><use href="#icon-whatsapp"></use></svg> Chat On WhatsApp
+        </a>
+        <a href="viber://chat?number=%2B38763734327" target="_blank" rel="noopener noreferrer" class="contact-btn viber" aria-label="Chat with me on Viber">
+            <svg class="icon"><use href="#icon-viber"></use></svg> Chat On Viber
+        </a>
+    </div>
+
+    <p class="contact-privacy">
+        Your information is private and will never be shared.
+    </p>
+</div>
