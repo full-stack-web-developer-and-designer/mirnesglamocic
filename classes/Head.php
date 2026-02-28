@@ -166,6 +166,9 @@ class Head extends Entity
             <!-- progressive-image CSS -->
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
             
+            <!-- Font Awesome Icons -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+            
             <!-- Schema -->
             {$schemaHtml}
         </head>

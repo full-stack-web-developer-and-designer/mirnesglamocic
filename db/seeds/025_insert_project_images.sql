@@ -3,8 +3,10 @@
 -- Each row links a project (by project_id) to a corresponding image.
 -- Project IDs 27–38: Illustrations
 -- Project IDs 39–50: Logos
--- ----------------------------
-
+-- -----------------------------
+-- Clear existing project images
+-- -----------------------------
+TRUNCATE TABLE `project_images`;
 INSERT INTO project_images (project_id, image)
 VALUES
 -- Illustrations

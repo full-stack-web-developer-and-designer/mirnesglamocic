@@ -1,7 +1,9 @@
 -- =========================================
 -- Insert all certificate CTAs into certificate_ctas table
 -- =========================================
-
+-- Clear existing certificate_ctas
+-- =========================================
+TRUNCATE TABLE `certificate_ctas`;
 -- Frontend Certificates (page_id = 2)
 INSERT INTO `certificate_ctas` 
 (`page_id`, `title`, `paragraph1`, `paragraph2`, `paragraph3`)

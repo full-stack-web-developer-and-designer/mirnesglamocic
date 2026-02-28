@@ -46,7 +46,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/assets/icons.html'; ?>
                 
                 <span id="cv">
                     
-                    <a id="resume" href="https://mirnesglamocic.com/images/MirnesGlamocic-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my resume">
+                    <a id="resume" href="./resume" target="_blank" rel="noopener noreferrer" aria-label="Download my resume">
                         <svg class="icon" aria-hidden="true">
                             <use href="#icon-download"></use>
                         </svg>&nbsp;&nbsp;Download my resume

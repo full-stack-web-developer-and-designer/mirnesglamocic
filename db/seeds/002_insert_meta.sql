@@ -151,4 +151,13 @@ VALUES
       'https://mirnesglamocic.com/images/og_img/404_og.webp', 
       'error.min.css', 
       '2026-01-09 15:13:15', 
-      '2026-01-09 15:14:50');
+      '2026-01-09 15:14:50'),
+
+('17', '17', 'Professional Resume by Mirnes Glamočić', 
+'Explore the professional portfolio and resume of Mirnes Glamočić, a skilled Full-Stack Web Developer & Designer with 10+ years of experience in web development, WordPress, SEO, UI/UX design, and more. Available for freelance projects, long-term collaborations, and remote work.', 
+'https://mirnesglamocic.com/resume', 
+'https://mirnesglamocic.com/images/og_img/resume_og.jpg', 
+'https://mirnesglamocic.com/images/og_img/resume_og.webp', 
+'resume.min.css', 
+'2026-02-22 21:06:03', 
+'2026-02-22 21:06:03');

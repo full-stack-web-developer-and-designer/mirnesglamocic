@@ -61,8 +61,9 @@ function asset(string $path): string
 // ========================================
 // Utility: sanitize output
 // ========================================
-function e(string $str): string {
-    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+function e(string|int|null $str): string
+{
+    return htmlspecialchars((string) $str, ENT_QUOTES, 'UTF-8');
 }
 
 /**

@@ -22,4 +22,5 @@ INSERT INTO `pages` (`page_id`, `title`, `slug`) VALUES
 (13, 'Linux Certificates', 'linux-certificates'),
 (14, 'Projects', 'projects'),
 (15, 'Forbidden!', 'forbidden'),
-(16, 'Not Found!', 'not-found');
+(16, 'Not Found!', 'not-found'),
+(17, 'Mirnes Glamočić', 'resume');

@@ -7,9 +7,9 @@
 -- - img: default image
 -- ----------------------------
 
--- ----------------------------
--- Clear existing website types
--- ----------------------------
+-- ---------------------------------
+-- Clear existing photoshop projects
+-- ---------------------------------
 TRUNCATE TABLE `project_photoshop`;
 
 INSERT INTO project_photoshop (

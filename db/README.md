@@ -37,7 +37,17 @@ The database has **20 tables**:
 22. `website_types` – Stores types or categories of websites (e.g., Fullstack, Mini Apps, WordPress).  
 23. `project_website_types` – Many-to-many relationship linking projects to website types.  
 24. `project_photoshop` – Stores Photoshop project images at multiple resolutions.  
-25. `project_images` – Stores images for general projects such as logos and illustrations.  
+25. `project_images` – Stores images for general projects such as logos and illustrations.
+26. `certificate_ctas` – Stores CTA content for certificate pages.
+27. `resume_main` – Main personal information for the resume page.
+28. `resume_contact` – Contact info for the resume page.
+29. `resume_skills` – Categorized skills for the resume.
+30. `resume_languages` – Languages and proficiency levels.
+31. `resume_projects` – Resume-related projects (portfolio items).
+32. `resume_education` – Education history for the resume.
+33. `resume_certifications` – Certifications displayed in the resume.
+34. `resume_experience` – Work experience entries for the resume.
+35. `resume_experience_points` – Bullet points for each experience entry.
 
 ---
 
@@ -234,6 +244,92 @@ erDiagram
     PROJECT_IMAGES {
         INT project_id PK
         VARCHAR image
+    }
+
+    CERTIFICATE_CTAS {
+        INT cta_id PK
+        INT page_id FK
+        VARCHAR title
+        TEXT paragraph1
+        TEXT paragraph2
+        TEXT paragraph3
+        VARCHAR contact_link
+        VARCHAR projects_link
+    }
+
+    RESUME_MAIN {
+        INT resume_id PK
+        INT page_id FK
+        VARCHAR name
+        TEXT bio
+        VARCHAR position
+        VARCHAR location
+        VARCHAR contact_link
+    }
+
+    RESUME_CONTACT {
+        INT contact_id PK
+        INT page_id FK
+        VARCHAR phone
+        VARCHAR email
+        VARCHAR website
+    }
+
+    RESUME_SKILLS {
+        INT skill_id PK
+        INT page_id FK
+        VARCHAR category
+        VARCHAR name
+        INT sort_order
+    }
+
+    RESUME_LANGUAGES {
+        INT language_id PK
+        INT page_id FK
+        VARCHAR language
+        VARCHAR proficiency
+    }
+
+    RESUME_PROJECTS {
+        INT project_id PK
+        INT page_id FK
+        VARCHAR title
+        TEXT description
+        VARCHAR link
+    }
+
+    RESUME_EDUCATION {
+        INT education_id PK
+        INT page_id FK
+        VARCHAR institution_name
+        VARCHAR degree
+        VARCHAR location
+        VARCHAR duration
+        INT sort_order
+    }
+
+    RESUME_CERTIFICATIONS {
+        INT certification_id PK
+        INT page_id FK
+        VARCHAR title
+        VARCHAR issuer
+        DATE issued_date
+    }
+
+    RESUME_EXPERIENCE {
+        INT experience_id PK
+        INT page_id FK
+        VARCHAR job_title
+        VARCHAR company
+        VARCHAR location
+        VARCHAR start_year
+        VARCHAR end_year
+    }
+
+    RESUME_EXPERIENCE_POINTS {
+        INT point_id PK
+        INT experience_id FK
+        TEXT description
     }
 
     %% Relationships

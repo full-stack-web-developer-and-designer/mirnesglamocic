@@ -1,0 +1,296 @@
+@charset "UTF-8";
+body {
+  background: var(--white);
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  background: var(--white);
+}
+
+.sidebar {
+  width: 35%;
+  background-color: #f4f4f4;
+  padding: 25px;
+}
+
+.main {
+  width: 65%;
+  padding: 25px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  padding: 0;
+  font-size: 28px;
+  text-align: left;
+  background: transparent;
+  color: #333;
+}
+
+h2 {
+  color: #2c3e50;
+  background: transparent;
+  margin: 0 0 10px;
+  font-size: 18px;
+  text-align: left;
+  border-radius: unset;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.contact p {
+  font-size: 14px; /* Reduce the overall font size */
+  line-height: 1.4; /* Maintain good line spacing */
+  display: flex;
+  margin: 1em auto;
+  align-items: center; /* Vertically align the icon and text */
+}
+
+.contact p i {
+  font-size: 16px; /* Set a smaller size for the icons */
+  margin-right: 8px; /* Add space between icon and text */
+}
+
+.contact a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Make link color match the text */
+}
+
+.availability {
+  margin: 1rem auto;
+}
+
+.projects a {
+  color: inherit;
+}
+
+.skills ul,
+.languages ul,
+.projects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.skills li span.icon {
+  margin-right: 8px;
+}
+
+.projects,
+.educations,
+.certifications,
+.experience {
+  margin-bottom: 20px;
+}
+
+.projects ul,
+.educations ul,
+.certifications ul,
+.experience ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+.projects ul {
+  list-style: none;
+}
+
+.projects li,
+.educations li,
+.certifications li,
+.experience li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.projects a,
+.projects a:link,
+.projects a:visited {
+  text-decoration: underline;
+  color: #0056b3;
+  text-underline-offset: 3px;
+}
+
+.projects a:hover {
+  color: #003d80;
+  font-weight: bold;
+  text-decoration-thickness: 2px;
+}
+
+.projects a:active {
+  color: #001f60;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.education-item {
+  display: flex;
+  align-items: center; /* Aligns logo and text vertically */
+  margin-bottom: 10px;
+}
+
+.education-item img {
+  margin-right: 15px;
+}
+
+.education-text {
+  font-size: 14px;
+}
+
+svg {
+  margin: 0;
+  padding: 0;
+}
+
+.svg-icon {
+  height: 20px;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.linkedin {
+  width: 75px;
+  height: 19px;
+}
+
+.certifications span {
+  padding-left: 15px;
+}
+
+.certifications li .pluralsight + span {
+  padding-left: 0;
+}
+
+.pluralsight {
+  width: 90px;
+}
+
+.sololearn {
+  width: 74px;
+  height: 14px;
+}
+
+a.download-btn {
+  color: var(--white);
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 30px; /* Position it 30px from the bottom of the viewport */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+.download-btn .svg-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+  
+  .container {
+    flex-direction: column; /* Stack sidebar and main vertically */
+    max-width: 100%; /* Override fixed max-width */
+    margin: 0 auto; /* Center if needed */
+    border: none; /* Optional: remove border for cleaner mobile view */
+  }
+
+  .sidebar,
+  .main {
+    width: 100%; /* Full width */
+    padding: 15px 20px; /* Optional: adjust padding for mobile */
+  }
+
+}
+/* Reset layout for printing */
+@media print {
+
+  body {
+    padding: 0 !important;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row; /* Keep sidebar and main side by side */
+    max-width: 100%;
+    border: none; 
+  }
+
+  .sidebar {
+    width: 35%;
+    padding: 10px;
+  }
+
+  .main {
+    width: 65%;
+    padding: 10px;
+  }
+  
+  .projects,
+  .educations,
+  .certifications,
+  .experience {
+    margin-bottom: 10px;
+  }
+
+  .education-item {
+    margin-bottom: 5px;
+  }
+
+  .skills li,
+  .languages li {
+    margin-bottom: 3px;
+  }
+
+  h2 {
+    margin-bottom: 4px;
+  }
+
+  a[href]:after {
+        content: none !important;
+    }
+
+  .download-btn {
+    display: none !important; /* Hide download button in print */
+    position: static !important;
+  }
+
+}

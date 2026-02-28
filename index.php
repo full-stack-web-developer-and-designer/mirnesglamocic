@@ -32,7 +32,7 @@ $certContent = SectionContent::getSection($page_id, 'certificates');
                     <p>I build responsive, SEO-ready business websites that convert visitors into customers</p>
                     <div class="cta-buttons">
                         <a href="#contact">🚀 Contact Me</a>
-                        <a href="projects" target="_blank">📁 View My Projects</a>
+                        <a href="projects">📁 View My Projects</a>
                     </div>
                     
                 </div>

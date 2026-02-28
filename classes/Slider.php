@@ -77,6 +77,7 @@ class Slider extends Entity
         foreach ($certificates as $row) {
             $picture = htmlspecialchars($row['picture'], ENT_QUOTES, 'UTF-8');
             $alt     = htmlspecialchars($row['alt'], ENT_QUOTES, 'UTF-8');
+            $class   = htmlspecialchars($row['class'], ENT_QUOTES, 'UTF-8');
 
             $small = "/cert/SMALL/{$picture}.webp";
             $big   = "/cert/BIG/{$picture}.webp";
@@ -85,7 +86,7 @@ class Slider extends Entity
             <li class="item-a slide">
                 <article class="cert">
                     <a href="{$big}" class="progressive replace" data-href="{$small}" data-lightbox="image-group">
-                        <img src="{$small}" class="preview" alt="{$alt}" loading="lazy">
+                        <img src="{$small}" class="preview {$class}" alt="{$alt}" loading="lazy">
                     </a>
                 </article>
             </li>
