@@ -20,7 +20,7 @@ VALUES
 
 (2,  2, 'Frontend Certificates of IT expert Mirnes Glamočić', 
       'See the Frontend certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/front-end-certificates', 
+      'https://mirnesglamocic.com/frontendcertificates', 
       'https://mirnesglamocic.com/images/og_img/frontend_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/frontend_og.webp', 
       'certificates.min.css', 
@@ -29,7 +29,7 @@ VALUES
 
 (3,  3, 'Back-end certificates of IT expert Mirnes Glamočić', 
       'See the Back-end certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/back-end-certificates', 
+      'https://mirnesglamocic.com/backendcertificates', 
       'https://mirnesglamocic.com/images/og_img/backend_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/backend_og.webp', 
       'certificates.min.css', 
@@ -38,7 +38,7 @@ VALUES
 
 (4,  4, 'Database certificates of IT expert Mirnes Glamočić', 
       'See the Database certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/database-certificates', 
+      'https://mirnesglamocic.com/databasecertificates', 
       'https://mirnesglamocic.com/images/og_img/database_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/database_og.webp', 
       'certificates.min.css', 
@@ -47,7 +47,7 @@ VALUES
 
 (5,  5, 'WordPress certificates of IT expert Mirnes Glamočić', 
       'See the WordPress certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/wordpress-certificates', 
+      'https://mirnesglamocic.com/wordpresscertificates', 
       'https://mirnesglamocic.com/images/og_img/wordpress_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/wordpress_og.webp', 
       'certificates.min.css', 
@@ -56,7 +56,7 @@ VALUES
 
 (6,  6, 'Web Services certificates of IT expert Mirnes Glamočić', 
       'See the Web Services certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/web-services-certificates', 
+      'https://mirnesglamocic.com/webservicescertificates', 
       'https://mirnesglamocic.com/images/og_img/webservices_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/webservices_og.webp', 
       'certificates.min.css', 
@@ -65,7 +65,7 @@ VALUES
 
 (7,  7, 'Web Design Certificates of IT expert Mirnes Glamočić', 
       'See the Web Design certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/web-design-certificates', 
+      'https://mirnesglamocic.com/webdesigncertificates', 
       'https://mirnesglamocic.com/images/og_img/webdesign_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/webdesign_og.webp', 
       'certificates.min.css', 
@@ -74,7 +74,7 @@ VALUES
 
 (8,  8, 'UI/UX certificates of IT expert Mirnes Glamočić', 
       'See the UI/UX certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/ui-ux-design-certificates', 
+      'https://mirnesglamocic.com/uxcertificates', 
       'https://mirnesglamocic.com/images/og_img/ux_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/ux_og.webp', 
       'certificates.min.css', 
@@ -83,7 +83,7 @@ VALUES
 
 (9,  9, 'SEO certificates of IT expert Mirnes Glamočić', 
       'See the SEO certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/seo-certificates', 
+      'https://mirnesglamocic.com/seocertificates', 
       'https://mirnesglamocic.com/images/og_img/seo_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/seo_og.webp', 
       'certificates.min.css', 
@@ -92,7 +92,7 @@ VALUES
 
 (10, 10, 'Adobe CC certificates of IT expert Mirnes Glamočić', 
       'See the Adobe CC certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/adobe-cc-certificates', 
+      'https://mirnesglamocic.com/adobecertificates', 
       'https://mirnesglamocic.com/images/og_img/adobe_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/adobe_og.webp', 
       'certificates.min.css', 
@@ -101,7 +101,7 @@ VALUES
 
 (11, 11, 'Version Control certificates of IT expert Mirnes Glamočić', 
       'See the Version Control certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/version-control-certificates', 
+      'https://mirnesglamocic.com/gitcertificates', 
       'https://mirnesglamocic.com/images/og_img/git_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/git_og.webp', 
       'certificates.min.css', 
@@ -110,7 +110,7 @@ VALUES
 
 (12, 12, 'Docker certificates of IT expert Mirnes Glamočić', 
       'See the Docker certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/docker-certificates', 
+      'https://mirnesglamocic.com/dockercertificates', 
       'https://mirnesglamocic.com/images/og_img/docker-og.jpg', 
       'https://mirnesglamocic.com/images/og_img/docker-og.webp', 
       'certificates.min.css', 
@@ -119,7 +119,7 @@ VALUES
 
 (13, 13, 'Linux certificates of IT expert Mirnes Glamočić', 
       'See the Linux certificates of professional web developer and web designer Mirnes Glamočić from Bosnia and Herzegovina.', 
-      'https://mirnesglamocic.com/linux-certificates', 
+      'https://mirnesglamocic.com/linuxcertificates', 
       'https://mirnesglamocic.com/images/og_img/linux_og.jpg', 
       'https://mirnesglamocic.com/images/og_img/linux_og.webp', 
       'certificates.min.css', 
