@@ -38,6 +38,19 @@ RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L]
 ErrorDocument 403 /403.php
 ErrorDocument 404 /404.php
 
+# --------------------------------------------------------
+# Allow access to PDF files
+# --------------------------------------------------------
+# This rule ensures that PDF files are accessible by all users
+# regardless of other restrictions in the .htaccess file.
+# It uses the FilesMatch directive to target any file with a .pdf extension.
+# The Order Allow,Deny and Allow from all directives make sure
+# that the PDF files are not blocked by any access control rules.
+<FilesMatch "\.(pdf)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
 # ----------------------------------------
 # Disable directory listing
 # ----------------------------------------

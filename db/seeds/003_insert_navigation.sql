@@ -13,5 +13,6 @@ VALUES
 (2,  1, 'Certificates', 'section', 'certificates', '_self'),
 (3,  1, 'Skills', 'section', 'skills', '_self'),
 (4,  1, 'Services', 'section', 'services', '_self'),
-(5,  1, 'Contact', 'section', 'contact', '_self'),
-(6, 14, 'Projects', 'page', NULL, '_blank');
+(5,  1, 'Pricing', 'section', 'pricing', '_self'),
+(6,  1, 'Contact', 'section', 'contact', '_self'),
+(7, 14, 'Projects', 'page', NULL, '_self');

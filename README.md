@@ -43,14 +43,95 @@ The goal of the website is to provide a clean and professional space where poten
 
 - Hosting: Globalhost (deployment environment) 
 GitHub
+## 🏗️ Project Architecture
+
+The project follows a modular structure with reusable components and database-driven content.
+
+```graphql
+/classes
+    AboutMe.php
+    CertDesc.php
+    CertificateCTA.php
+    Config.php
+    DB.php
+    Entity.php
+    Head.php
+    Illustration.php
+    Input.php
+    ITA.php
+    Logo.php
+    Pages.php
+    Photoshop.php
+    Prices.php
+    Quotes.php
+    ResumeCertifications.php
+    ResumeContact.php
+    ResumeEducation.php
+    ResumeExperience.php
+    ResumeExperiencePoint.php
+    ResumeLanguage.php
+    ResumeMain.php
+    ResumeProjects.php
+    ResumeSkill.php
+    SectionContent.php
+    Services.php
+    Skills.php
+    Slider.php
+    SliderConfig.php
+    Support.php
+    WebsiteProject.php
+    WebsiteRenderer.php
+
+/CSS
+    certificates.css
+    css.php
+    error.css
+    projects.css
+    resume.css
+    style.css
+
+/db
+    /schema      # Database migrations (37 tables)
+    /seeds       # Initial data
+
+
+
+/images
+    images, illustrations, logos, icons, mockups
+
+inc/
+    helpers, configuration, shared logic
+
+JS/
+    cert-slider.js
+    form-focus.js
+    main.js
+    projects-buttons.js
+    projects-load-more.js
+    validate_me.js
+
+partials/
+    schema.php
+
+pages
+    index.php
+    projects.php
+    resume.php
+    adobecertificates.php and other certificate pages
+```
+
 ## 📂 Features
 
-- Responsive design optimized for all devices  
-- Showcase of personal and professional projects  
-- Contact form / CTAs  
-- SEO-friendly structure  
-- Fast loading performance  
-
+- Dynamic project portfolio powered by MySQL
+- Modular PHP architecture using reusable classes
+- Resume system with structured sections (experience, education, skills)
+- Certificate pages with reusable CTA components
+- Responsive design optimized for all devices 
+- Contact form with frontend and backend validation
+- SEO-friendly structure with optimized meta tags
+- Fast loading performance and optimized assets
+- Showcase of personal and professional projects 
+ 
 ## 🚀 Live Demo
 
 🔗 Website: https://mirnesglamocic.com

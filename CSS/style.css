@@ -24,9 +24,10 @@
     --light-blue: #93c5fd;                    /* light blue for highlights */
     
     /* BUTTONS */
-    --button-blue: #2563EB;       /* #1E6FFB */
-    --button-blue-hover: #1E4FD8; /* #0056D4 */
-    --button-blue-active: #1B3FAF;/* #003E9E */
+    --button-blue: #007bff;
+    --button-blue-hover: #0056b3;
+    --button-blue-visited: #0056b3;
+    --button-blue-active: #003d80;
 
      /* SHADOWS */
 
@@ -93,6 +94,7 @@
     --bg-light: #e3ebff;                       /* page background */
     --bg-white: #fff;                          /* white background */
     --bg-lazy: #f1f1fa;                        /* lazy background */
+    --bg-section-light: #f5f7ff; /* light blue for sections with subtle theme */
     --bg-overlay: rgba(0, 0, 0, 0.55);  /* semi-transparent overlay background */
     --scrollbar-track: #f5f7ff;                /* scrollbar track */
     --nav-hover-bg: #faf7eb;                   /* nav hover background */

@@ -14,7 +14,7 @@
      *   $head = Head::get($pageId);
      *   echo $head->renderHead();
      */
-
+require_once __DIR__ . '/../inc/helpers.php';
 class Head extends Entity
 {
     protected static string $tableName = 'meta';
@@ -98,6 +98,7 @@ class Head extends Entity
             <!-- Open Graph -->
             <meta property="og:title" content="{$title}">
             <meta property="og:url" content="{$ogUrl}">
+            <meta property="og:description" content="{$description}">
             <meta property="og:type" content="website">
             <meta property="og:image:type" content="image/jpeg">
             <meta property="og:image:width" content="1200">

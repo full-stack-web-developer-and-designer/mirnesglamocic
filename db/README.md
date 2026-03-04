@@ -1,6 +1,26 @@
+![PHP](https://img.shields.io/badge/PHP-Backend-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-success)
+
 # Database
 
 This folder contains the SQL scripts and data for the portfolio website database. It is organized into two main parts:
+
+## Database Overview
+
+The database is designed to support a modular portfolio website with dynamic content.
+
+Main domains:
+
+- **Content Management** – pages, meta tags, navigation, section content
+- **Personal Profile** – about me, quotes, resume data
+- **Projects Portfolio** – project categories, projects, website projects, design projects
+- **Certificates System** – certificate descriptions, categories, certificate pages
+- **Pricing & Services** – services, pricing plans, pricing features
+- **User Interaction** – contact form submissions and support links
+
+The schema follows relational design with foreign key constraints and normalized tables.
 
 - **Schema** – SQL scripts to create all database tables.
 - **Seeds** – SQL scripts to populate tables with initial data.
@@ -11,7 +31,7 @@ This folder contains the SQL scripts and data for the portfolio website database
 
 ## Tables Overview
 
-The database has **20 tables**:
+The database has **37 tables**:
 
 1. `pages` – Stores website pages metadata.  
 2. `meta` – Stores SEO and social metadata per page.  
@@ -28,26 +48,28 @@ The database has **20 tables**:
 13. `ita_certificate` – Certificates obtained from ITAcademy.  
 14. `ita_certificate_images` – Multiple image versions for ITAcademy certificates.  
 15. `skills` – Stores technical and professional skills used in the portfolio.  
-16. `services` – Stores website services data.  
-17. `contact` – Stores contact form submissions.  
-18. `support` – Stores external support / donation links.  
-19. `project_categories` – Stores project categories used to group projects.  
-20. `projects` – Stores all projects including websites, Photoshop works, logos, and illustrations.  
-21. `project_websites` – Stores website-specific details for projects of category "website".  
-22. `website_types` – Stores types or categories of websites (e.g., Fullstack, Mini Apps, WordPress).  
-23. `project_website_types` – Many-to-many relationship linking projects to website types.  
-24. `project_photoshop` – Stores Photoshop project images at multiple resolutions.  
-25. `project_images` – Stores images for general projects such as logos and illustrations.
-26. `certificate_ctas` – Stores CTA content for certificate pages.
-27. `resume_main` – Main personal information for the resume page.
-28. `resume_contact` – Contact info for the resume page.
-29. `resume_skills` – Categorized skills for the resume.
-30. `resume_languages` – Languages and proficiency levels.
-31. `resume_projects` – Resume-related projects (portfolio items).
-32. `resume_education` – Education history for the resume.
-33. `resume_certifications` – Certifications displayed in the resume.
-34. `resume_experience` – Work experience entries for the resume.
-35. `resume_experience_points` – Bullet points for each experience entry.
+16. `services` – Stores website services data.
+17. `pricing_plans` - Stores pricing plan main data
+18. `pricing_features` - Stores features associated with pricing plans
+19. `contact` – Stores contact form submissions.  
+20. `support` – Stores external support / donation links.  
+21. `project_categories` – Stores project categories used to group projects.  
+22. `projects` – Stores all projects including websites, Photoshop works, logos, and illustrations.  
+23. `project_websites` – Stores website-specific details for projects of category "website".  
+24. `website_types` – Stores types or categories of websites (e.g., Fullstack, Mini Apps, WordPress).  
+25. `project_website_types` – Many-to-many relationship linking projects to website types.  
+26. `project_photoshop` – Stores Photoshop project images at multiple resolutions.  
+27. `project_images` – Stores images for general projects such as logos and illustrations.
+28. `certificate_ctas` – Stores CTA content for certificate pages.
+29. `resume_main` – Main personal information for the resume page.
+30. `resume_contact` – Contact info for the resume page.
+31. `resume_skills` – Categorized skills for the resume.
+32. `resume_languages` – Languages and proficiency levels.
+33. `resume_projects` – Resume-related projects (portfolio items).
+34. `resume_education` – Education history for the resume.
+35. `resume_certifications` – Certifications displayed in the resume.
+36. `resume_experience` – Work experience entries for the resume.
+37. `resume_experience_points` – Bullet points for each experience entry.
 
 ---
 
@@ -170,6 +192,24 @@ erDiagram
         INT page_id FK
         VARCHAR title
         TEXT description
+    }
+
+    PRICING_PLANS {
+        INT plan_id PK
+        INT page_id FK
+        VARCHAR title
+        DECIMAL price
+        VARCHAR price_text
+        INT delivery_days
+        TINYINT is_featured
+        VARCHAR button_text
+    }
+
+    PRICING_FEATURES {
+        INT feature_id PK
+        INT plan_id FK
+        VARCHAR feature_text
+        INT sort_order
     }
 
     CONTACT {
@@ -332,7 +372,7 @@ erDiagram
         TEXT description
     }
 
-    %% Relationships
+     %% Relationships
     PAGES ||--o{ META : has
     PAGES ||--o{ NAVIGATION : has
     PAGES ||--o{ ABOUT_ME : has
@@ -359,6 +399,8 @@ erDiagram
     PROJECTS ||--o{ PROJECT_IMAGES : images
     PROJECT_WEBSITES ||--o{ PROJECT_WEBSITE_TYPES : typed_as
     WEBSITE_TYPES ||--o{ PROJECT_WEBSITE_TYPES : applied_to
+
+    PRICING_PLANS ||--o{ PRICING_FEATURES : has
 ```
 
 

@@ -1,6 +1,42 @@
 <?php
 declare(strict_types=1);
     
+    /**
+     * Resume.php
+     *
+     * Dynamic resume page rendering personal CV data from the database.
+     * Displays sidebar information (contact, skills, languages),
+     * and main content (profile, experience, projects, education, certifications).
+     *
+     * This page follows a modular architecture using Entity-based models
+     * to fetch structured resume data by page ID.
+     *
+     * Features:
+     * - Dynamic head rendering (SEO optimized)
+     * - Structured sidebar with grouped skills & languages
+     * - Experience with bullet points
+     * - Clickable project links
+     * - Education with institution logos
+     * - Certifications with SVG icons
+     * - Downloadable resume PDF
+     *
+     * Author: Mirnes Glamočić
+     * Website: https://mirnesglamocic.com
+     * Created: 2026
+     * Version: 1.0
+     *
+     * Architecture:
+     * - Head::get($page_id)
+     * - Pages::get($page_id)
+     * - ResumeContact::getByPage()
+     * - ResumeSkill::getByPage()
+     * - ResumeExperience::getByPage()
+     * - ResumeProjects::getByPage()
+     * - ResumeEducation::getByPage()
+     * - ResumeCertifications::getByPage()
+     *
+     * This file serves as the dynamic CV endpoint for page_id = 17.
+     */
 
     require_once __DIR__ . '/core/init.php';
     require_once __DIR__ . '/inc/helpers.php';
@@ -23,7 +59,10 @@ declare(strict_types=1);
                 <?php echo $page->renderPage(); ?>
                 
                 <p><strong>Full-Stack Web Developer & Designer</strong></p>
-
+                <div class="resume-cta">
+                    <a href="/#contact" class="cta-btn">Hire Me</a>
+                    <a href="/projects" class="cta-btn secondary">View Projects</a>
+                </div>
                 <?php
                     // Fetch contact information for the specific page
                     $contacts = ResumeContact::getByPage($page_id); // Fetch contact information dynamically
@@ -137,6 +176,9 @@ declare(strict_types=1);
                     if ($main) {
                         echo '<h2>Profile</h2>';
                         echo '<p>' . e($main->profile_text) . '</p>';
+                        echo '<div class="resume-profile-cta">';
+                        echo '<a href="/#contact" class="cta-btn">Let’s Work Together</a>';
+                        echo '</div>';
                     }
 
                     // Fetch and display experiences
@@ -225,13 +267,20 @@ declare(strict_types=1);
             </div>
 
         </div>
-        <a href="/MirnesGlamocic-Resume.pdf" class="download-btn" download="MirnesGlamocic-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my resume PDF">
-            <svg class="svg-icon" aria-hidden="true">
-                <use href="#icon-download"></use>
-            </svg>&nbsp;&nbsp;Download my resume PDF
-        </a>
+
+        <div class="resume-final-cta">
+            <h3>Interested in working together?</h3>
+            <a href="/#contact" class="cta-btn">Contact Me Today</a>
+            <a href="/resume.pdf" class="download-btn" download="MirnesGlamocic-Resume.pdf"    target="_blank" rel="noopener noreferrer" aria-label="Download my resume PDF">
+                <svg class="svg-icon" aria-hidden="true">
+                    <use href="#icon-download"></use>
+                </svg>&nbsp;&nbsp;Download my resume PDF
+            </a>
+        </div>
+
         <div style="display:none">
             <?php include('./assets/icons-resume.html'); ?>
         </div>
+
     </body>
 </html>

@@ -112,12 +112,10 @@ $certContent = SectionContent::getSection($page_id, 'certificates');
                     <div class="wrapper">
 
                         <h2 id="skills-title">Skills</h2>
-
                             <?php
                                 $skills = new Skills();
                                 $skills->renderSkills();
                             ?>
-
                     </div>
                     
             </section>
@@ -127,14 +125,30 @@ $certContent = SectionContent::getSection($page_id, 'certificates');
                 <div class="wrapper">
                     <h2 id="services-title">Services</h2>
                         
-                        <h3 id="service">Best solutions for your business</h3>
-                            
-                            <div class="services-grid">
-                                    <?php
-                                        $services = new Services();
-                                        $services->renderServices();
-                                    ?>
-                            </div>
+                    <h3 id="service">Best solutions for your business</h3>
+                        
+                        <div class="services-grid">
+                            <?php
+                                $services = new Services();
+                                $services->renderServices();
+                            ?>
+                        </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section id="pricing" aria-labelledby="pricing-title">
+                <div class="wrapper">
+                    <h2 id="pricing-title">Pricing</h2>
+
+                    <h3 id="price">Transparent pricing for your business growth</h3>
+
+                    <div class="pricing-grid">
+                        <?php
+                            $prices = new Prices();
+                            $prices->renderPrices();
+                        ?>
+                    </div>
                 </div>
             </section>
 

@@ -67,10 +67,10 @@
 .white h2 {
     background: none;
 }
-#aboutme, #certificates, #linkedin, #skills, #services, #contact {
+#aboutme, #certificates, #linkedin, #skills, #services, #pricing, #contact {
     padding: 2.5rem 0;
 }
-#certificates, #linkedin, #skills, #services {
+#certificates, #linkedin, #skills, #services, #pricing {
     margin-bottom: 2.5rem;
 }
 #aboutme,
@@ -78,8 +78,9 @@
 #linkedin,
 #services,
 #skills,
+#pricing,
 #contact {
-    background: #f5f7ff;      /* very light blue for subtle theme */
+    background: var(--bg-section-light);      /* very light blue for subtle theme */
     text-align: left;
 }
 #linkedin, #projects {
@@ -222,7 +223,7 @@ p.text-after-images {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl); /* blue-tinted shadow */
 }
-.certificate, .services {
+.certificate, .services, .pricing-card {
     width: 100%;
     max-width: 100%;
 }
@@ -295,17 +296,18 @@ svg.icons-cert {
   background: #e8f0ff;
   border-radius: 8px;
   padding: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-md);
 }
 .skill svg {
   width: 100%;
   height: 100%;
   display: block;
-  color: var(--primary-blue);;
+  color: var(--primary-blue);
 }
 .skill:hover {
   transform: scale(1.1);
   cursor: pointer;
+  box-shadow: var(--shadow-xl);
 }
 /* Footer skills wrapper */
 .skills-footer-columns {
@@ -315,14 +317,14 @@ svg.icons-cert {
   margin: 0 auto;
 }
 /* Services */
-.services-grid {
+.services-grid, .pricing-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem 1rem 0;
     justify-items: center;
 }
-.services {
+.services, .pricing-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -335,13 +337,15 @@ svg.icons-cert {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     justify-content: center;
 }
-h3#service {
+h3#service,
+h3#price {
     color: var(--primary-blue);          
     margin: 1.15rem auto 0;
     letter-spacing: normal;
     padding-bottom: 0.5rem;
 }
-.services:hover {
+.services:hover,
+.pricing-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl); /* blue-tinted shadow */
 }
@@ -353,17 +357,19 @@ h3#service {
     fill: var(--primary-blue);
     color: var(--primary-blue);           
 }
-.services p {
+.services p,
+.pricing-card p {
     max-width: 300px; 
     font-size: 0.95rem;
     line-height: 1.5;
 }
 /* Services heading */
-.services h4 {
+.services h4,
+.pricing-card h4 {
     color: var(--primary-blue);      /* primary blue */
     margin: 0.5rem 0;
-    font-size: 1.2rem;
-    line-height: 1.3;
+    font-size: 1.3rem;
+    line-height: 1.2;
 }
 .services svg#icon-webservice path {
     fill: var(--primary-blue);           /* base color */
@@ -371,6 +377,107 @@ h3#service {
 }
 .services:hover svg#icon-webservice path {
     fill: var(--accent-blue);           /* brighter blue on hover */
+}
+
+.pricing-card .price {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 20px 0;
+    color: var(--primary-blue);
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.pricing-card li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.pricing-btn {
+    display: inline-flex;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 20px;
+    background-color: var(--button-blue);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-card a {
+    width: 100%;              /* full width on mobile */
+    max-width: 400px;         /* optional: don’t get too wide on big phones */
+    padding: 12px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--button-blue);
+    color: var(--white)!important;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Hover */
+.pricing-card a:hover {
+    background-color: var(--button-blue-hover);
+    transform: scale(1.02);
+}
+
+/* Active (pressed) */
+.pricing-card a:active {
+    background-color: var(--button-blue-active);
+    transform: scale(0.97); /* slight press effect */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.featured {
+    border: 2px solid var(--primary-blue);
+}
+/* Common badge style */
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #0d6efd;
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.pricing-card {
+    position: relative;
+}
+.pricing-card.featured .pricing-badge {
+    background: #ff9500; /* warm orange for Most Popular */
+}
+
+.premium-care {
+    border: 2px solid #0d6efd;
+    background: linear-gradient(145deg, #ffffff, #f8fbff);
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.15);
+    transform: scale(1.03);
+    position: relative;
+}
+
+.premium-care:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(13, 110, 253, 0.25);
+}
+
+.premium-care .price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0d6efd;
 }
 /* Contact Section */
 #form {
@@ -395,6 +502,7 @@ h3#service {
     margin: 1rem 0 2rem;
     color: var(--text-dark);
     font-size: 1rem;
+    text-align: center;
 }
 p#response {
     font-size: 1.6em;
@@ -822,7 +930,7 @@ label.error {
     }
 
     /* External Certificates | Services */
-    .certificate, .services {
+    .certificate, .services, .pricing-card {
         width: 304px;
     }
     #contact h2 {
@@ -858,7 +966,7 @@ label.error {
         margin-bottom: 0;
     }
     /* External Certificates | Services */
-    .certificate, .services {
+    .certificate, .services, .pricing-card {
         width: 334px;
     }
     /* Contact */
@@ -881,7 +989,7 @@ label.error {
         grid-template-columns: repeat(2, 1fr);
     }
     /* External Certificates | Services */
-    .certificate, .services {
+    .certificate, .services, .pricing-card {
         width: 230px;
     }
     /* Skills */
@@ -890,7 +998,7 @@ label.error {
         gap: 1.5rem;
     }
     /* Services */
-    .services-grid {
+    .services-grid, .pricing-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -902,13 +1010,13 @@ label.error {
     #aboutme h2 {
         margin-bottom: 2.5rem;
     }
-    .certificate, .services {
+    .certificate, .services, .pricing-card {
         width: 250px;
     }
     .skills-list {
         gap: 2rem;
     }
-    .services-grid {
+    .services-grid, .pricing-grid {
         gap: 2.5rem;
     }
     #support > div {
@@ -991,7 +1099,7 @@ label.error {
         padding: 20px 25px 15px;
     }
     /* External Certificates | Services */
-    .certificate, .services {
+    .certificate, .services, .pricing-card {
         width: 304px;
     }
     .form-control textarea {
@@ -1085,6 +1193,13 @@ label.error {
    .hero-title {
      font-size: 2.25rem;
    }
+   #hero {
+        background-image: url("../images/bg<?php echo $rnd ?>_1260.webp");
+        background-image: image-set(
+            url("../images/bg<?php echo $rnd ?>_1260.webp") 1x,
+            url("../images/bg<?php echo $rnd ?>_1260@2x.webp") 2x
+        );
+    }
     /* About */
     #about {
         background-image: url("../images/developmentMirnes_1260.webp");
@@ -1148,7 +1263,7 @@ label.error {
     .description, .content-text {
         max-width: 800px;
     }
-    .certificate, .services {
+    .certificate, .services, .pricing-card {
         max-width: 250px;
     }
     /* External Certificates */
@@ -1164,7 +1279,7 @@ label.error {
         height: 100px;
     }
     /* services */
-    .services-grid {
+    .services-grid, .pricing-grid {
         grid-template-columns: repeat(4, 1fr);
     }
     .services {
@@ -1189,7 +1304,7 @@ label.error {
     #certificates h2 {
     width: 1200px;
     }
-    .certificate, .services {
+    .certificate, .services, .pricing-card {
         width: 270px;
         padding: 35px 30px 15px;
     }

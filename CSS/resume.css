@@ -128,18 +128,18 @@ strong {
 .projects a:link,
 .projects a:visited {
   text-decoration: underline;
-  color: #0056b3;
+  color: var(--button-blue-visited);
   text-underline-offset: 3px;
 }
 
 .projects a:hover {
-  color: #003d80;
+  color: var(--button-blue-hover);
   font-weight: bold;
   text-decoration-thickness: 2px;
 }
 
 .projects a:active {
-  color: #001f60;
+  color: var(--button-blue-active);
   font-weight: normal;
   text-decoration: underline;
 }
@@ -166,7 +166,7 @@ svg {
 .svg-icon {
   height: 20px;
   vertical-align: middle;
-  color: #fff;
+  color: var(--white);
 }
 
 .linkedin {
@@ -191,36 +191,122 @@ svg {
   height: 14px;
 }
 
+.cta-btn + .cta-btn {
+  margin-left: 20px; /* space between buttons */
+}
+.resume-cta,
+.resume-profile-cta {
+    text-align: center;
+}
+.resume-final-cta {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd; /* subtle separation from content */
+  padding-top: 25px;
+}
+
+.resume-final-cta h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.resume-final-cta .cta-btn.large,
+.resume-final-cta .download-btn {
+  font-size: 16px;
+  padding: 10px 18px;
+}
+
 a.download-btn {
   color: var(--white);
 }
 
-.download-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #007bff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 30px;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  bottom: 30px; /* Position it 30px from the bottom of the viewport */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
+.resume-final-cta .download-btn:hover {
+  background-color: var(--button-blue-hover)
 }
 
-.download-btn:hover {
-  background-color: #0056b3;
+/* Styling for resume CTA buttons */
+.resume-cta a,
+.resume-profile-cta a,
+.resume-final-cta a {
+    text-decoration: none; /* Remove default underline */
+    color: var(--button-blue); /* Default button color */
+    font-weight: bold; /* Bold for emphasis */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
 }
 
-.download-btn .svg-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
+.resume-cta a:hover,
+.resume-profile-cta a:hover,
+.resume-final-cta a:hover {
+    color: var(--button-blue-hover); /* Darker shade on hover */
+    text-decoration: underline; /* Underline on hover */
+    text-underline-offset: 3px; /* Gives a little offset to the underline */
+}
+
+.resume-cta a:visited,
+.resume-profile-cta a:visited,
+.resume-final-cta a:visited {
+    color: var(--button-blue-visited); /* Keep visited links in a consistent color */
+    text-decoration: underline; /* Maintain the underline even after visited */
+}
+
+.resume-cta a:active,
+.resume-profile-cta a:active,
+.resume-final-cta a:active {
+    color: var(--button-blue-active); /* Darker color when link is clicked */
+    font-weight: normal; /* Lighter font weight on click */
+    text-decoration: underline; /* Keep underline on active state */
+}
+
+/* For the Resume Final CTA download button */
+.resume-final-cta .download-btn {
+    background-color: var(--button-blue); /* Primary button color */
+    color: var(--white);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    display: inline-flex;
+    align-items: center;
+}
+
+.resume-final-cta .download-btn:hover {
+    background-color: var(--button-blue-hover); /* Darker background on hover */
+    color: var(--white);
+    text-decoration: none;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Add stronger shadow on hover */
+}
+
+.resume-final-cta .download-btn:active {
+    background-color: var(--button-blue-active);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.resume-final-cta .download-btn .svg-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+@media (max-width: 767px) {
+  .resume-final-cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .resume-final-cta .download-btn {
+    width: 100%; /* Makes the download button full-width on mobile */
+  }
 }
 
 /* Mobile layout */
@@ -236,7 +322,21 @@ a.download-btn {
   .sidebar,
   .main {
     width: 100%; /* Full width */
-    padding: 15px 20px; /* Optional: adjust padding for mobile */
+    padding: 15px 20px;
+  }
+
+  .resume-final-cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .resume-final-cta h3 {
+    padding: 0;
+  }
+  .resume-final-cta .download-btn {
+    width: 100%; 
+    display: block;
   }
 
 }
@@ -285,8 +385,14 @@ a.download-btn {
   }
 
   a[href]:after {
-        content: none !important;
-    }
+    content: none !important;
+  }
+
+  .resume-cta,
+  .resume-profile-cta,
+  .resume-final-cta {
+    display: none;
+  }
 
   .download-btn {
     display: none !important; /* Hide download button in print */
