@@ -271,7 +271,7 @@ declare(strict_types=1);
         <div class="resume-final-cta">
             <h3>Interested in working together?</h3>
             <a href="/#contact" class="cta-btn">Contact Me Today</a>
-            <a href="/resume.pdf" class="download-btn" download="MirnesGlamocic-Resume.pdf"    target="_blank" rel="noopener noreferrer" aria-label="Download my resume PDF">
+            <a href="/MirnesGlamocic-Resume.pdf" class="download-btn" download="MirnesGlamocic-Resume.pdf"    target="_blank" rel="noopener noreferrer" aria-label="Download my resume PDF">
                 <svg class="svg-icon" aria-hidden="true">
                     <use href="#icon-download"></use>
                 </svg>&nbsp;&nbsp;Download my resume PDF
