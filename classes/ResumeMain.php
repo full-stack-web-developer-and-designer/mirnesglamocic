@@ -15,9 +15,12 @@ class ResumeMain extends Entity
 
     public static function getByPage(int $page_id): ?self
     {
-        $stmt = self::$db->prepare(
+        $db = DB::getInstance();
+
+        $stmt = $db->prepare(
             "SELECT * FROM " . self::$tableName . " WHERE page_id = :page_id LIMIT 1"
         );
+        
         $stmt->execute(['page_id' => $page_id]);
 
         return $stmt->fetchObject(self::class) ?: null;

@@ -19,10 +19,14 @@ class ResumeEducation extends Entity
     // Fetch all education by page ID
     public static function getByPage(int $page_id): array
     {
-        $stmt = self::$db->prepare(
+        $db = DB::getInstance();
+
+        $stmt = $db->prepare(
             "SELECT * FROM " . static::$tableName . " WHERE page_id = :page_id ORDER BY sort_order"
         );
+
         $stmt->execute(['page_id' => $page_id]);
+        
         return $stmt->fetchAll(PDO::FETCH_CLASS, static::class);
     }
 }

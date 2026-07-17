@@ -12,7 +12,9 @@ class ResumeExperiencePoint extends Entity
 
     public static function getByExperience(int $experience_id): array
     {
-        $stmt = self::$db->prepare(
+        $db = DB::getInstance();
+
+        $stmt = $db->prepare(
             "SELECT * FROM " . self::$tableName . "
              WHERE experience_id = :experience_id
              ORDER BY point_id ASC"

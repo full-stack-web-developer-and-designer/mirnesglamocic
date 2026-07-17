@@ -13,9 +13,12 @@ class ResumeLanguage extends Entity
 
     public static function getByPage(int $page_id): array
     {
-        $stmt = self::$db->prepare(
+        $db = DB::getInstance();
+
+        $stmt = $db->prepare(
             "SELECT * FROM " . self::$tableName . " WHERE page_id = :page_id ORDER BY language_id"
         );
+        
         $stmt->execute(['page_id' => $page_id]);
 
         return $stmt->fetchAll(PDO::FETCH_CLASS, self::class);

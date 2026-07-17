@@ -15,11 +15,14 @@ class ResumeContact extends Entity
 
     public static function getByPage(int $page_id): array
     {
-        $stmt = self::$db->prepare(
-            "SELECT * FROM " . self::$tableName . " WHERE page_id = :page_id ORDER BY sort_order"
+        $db = DB::getInstance();
+
+        $stmt = $db->prepare(
+            "SELECT * FROM " . static::$tableName . " WHERE page_id = :page_id ORDER BY sort_order"
         );
+
         $stmt->execute(['page_id' => $page_id]);
 
-        return $stmt->fetchAll(PDO::FETCH_CLASS, self::class);
+        return $stmt->fetchAll(PDO::FETCH_CLASS, static::class);
     }
 }
