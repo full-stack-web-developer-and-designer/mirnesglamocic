@@ -32,10 +32,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/assets/icons.html'; ?>
                 
                 <span id="number">
 
-                    <a href="tel:+38763734327" aria-label="Call phone number">
+                    <a href="tel:+387671047935" aria-label="Call phone number">
                         <svg class="icon" aria-hidden="true">
                             <use href="#icon-phone"></use>
-                        </svg>&nbsp;&nbsp;+387 63 734 327
+                        </svg>&nbsp;&nbsp;+387 67 1047 935
                     </a>
                     
                 </span>
