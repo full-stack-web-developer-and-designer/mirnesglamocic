@@ -48,6 +48,9 @@ $yearText = ($startYear < $currentYear) ? "&copy; $startYear – $currentYear" :
     </svg>
 </a>
 
+
+<?php require_once __DIR__ . '/chat.php'; ?>
+
 <footer id="footer">
 
     <p class="no_print">
@@ -159,6 +162,6 @@ $yearText = ($startYear < $currentYear) ? "&copy; $startYear – $currentYear" :
 
 <?php
 // Custom JS
-$js_files = ['main.js'];
+$js_files = ['main.js', 'chat.js'];
 load_js($js_files);
 ?>
