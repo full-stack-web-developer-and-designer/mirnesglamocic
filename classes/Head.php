@@ -1,20 +1,23 @@
 <?php
-    /**
-     * Head.php
-     * 
-     * Handles rendering of the <head> section for the website.
-     * Includes meta tags, favicon, CSS, fonts, Open Graph, Twitter cards, etc.
-     * 
-     * Author: Mirnes Glamočić
-     * Website: https://mirnesglamocic.com
-     * Created: 2023
-     * Updated: 2026-01-27
-     * 
-     * Usage:
-     *   $head = Head::get($pageId);
-     *   echo $head->renderHead();
-     */
+
+/**
+ * Head.php
+ * 
+ * Handles rendering of the <head> section for the website.
+ * Includes meta tags, favicon, CSS, fonts, Open Graph, Twitter cards, etc.
+ * 
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2023
+ * Updated: 2026-01-27
+ * 
+ * Usage:
+ *   $head = Head::get($pageId);
+ *   echo $head->renderHead();
+ */
+
 require_once __DIR__ . '/../inc/helpers.php';
+
 class Head extends Entity
 {
     protected static string $tableName = 'meta';
@@ -25,53 +28,108 @@ class Head extends Entity
     public string $description;
     public string $created_at;
     public string $updated_at;
-    public $og_url;
-    public $og_image;
-    public $twitter_image;
-    public $css;
+    public ?string $og_url = null;
+    public ?string $og_image = null;
+    public ?string $twitter_image = null;
+    public ?string $css = null;
     
-    // Fetch data from MySQL using PDO - PHP Data Object
+    /**
+     * Render the complete HTML head section.
+     */
     public function renderHead(): string
-{
-    // 1️⃣ ENV + choose CSS filenames
-    $isLocal = (defined('ENV') && ENV === 'development');
-    $mainCssFile = 'style.css';
+    {
+        // Environment and CSS filenames
+        $isLocal = defined('ENV') && ENV === 'development';
+        $mainCssFile = 'style.css';
 
-    if (!$isLocal) {
-        $minFile = 'style.min.css';
-        if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/CSS/' . $minFile)) {
-            $mainCssFile = $minFile;
+        if (!$isLocal) {
+            $minFile = 'style.min.css';
+
+            if (
+                file_exists(
+                    $_SERVER['DOCUMENT_ROOT'] . '/CSS/' . $minFile
+                )
+            ) {
+                $mainCssFile = $minFile;
+            }
         }
-    }
 
-    // Page-specific CSS from DB
-    $cssFile = $this->css ?? '';
-    $cssFile = ltrim($cssFile, '/');
-    $cssFile = basename($cssFile);
+        // Page-specific CSS from DB
+        $cssFile = basename(
+            ltrim($this->css ?? '', '/')
+        );
 
-    if ($cssFile && !$isLocal && !preg_match('/\.min\.(css|php)$/', $cssFile)) {
-        $minFile = preg_replace('/\.(css|php)$/', '.min.$1', $cssFile);
-        if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/CSS/' . $minFile)) {
-            $cssFile = $minFile;
+        if (
+            $cssFile !== '' &&
+            !$isLocal &&
+            !preg_match('/\.min\.(css|php)$/', $cssFile)
+        ) {
+            $minFile = preg_replace(
+                '/\.(css|php)$/',
+                '.min.$1',
+                $cssFile
+            );
+
+            if (
+                $minFile !== null &&
+                file_exists(
+                    $_SERVER['DOCUMENT_ROOT'] . '/CSS/' . $minFile
+                )
+            ) {
+                $cssFile = $minFile;
+            }
         }
-    }
 
-    // 2️⃣ BUILD CACHE-BUSTED CSS URLS  ← PUT IT HERE
-    $mainCssHref = asset('/CSS/' . $mainCssFile);
+        // Build cache-busted CSS URLs
+        $mainCssHref = asset('/CSS/' . $mainCssFile);
 
-    $pageCssHref = '';
-    if (!empty($cssFile)) {
-        $pageCssHref = asset('/CSS/' . $cssFile);
-    }
+        $pageCssHref = $cssFile !== ''
+            ? asset('/CSS/' . $cssFile)
+            : '';
 
+        // Chat CSS
+        $chatCssFile = 'chat.css';
 
+        if (!$isLocal) {
+            $minFile = 'chat.min.css';
+
+            if (
+                file_exists(
+                    $_SERVER['DOCUMENT_ROOT'] . '/CSS/' . $minFile
+                )
+            ) {
+                $chatCssFile = $minFile;
+            }
+        }
+
+        $chatCssHref = asset('/CSS/' . $chatCssFile);
         
         // Escape all dynamic content
-        $title = htmlspecialchars($this->title, ENT_QUOTES | ENT_HTML5);
-        $description = htmlspecialchars($this->description, ENT_QUOTES | ENT_HTML5);
-        $ogUrl = htmlspecialchars($this->og_url, ENT_QUOTES | ENT_HTML5);
-        $ogImage = htmlspecialchars($this->og_image, ENT_QUOTES | ENT_HTML5);
-        $twitterImage = htmlspecialchars($this->twitter_image, ENT_QUOTES | ENT_HTML5);
+        $title = htmlspecialchars(
+            $this->title,
+            ENT_QUOTES | ENT_HTML5,
+            'UTF-8'
+        );
+        $description = htmlspecialchars(
+            $this->description,
+            ENT_QUOTES | ENT_HTML5,
+            'UTF-8'
+        );
+        $ogUrl = htmlspecialchars(
+            $this->og_url ?? '',
+            ENT_QUOTES | ENT_HTML5,
+            'UTF-8'
+        );
+        $ogImage = htmlspecialchars(
+            $this->og_image ?? '', 
+            ENT_QUOTES | ENT_HTML5,
+            'UTF-8'
+        );
+        $twitterImage = htmlspecialchars(
+            $this->twitter_image ?? '',
+            ENT_QUOTES | ENT_HTML5,
+            'UTF-8'
+        );
         
         // Capture the schema.php output as string
         $schemaHtml = '';
@@ -157,6 +215,7 @@ class Head extends Entity
             <!-- CSS -->
             <link rel="stylesheet" href="{$mainCssHref}" media="all">
             <link rel="stylesheet" href="{$pageCssHref}" media="all">
+            <link rel="stylesheet" href="{$chatCssHref}" media="all">
 
             <!-- lightslider CSS-->
             <link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet">

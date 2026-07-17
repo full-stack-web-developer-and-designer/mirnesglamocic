@@ -1,0 +1,863 @@
+/* =========================================================
+   MIRNES AI CHAT WIDGET
+   ========================================================= */
+
+:root {
+    --mirnes-ai-primary: #1e3a8a;
+    --mirnes-ai-primary-hover: #1e40af;
+    --mirnes-ai-accent: #2563eb;
+
+    --mirnes-ai-surface: #ffffff;
+    --mirnes-ai-message-area: #e8eef8;
+    --mirnes-ai-assistant-bg: #ffffff;
+    --mirnes-ai-user-bg: #1e3a8a;
+
+    --mirnes-ai-text: #1e293b;
+    --mirnes-ai-muted: #64748b;
+    --mirnes-ai-border: #cbd5e1;
+    --mirnes-ai-light-border: #d7e0f0;
+
+    --mirnes-ai-success: #22c55e;
+
+    --mirnes-ai-shadow:
+        0 1.25rem 3.75rem rgba(15, 23, 42, 0.28);
+}
+
+
+/* Screen-reader-only text */
+
+.mirnes-ai-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+/* =========================================================
+   OPEN BUTTON
+   ========================================================= */
+
+button.mirnes-ai-toggle {
+    position: fixed;
+    right: 3.875rem;
+    bottom: 0.875rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+
+    width: 4.25rem;
+    min-width: auto;
+    height: 4.25rem;
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 0;
+    border-radius: 999px;
+
+    background: var(--mirnes-ai-primary) !important;
+    color: #ffffff !important;
+
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+
+    box-shadow:
+        0 0.625rem 1.875rem rgba(30, 58, 138, 0.38);
+
+    cursor: pointer;
+    z-index: 100000;
+
+    transition:
+        width 0.28s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button.mirnes-ai-toggle:hover,
+button.mirnes-ai-toggle:focus-visible {
+    width: 12rem;
+    gap: 0.625rem;
+
+    background: var(--mirnes-ai-primary-hover) !important;
+
+    transform: translateY(-0.1875rem);
+
+    box-shadow:
+        0 0.875rem 2.25rem rgba(30, 58, 138, 0.46);
+}
+
+button.mirnes-ai-toggle:focus-visible {
+    outline: 0.1875rem solid #93c5fd;
+    outline-offset: 0.1875rem;
+}
+
+.mirnes-ai-toggle-icon {
+    flex: 0 0 auto;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    font-size: 1.75rem;
+    line-height: 1;
+
+    transition: transform 0.2s ease;
+}
+
+.mirnes-ai-toggle:hover .mirnes-ai-toggle-icon {
+    transform: scale(1.05);
+}
+
+.mirnes-ai-toggle-label {
+    width: 0;
+    max-width: 0;
+
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    color: #ffffff !important;
+
+    transition:
+        opacity 0.2s ease,
+        width 0.28s ease,
+        max-width 0.28s ease;
+}
+
+.mirnes-ai-toggle:hover .mirnes-ai-toggle-label,
+.mirnes-ai-toggle:focus-visible .mirnes-ai-toggle-label {
+    width: auto;
+    max-width: 8rem;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CHAT WINDOW
+   ========================================================= */
+
+/* =========================================================
+   CHAT WINDOW
+   ========================================================= */
+
+.mirnes-ai-widget {
+    position: fixed;
+    right: 1.875rem;
+    bottom: 7.25rem;
+
+    display: flex;
+    flex-direction: column;
+
+    width: min(27rem, calc(100vw - 2.5rem));
+    height: min(39rem, calc(100dvh - 9rem));
+    max-height: calc(100dvh - 9rem);
+
+    overflow: hidden;
+
+    border: 1px solid var(--mirnes-ai-border);
+    border-radius: 1.5rem;
+
+    background: var(--mirnes-ai-surface) !important;
+    color: var(--mirnes-ai-text) !important;
+
+    box-shadow: var(--mirnes-ai-shadow);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(1rem) scale(0.97);
+    transform-origin: bottom right;
+
+    z-index: 99999;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.25s ease;
+}
+
+.mirnes-ai-widget.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.mirnes-ai-header {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    min-height: 5.5rem;
+    padding: 1rem 1.125rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--mirnes-ai-primary),
+            var(--mirnes-ai-accent)
+        ) !important;
+
+    color: #ffffff !important;
+}
+
+.mirnes-ai-avatar {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    background: #ffffff !important;
+
+    font-size: 1.55rem;
+    line-height: 1;
+}
+
+.mirnes-ai-header-content {
+    flex: 1;
+    min-width: 0;
+}
+
+h3.mirnes-ai-title {
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    word-break: normal;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+    color: #ffffff !important;
+
+    font-family: Roboto, Arial, sans-serif !important;
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+}
+
+.mirnes-ai-status {
+    display: flex;
+    align-items: center;
+    gap: 0.4375rem;
+
+    margin: 0.25rem 0 0 !important;
+    padding: 0 !important;
+
+    color: #dbeafe !important;
+
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.mirnes-ai-online-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+
+    border-radius: 50%;
+
+    background: var(--mirnes-ai-success);
+
+    box-shadow:
+        0 0 0 0.1875rem rgba(34, 197, 94, 0.2);
+}
+
+button.mirnes-ai-close {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.75rem;
+    min-width: auto;
+    height: 2.75rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+button.mirnes-ai-close:hover,
+button.mirnes-ai-close:focus-visible {
+    background: rgba(255, 255, 255, 0.22) !important;
+    transform: rotate(5deg);
+}
+
+button.mirnes-ai-close:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.mirnes-ai-messages {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 1.125rem;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    background: var(--mirnes-ai-message-area) !important;
+}
+
+.mirnes-ai-message {
+    width: fit-content;
+    max-width: 88%;
+    padding: 0.875rem 1rem;
+    margin: 0 auto;
+    border-radius: 1.125rem;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.mirnes-ai-message p {
+    margin: 0.5rem 0 0 !important;
+    color: inherit !important;
+}
+
+.mirnes-ai-message p:first-child {
+    margin-top: 0 !important;
+}
+
+.mirnes-ai-message-assistant {
+    align-self: flex-start;
+
+    border: 1px solid var(--mirnes-ai-light-border);
+
+    border-bottom-left-radius: 0.3125rem;
+
+    background: var(--mirnes-ai-assistant-bg) !important;
+    color: var(--mirnes-ai-text) !important;
+
+    box-shadow:
+        0 0.25rem 0.75rem rgba(30, 58, 138, 0.08);
+}
+
+.mirnes-ai-message-user {
+    align-self: flex-end;
+
+    border-bottom-right-radius: 0.3125rem;
+
+    background: var(--mirnes-ai-user-bg) !important;
+    color: #ffffff !important;
+
+    box-shadow:
+        0 0.3125rem 0.9375rem rgba(30, 58, 138, 0.23);
+}
+
+.mirnes-ai-welcome-title {
+    color: var(--mirnes-ai-primary) !important;
+}
+
+
+/* Lists returned by AI */
+
+.mirnes-ai-message ul,
+.mirnes-ai-message ol {
+    margin: 0.625rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.mirnes-ai-message li {
+    margin: 0.25rem 0;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.mirnes-ai-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    gap: 0.5rem;
+    margin: 0;
+    margin-top: 0.875rem;
+}
+
+.mirnes-ai-quick-actions button {
+    width: auto!important;
+    min-height: 2.25rem;
+    padding: 0.4375rem 0.75rem;
+
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+
+    background: #eff6ff !important;
+    color: var(--mirnes-ai-primary) !important;
+
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.mirnes-ai-quick-actions button:hover,
+.mirnes-ai-quick-actions button:focus-visible {
+    border-color: var(--mirnes-ai-accent);
+
+    background: #dbeafe !important;
+
+    transform: translateY(-1px);
+}
+
+.mirnes-ai-quick-actions button:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+button.quick-action {
+    .quick-action {
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 16px;
+
+    border: 1px solid #BFDBFE;
+    border-radius: 14px;
+
+    background: #EFF6FF;
+    color: #1E3A8A;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .2s ease;
+}
+}
+
+/* =========================================================
+   TYPING INDICATOR
+   ========================================================= */
+
+.mirnes-ai-typing {
+    flex: 0 0 auto;
+
+    min-height: 2.5rem;
+    padding: 0.75rem 1.25rem;
+
+    border-top: 1px solid rgba(203, 213, 225, 0.7);
+
+    background: var(--mirnes-ai-message-area) !important;
+}
+
+.mirnes-ai-typing[hidden] {
+    display: none !important;
+}
+
+.mirnes-ai-typing span {
+    display: inline-block;
+
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-right: 0.25rem;
+
+    border-radius: 50%;
+
+    background: var(--mirnes-ai-muted);
+
+    animation: mirnes-ai-typing 1.1s infinite ease-in-out;
+}
+
+.mirnes-ai-typing span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.mirnes-ai-typing span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes mirnes-ai-typing {
+    0%,
+    60%,
+    100% {
+        opacity: 0.35;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-0.25rem);
+    }
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.mirnes-ai-footer {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+
+    width: 100%;
+    min-height: 4.75rem;
+    padding: 0.875rem;
+
+    border-top: 1px solid var(--mirnes-ai-border);
+
+    background: #ffffff !important;
+}
+
+.mirnes-ai-input-wrapper {
+    display: block;
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+    height: 3rem;
+
+    margin: 0;
+}
+
+.mirnes-ai-widget textarea.mirnes-ai-input {
+    display: block;
+
+    width: 100%;
+    height: 3rem !important;
+    min-height: 3rem !important;
+    max-height: 7.5rem !important;
+
+    margin: 0 !important;
+    padding: 0.75rem 0.875rem !important;
+
+    resize: none !important;
+    overflow-y: auto;
+
+    border: 1px solid var(--mirnes-ai-border) !important;
+    border-radius: 0.875rem;
+
+    background: #f8fafc !important;
+    color: var(--mirnes-ai-text) !important;
+
+    font-family: Roboto, Arial, sans-serif !important;
+    font-size: 0.9375rem !important;
+    font-weight: 400;
+    line-height: 1.45 !important;
+
+    box-sizing: border-box !important;
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+#user-message::placeholder {
+    color: #64748b;
+    opacity: 1;
+}
+
+#user-message:hover {
+    border-color: #94a3b8 !important;
+}
+
+#user-message:focus {
+    border-color: var(--mirnes-ai-accent) !important;
+
+    background: #ffffff !important;
+
+    box-shadow:
+        0 0 0 0.1875rem rgba(37, 99, 235, 0.15);
+}
+
+button.mirnes-ai-send {
+    flex: 0 0 auto;
+
+    min-width: 4.75rem;
+    height: 3rem;
+    min-height: 3rem;
+
+    margin: 0 !important;
+    padding: 0.625rem 0.875rem;
+
+    border: 0;
+    border-radius: 0.875rem;
+
+    background: var(--mirnes-ai-primary) !important;
+    color: #ffffff !important;
+
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+button.mirnes-ai-send:hover,
+button.mirnes-ai-send:focus-visible {
+    background: var(--mirnes-ai-primary-hover) !important;
+    transform: translateY(-1px);
+}
+
+button.mirnes-ai-send:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+button.mirnes-ai-send:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.mirnes-ai-messages {
+    scrollbar-width: thin;
+    scrollbar-color:
+        var(--mirnes-ai-primary)
+        #dbe4f2;
+}
+
+.mirnes-ai-messages::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.mirnes-ai-messages::-webkit-scrollbar-track {
+    background: #dbe4f2;
+}
+
+.mirnes-ai-messages::-webkit-scrollbar-thumb {
+    border: 2px solid #dbe4f2;
+    border-radius: 999px;
+
+    background: var(--mirnes-ai-primary);
+}
+
+.mirnes-ai-message p {
+    white-space: pre-line;
+}
+/* ==========================================
+   Tablet and Mobile
+========================================== */
+
+@media (max-width: 1024px) {
+
+    .mirnes-ai-footer {
+
+        display:flex;
+        flex-direction:column;
+        gap: 12px;
+
+        align-items: stretch;
+
+    }
+
+    .mirnes-ai-input-wrapper {
+
+        width: 100%;
+
+    }
+#user-message{width:100%;min-height:48px;}button.mirnes-ai-send{width:100%;height:48px;}}
+@media (max-width: 768px) {
+
+    .mirnes-ai-widget {
+
+        right: 0.75rem;
+        left: 0.75rem;
+        width: auto;
+        bottom: 5.5rem;
+        height: calc(100dvh - 6.5rem);
+        max-height: none;
+        border-radius: 1.25rem;
+    }
+
+}
+/* =========================================================
+   MOBILE CHAT
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    button.mirnes-ai-toggle {
+        right: 1rem;
+        bottom: 1rem;
+
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    button.mirnes-ai-toggle:hover,
+    button.mirnes-ai-toggle:focus-visible {
+        width: 3.75rem;
+        gap: 0;
+    }
+
+    .mirnes-ai-toggle-label {
+        display: none;
+    }
+
+
+    .mirnes-ai-widget {
+        /*
+         * JavaScript će tokom otvaranja tastature
+         * privremeno postaviti top, left, width i height.
+         */
+        top: auto;
+        right: 0.625rem;
+        bottom: 5.5rem;
+        left: 0.625rem;
+
+        width: auto;
+        height: min(75dvh, 38rem);
+        max-height: calc(100dvh - 6.5rem);
+
+        border-radius: 1.25rem;
+
+        transform-origin: bottom center;
+    }
+
+
+    .mirnes-ai-header {
+        min-height: 4.75rem;
+        padding: 0.75rem 0.875rem;
+    }
+
+    .mirnes-ai-avatar {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    h3.mirnes-ai-title {
+        font-size: 1rem !important;
+    }
+
+    .mirnes-ai-status {
+        font-size: 0.75rem;
+    }
+
+
+    .mirnes-ai-messages {
+        min-height: 0;
+        padding: 0.875rem;
+    }
+
+    .mirnes-ai-message {
+        max-width: 94%;
+    }
+
+
+    .mirnes-ai-footer {
+        flex-direction: row;
+        align-items: center;
+
+        gap: 0.5rem;
+
+        min-height: 4.5rem;
+        padding: 0.75rem;
+    }
+
+    .mirnes-ai-input-wrapper {
+        flex: 1 1 auto;
+
+        width: auto;
+        min-width: 0;
+        height: 3rem;
+    }
+
+    .mirnes-ai-widget textarea.mirnes-ai-input {
+        width: 100%;
+        height: 3rem !important;
+        min-height: 3rem !important;
+    }
+
+    button.mirnes-ai-send {
+        flex: 0 0 auto;
+
+        width: auto;
+        min-width: 4rem;
+        height: 3rem;
+
+        padding-inline: 0.75rem;
+    }
+}

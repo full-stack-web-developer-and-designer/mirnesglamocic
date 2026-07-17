@@ -454,8 +454,8 @@ a.button:active {
 }
 
 .scroll-top {
-    right: 20px;
-    bottom: 20px;
+    right: 1rem;
+    bottom: 5.5rem;
     display: none;
     height: 2.5rem;
     width: 2.5rem;
@@ -817,6 +817,10 @@ footer small {
 
     a.button:active {
         border: 3px solid var(--button-blue-active); /* bright blue for active state */
+    }
+    .scroll-top {
+        right: 1.875rem;
+        bottom: 6.75rem;
     }
 
 }
