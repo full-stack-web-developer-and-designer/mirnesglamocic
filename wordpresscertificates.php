@@ -61,7 +61,7 @@ declare(strict_types=1);
                 ?>
                 
                 <!-- Section certificates-cta -->
-                <?= CertificateCTA::render($page_id) ?>
+                <?php CertificateCTA::render($page_id); ?>
 
             </div><!-- end .wrapper -->
         
