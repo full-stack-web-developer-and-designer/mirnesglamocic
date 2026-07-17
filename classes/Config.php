@@ -1,44 +1,113 @@
 <?php
 /**
  * Config.php
- * 
- * Handles access to the global configuration array.
- * Allows fetching configuration values using a slash-separated path.
- * 
+ *
+ * Handles access to global configuration values.
+ *
+ * Supports slash-separated paths.
+ *
  * Author: Mirnes Glamočić
  * Website: https://mirnesglamocic.com
  * Created: 2023
- * Updated: 2026-01-27
- * 
- * Usage:
- *   $dbHost = Config::get('database/host');
- *   $siteName = Config::get('site/name');
+ * Updated: 2026
  */
+
+declare(strict_types=1);
+
 // ========================================
 // Environment
 // ========================================
-define('ENV', in_array($_SERVER['HTTP_HOST'], ['mirnesglamocic.ba', '127.0.0.1', 'localhost']) ? 'development' : 'production');
+
+$host = strtolower(
+    preg_replace(
+        '/:\d+$/',
+        '',
+        $_SERVER['HTTP_HOST'] ?? ''
+    )
+);
+
+define(
+    'ENV',
+    in_array(
+        $host,
+        [
+            '127.0.0.1',
+            'localhost',
+        ],
+        true
+    )
+        ? 'development'
+        : 'production'
+);
 
 class Config
 {
     /**
-     * Get a value from the global configuration array.
-     *
-     * @param string|null $path Slash-separated path, e.g., "database/host"
-     * @return mixed Returns the value if found, or false if not
+     * WhatsApp/Viber phone number.
      */
-    public static function get($path = null)
-    {
-        if ($path) {
-            $result = $GLOBALS["config"];
-            $path = explode("/", $path);
-            foreach ($path as $part) {
-                if (isset($result[$part])) {
-                    $result = $result[$part];
-                }
-            }
-            return $result;
+    public const PHONE = '387671047935';
+
+    /**
+     * Get configuration value.
+     *
+     * Example:
+     *
+     * Config::get('mysql/host');
+     */
+    public static function get(
+        ?string $path = null
+    ): mixed {
+        if ($path === null || $path === '') {
+            return null;
         }
-        return false;
+
+        if (
+            !isset($GLOBALS['config']) ||
+            !is_array($GLOBALS['config'])
+        ) {
+            return null;
+        }
+
+        $result = $GLOBALS['config'];
+
+        foreach (explode('/', $path) as $part) {
+            if (
+                !is_array($result) ||
+                !array_key_exists($part, $result)
+            ) {
+                return null;
+            }
+
+            $result = $result[$part];
+        }
+
+        return $result;
+    }
+
+    /**
+     * Default contact message.
+     */
+    public static function defaultMessage(): string
+    {
+        $page = basename(
+            $_SERVER['PHP_SELF'] ?? ''
+        );
+
+        return match ($page) {
+            'projects.php' =>
+                "Hello Mirnes,\n\n" .
+                "I viewed your projects portfolio " .
+                "and would like to discuss a website project.",
+
+            'resume.php' =>
+                "Hello Mirnes,\n\n" .
+                "I reviewed your resume and would " .
+                "like to discuss a job opportunity.",
+
+            default =>
+                "Hello Mirnes,\n\n" .
+                "I found your website and would " .
+                "like to get in touch.",
+        };
     }
 }
