@@ -84,7 +84,7 @@ The project follows a modular, class-based structure with reusable components an
 ```text
 /
 ├── api/
-│   └── chat.php
+│   └── chat.php        AI chat endpoint
 │
 ├── classes/
 │   ├── AI.php
