@@ -1,6 +1,6 @@
 form*.php
 cert/
-core/
+/core/init.php
 images/
 lightbox2/
 lightslider/
