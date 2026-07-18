@@ -142,8 +142,9 @@ class ITA extends Entity
         LEFT JOIN ita_certificate_images i ON i.ita_id = c.ita_id
         GROUP BY c.ita_id
         ";
-        return self::$db
-            ->query($sql)
-            ->fetchAll(PDO::FETCH_OBJ);
+        $db = DB::getInstance();
+
+        return $db->query($sql)
+                ->fetchAll(PDO::FETCH_OBJ);
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 require_once __DIR__ . '/core/init.php';
@@ -11,7 +12,6 @@ $page = Pages::get($page_id);
 // -------------------------------
 // Fetch Certificates section content
 // -------------------------------
-Entity::init(); // make sure PDO is initialized
 $certContent = SectionContent::getSection($page_id, 'certificates');
 ?>
 <!DOCTYPE html>

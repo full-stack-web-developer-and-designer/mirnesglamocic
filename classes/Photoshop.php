@@ -1,27 +1,29 @@
 <?php
 /**
  * Photoshop.php
- * 
- * Handles fetching and rendering Photoshop projects from the database.
- * Each project includes multiple image sizes for responsive design and
- * renders HTML for a Lightbox gallery.
- * 
+ *
+ * Handles Photoshop and image-editing portfolio projects.
+ *
+ * Responsibilities:
+ * - Fetch Photoshop projects from the database
+ * - Provide structured project data for Mirnes AI
+ * - Render responsive Lightbox gallery HTML
+ *
  * Author: Mirnes Glamočić
  * Website: https://mirnesglamocic.com
  * Created: 2023
- * Updated: 2026-01-27
- * 
- * Usage:
- *   $projects = Photoshop::fetch();
- *   Photoshop::render();
+ * Updated: 2026
  */
+
+declare(strict_types=1);
+
 
 class Photoshop extends Entity
 {
     /**
-     * Fetch Photoshop projects from the database
+     * Fetch Photoshop projects from the database.
      *
-     * @return array Array of project objects
+     * @return object[]
      */
     public static function fetch(): array
     {
@@ -46,47 +48,191 @@ class Photoshop extends Entity
             ORDER BY p.project_id DESC
         ";
 
-        $stmt = self::$db->query($sql);
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        $db = DB::getInstance();
+
+        $stmt = $db->prepare($sql);
+
+        $stmt->execute();
+
+
+        return $stmt->fetchAll(
+            PDO::FETCH_OBJ
+        );
     }
 
+
     /**
-     * Render Photoshop projects as HTML
+     * Return Photoshop projects formatted for Mirnes AI.
      *
-     * Each project outputs a <article> with a responsive <picture> and Lightbox link.
+     * Only textual project information is required by the AI prompt.
+     *
+     * @return object[]
+     */
+    public static function getForAI(): array
+    {
+        $sql = "
+            SELECT
+                p.project_id,
+                p.title,
+                p.summary
+            FROM projects p
+            WHERE p.category_id = 2
+            ORDER BY p.project_id DESC
+        ";
+
+
+        $db = DB::getInstance();
+
+        $stmt = $db->prepare($sql);
+
+        $stmt->execute();
+
+
+        return $stmt->fetchAll(
+            PDO::FETCH_OBJ
+        );
+    }
+
+
+    /**
+     * Render Photoshop projects as responsive Lightbox gallery items.
      */
     public static function renderPhotoshop(): void
     {
         $projects = self::fetch();
 
-        if (empty($projects)) {
-            return; // Avoid broken HTML
+
+        if ($projects === []) {
+            return;
         }
 
-        foreach ($projects as $row) {
-            echo "
-            <article class='project photoshop' data-category='photoshop'>
-                <a href='/images/photoshops/BIG/{$row->big_img}' data-lightbox='photoshops'>
-                    <picture class='image'>
-                        <source srcset='/images/photoshops/SMALL/{$row->img_576}' media='(min-width: 1260px)'>
-                        <source srcset='/images/photoshops/SMALL/{$row->img_500}' media='(min-width: 1200px)'>
-                        <source srcset='/images/photoshops/SMALL/{$row->img_450}' media='(min-width: 1024px)'>
-                        <source srcset='/images/photoshops/SMALL/{$row->img_408}' media='(min-width: 900px)'>
-                        <source srcset='/images/photoshops/SMALL/{$row->img_350}' media='(min-width: 768px)'>
-                        <source srcset='/images/photoshops/SMALL/{$row->img_282}' media='(max-width: 456px)'>
+
+        foreach ($projects as $project) {
+
+            $title = htmlspecialchars(
+                (string) $project->title,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            $summary = htmlspecialchars(
+                (string) $project->summary,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            $bigImage = htmlspecialchars(
+                (string) $project->big_img,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            $img576 = htmlspecialchars(
+                (string) $project->img_576,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            $img500 = htmlspecialchars(
+                (string) $project->img_500,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            $img450 = htmlspecialchars(
+                (string) $project->img_450,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            $img408 = htmlspecialchars(
+                (string) $project->img_408,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            $img350 = htmlspecialchars(
+                (string) $project->img_350,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            $img282 = htmlspecialchars(
+                (string) $project->img_282,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            $defaultImage = htmlspecialchars(
+                (string) $project->img,
+                ENT_QUOTES | ENT_HTML5,
+                'UTF-8'
+            );
+
+
+            echo <<<HTML
+            <article
+                class="project photoshop"
+                data-category="photoshop"
+                aria-label="Image editing project: {$title}">
+
+                <a
+                    href="/images/photoshops/BIG/{$bigImage}"
+                    data-lightbox="photoshops"
+                    data-title="{$title}">
+
+                    <picture class="image">
+
+                        <source
+                            srcset="/images/photoshops/SMALL/{$img576}"
+                            media="(min-width: 1260px)">
+
+                        <source
+                            srcset="/images/photoshops/SMALL/{$img500}"
+                            media="(min-width: 1200px)">
+
+                        <source
+                            srcset="/images/photoshops/SMALL/{$img450}"
+                            media="(min-width: 1024px)">
+
+                        <source
+                            srcset="/images/photoshops/SMALL/{$img408}"
+                            media="(min-width: 900px)">
+
+                        <source
+                            srcset="/images/photoshops/SMALL/{$img350}"
+                            media="(min-width: 768px)">
+
+                        <source
+                            srcset="/images/photoshops/SMALL/{$img282}"
+                            media="(max-width: 456px)">
 
                         <img
-                            src='/images/photoshops/SMALL/{$row->img}'
-                            loading='lazy'
-                            alt='" . htmlspecialchars($row->title) . "'>
+                            src="/images/photoshops/SMALL/{$defaultImage}"
+                            alt="{$title} image editing project by Mirnes Glamočić"
+                            loading="lazy"
+                            decoding="async">
+
                     </picture>
 
-                    <div class='content fade'>
-                        <p>" . htmlspecialchars($row->summary) . "</p>
+                    <div class="content fade">
+                        <p>{$summary}</p>
                     </div>
+
                 </a>
+
             </article>
-            ";
+            HTML;
         }
     }
 }

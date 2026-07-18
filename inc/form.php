@@ -19,6 +19,20 @@
  * Include this file where a contact form is needed:
  * <?php include_once __DIR__ . '/form.php'; ?>
  */
+require_once 'inc/helpers.php';
+
+$message = Config::defaultMessage();
+
+$whatsappUrl = whatsappLink(
+    Config::PHONE,
+    $message
+);
+
+$viberUrl = viberLink(
+    '+' . Config::PHONE,
+    $message
+);
+
 $name_error = $email_error = $message_error = '';
 ?>
 <form spellcheck="false" autocomplete="on" id="contact_me" class="form ajax" name="contact_me" method="POST">
@@ -65,15 +79,14 @@ $name_error = $email_error = $message_error = '';
 
     <input type="submit" id="submit" class="btn_submit" name="submit" aria-label="send email" value="🚀 Send Project Details">
 </form>
-
 <!-- Direct Contact Buttons -->
 <div class="direct-contact">
     <h3>Or contact me directly:</h3>
     <div class="contact-buttons">
-        <a href="https://wa.me/38763734327" target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp" aria-label="Contact me on WhatsApp">
+        <a href=<?= htmlspecialchars($whatsappUrl) ?>" target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp" aria-label="Contact me on WhatsApp">
             <svg class="icon"><use href="#icon-whatsapp"></use></svg> Chat On WhatsApp
         </a>
-        <a href="viber://chat?number=%2B38763734327" target="_blank" rel="noopener noreferrer" class="contact-btn viber" aria-label="Chat with me on Viber">
+        <a href="<?= htmlspecialchars($viberUrl) ?>" target="_blank" rel="noopener noreferrer" class="contact-btn viber" aria-label="Chat with me on Viber">
             <svg class="icon"><use href="#icon-viber"></use></svg> Chat On Viber
         </a>
     </div>

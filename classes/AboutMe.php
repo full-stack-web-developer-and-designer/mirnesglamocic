@@ -46,7 +46,8 @@ class AboutMe extends Entity
             GROUP BY am.about_id
             LIMIT 1
         ";
-        $stmt = self::$db->prepare($sql);
+        $db = DB::getInstance();
+        $stmt = $db->prepare($sql);
         $stmt->execute(['pageId' => $pageId]);
         $about = $stmt->fetchObject(self::class);
 
@@ -62,7 +63,8 @@ class AboutMe extends Entity
 
     protected static function getParagraphs(int $aboutId): array
     {
-        $stmt = self::$db->prepare(
+        $db = DB::getInstance();
+        $stmt = $db->prepare(
             "SELECT content FROM about_me_text WHERE about_id = :aboutId ORDER BY sort_order ASC"
         );
         $stmt->execute(['aboutId' => $aboutId]);

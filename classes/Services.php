@@ -29,7 +29,8 @@ class Services extends Entity
      */
     public function renderServices(): void
     {
-        $stmt = self::$db->query(
+        $db = DB::getInstance();
+        $stmt = $db->query(
             "SELECT * FROM " . static::$tableName
         );
 
@@ -55,4 +56,15 @@ class Services extends Entity
             </article>";
         }
     }
+    public static function getForAI(): array
+{
+    $db = DB::getInstance();
+
+    $stmt = $db->query(
+        "SELECT title, description
+         FROM " . static::$tableName
+    );
+
+    return $stmt->fetchAll(PDO::FETCH_OBJ);
+}
 }

@@ -65,7 +65,9 @@ class Slider extends Entity
 
         $sql .= " ORDER BY RAND()";
 
-        $stmt = Entity::$db->prepare($sql);
+        $db = DB::getInstance();
+
+        $stmt = $db->prepare($sql);
         $stmt->execute($params);
 
         $certificates = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -26,7 +26,8 @@ class Quotes extends Entity
             ORDER BY sort_order ASC
         ";
 
-        $stmt = self::$db->prepare($sql);
+        $db = DB::getInstance();
+        $stmt = $db->prepare($sql);
         $stmt->execute(['page_id' => $pageId]);
     return $stmt->fetchAll(PDO::FETCH_OBJ);
     }

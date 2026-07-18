@@ -10,73 +10,188 @@
  * Created: 2026
  */
 
+declare(strict_types=1);
+
+
 class Prices extends Entity
 {
+    /**
+     * Database table name.
+     */
     protected static string $tableName = 'pricing_plans';
-    protected static string $keyColumn = 'plan_id';
+
 
     /**
-     * Render all pricing plans
+     * Primary key column.
+     */
+    protected static string $keyColumn = 'plan_id';
+
+
+
+    /**
+     * Render all pricing plans.
      */
     public function renderPrices(): void
     {
-        $stmt = self::$db->query(
-            "SELECT * FROM " . static::$tableName . " ORDER BY plan_id ASC"
+        $db = DB::getInstance();
+
+
+        $stmt = $db->query(
+            "SELECT *
+             FROM " . static::$tableName . "
+             ORDER BY plan_id ASC"
         );
+
 
         while ($plan = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
-            $plan_id     = (int) $plan['plan_id'];
-            $title       = htmlspecialchars($plan['title'], ENT_QUOTES);
-            $button_text = htmlspecialchars($plan['button_text'], ENT_QUOTES);
-            $is_featured = (int) $plan['is_featured'];
 
-            // Price logic
+            $planId = (int) $plan['plan_id'];
+
+
+            $title = htmlspecialchars(
+                $plan['title'],
+                ENT_QUOTES,
+                'UTF-8'
+            );
+
+
+            $buttonText = htmlspecialchars(
+                $plan['button_text'],
+                ENT_QUOTES,
+                'UTF-8'
+            );
+
+
+            $isFeatured = (int) $plan['is_featured'];
+
+
+
+            /*
+             * Price logic
+             */
             if (!empty($plan['price'])) {
-                $price = "€" . number_format($plan['price'], 0);
+
+                $price = "€" .
+                    number_format(
+                        (float) $plan['price'],
+                        0
+                    );
+
             } else {
-                $price = htmlspecialchars($plan['price_text'], ENT_QUOTES);
+
+                $price = htmlspecialchars(
+                    $plan['price_text'] ?? '',
+                    ENT_QUOTES,
+                    'UTF-8'
+                );
             }
 
-            $featuredClass = $is_featured ? " featured" : "";
-            $premiumClass  = ($title === 'Website Care') ? " premium-care" : "";
-            $cardClass     = $featuredClass . $premiumClass;
 
-            // Badge logic
-            $badgeText = "";
+
+            /*
+             * CSS classes
+             */
+            $featuredClass = $isFeatured
+                ? ' featured'
+                : '';
+
+
+            $premiumClass = ($title === 'Website Care')
+                ? ' premium-care'
+                : '';
+
+
+            $cardClass =
+                $featuredClass .
+                $premiumClass;
+
+
+
+            /*
+             * Badge logic
+             */
+            $badgeText = '';
+
+
             if ($title === 'Business Website') {
-                $badgeText = "Most Popular";
+
+                $badgeText = 'Most Popular';
+
             } elseif ($title === 'Website Care') {
-                $badgeText = "Recommended";
+
+                $badgeText = 'Recommended';
             }
+
+
 
             echo "<div class='pricing-card{$cardClass}'>";
 
-            // Display badge if exists
-            if (!empty($badgeText)) {
-                echo "<span class='pricing-badge'>{$badgeText}</span>";
+
+
+            if ($badgeText !== '') {
+
+                echo "<span class='pricing-badge'>"
+                    . htmlspecialchars(
+                        $badgeText,
+                        ENT_QUOTES,
+                        'UTF-8'
+                    )
+                    . "</span>";
             }
+
+
 
             echo "<h4>{$title}</h4>";
+
             echo "<p class='price'>{$price}</p>";
+
             echo "<ul>";
 
-            // Fetch features as before
-            $featureStmt = self::$db->prepare(
-                "SELECT feature_text 
-                FROM pricing_features 
-                WHERE plan_id = :plan_id 
-                ORDER BY sort_order ASC"
-            );
-            $featureStmt->execute(['plan_id' => $plan_id]);
 
-            while ($feature = $featureStmt->fetch(PDO::FETCH_ASSOC)) {
-                $feature_text = htmlspecialchars($feature['feature_text'], ENT_QUOTES);
-                echo "<li>✔ {$feature_text}</li>";
+
+            /*
+             * Fetch pricing features
+             */
+            $featureStmt = $db->prepare(
+                "SELECT feature_text
+                 FROM pricing_features
+                 WHERE plan_id = :plan_id
+                 ORDER BY sort_order ASC"
+            );
+
+
+            $featureStmt->execute([
+                'plan_id' => $planId
+            ]);
+
+
+
+            while (
+                $feature = $featureStmt->fetch(
+                    PDO::FETCH_ASSOC
+                )
+            ) {
+
+
+                $featureText = htmlspecialchars(
+                    $feature['feature_text'],
+                    ENT_QUOTES,
+                    'UTF-8'
+                );
+
+
+                echo "<li>✔ {$featureText}</li>";
             }
 
+
+
             echo "</ul>";
-            echo "<a href='#contact' class='pricing-btn'>{$button_text}</a>";
+
+            echo "<a href='#contact' class='pricing-btn'>"
+                . $buttonText .
+                "</a>";
+
             echo "</div>";
         }
     }

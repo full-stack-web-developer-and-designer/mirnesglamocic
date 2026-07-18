@@ -26,7 +26,8 @@ class Skills extends Entity
      */
     public function renderSkills(): void
     {
-        $stmt = self::$db->query(
+        $db = DB::getInstance();
+        $stmt = $db->query(
             "SELECT *
              FROM " . static::$tableName . "
              WHERE page_id = 1
@@ -145,4 +146,17 @@ class Skills extends Entity
         echo "</div>"; // skills-footer
         echo "</div>"; // skills
     }
+    public static function getForAI(): array
+{
+    $db = DB::getInstance();
+
+    $stmt = $db->query(
+        "SELECT name, category
+         FROM " . static::$tableName . "
+         WHERE page_id = 1
+         ORDER BY category_order, sort_order"
+    );
+
+    return $stmt->fetchAll(PDO::FETCH_OBJ);
+}
 }

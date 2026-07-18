@@ -48,8 +48,8 @@ h1 {
 }
 
 /* Button locking */
-.btn,
-button {
+#projects .btn,
+#projects button {
     padding: 0.75rem 1rem; /* 12px 16px */
     display: inline-flex;
     justify-content: center;  /* center horizontally */
@@ -242,7 +242,7 @@ a.secondary:hover {
     }
 }
 /* Button layout */
-.load-more {
+#projects button.load-more {
     position: relative;
     display: flex;
     align-items: center;
@@ -262,26 +262,26 @@ a.secondary:hover {
         opacity 0.2s ease;
 }
 
-.load-more:hover {
+#projects button.load-more:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
     background-color: var(--button-blue-hover);
 }
 
-.load-more:active {
+#projects button.load-more:active {
     transform: translateY(0);
     box-shadow: var(--shadow-md);
     background-color: var(--button-blue-active);
 }
 
-.load-more:focus {
+#projects button.load-more:focus {
     outline: none;
     box-shadow: var(--shadow-xl);
 }
 
 
 /* Spinner */
-.load-more .spinner {
+#projects button.load-more .spinner {
     width: 16px;
     height: 16px;
     border: 2px solid rgba(255, 255, 255, 0.35);
@@ -292,11 +292,11 @@ a.secondary:hover {
 }
 
 /* Show spinner when loading */
-.load-more.is-loading .spinner {
+#projects button.load-more.is-loading .spinner {
     display: inline-block;
 }
 
-.load-more.is-loading .btn-text {
+#projects button.load-more.is-loading .btn-text {
     opacity: 0.85;
 }
 
@@ -551,8 +551,8 @@ h2.projects {
         max-width: 960px;
     }
 
-    .btn, 
-    button {
+    #projects .btn, 
+    #projects button {
             width: 200px;      /* fixed width */
             min-width: 200px;  /* ensure uniformity */
     }

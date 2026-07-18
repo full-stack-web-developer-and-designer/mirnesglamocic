@@ -1,48 +1,88 @@
 <?php
+/**
+ * SectionContent.php
+ *
+ * Handles fetching page section content.
+ *
+ * Author: Mirnes Glamočić
+ * Website: https://mirnesglamocic.com
+ * Created: 2026
+ */
+
+declare(strict_types=1);
+
 
 class SectionContent extends Entity
 {
-    protected static string $tableName  = 'page_section_content';
-    protected static string $keyColumn  = 'content_id';
+    protected static string $tableName = 'page_section_content';
 
-    // Table columns (optional, but nice for IDEs)
-    public int $content_id;
-    public int $page_id;
-    public string $section;
-    public string $block;
-    public string $content;
-    public int $position;
+    protected static string $keyColumn = 'content_id';
+
 
     /**
-     * Get structured content for a page section
+     * Get section content by page and section name.
      *
-     * @param int $pageId
-     * @param string $section
-     * @return array
+     * Returns:
+     *
+     * [
+     *     'before_images' => [
+     *          'text 1',
+     *          'text 2'
+     *     ],
+     *
+     *     'after_images' => [
+     *          'text 1'
+     *     ]
+     * ]
      */
-    public static function getSection(int $pageId, string $section): array
-    {
-        $stmt = self::$db->prepare("
-            SELECT block, content
+    public static function getSection(
+        int $pageId,
+        string $section
+    ): array {
+
+        $db = DB::getInstance();
+
+
+        $sql = "
+            SELECT *
             FROM " . static::$tableName . "
             WHERE page_id = :page_id
-              AND section = :section
-            ORDER BY block, position
-        ");
+            AND section = :section
+            ORDER BY position ASC
+        ";
+
+        $stmt = $db->prepare($sql);
 
         $stmt->execute([
             'page_id' => $pageId,
             'section' => $section
         ]);
 
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Group by block
-        $data = [];
+        $rows = $stmt->fetchAll(
+            PDO::FETCH_ASSOC
+        );
+
+
+        $content = [];
+
+
         foreach ($rows as $row) {
-            $data[$row['block']][] = $row['content'];
+
+
+            $block = $row['block'];
+
+
+            if (!isset($content[$block])) {
+
+                $content[$block] = [];
+            }
+
+
+            $content[$block][] = $row['content'];
         }
 
-        return $data;
+
+        return $content;
     }
 }

@@ -108,3 +108,14 @@ function renderParagraphs(string $text): string
     return $html;
 }
 
+function whatsappLink(string $phone, string $message): string
+{
+    return 'https://wa.me/' . preg_replace('/\D/', '', $phone)
+        . '?text=' . rawurlencode($message);
+}
+
+function viberLink(string $phone, string $message): string
+{
+    return 'viber://chat?number=' . urlencode($phone)
+        . '&text=' . rawurlencode($message);
+}

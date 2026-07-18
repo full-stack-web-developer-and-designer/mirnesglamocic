@@ -39,7 +39,8 @@ class Navigation extends Entity
             LEFT JOIN pages p ON n.page_id = p.page_id
         ";
 
-        $stmt = self::$db->prepare($sql);
+        $db = DB::getInstance();
+        $stmt = $db->prepare($sql);
         $stmt->execute();
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
