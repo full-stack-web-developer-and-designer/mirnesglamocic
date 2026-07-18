@@ -1,10 +1,10 @@
 # PHP Classes Architecture
 
-This repository contains the PHP backend architecture for my portfolio website, including projects, skills, certificates, services, and other components.  
+This folder contains the PHP backend architecture for my portfolio website, including the AI assistant, projects, skills, certificates, services, database models, and reusable rendering components.
 
-The classes are responsible for **database access, data fetching, and HTML rendering** across the website.
+The classes are responsible for database access, content retrieval, HTML rendering, AI communication, conversation management, validation, logging, and other backend functionality across the website.
 
-Most classes extend a shared base class (`Entity`) that provides a PDO database connection and common query helpers.  
+Database-backed model classes extend a shared base class (`Entity`) that provides a PDO database connection and common query helpers.  
 Rendering logic is kept inside classes to keep templates clean and minimal.
 
 The architecture is pragmatic rather than framework-driven, prioritizing readability, maintainability, and direct control over rendering for a single-developer portfolio project while avoiding unnecessary abstraction layers.
@@ -17,25 +17,40 @@ The architecture is pragmatic rather than framework-driven, prioritizing readabi
    - [Config](#config)
    - [DB](#db)
    - [Entity](#entity)
-2. [Content & Pages](#content--pages)
+2. [AI Assistant Architecture](#ai-assistant-architecture)
+   - [AI](#ai)
+   - [AIAssistant](#aiassistant)
+   - [AIClient](#aiclient)
+   - [AIConfig](#aiconfig)
+   - [AIConversation](#aiconversation)
+   - [AIKnowledge](#aiknowledge)
+   - [AILead](#ailead)
+   - [AILogger](#ailogger)
+   - [AIMessage](#aimessage)
+   - [AIPrompt](#aiprompt)
+   - [AIRateLimiter](#airatelimiter)
+   - [AIResponse](#airesponse)
+   - [AIValidator](#aivalidator)
+   - [AIException](#aiexception)
+3. [Content & Pages](#content--pages)
    - [Pages](#pages)
    - [Navigation](#navigation)
-3. [UI Components](#ui-components)
+4. [UI Components](#ui-components)
    - [ITA](#ita)
    - [CertDesc](#certdesc)
    - [Skills](#skills)
    - [Services](#services)
    - [Support](#support)
-4. [Certificates & Sliders](#certificates--sliders)
+5. [Certificates & Sliders](#certificates--sliders)
    - [Slider](#slider)
    - [SliderConfig](#sliderconfig)
-5. [Projects & Media](#projects--media)
+6. [Projects & Media](#projects--media)
    - [WebsiteProject](#websiteproject)
    - [WebsiteRenderer](#websiterenderer)
    - [Photoshop](#photoshop)
    - [Illustrations](#illustrations)
    - [Logos](#logos) 
-6. [Utilities](#utilities)
+7. [Utilities](#utilities)
    - [Input](#input)
    - [Helpers & Tools](#helpers--tools)
 
@@ -82,6 +97,198 @@ Abstract base class for all database-backed models.
 **Notes:**
 - Automatically initializes DB connection
 - Encourages consistent data access
+
+---
+
+## AI Assistant Architecture
+
+The AI assistant is implemented through a modular group of classes responsible for request validation, conversation persistence, prompt construction, OpenAI communication, rate limiting, logging, lead capture, and response handling.
+
+The public chat endpoint is located at `/api/chat.php`, while the frontend interface is rendered through `/inc/ai.php` and controlled by `/JS/chat.js`.
+
+### AI
+
+Main AI service and orchestration class.
+
+**Responsibilities:**
+
+* Coordinates the complete AI request lifecycle.
+* Validates visitor input.
+* Creates or retrieves conversations.
+* Stores visitor and assistant messages.
+* Loads conversation history.
+* Builds the OpenAI request payload.
+* Sends requests through `AIClient`.
+* Returns a normalized `AIResponse`.
+* Supports lead creation and conversation history retrieval.
+
+**Usage:**
+
+```php
+$ai = new AI();
+
+$response = $ai->ask([
+    'message' => $message,
+    'conversation_id' => $conversationId,
+    'name' => $name,
+    'email' => $email,
+    'ip' => $ip,
+]);
+```
+
+### AIAssistant
+
+Provides higher-level AI assistant behavior and application-specific interaction logic.
+
+**Responsibilities:**
+
+* Connects the AI service with the website assistant.
+* Defines assistant-specific behavior.
+* Coordinates website context and visitor interaction.
+* Keeps assistant functionality separate from lower-level API communication.
+
+### AIClient
+
+Handles communication with the OpenAI API.
+
+**Responsibilities:**
+
+* Sends HTTP requests to the OpenAI Responses API.
+* Applies API credentials and request configuration.
+* Encodes request payloads as JSON.
+* Processes API responses.
+* Handles network, HTTP, and malformed-response errors.
+* Returns structured response data to the AI service.
+
+### AIConfig
+
+Centralizes AI configuration.
+
+**Responsibilities:**
+
+* Provides the OpenAI API key.
+* Defines the selected model.
+* Stores endpoint and timeout configuration.
+* Provides token and rate-limit settings.
+* Prevents configuration values from being duplicated across classes.
+
+### AIConversation
+
+Represents an AI conversation stored in the database.
+
+**Responsibilities:**
+
+* Creates new visitor conversations.
+* Retrieves existing conversations.
+* Stores visitor identity and session information.
+* Associates messages and leads with a conversation.
+* Supports persistent conversation state.
+
+### AIKnowledge
+
+Provides website-specific knowledge to the AI assistant.
+
+**Responsibilities:**
+
+* Retrieves relevant portfolio information.
+* Supplies project, service, skill, and contact context.
+* Helps ground AI responses in website content.
+* Separates knowledge retrieval from prompt formatting.
+
+### AILead
+
+Stores potential client or employer information.
+
+**Responsibilities:**
+
+* Captures visitor names and email addresses.
+* Associates leads with AI conversations.
+* Stores relevant enquiry details.
+* Supports follow-up and lead management.
+
+### AILogger
+
+Handles AI-related application logging.
+
+**Responsibilities:**
+
+* Records API and application errors.
+* Stores diagnostic information.
+* Helps identify failed requests and unexpected responses.
+* Keeps visitor-facing error messages separate from technical logs.
+
+### AIMessage
+
+Represents individual conversation messages.
+
+**Responsibilities:**
+
+* Stores visitor and assistant messages.
+* Associates messages with conversations.
+* Retrieves ordered conversation history.
+* Stores AI model and token-usage metadata.
+* Supports context-aware conversations.
+
+### AIPrompt
+
+Builds prompts and API request payloads.
+
+**Responsibilities:**
+
+* Defines the assistant's system instructions.
+* Combines website knowledge with conversation history.
+* Adds the current visitor message.
+* Produces the payload expected by the OpenAI Responses API.
+* Keeps prompt construction separate from transport logic.
+
+### AIRateLimiter
+
+Protects the AI endpoint from excessive requests.
+
+**Responsibilities:**
+
+* Tracks requests by visitor or IP address.
+* Enforces request limits within a defined period.
+* Reduces abuse and unnecessary API usage.
+* Returns a controlled error when the limit is exceeded.
+
+### AIResponse
+
+Represents a normalized AI response.
+
+**Responsibilities:**
+
+* Stores the assistant message.
+* Stores the model name.
+* Stores input, output, and total token counts.
+* Stores the raw API response when required.
+* Associates the response with a conversation ID.
+* Provides consistent getters for the application layer.
+
+### AIValidator
+
+Validates AI request data.
+
+**Responsibilities:**
+
+* Validates visitor messages.
+* Validates conversation identifiers.
+* Validates optional names and email addresses.
+* Enforces length and format restrictions.
+* Rejects malformed requests before API communication.
+
+### AIException
+
+Custom exception class for AI-related failures.
+
+**Responsibilities:**
+
+* Represents controlled AI application errors.
+* Separates AI failures from generic PHP exceptions.
+* Allows the API endpoint to return consistent error responses.
+* Supports centralized logging and error handling.
+
+---
 
 ## Content & Pages
 
@@ -323,11 +530,10 @@ if (Input::exists()) {
 
 **Mirnes Glamočić** - Full-stack web developer & designer
 
-Portfolio: [mirnesglamocic.com](https://mirnesglamocic.com "Visit my portfolio website")
-
-**Email:** contact@mirnesglamocic.com  
-**LinkedIn:** https://www.linkedin.com/in/mirnesglamocic  
-**GitHub:** https://github.com/full-stack-web-developer-and-designer
+- **Website:** [mirnesglamocic.com](https://mirnesglamocic.com)
+- **Email:** [contact@mirnesglamocic.com](mailto:contact@mirnesglamocic.com)
+- **LinkedIn:** [linkedin.com/in/mirnesglamocic](https://www.linkedin.com/in/mirnesglamocic)
+- **GitHub:** [full-stack-web-developer-and-designer](https://github.com/full-stack-web-developer-and-designer)
 
 ---
 

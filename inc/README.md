@@ -11,6 +11,7 @@ Each file has a clear responsibility and can be included in pages where its func
 
 ```text
 inc
+├── ai.php
 ├── footer.php
 ├── form.php
 ├── header.php
@@ -21,13 +22,36 @@ inc
 
 ## Table of Contents
 
-1. [Header](#header)
-2. [Footer](#footer)
-3. [Contact Form](#contact-form)
-4. [Helpers](#helpers)
-5. [Usage Notes](#usage-notes)
+1. [AI Chat](#ai-chat)
+2. [Header](#header)
+3. [Footer](#footer)
+4. [Contact Form](#contact-form)
+5. [Helpers](#helpers)
+6. [Usage Notes](#usage-notes)
 
 ---
+
+## AI Chat
+
+`ai.php`
+
+**Responsibilities:**
+
+- Renders the reusable AI chat interface.
+- Displays the floating AI assistant button and chat window.
+- Provides the frontend markup required for AI conversations.
+- Integrates with the chat API endpoint (`/api/chat.php`).
+- Uses JavaScript to send and receive messages asynchronously.
+- Designed to be reusable across multiple pages.
+- Accessibility-friendly with semantic HTML and ARIA attributes.
+
+**Usage (simplified example):**
+
+```php
+<?php require_once BASE_PATH . '/inc/ai.php'; ?>
+```
+---
+
 ## Header
 
 `header.php`
@@ -119,6 +143,7 @@ load_js($js_files);
 ## Usage Notes
 
 - Include files only where needed for performance and maintainability.
+- `ai.php` can be included on any page where the AI assistant should be available.
 - `header.php` and `footer.php` are typically included at the top and bottom of all pages.
 - `form.php` can be embedded on any page that requires a contact form.
 - `helpers.php` should be included before using its functions in other PHP files.
@@ -129,11 +154,10 @@ load_js($js_files);
 
 **Mirnes Glamočić** - Full-stack web developer & designer
 
-Portfolio: [mirnesglamocic.com](https://mirnesglamocic.com "Visit my portfolio website")
-
-**Email:** contact@mirnesglamocic.com  
-**LinkedIn:** https://www.linkedin.com/in/mirnesglamocic  
-**GitHub:** https://github.com/full-stack-web-developer-and-designer
+- **Website:** [mirnesglamocic.com](https://mirnesglamocic.com)
+- **Email:** [contact@mirnesglamocic.com](mailto:contact@mirnesglamocic.com)
+- **LinkedIn:** [linkedin.com/in/mirnesglamocic](https://www.linkedin.com/in/mirnesglamocic)
+- **GitHub:** [full-stack-web-developer-and-designer](https://github.com/full-stack-web-developer-and-designer)
 
 ---
 
